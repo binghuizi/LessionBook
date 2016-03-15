@@ -33,6 +33,7 @@
     UINavigationController *searchNav = [[UINavigationController alloc] initWithRootViewController:searchVC];
     searchNav.tabBarItem.title = @"搜索";
 
+    //
     
     /**
      *  创建UITabBarController
