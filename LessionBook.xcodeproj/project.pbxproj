@@ -14,6 +14,7 @@
 		7AD9F7E91C9834460060FC13 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD9F7E81C9834460060FC13 /* DownloadViewController.m */; };
 		7AD9F7EC1C9834580060FC13 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD9F7EB1C9834580060FC13 /* SearchViewController.m */; };
 		7AE264B71C9840A9006C9A6D /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE264B61C9840A9006C9A6D /* MyViewController.m */; };
+		7AE264B91C9841D4006C9A6D /* My.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE264B81C9841D4006C9A6D /* My.storyboard */; };
 		7AE2889F1C98118000596833 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE2889E1C98118000596833 /* DiscoverViewController.m */; };
 		F3C52409254B7E14DA087F46 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E1B894ED2483C469F39545 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		7AD9F7EB1C9834580060FC13 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = LessionBook/SearchViewController.m; sourceTree = SOURCE_ROOT; };
 		7AE264B51C9840A9006C9A6D /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		7AE264B61C9840A9006C9A6D /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		7AE264B81C9841D4006C9A6D /* My.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = My.storyboard; sourceTree = "<group>"; };
 		7AE2889C1C980FB800596833 /* HWDefine.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWDefine.pch; sourceTree = "<group>"; };
 		7AE2889D1C98118000596833 /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
 		7AE2889E1C98118000596833 /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 		7AE264B41C984075006C9A6D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7AE264B81C9841D4006C9A6D /* My.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AE264B91C9841D4006C9A6D /* My.storyboard in Resources */,
 				7A99D4521C97EE31001DD9B9 /* Assets.xcassets in Resources */,
 				7A99D4551C97EE31001DD9B9 /* LaunchScreen.storyboard in Resources */,
 			);

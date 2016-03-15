@@ -10,7 +10,7 @@
 
 #import "DownloadViewController.h"
 #import "SearchViewController.h"
-
+#import "MyViewController.h"
 #import "DiscoverViewController.h"
 @interface AppDelegate ()
 
@@ -33,7 +33,13 @@
     UINavigationController *searchNav = [[UINavigationController alloc] initWithRootViewController:searchVC];
     searchNav.tabBarItem.title = @"搜索";
 
-    //
+    //我的
+    UIStoryboard *myStoryBoary = [UIStoryboard storyboardWithName:@"My" bundle:nil];
+   UINavigationController *myNav = [myStoryBoary instantiateInitialViewController];
+    myNav.tabBarItem.title = @"我的";
+    myNav.tabBarItem.image = [UIImage imageNamed:@"tab_personal"];
+    myNav.tabBarItem.selectedImage = [UIImage imageNamed:@"tab_personal_s"];
+    
     
     /**
      *  创建UITabBarController
@@ -50,7 +56,7 @@
     
     
     
-    tabarVc.viewControllers = @[disNav];
+    tabarVc.viewControllers = @[disNav, myNav];
     
     self.window.rootViewController = tabarVc;
     
