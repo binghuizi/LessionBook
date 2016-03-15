@@ -11,6 +11,7 @@
 		7A99D4501C97EE31001DD9B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A99D44F1C97EE31001DD9B9 /* AppDelegate.m */; };
 		7A99D4521C97EE31001DD9B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A99D4511C97EE31001DD9B9 /* Assets.xcassets */; };
 		7A99D4551C97EE31001DD9B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A99D4531C97EE31001DD9B9 /* LaunchScreen.storyboard */; };
+		7AE2889F1C98118000596833 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE2889E1C98118000596833 /* DiscoverViewController.m */; };
 		F3C52409254B7E14DA087F46 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E1B894ED2483C469F39545 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,9 @@
 		7A99D4511C97EE31001DD9B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A99D4541C97EE31001DD9B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A99D4561C97EE31001DD9B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AE2889C1C980FB800596833 /* HWDefine.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWDefine.pch; sourceTree = "<group>"; };
+		7AE2889D1C98118000596833 /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
+		7AE2889E1C98118000596833 /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
 		B8E1B894ED2483C469F39545 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,6 +81,7 @@
 		7A99D44A1C97EE31001DD9B9 /* LessionBook */ = {
 			isa = PBXGroup;
 			children = (
+				7AE2889A1C980EEF00596833 /* Library */,
 				7AA0C53B1C980BEA001275A0 /* Class */,
 				7A99D44E1C97EE31001DD9B9 /* AppDelegate.h */,
 				7A99D44F1C97EE31001DD9B9 /* AppDelegate.m */,
@@ -120,6 +125,8 @@
 		7AA0C53D1C980BEA001275A0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7AE2889D1C98118000596833 /* DiscoverViewController.h */,
+				7AE2889E1C98118000596833 /* DiscoverViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -229,6 +236,22 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		7AE2889A1C980EEF00596833 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				7AE2889B1C980EEF00596833 /* tools */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		7AE2889B1C980EEF00596833 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				7AE2889C1C980FB800596833 /* HWDefine.pch */,
+			);
+			path = tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A99D4501C97EE31001DD9B9 /* AppDelegate.m in Sources */,
+				7AE2889F1C98118000596833 /* DiscoverViewController.m in Sources */,
 				7A99D44D1C97EE31001DD9B9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,6 +479,8 @@
 			baseConfigurationReference = 706A4DEFC7FBB216AD8C4E61 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT/LessionBook/Library/tools/HWDefine.pch";
 				INFOPLIST_FILE = LessionBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iOS.huI.LessionBook;
@@ -467,6 +493,8 @@
 			baseConfigurationReference = 67981FB38F5840FA5D07AC7F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT/LessionBook/Library/tools/HWDefine.pch";
 				INFOPLIST_FILE = LessionBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iOS.huI.LessionBook;

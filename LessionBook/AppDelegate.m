@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "DiscoverViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,7 +17,33 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    
+    /**
+     *  创建UITabBarController
+     */
+    
+    UITabBarController *tabarVc = [UITabBarController new];
+   //发现
+    DiscoverViewController *discoVc = [DiscoverViewController new];
+    UINavigationController *disNav = [[UINavigationController alloc]initWithRootViewController:discoVc];
+    discoVc.tabBarItem.title = @"发现";
+    discoVc.tabBarItem.image = [UIImage imageNamed:@"tab_discovery"];
+    
+    
+    
+    
+    
+    tabarVc.viewControllers = @[disNav];
+    
+    self.window.rootViewController = tabarVc;
+    
+    
+    
+    
+    
+    
+    
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
