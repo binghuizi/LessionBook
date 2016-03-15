@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "DownloadViewController.h"
+#import "SearchViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +20,17 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    //下载
+    DownloadViewController *downloadVC = [[DownloadViewController alloc] init];
+    UINavigationController *downloadNav = [[UINavigationController alloc] initWithRootViewController:downloadVC];
+    downloadNav.tabBarItem.title = @"下载";
+    
+    //搜索
+    SearchViewController *searchVC = [[SearchViewController alloc] init];
+    UINavigationController *searchNav = [[UINavigationController alloc] initWithRootViewController:searchVC];
+    searchNav.tabBarItem.title = @"搜索";
+    
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
