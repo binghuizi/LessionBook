@@ -1,0 +1,838 @@
+
+data =     (
+{
+doclist =             {
+docs =                 (
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65292;
+cname = "\U5927\U4e3b\U5bb0\Uff08\U9ad8\U97f3\U8d28\Uff09";
+dimensionid = 919;
+dimensionname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+id = "radio_virtual_program_6444801";
+name = "\U5927\U4e3b\U5bb0_99";
+parentid = 65292;
+parenttype = VirtualChannel;
+pid = 6444801;
+rank = 1;
+score = "3.3237526";
+subtype = PodcastProgram;
+totalscore = "2209.4663";
+type = VirtualProgram;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65292;
+cname = "\U5927\U4e3b\U5bb0\Uff08\U9ad8\U97f3\U8d28\Uff09";
+dimensionid = 919;
+dimensionname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+id = "radio_virtual_program_6444802";
+name = "\U5927\U4e3b\U5bb0_98";
+parentid = 65292;
+parenttype = VirtualChannel;
+pid = 6444802;
+rank = 1;
+score = "3.3237526";
+subtype = PodcastProgram;
+totalscore = "2209.4663";
+type = VirtualProgram;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65292;
+cname = "\U5927\U4e3b\U5bb0\Uff08\U9ad8\U97f3\U8d28\Uff09";
+dimensionid = 919;
+dimensionname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+id = "radio_virtual_program_6444803";
+name = "\U5927\U4e3b\U5bb0_97";
+parentid = 65292;
+parenttype = VirtualChannel;
+pid = 6444803;
+rank = 1;
+score = "3.3237526";
+subtype = PodcastProgram;
+totalscore = "2209.4663";
+type = VirtualProgram;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65292;
+cname = "\U5927\U4e3b\U5bb0\Uff08\U9ad8\U97f3\U8d28\Uff09";
+dimensionid = 919;
+dimensionname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+id = "radio_virtual_program_6444804";
+name = "\U5927\U4e3b\U5bb0_96";
+parentid = 65292;
+parenttype = VirtualChannel;
+pid = 6444804;
+rank = 1;
+score = "3.3237526";
+subtype = PodcastProgram;
+totalscore = "2209.4663";
+type = VirtualProgram;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65292;
+cname = "\U5927\U4e3b\U5bb0\Uff08\U9ad8\U97f3\U8d28\Uff09";
+dimensionid = 919;
+dimensionname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+id = "radio_virtual_program_6444805";
+name = "\U5927\U4e3b\U5bb0_95";
+parentid = 65292;
+parenttype = VirtualChannel;
+pid = 6444805;
+rank = 1;
+score = "3.3237526";
+subtype = PodcastProgram;
+totalscore = "2209.4663";
+type = VirtualProgram;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65292;
+cname = "\U5927\U4e3b\U5bb0\Uff08\U9ad8\U97f3\U8d28\Uff09";
+dimensionid = 919;
+dimensionname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+id = "radio_virtual_program_6444806";
+name = "\U5927\U4e3b\U5bb0_94";
+parentid = 65292;
+parenttype = VirtualChannel;
+pid = 6444806;
+rank = 1;
+score = "3.3237526";
+subtype = PodcastProgram;
+totalscore = "2209.4663";
+type = VirtualProgram;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65292;
+cname = "\U5927\U4e3b\U5bb0\Uff08\U9ad8\U97f3\U8d28\Uff09";
+dimensionid = 919;
+dimensionname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+id = "radio_virtual_program_6444807";
+name = "\U5927\U4e3b\U5bb0_93";
+parentid = 65292;
+parenttype = VirtualChannel;
+pid = 6444807;
+rank = 1;
+score = "3.3237526";
+subtype = PodcastProgram;
+totalscore = "2209.4663";
+type = VirtualProgram;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65292;
+cname = "\U5927\U4e3b\U5bb0\Uff08\U9ad8\U97f3\U8d28\Uff09";
+dimensionid = 919;
+dimensionname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+id = "radio_virtual_program_6444808";
+name = "\U5927\U4e3b\U5bb0_92";
+parentid = 65292;
+parenttype = VirtualChannel;
+pid = 6444808;
+rank = 1;
+score = "3.3237526";
+subtype = PodcastProgram;
+totalscore = "2209.4663";
+type = VirtualProgram;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65292;
+cname = "\U5927\U4e3b\U5bb0\Uff08\U9ad8\U97f3\U8d28\Uff09";
+dimensionid = 919;
+dimensionname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+id = "radio_virtual_program_6444809";
+name = "\U5927\U4e3b\U5bb0_91";
+parentid = 65292;
+parenttype = VirtualChannel;
+pid = 6444809;
+rank = 1;
+score = "3.3237526";
+subtype = PodcastProgram;
+totalscore = "2209.4663";
+type = VirtualProgram;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65292;
+cname = "\U5927\U4e3b\U5bb0\Uff08\U9ad8\U97f3\U8d28\Uff09";
+dimensionid = 919;
+dimensionname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+id = "radio_virtual_program_6444810";
+name = "\U5927\U4e3b\U5bb0_90";
+parentid = 65292;
+parenttype = VirtualChannel;
+pid = 6444810;
+rank = 1;
+score = "3.3237526";
+subtype = PodcastProgram;
+totalscore = "2209.4663";
+type = VirtualProgram;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65292;
+cname = "\U5927\U4e3b\U5bb0\Uff08\U9ad8\U97f3\U8d28\Uff09";
+dimensionid = 919;
+dimensionname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+id = "radio_virtual_program_6444811";
+name = "\U5927\U4e3b\U5bb0_89";
+parentid = 65292;
+parenttype = VirtualChannel;
+pid = 6444811;
+rank = 1;
+score = "3.3237526";
+subtype = PodcastProgram;
+totalscore = "2209.4663";
+type = VirtualProgram;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65292;
+cname = "\U5927\U4e3b\U5bb0\Uff08\U9ad8\U97f3\U8d28\Uff09";
+dimensionid = 919;
+dimensionname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+id = "radio_virtual_program_6444812";
+name = "\U5927\U4e3b\U5bb0_88";
+parentid = 65292;
+parenttype = VirtualChannel;
+pid = 6444812;
+rank = 1;
+score = "3.3237526";
+subtype = PodcastProgram;
+totalscore = "2209.4663";
+type = VirtualProgram;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65292;
+cname = "\U5927\U4e3b\U5bb0\Uff08\U9ad8\U97f3\U8d28\Uff09";
+dimensionid = 919;
+dimensionname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+id = "radio_virtual_program_6444813";
+name = "\U5927\U4e3b\U5bb0_87";
+parentid = 65292;
+parenttype = VirtualChannel;
+pid = 6444813;
+rank = 1;
+score = "3.3237526";
+subtype = PodcastProgram;
+totalscore = "2209.4663";
+type = VirtualProgram;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65292;
+cname = "\U5927\U4e3b\U5bb0\Uff08\U9ad8\U97f3\U8d28\Uff09";
+dimensionid = 919;
+dimensionname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+id = "radio_virtual_program_6444814";
+name = "\U5927\U4e3b\U5bb0_86";
+parentid = 65292;
+parenttype = VirtualChannel;
+pid = 6444814;
+rank = 1;
+score = "3.3237526";
+subtype = PodcastProgram;
+totalscore = "2209.4663";
+type = VirtualProgram;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65292;
+cname = "\U5927\U4e3b\U5bb0\Uff08\U9ad8\U97f3\U8d28\Uff09";
+dimensionid = 919;
+dimensionname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+id = "radio_virtual_program_6444815";
+name = "\U5927\U4e3b\U5bb0_85";
+parentid = 65292;
+parenttype = VirtualChannel;
+pid = 6444815;
+rank = 1;
+score = "3.3237526";
+subtype = PodcastProgram;
+totalscore = "2209.4663";
+type = VirtualProgram;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65292;
+cname = "\U5927\U4e3b\U5bb0\Uff08\U9ad8\U97f3\U8d28\Uff09";
+dimensionid = 919;
+dimensionname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+id = "radio_virtual_program_6444816";
+name = "\U5927\U4e3b\U5bb0_84";
+parentid = 65292;
+parenttype = VirtualChannel;
+pid = 6444816;
+rank = 1;
+score = "3.3237526";
+subtype = PodcastProgram;
+totalscore = "2209.4663";
+type = VirtualProgram;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65292;
+cname = "\U5927\U4e3b\U5bb0\Uff08\U9ad8\U97f3\U8d28\Uff09";
+dimensionid = 919;
+dimensionname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+id = "radio_virtual_program_6444817";
+name = "\U5927\U4e3b\U5bb0_83";
+parentid = 65292;
+parenttype = VirtualChannel;
+pid = 6444817;
+rank = 1;
+score = "3.3237526";
+subtype = PodcastProgram;
+totalscore = "2209.4663";
+type = VirtualProgram;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65292;
+cname = "\U5927\U4e3b\U5bb0\Uff08\U9ad8\U97f3\U8d28\Uff09";
+dimensionid = 919;
+dimensionname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+id = "radio_virtual_program_6444818";
+name = "\U5927\U4e3b\U5bb0_82";
+parentid = 65292;
+parenttype = VirtualChannel;
+pid = 6444818;
+rank = 1;
+score = "3.3237526";
+subtype = PodcastProgram;
+totalscore = "2209.4663";
+type = VirtualProgram;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65292;
+cname = "\U5927\U4e3b\U5bb0\Uff08\U9ad8\U97f3\U8d28\Uff09";
+dimensionid = 919;
+dimensionname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+id = "radio_virtual_program_6444819";
+name = "\U5927\U4e3b\U5bb0_81";
+parentid = 65292;
+parenttype = VirtualChannel;
+pid = 6444819;
+rank = 1;
+score = "3.3237526";
+subtype = PodcastProgram;
+totalscore = "2209.4663";
+type = VirtualProgram;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65292;
+cname = "\U5927\U4e3b\U5bb0\Uff08\U9ad8\U97f3\U8d28\Uff09";
+dimensionid = 919;
+dimensionname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+id = "radio_virtual_program_6444820";
+name = "\U5927\U4e3b\U5bb0_80";
+parentid = 65292;
+parenttype = VirtualChannel;
+pid = 6444820;
+rank = 1;
+score = "3.3237526";
+subtype = PodcastProgram;
+totalscore = "2209.4663";
+type = VirtualProgram;
+}
+);
+maxScore = "2209.4663";
+numFound = 7701;
+start = 0;
+};
+groupValue = virtualprogram;
+},
+{
+doclist =             {
+docs =                 (
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65292;
+cover = "http://pic.qingting.fm/2014/1022/20141022025920388.jpg";
+description = "\U4e3b\U4eba\U516c\U662f\U7267\U5c18\Uff0c\U6545\U4e8b\U53d1\U751f\U5728\U201c\U708e\U5e1d\U201d\U8427\U708e\U4e0e\U201c\U6b66\U7956\U201d\U6797\U52a8\U6765\U5230\U7684\U65b0\U4e16\U754c\U3002
+\n\U5927\U5343\U4e16\U754c\Uff0c\U4f4d\U9762\U4ea4\U6c47\Uff0c\U4e07\U65cf\U6797\U7acb\Uff0c\U7fa4\U96c4\U835f\U8403\Uff0c\U4e00\U4f4d\U4f4d\U6765\U81ea\U4e0b\U4f4d\U9762\U7684\U5929\U4e4b\U81f3\U5c0a\Uff0c\U5728\U8fd9\U65e0\U5c3d\U4e16\U754c\Uff0c\U6f14\U7ece\U7740\U4ee4\U4eba\U5411\U5f80\U7684\U4f20\U5947\Uff0c\U8ffd\U6c42\U7740\U90a3\U4e3b\U5bb0\U4e4b\U8def\U3002
+\n\U65e0\U5c3d\U706b\U57df\Uff0c\U708e\U5e1d\U6267\U638c\Uff0c\U4e07\U706b\U711a\U82cd\U7a79\U3002
+\n\U6b66\U5883\U4e4b\U5185\Uff0c\U6b66\U7956\U4e4b\U5a01\Uff0c\U9707\U6151\U4e7e\U5764\U3002
+\n\U897f\U5929\U4e4b\U6bbf\Uff0c\U767e\U6218\U4e4b\U7687\Uff0c\U6218\U5a01\U65e0\U53ef\U654c\U3002
+\n\U5317\U8352\U4e4b\U4e18\Uff0c\U4e07\U5893\U4e4b\U5730\Uff0c\U4e0d\U6b7b\U4e4b\U4e3b\U9547\U5929\U5730\U3002
+\n\U5c11\U5e74\U81ea\U5317\U7075\U5883\U800c\U51fa\Uff0c\U9a91\U4e5d\U5e7d\U51a5\U96c0\Uff0c\U95ef\U5411\U4e86\U90a3\U7cbe\U5f69\U7edd\U4f26\U7684\U7eb7\U7ead\U4e16\U754c\Uff0c\U4e3b\U5bb0\U4e4b\U8def\Uff0c\U8c01\U4e3b\U6c89\U6d6e\Uff1f
+\n\U5927\U5343\U4e16\U754c\Uff0c\U4e07\U9053\U4e89\U950b\Uff0c\U543e\U4e3a\U5927\U4e3b\U5bb0\U3002";
+dimensionid = 919;
+dimensionname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+id = "radio_virtual_channel_1025455";
+keywords = "\U5927\U4e3b\U5bb0";
+name = "\U5927\U4e3b\U5bb0\Uff08\U9ad8\U97f3\U8d28\Uff09";
+parentid = 919;
+parenttype = Category;
+rank = 1;
+score = "2.969603";
+subtype = Novel;
+totalscore = "11023.178";
+type = VirtualChannel;
+typekey = VirtualChannel;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65294;
+cover = "http://qingting-pic.b0.upaiyun.com/2014/0918/20140918101456518.jpg";
+description = "1950\U5e74\Uff0c\U4e00\U4e2a\U88ab\U4e0a\U7ea7\U6279\U793a\U201c\U6c38\U4e0d\U91ca\U653e\U201d\U7684\U72af\U4eba\U5192\U9669\U8d8a\U72f1\U4e86\Uff0c\U4ed6\U4e0d\U987e\U4e00\U5207\U5730\U6252\U4e0a\U4e86\U53bb\U5f80\U5927\U6208\U58c1\U7684\U5217\U8f66\Uff0c\U8981\U627e\U5bfb\U90a3\U8ff7\U5931\U5728\U9ec4\U6c99\U4e2d\U7684\U771f\U76f8\U3002\U5341\U5e74\U540e\Uff0c\U4e00\U652f\U80cc\U8d1f\U4e0a\U7ea7\U4efb\U52a1\U8fdb\U5165\U5185\U8499\U53e4\U5883\U5185\U627e\U77ff\U7684\U79d1\U8003\U961f\Uff0c\U65e0\U610f\U4e2d\U53d1\U73b0\U4e86\U4e00\U4e2a\U60ca\U5929\U79d8\U5bc6...";
+dimensionid = 925;
+dimensionname = "\U6050\U6016\U00b7\U7075\U5f02";
+id = "radio_virtual_channel_60863";
+keywords = "\U7981\U5730";
+name = "\U5927\U7981\U5730";
+parentid = 925;
+parenttype = Category;
+rank = 1;
+score = "0.5481969";
+subtype = Novel;
+totalscore = "1.5025992";
+type = VirtualChannel;
+typekey = VirtualChannel;
+},
+{
+broadcaster = "\U767d\U6768";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 41822;
+cover = "http://qingting-pic.b0.upaiyun.com/2014/0422/20140422112731736.jpg";
+description = " \U300a\U5927\U4e2d\U533b\U300b\U7684\U4e3b\U4eba\U516c\U53eb\U5b8b\U6d69\Uff0c\U5728\U5e7c\U513f\U65f6\U5c31\U88ab\U7236\U4eb2\U4e22\U5f03\U4e86\Uff0c\U540e\U6765\U4ed6\U8ba4\U8bc6\U4e86\U4e00\U4f4d\U8001\U4e2d\U533b\Uff0c\U5c31\U8ddf\U7740\U4ed6\U5b66\U533b\U3002\U5931\U8e2a\U4e86\U8fd1\U5343\U4f59\U5e74\U7684\U7edd\U4e16\U5947\U73cd\Uff0c\U533b\U4e2d\U81f3\U2014\U2014\U5929\U5723\U9488\U7078\U4eba\U7a81\U7136\U73b0\U4e16\Uff0c\U533b\U9053\U6c5f\U6e56\U98ce\U4e91\U518d\U8d77\U2026\U2026\U8fd9\U4e2a\U65f6\U5019\Uff0c\U5b8b\U6d69\U624d\U660e\U767d\Uff0c\U771f\U6b63\U7684\U533b\U9053\U5728\U6c11\U95f4\U5728\U6c5f\U6e56\Uff0c\U4e8e\U662f\U5c31\U5f00\U59cb\U884c\U533b\U5929\U4e0b\U3002\U53e4\U8001\U7684\U6587\U660e\Uff0c\U53e4\U8001\U7684\U533b\U672f\Uff0c\U5c24\U5176\U662f\U90a3\U795e\U79d8\U7684\U5c11\U6570\U6c11\U65cf\U533b\U672f\U2026\U2026\U533b\U5b66\U754c\U7684\U7231\U6068\U60c5\U4ec7\Uff0c\U5176\U5b9e\U4e5f\U4e00\U6837\U9519\U7efc\U590d\U6742\Uff0c\U8bf4\U4e0d\U5b8c\U9053\U4e0d\U5c3d\U3002\U6c5f\U6cb3\U8349\U539f\Uff0c\U5927\U6f20\U96ea\U5c71\U3002\U63a2\U5371\U5386\U9669\Uff0c\U641c\U5f02\U730e\U5947\U3001\U5c3d\U5c55\U4eba\U751f\U4e4b\U5e7b\U3002\U8bf4\U89e3\U4e2d\U533b\U5b66\Uff0c\U671b\U95fb\U95ee\U5207\U3001\U7406\U6cd5\U65b9\U836f\U2026\U2026\U533b\U4e43\U4ec1\U672f\Uff0c\U6d4e\U4e16\U6d3b\U4eba\U4e4b\U672c\Uff0c\U5165\U5927\U9053\U4e4b\U95e8\U3002";
+dimensionid = 939;
+dimensionname = "\U90fd\U5e02\U00b7\U6821\U56ed";
+id = "radio_virtual_channel_24637";
+keywords = "\U5927\U4e2d\U533b\Uff08hot\Uff09";
+name = "\U5927\U4e2d\U533b\Uff08hot\Uff09";
+parentid = 939;
+parenttype = Category;
+rank = 1;
+score = "0.48293245";
+subtype = Novel;
+totalscore = "1.1661187";
+type = VirtualChannel;
+typekey = VirtualChannel;
+},
+{
+broadcaster = "\U738b\U5a67";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 44972;
+cover = "http://pic.qingting.fm/2014/1022/20141022025051762.jpg";
+description = "\U4e5d\U9634\U4e5d\U9633\U9020\U5c31\U4e00\U4ee3\U6b66\U795e\U96f7\U7535\U4e4b\U529b\U94f8\U6210\U4e00\U4ee3\U96f7\U5e1d\U4ed6\U4fbf\U662f\U97e9\U7fbd\Uff0c\U4f46\U662f\U4ed6\U66f4\U559c\U6b22\U4e00\U4e2a\U540d\U5b57\U2014\U2014\U90aa\U4e3b\Uff01\Uff01\Uff01\U4ed6\U662f\U9ed1\U9053\U7684\U6559\U7236\U4ed6\U662f\U91d1\U94b1\U5e1d\U56fd\U7684\U738b\U8005\U4ed6\U662f\U4ed9\U754c\U7684\U81f3\U5c0a\U4ed6\U662f\U795e\U754c\U7684\U6700\U5f3a,\U4f46\U662f\U5728\U4f17\U4f4d\U7ea2\U989c\U7684\U773c\U4e2d\U4ed6\U53ea\U662f\U81ea\U5df1\U5fc3\U4e2d\U7684\U7231\U4eba\Uff0c\U770b\U4e00\U4ee3\U90aa\U4e3b\U7684\U98ce\U6d41\U4f20\U5947\U3002";
+dimensionid = 919;
+dimensionname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+id = "radio_virtual_channel_28381";
+keywords = "\U5927 \U90aa \U4e3b";
+name = "\U5927\U90aa\U4e3b";
+parentid = 919;
+parenttype = Category;
+rank = 1;
+score = "0.48293245";
+subtype = Novel;
+totalscore = "1.1661187";
+type = VirtualChannel;
+typekey = VirtualChannel;
+},
+{
+broadcaster = "\U4f5a\U540d";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 41806;
+cover = "http://qingting-pic.b0.upaiyun.com/2014/0725/20140725114703370.jpg";
+description = "\U6e05\U671d\U672b\U5e74\U7684\U4e00\U4e2a\U98ce\U96ea\U4e4b\U591c\Uff0c\U4e5e\U4e10\U9648\U5bff\U4ead\U5047\U88c5\U51bb\U660f\Uff0c\U6df7\U5165\U5468\U6751\U901a\U548c\U67d3\U574a\U3002\U5bff\U4ead\U9760\U5de7\U8a00\U4ee4\U8272\Uff0c\U4ece\U5218\U5e08\U5085\U90a3\U91cc\U5077\U5b66\U624b\U827a\Uff0c\U7136\U540e\U8f9e\U6389\U4e86\U9ad8\U50b2\U7684\U5e08\U5085\Uff0c\U81ea\U5df1\U51fa\U4efb\U4e3b\U69fd\U517c\U7ecf\U7406\Uff0c\U662f\U5e74\U5341\U4e94\U5c81\U3002\U901a\U548c\U67d3\U574a\U6709\U4e86\U5546\U754c\U5947\U624d\Uff0c\U6e10\U6e10\U7684\U6210\U4e3a\U4e86\U6b64\U884c\U4e1a\U7684\U9738\U4e3b\U3002";
+dimensionid = 931;
+dimensionname = "\U5b98\U573a\U00b7\U804c\U573a";
+id = "radio_virtual_channel_24619";
+keywords = "\U5927\U67d3\U574a";
+name = "\U5927\U67d3\U574a\Uff08hot\Uff09";
+parentid = 931;
+parenttype = Category;
+rank = 1;
+score = "0.48293245";
+subtype = Novel;
+totalscore = "1.1661187";
+type = VirtualChannel;
+typekey = VirtualChannel;
+},
+{
+broadcaster = "\U4f5a\U540d";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 56458;
+cover = "http://qingting-pic.b0.upaiyun.com/2014/0909/20140909024432579.jpg";
+description = "\U6536\U5f55\U4e86\U81ea\U8fd1\U4ee3\U4ee5\U6765\U7684\U4e16\U754c\U4e0a\U7684\U5404\U79cd\U9707\U60ca\U4eba\U5fc3\U7684\U5927\U76d7\U6848\U4ef6,\U4ed6\U4eec\U6709\U7684\U7684\U786e\U7231\U8d22,\U6709\U7684\U7eaf\U5c5e\U5a31\U4e50,\U4ed6\U4eec\U76d7\U7a83\U7684\U539f\U56e0\U5404\U4e0d\U76f8\U540c,\U76d7\U8d3c\U7684\U6027\U683c\U4e5f\U8fe5\U7136\U4e0d\U540c,\U4e0b\U9762\U5c31\U6765\U4ed4\U7ec6\U8046\U542c\U4e0b\U4ed6\U4eec\U7684\U6545\U4e8b\U3002
+\n";
+dimensionid = 937;
+dimensionname = "\U5386\U53f2\U00b7\U519b\U4e8b";
+id = "radio_virtual_channel_46033";
+keywords = "\U5927\U76d7 \U4e16\U754c";
+name = "\U4e16\U754c\U5927\U76d7";
+parentid = 937;
+parenttype = Category;
+rank = 1;
+score = "0.48293245";
+subtype = Novel;
+totalscore = "1.1661187";
+type = VirtualChannel;
+typekey = VirtualChannel;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 70112;
+cover = "http://pic.qingting.fm/2014/1027/20141027021331850.jpg";
+description = "70\U5e74\U4ee3\U521d\Uff0c\U5c39\U4ea6\U5bfb\U548c\U59bb\U5b50\U7ae0\U59a9\U5230\U519c\U573a\U52b3\U52a8\Uff0c\U5973\U513f\U5c39\U5c0f\U8df3\U548c\U5c39\U5c0f\U5e06\U7559\U5728\U57ce\U91cc\U3002\U4e09\U5e74\U540e\Uff0c\U7ae0\U59a9\U8bf7\U5047\U56de\U57ce\U770b\U75c5\Uff0c\U5374\U4e0e\U4e3a\U5979\U770b\U75c5\U7684\U5355\U8eab\U5510\U533b\U751f\U771f\U8bda\U76f8\U7231\U3002\U5973\U513f\U5c39\U5c0f\U8df3\U963b\U6b62\U4e0d\U9042\Uff0c\U5c31\U5199\U4fe1\U7ed9\U5728\U519c\U573a\U7684\U7238\U7238\U63ed\U53d1\U5988\U5988\U4e0e\U5510\U533b\U751f\U7684\U79c1\U60c5\U3002\U81ea\U5bb6\U540e\U9662\U8d77\U706b\Uff0c\U5c39\U4ea6\U5bfb\U6025\U5fd9\U8bf7\U5047\U56de\U57ce\Uff0c\U706d\U706b\U4e0d\U6210\U5374\U76ee\U7779\U4e86\U4e00\U573a\U6349\U5978\U4e11\U5267\Uff0c\U7f9e\U6124\U96be\U5f53\U3002\U7ae0\U59a9\U5bf9\U4e08\U592b\U5fc3\U4e2d\U6709\U6127\Uff0c\U51b3\U5b9a\U548c\U5510\U533b\U751f\U5206\U624b\Uff0c\U4e0d\U6599\U53c8\U53d1\U73b0\U81ea\U5df1\U6000\U5b55\U3002\U4e07\U822c\U65e0\U5948\U4e4b\U4e0b\U7ae0\U59a9\U751f\U4e0b\U4e86\U5979\U548c\U5510\U533b\U751f\U7684\U79c1\U751f\U5973\U513f\U5c39\U5c0f\U8343\Uff0c\U8fd9\U65f6\U5c39\U5c0f\U8343\U5c31\U8c61\U4e00\U6839\U62d4\U4e0d\U51fa\U6765\U7684\U201c\U8089\U523a\U201d\Uff0c\U65e0\U65f6\U65e0\U523b\U523a\U75db\U7740\U5c39\U5bb6\U6bcf\U4e2a\U4eba\U7684\U5fc3\U3002";
+dimensionid = 927;
+dimensionname = "\U6587\U5b66\U00b7\U4eba\U7269";
+id = "radio_virtual_channel_74521";
+keywords = "\U5927\U6d74\U5973";
+name = "\U5927\U6d74\U5973";
+parentid = 927;
+parenttype = Category;
+rank = 1;
+score = "0.48293245";
+subtype = Novel;
+totalscore = "1.1661187";
+type = VirtualChannel;
+typekey = VirtualChannel;
+},
+{
+broadcaster = "\U4f5a\U540d";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 58774;
+cover = "http://qingting-pic.b0.upaiyun.com/2014/0905/20140905012929562.jpg";
+description = "\U88ab\U65e5\U519b\U5360\U9886\U7684\U5317\U4eac\U57ce\U91cc\U5230\U5904\U98d8\U7740\U8000\U6b66\U626c\U5a01\U7684\U592a\U9633\U65d7\U3002\U767e\U5e74\U8001\U5b57\U53f7\U767e\U8349\U5385\U4f9d\U65e7\U662f\U65e5\U519b\U89ca\U89ce\U7684\U7f8e\U5473\U3002\U767d\U5bb6\U4e09\U8001\U592a\U7237\U6b7b\U540e\Uff0c\U65e5\U672c\U4eba\U4fbf\U76ef\U4f4f\U4e86\U5f53\U5bb6\U7684\U767d\U5bb6\U4e8c\U623f\U4e03\U8001\U7237\U767d\U666f\U7426\Uff0c\U8ba9\U4ed6\U4ea4\U51fa\U624b\U4e2d\U7684\U79d8\U65b9\Uff0c\U5e76\U4e14\U51fa\U4efb\U5546\U4f1a\U4f1a\U957f\U3002\U6027\U683c\U521a\U70c8\U7684\U767d\U666f\U7426\U81ea\U7136\U4e0d\U4ece\U3002\U4e0d\U4e89\U6c14\U7684\U513f\U5b50\U767d\U656c\U4e1a\U529d\U7236\U4eb2\U548c\U65e5\U672c\U4eba\U5408\U4f5c\U4ee5\U4fdd\U5168\U5168\U5bb6\U6027\U547d\Uff0c\U88ab\U7236\U4eb2\U8d76\U51fa\U4e86\U5927\U5b85\U95e8\U3002
+\n";
+dimensionid = 927;
+dimensionname = "\U6587\U5b66\U00b7\U4eba\U7269";
+id = "radio_virtual_channel_48691";
+keywords = "\U3010 \U4f5a\U540d \U3011";
+name = "\U5927\U5b85\U95e8\U7eed\U96c6";
+parentid = 927;
+parenttype = Category;
+rank = 1;
+score = "0.46161497";
+subtype = Novel;
+totalscore = "1.0654418";
+type = VirtualChannel;
+typekey = VirtualChannel;
+},
+{
+broadcaster = "\U5218\U5170\U82b3";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 45246;
+cover = "http://qingting-pic.b0.upaiyun.com/2014/0903/20140903052823905.jpg";
+description = "\U3010\U672c\U8282\U76ee\U6765\U81ea\U592e\U5e7f\U4e13\U533a\U3011\U6545\U4e8b\U53d1\U751f\U5728\U516c\U5143951\U5e74\U81f3982\U5e74\U95f4\U3002 \U8fbd\U56fd\U5927\U81e3\U8096\U601d\U6e29\U7684\U4e09\U5973\U513f\U8096\U71d5\U71d5\U4e0e\U8fbd\U56fd\U5927\U5c06\U6c49\U65cf\U5c11\U5e74\U97e9\U5fb7\U8ba9\U672c\U662f\U4e00\U5bf9\U604b\U4eba\Uff0c\U60c5\U6df1\U610f\U6d53\U3002\U4e0d\U6599\Uff0c\U8096\U71d5\U71d5\U88ab\U5f53\U671d\U7687\U4e0a\U7a46\U5b97\U6293\U83b7\Uff0c\U8d2a\U5a6a\U597d\U8272\U3001\U51f6\U72e0\U6b8b\U66b4\U7684\U7a46\U5b97\U5728\U8ba9\U71d5\U71d5\U966a\U4ed6\U5171\U5ea6\U826f\U5bb5\U4e4b\U65f6\Uff0c\U88ab\U4eba\U6740\U6b7b\U3002\U666f\U5b97\U7ee7\U4f4d\U540e\Uff0c\U4e0b\U65e8\U5c06\U8096\U71d5\U71d5\U8bcf\U8fdb\U5bab\Uff0c\U5c01\U4e3a\U7687\U5983\U3002";
+dimensionid = 937;
+dimensionname = "\U5386\U53f2\U00b7\U519b\U4e8b";
+id = "radio_virtual_channel_28687";
+keywords = "\U592a\U540e";
+name = "\U5927\U8fbd\U592a\U540e";
+parentid = 937;
+parenttype = Category;
+rank = 1;
+score = "0.44726247";
+subtype = Novel;
+totalscore = "1.0002185";
+type = VirtualChannel;
+typekey = VirtualChannel;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65512;
+cover = "http://qingting-pic.b0.upaiyun.com/2014/0630/20140630041158268.jpg";
+description = "\U4e24\U5343\U5e74\U524d\U7684\U539a\U9ed1\U5927\U5e08\Uff0c\U4e94\U5341\U5e74\U6ce2\U8be1\U4e91\U8c32\U4e4b\U519b\U653f\U4e71\U6597\Uff0c\U4f1f\U5927\U4e0e\U5351\U9119\Uff0c\U6210\U5c31\U4e0e\U8bcb\U6bc1 \Uff0c\U54ea\U4e2a\U624d\U662f\U771f\U6b63\U7684\U9b4f\U6b66\Uff1f\U4e14\U770b\U9b4f\U6b66\U626c\U97ad...";
+dimensionid = 937;
+dimensionname = "\U5386\U53f2\U00b7\U519b\U4e8b";
+id = "radio_virtual_channel_61119";
+keywords = "\U66f9\U64cd\U5927\U4f20";
+name = "\U66f9\U64cd\U5927\U4f20\Uff08hot\Uff09";
+parentid = 937;
+parenttype = Category;
+rank = 1;
+score = "0.39040545";
+subtype = Novel;
+totalscore = "0.76208204";
+type = VirtualChannel;
+typekey = VirtualChannel;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 90778;
+cover = "http://pic.qingting.fm/2014/1231/20141231111107674.jpg";
+description = "\U7ca4\U8bed\U5c0f\U8bf4\U4ecb\U7ecd\U5eb7\U7199\U5e1d\U7684\U4e00\U751f";
+dimensionid = 1703;
+dimensionname = "\U7ca4\U8bed\U5c0f\U8bf4";
+id = "radio_virtual_channel_2634970";
+keywords = "\U5eb7\U7199\U5927\U5e1d";
+name = "\U3010\U7ca4\U8bed\U3011\U5eb7\U7199\U5927\U5e1d";
+parentid = 1703;
+parenttype = Category;
+rank = 1;
+score = "0.39040545";
+subtype = Novel;
+totalscore = "0.76208204";
+type = VirtualChannel;
+typekey = VirtualChannel;
+},
+{
+broadcaster = "\U4f5a\U540d";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 58014;
+cover = "http://qingting-pic.b0.upaiyun.com/2014/0905/20140905020355130.jpg";
+description = "\U6211\U66fe\U4ef0\U671b\U7740\U84dd\U5929\Uff0c\U82e6\U82e6\U5730\U8ffd\U95ee\Uff0c\U52c7\U6562\U662f\U4ec0\U4e48\Uff1f\U84dd\U5929\U5377\U8d77\U4e4c\U4e91\Uff0c\U594f\U54cd\U96f7\U9706\Uff0c\U5212\U8fc7\U95ea\U7535\U2026\U2026\U6211\U66fe\U9762\U5bf9\U7740\U5927\U6d77\Uff0c\U82e6\U82e6\U5730\U5bfb\U6c42\Uff0c\U52c7\U6562\U662f\U4ec0\U4e48\Uff1f\U5927\U6d77\U6d8c\U8d77\U6ce2\U6d9b\Uff0c\U6380\U7ffb\U5de8\U6d6a\Uff0c\U6251\U5411\U5929\U8fb9\U2026\U2026\U84dd\U5929\U3001\U5927\U6d77\U544a\U8bc9\U6211\Uff0c\U52c7\U6562\Uff0c\U5c31\U662f\U4e00\U79cd\U5c0a\U4e25\Uff01
+\n
+\n
+\n";
+dimensionid = 927;
+dimensionname = "\U6587\U5b66\U00b7\U4eba\U7269";
+id = "radio_virtual_channel_47879";
+keywords = "\U51ef\U6492 \U5927\U5e1d \U8bd7\U96c6";
+name = "\U51ef\U6492\U5927\U5e1d\U8bd7\U96c6";
+parentid = 927;
+parenttype = Category;
+rank = 1;
+score = "0.39040545";
+subtype = Novel;
+totalscore = "0.76208204";
+type = VirtualChannel;
+typekey = VirtualChannel;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 65170;
+cover = "http://pic.qingting.fm/2014/1010/20141010095223472.jpg";
+description = " \U8fd9\U662f\U4e00\U4e2a\U5173\U4e8e\U201c\U771f\U5b9e\U201d\U7684\U6545\U4e8b\Uff0c\U8fd9\U91cc\U6709\U9762\U5bf9\U5371\U6025\U65f6\U523b\U4eba\U6027\U7684\U771f\U5b9e\Uff0c\U6709\U9762\U5bf9\U5229\U76ca\U65f6\U73b0\U5b9e\U7684\U771f\U5b9e\Uff0c\U6709\U9762\U5bf9\U5de8\U5927\U8bf1\U60d1\U65f6\U611f\U60c5\U7684\U771f\U5b9e\U2026\U2026\U8eab\U5904\U6d6e\U534e\U90fd\U5e02\Uff0c\U771f\U5b9e\U662f\U4e00\U79cd\U653e\U5f03\U8fd8\U662f\U5f97\U5230\Uff1f\U771f\U5b9e\U80fd\U5426\U6218\U80dc\U865a\U4f2a\Uff1f\U771f\U5b9e\U7684\U7231\U60c5\Uff0c\U4f1a\U5b9e\U73b0\U5417\Uff1f
+\n";
+dimensionid = 939;
+dimensionname = "\U90fd\U5e02\U00b7\U6821\U56ed";
+id = "radio_virtual_channel_60721";
+keywords = "\U996d\U5e97";
+name = "\U4e94\U661f\U5927\U996d\U5e97\Uff08hot\Uff09";
+parentid = 939;
+parenttype = Category;
+rank = 1;
+score = "0.37503296";
+subtype = Novel;
+totalscore = "0.7032486";
+type = VirtualChannel;
+typekey = VirtualChannel;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 76484;
+cover = "http://qingting-pic.b0.upaiyun.com/2014/0916/20140916050556491.jpg";
+description = "\U3000\U660e\U671d\U5f00\U56fd\U5927\U5e1d\U6731\U5143\U748b\U672c\U662f\U4e00\U4ecb\U8349\U6c11\Uff0c\U751a\U81f3\U6ca1\U6709\U4efb\U4f55\U6587\U5316\Uff0c\U7adf\U7136\U5f53\U4e0a\U4e00\U4ee3\U541b\U4e3b\Uff0c\U6539\U53d8\U4e86\U4e2d\U56fd\U5168\U56fd\U4eba\U6c11\U7684\U547d\U8fd0\Uff0c\U91cc\U9762\U5230\U5e95\U5b58\U5728\U7740\U600e\U6837\U7684\U539f\U56e0\Uff1b\U5efa\U6587\U5e1d\U3001\U6c38\U4e50\U5e1d\U4e89\U671d\U4f4d\U7684\U80cc\U540e\U5230\U5e95\U53c8\U6709\U7740\U600e\U6837\U7684\U9634\U8c0b\Uff0c\U7530\U4e2d\U4fe1\U90fd\U5c06\U4e3a\U60a8\U7ec6\U7ec6\U8bb2\U8ff0\U3002";
+dimensionid = 927;
+dimensionname = "\U6587\U5b66\U00b7\U4eba\U7269";
+id = "radio_virtual_channel_1152247";
+keywords = "\U5929\U5b50";
+name = "\U5927\U660e\U5929\U5b50\Uff08hot\Uff09";
+parentid = 927;
+parenttype = Category;
+rank = 1;
+score = "0.37503296";
+subtype = Novel;
+totalscore = "0.7032486";
+type = VirtualChannel;
+typekey = VirtualChannel;
+},
+{
+broadcaster = "\U4efb\U666f\U884c";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 45424;
+cover = "http://qingting-pic.b0.upaiyun.com/2014/0521/20140521055136391.jpg";
+description = "\U8bb2\U8ff0\U5eb7\U7199\U7687\U5e1d\U4e00\U751f\U79bb\U5947\U7684\U6545\U4e8b\U3002\U516b\U5c81\U7684\U592a\U5b50\U7384\U70e8\U5949\U987a\U6cbb\U7687\U5e1d\U7684\U9057\U53ec\U767b\U57fa\U505a\U4e86\U201c\U5eb7\U7199\U7237\U201d\Uff0c\U4ece\U6b64\U4fbf\U5f00\U59cb\U4e86\U4ed6\U7684\U7687\U5e1d\U751f\U6daf\U3002\U5eb7\U7199\U662f\U4e2d\U56fd\U5c01\U5efa\U5386\U53f2\U4e0a\U5728\U4f4d\U6700\U957f\U7684\U7687\U5e1d\Uff0c\U4e5f\U662f\U4e00\U4f4d\U513f\U5973\U6700\U591a\U7684\U7687\U5e1d\U3002\U4ed6\U4e00\U751f\U8f9b\U52b3\Uff0c\U6709\U529f\U4e8e\U5927\U6e05\Uff0c\U4e3a\U5eb7\U4e7e\U76db\U4e16\U5960\U5b9a\U4e86\U57fa\U7840\Uff0c\U4e5f\U4e3a\U4ed6\U7684\U513f\U5b50\U4eec\U7559\U4e0b\U4e86\U4e00\U4e2a\U82b1\U56e2\U9526\U7c07\U7684\U6c5f\U5c71\U3002";
+dimensionid = 937;
+dimensionname = "\U5386\U53f2\U00b7\U519b\U4e8b";
+id = "radio_virtual_channel_28877";
+keywords = "\U5eb7\U7199 \U5927\U5e1d \U58f9\U00b7";
+name = "\U5eb7\U7199\U5927\U5e1d\U5168\U96c6";
+parentid = 937;
+parenttype = Category;
+rank = 1;
+score = "0.37010795";
+subtype = Novel;
+totalscore = "0.68489945";
+type = VirtualChannel;
+typekey = VirtualChannel;
+},
+{
+broadcaster = "\U5218\U5170\U82b3";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 45184;
+cover = "http://qingting-pic.b0.upaiyun.com/2014/0903/20140903052823905.jpg";
+description = "\U3010\U672c\U8282\U76ee\U6765\U81ea\U592e\U5e7f\U4e13\U533a\U3011\U5927\U821c\U662f\U4e00\U4f4d\U653f\U7ee9\U5353\U8457\U7684\U8fdc\U53e4\U5927\U5e1d\Uff0c\U662f\U4e2d\U534e\U6c11\U65cf\U539f\U59cb\U6587\U660e\U7684\U96c6\U5927\U6210\U8005\Uff0c\U4e5f\U662f\U4e2d\U56fd\U53e4\U4ee3\U660e\U541b\U3001\U8d24\U81e3\U3001\U5b5d\U5b50\U7684\U5178\U578b\U3002\U5728\U6211\U7701\U53f2\U5b66\U754c\Uff0c\U201c\U5927\U821c\U786e\U6709\U5176\U4eba\Uff0c\U5927\U821c\U662f\U5c71\U4e1c\U4eba\Uff0c\U5927\U821c\U6587\U5316\U662f\U9f50\U9c81\U6587\U5316\U7684\U91cd\U8981\U6e90\U5934\U201d\U5df2\U9010\U6e10\U5f62\U6210\U5171\U8bc6\U3002\U738b\U91d1\U94c3\U521b\U4f5c\U7684\U5c0f\U8bf4\U300a\U865e\U821c\U5927\U4f20\U300b\Uff0c\U8bb2\U8ff0\U4e86\U5927\U821c\U4e00\U751f\U7684\U58ee\U4e3e\U548c\U4f1f\U4e1a\Uff0c\U5c06\U56db\U5343\U591a\U5e74\U524d\U4e2d\U56fd\U539f\U59cb\U793e\U4f1a\U540e\U671f\U7684\U751f\U6d3b\U573a\U9762\U62c9\U8fd1\U5230\U8bfb\U8005\U9762\U524d\U3002";
+dimensionid = 937;
+dimensionname = "\U5386\U53f2\U00b7\U519b\U4e8b";
+id = "radio_virtual_channel_28625";
+keywords = "\U865e\U821c\U5927\U4f20";
+name = "\U865e\U821c\U5927\U4f20";
+parentid = 937;
+parenttype = Category;
+rank = 1;
+score = "0.37010795";
+subtype = Novel;
+totalscore = "0.68489945";
+type = VirtualChannel;
+typekey = VirtualChannel;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 81490;
+cover = "http://pic.qingting.fm/2014/1114/20141114030123324.jpg";
+description = "1950\U5e74\Uff0c\U4e00\U4e2a\U88ab\U4e0a\U7ea7\U6279\U793a\U201c\U6c38\U4e0d\U91ca\U653e\U201d\U7684\U72af\U4eba\U5192\U9669\U8d8a\U72f1\U4e86\Uff0c\U4ed6\U4e0d\U987e\U4e00\U5207\U5730\U6252\U4e0a\U4e86\U53bb\U5f80\U5927\U6208\U58c1\U7684\U5217\U8f66\Uff0c\U8981\U627e\U5bfb\U90a3\U8ff7\U5931\U5728\U9ec4\U6c99\U4e2d\U7684\U771f\U76f8\U3002\U5341\U5e74\U540e\Uff0c\U4e00\U652f\U80cc\U8d1f\U4e0a\U7ea7\U4efb\U52a1\U8fdb\U5165\U5185\U8499\U53e4\U5883\U5185\U627e\U77ff\U7684\U79d1\U8003\U961f\Uff0c\U65e0\U610f\U4e2d\U53d1\U73b0\U4e86\U4e00\U4e2a\U60ca\U5929\U79d8\U5bc6\Uff0c\U8fd9\U4e2a\U79d8\U5bc6\U6b63\U597d\U53d1\U751f\U4e8e\U5341\U5e74\U524d\U76841950\U5e74\Uff1a\U795e\U79d8\U5931\U8e2a\U7684\U79d1\U8003\U961f\U3001\U751f\U6b7b\U672a\U660e\U7684\U79d1\U5b66\U5bb6\U3001\U5927\U6f20\U4e2d\U90a3\U5ea7\U9b54\U9b3c\U4e00\U6837\U7684\U53e4\U57ce\U3001\U65e0\U6cd5\U89e3\U91ca\U7684\U975e\U6b63\U5e38\U6b7b\U4ea1\Uff0c\U4e3a\U4e86\U63ed\U5f00\U8fd9\U4e00\U5207\U8c1c\U5e95\Uff0c\U5e74\U8f7b\U7684\U79d1\U8003\U961f\U5458\U4e01\U53f2\U548c\U4e00\U76f4\U72b9\U8c6b\U5728\U201c\U53db\U53d8\U201d\U4e0e\U201c\U5fe0\U8bda\U201d\U4e4b\U95f4\U7684\U53e4\U6559\U6388\Uff0c\U5c55\U5f00\U4e86\U4e00\U6bb5\U60ca\U5fc3\U52a8\U9b44\U7684\U5927\U6f20\U63a2\U9669\Uff0c\U5176\U95f4\U4ed6\U4eec\U6240\U7ecf\U5386\U4e4b\U4e8b\U7686\U532a\U5937\U6240\U601d\Uff0c\U4ed6\U4eec\U6240\U89c1\U4e4b\U4eba\U7686\U4e0d\U662f\U4e00\U822c\U4eba\U7b49,\U800c\U4ed6\U4eec\U66f4\U6ca1\U6709\U60f3\U5230\Uff0c\U5de6\U53f3\U4ed6\U4eec\U547d\U8fd0\U7684\Uff0c\U7adf\U7136\U4e0e\U8499\U53e4\U5386\U53f2\U4e0a\U7684\U6700\U5927\U60ac\U6848\U6709\U5173\U3002";
+dimensionid = 933;
+dimensionname = "\U60ac\U7591\U00b7\U63a8\U7406";
+id = "radio_virtual_channel_1990842";
+keywords = "\U7981\U5730 \U9ad8\U8d28\U91cf";
+name = "\U5927\U7981\U5730\Uff08\U9ad8\U8d28\U91cf\Uff09";
+parentid = 933;
+parenttype = Category;
+rank = 1;
+score = "0.36068046";
+subtype = Novel;
+totalscore = "0.6504519600000001";
+type = VirtualChannel;
+typekey = VirtualChannel;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 81586;
+cover = "http://pic.qingting.fm/2014/1120/20141120042935332.jpg";
+description = "\U6ca7\U6851\U5c81\U6708\U63a9\U9970\U4e86\U65e0\U6570\U540d\U4eba\U8f76\U4e8b\Uff0c\U65e0\U9650\U98ce\U5149\U7684\U80cc\U540e\U4e5f\U8bb8\U662f\U80cc\U53db\Uff0c\U6b7b\U4ea1\U662f\U4ed6\U4eec\U5171\U540c\U7684\U5f52\U5bbf\Uff0c\U5386\U53f2\U957f\U6cb3\U6c89\U6dc0\U4e86\U65e0\U6570\U672a\U77e5\U7684\U4eba\U7c7b\U6587\U660e\Uff0c\U65f6\U5149\U834f\U82d2\Uff0c\U5f53\U4e00\U5207\U5c18\U57c3\U843d\U5b9a\Uff0c\U8c1c\U5e95\U6084\U7136\U63ed\U5f00\Uff0c\U865a\U5e7b\U7684\U9ad8\U5854\U77ac\U95f4\U5d29\U584c\U3002\U7eb5\U53e4\U4eca\Uff0c\U6a2a\U4e07\U91cc\Uff0c\U77f3\U7834\U5929\U60ca\Uff0c\U60ca\U5929\U5927\U5e55\Uff01";
+dimensionid = 937;
+dimensionname = "\U5386\U53f2\U00b7\U519b\U4e8b";
+id = "radio_virtual_channel_1992971";
+keywords = "\U5927\U5e55 \U9ad8\U8d28\U91cf";
+name = "\U60ca\U5929\U5927\U5e55\Uff08\U9ad8\U8d28\U91cf\Uff09";
+parentid = 937;
+parenttype = Category;
+rank = 1;
+score = "0.31817594";
+subtype = Novel;
+totalscore = "0.50617963";
+type = VirtualChannel;
+typekey = VirtualChannel;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 93792;
+cover = "http://pic.qingting.fm/2015/0113/20150113060531805.jpg";
+description = "\U662f\U6b66\U4fa0\U5c0f\U8bf4\U5bb6\U53e4\U9f99-\U9646\U5c0f\U51e4\U7cfb\U5217\U7684\U7b2c\U4e8c\U4e2a\U7684\U6545\U4e8b\U3002\U300c\U7ee3\U82b1\U5927\U76d7\U300d\U662f\U4e00\U4ef6\U79bb\U5947\U7684\U6848\U4ef6\U3002\U6848\U4ef6\U7684\U79bb\U5947\Uff0c\U53ef\U5206\U4e3a\U300c\U4eba\U5947\U300d\U4e0e\U300c\U4e8b\U5947\U300d\U4e24\U79cd\Uff1a\U300c\U4eba\U5947\U300d\U6307\U72af\U6848\U7684\U4eba\U8be1\U5947\Uff0c\U4e00\U4e2a\U5927\U70ed\U5929\U7a7f\U68c9\U8884\U3001\U6ee1\U8138\U80e1\U5b50\Uff0c\U300c\U4e13\U5fc3\U7ee3\U82b1\Uff0c\U5c31\U597d\U50cf\U662f\U4e2a\U6625\U5fc3\U5df2\U52a8\U7684\U5927\U59d1\U5a18\Uff0c\U5750\U5728\U95fa\U623f\U91cc\U8d76\U7740\U7ee3\U5979\U7684\U5ac1\U8863\U4e00\U6837\U300d\Uff0c\U7a76\U7adf\U6b64\U4eba\U662f\U7537\U662f\U5973\Uff1f\U7b80\U76f4\U6beb\U65e0\U7ebf\U7d22\Uff0c\U5176\U4eba\U663e\U7136\U300c\U8be1\U5947\U300d\Uff1b\U300c\U4e8b\U5947\U300d\U6307\U4e8b\U4ef6\U79bb\U5947\Uff0c\U5728\U4e0d\U53ef\U80fd\U7684\U5730\U65b9\Uff0c\U53d1\U751f\U4e0d\U53ef\U80fd\U7684\U4e8b\Uff0c\U5e73\U5357\U738b\U5e9c\U7981\U536b\U68ee\U4e25\U3001\U4e09\U9053\U4e00\U5c3a\U4e03\U5bf8\U94c1\U95e8\U6243\U9501\U3001\U8fde\U4e00\U53ea\U8682\U8681\U4e5f\U8fdb\U4e0d\U53bb\U7684\U5b9d\U5e93\Uff0c\U5c45\U7136\U6709\U4eba\U6f5c\U5165\Uff0c\U800c\U4e14\U76d7\U8d70\U4e86\U65e0\U6570\U73cd\U5b9d\Uff0c\U7b80\U76f4\U4ee4\U4eba\U532a\U5937\U6240\U601d\Uff0c\U5176\U4e8b\U679c\U7136\U4e5f\U300c\U79bb\U5947\U300d\U3002";
+dimensionid = 921;
+dimensionname = "\U6b66\U4fa0\U00b7\U4ed9\U4fa0";
+id = "radio_virtual_channel_2889121";
+keywords = "\U5927\U76d7 \U9ad8\U54c1\U8d28";
+name = "\U7ee3\U82b1\U5927\U76d7\Uff08\U9ad8\U54c1\U8d28\Uff09";
+parentid = 921;
+parenttype = Category;
+rank = 1;
+score = "0.31817594";
+subtype = Novel;
+totalscore = "0.50617963";
+type = VirtualChannel;
+typekey = VirtualChannel;
+},
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 76498;
+cover = "http://qingting-pic.b0.upaiyun.com/2014/0902/20140902031441847.jpg";
+description = "\U6c38\U4e50\U5927\U5e1d\U5c31\U662f\U660e\U6210\U7956\U6731\U68e3\Uff0c\U660e\U671d\U7684\U7b2c\U4e09\U4e2a\U7687\U5e1d\U3002\U6731\U68e3\U662f\U6731\U5143\U748b\U7684\U7b2c\U56db\U5b50\Uff0c\U5c0f\U540d\U4fdd\U513f\Uff0c11\U5c81\U88ab\U5c01\U4e3a\U71d5\U738b\Uff0c44\U5c81\U4ece\U4ed6\U7684\U4f84\U513f\U5efa\U6587\U5e1d\U624b\U4e2d\U593a\U5f97\U4e86\U5927\U660e\U6c5f\U5c71\Uff0c\U5728\U4f4d22\U5e74\Uff0c\U6539\U5e74\U53f7\U4e3a\U201c\U6c38\U4e50\U201d\Uff0c\U8c25\U53f7\U201c\U6587\U7687\U5e1d\U201d\Uff0c\U6545\U53c8\U79f0\U201c\U6587\U7687\U201d\Uff0c\U5e99\U53f7\U201c\U592a\U5b97\U201d\Uff0c\U4e16\U5b97\U6539\U201c\U592a\U5b97\U201d\U4e3a\U201c\U6210\U7956\U201d\Uff0c\U6b7b\U540e\U846c\U4e8e\U957f\U9675\U3002\U6731\U68e3\U662f\U4f4d\U9a6c\U4e0a\U5929\U5b50\U3002\U6731\U68e3\U7684\U6027\U683c\U9887\U50cf\U5176\U7236\U6731\U5143\U748b\Uff0c\U540c\U65f6\U4e5f\U662f\U7ee7\U6731\U5143\U748b\U4e4b\U540e\U53c8\U4e00\U4f4d\U96c4\U624d\U4f1f\U7565\U7684\U7687\U5e1d\U3002\U4ed6\U7684\U4e00\U751f\U8dcc\U5b95\U8d77\U4f0f\Uff0c\U542c\U5546\U4f20\U7ed9\U60a8\U7ec6\U7ec6\U8bb2\U8ff0\U3002";
+dimensionid = 927;
+dimensionname = "\U6587\U5b66\U00b7\U4eba\U7269";
+id = "radio_virtual_channel_1153212";
+keywords = "\U5927\U5e1d";
+name = "\U6c38\U4e50\U5927\U5e1d\Uff08hot\Uff09";
+parentid = 927;
+parenttype = Category;
+rank = 1;
+score = "0.31817594";
+subtype = Novel;
+totalscore = "0.50617963";
+type = VirtualChannel;
+typekey = VirtualChannel;
+}
+);
+maxScore = "11023.178";
+numFound = 78;
+start = 0;
+};
+groupValue = virtualchannel;
+}
+);
+title = "\U641c\U7d22\U7ed3\U679c";
+}

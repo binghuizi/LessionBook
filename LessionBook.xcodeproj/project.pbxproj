@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A47640C1C9835BA0057A7D9 /* 搜索大主宰.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A47640B1C9835BA0057A7D9 /* 搜索大主宰.plist */; };
+		7A47640E1C9835C20057A7D9 /* 坏蛋.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A47640D1C9835C20057A7D9 /* 坏蛋.plist */; };
+		7A4764101C9835C90057A7D9 /* 精选.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A47640F1C9835C90057A7D9 /* 精选.plist */; };
+		7A4764121C98400C0057A7D9 /* 轮番图.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A4764111C98400C0057A7D9 /* 轮番图.plist */; };
+		7A4764141C98408C0057A7D9 /* 分类.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A4764131C98408C0057A7D9 /* 分类.plist */; };
+		7A4764161C9847750057A7D9 /* 分类--热门.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A4764151C9847750057A7D9 /* 分类--热门.plist */; };
+		7A4764201C984D900057A7D9 /* VOContentLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4764191C984D900057A7D9 /* VOContentLayer.m */; };
+		7A4764211C984D900057A7D9 /* VOIndicatorAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A47641B1C984D900057A7D9 /* VOIndicatorAnimation.m */; };
+		7A4764221C984D900057A7D9 /* VOSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A47641D1C984D900057A7D9 /* VOSegment.m */; };
+		7A4764231C984D900057A7D9 /* VOSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A47641F1C984D900057A7D9 /* VOSegmentedControl.m */; };
 		7A99D44D1C97EE31001DD9B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A99D44C1C97EE31001DD9B9 /* main.m */; };
 		7A99D4501C97EE31001DD9B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A99D44F1C97EE31001DD9B9 /* AppDelegate.m */; };
 		7A99D4521C97EE31001DD9B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A99D4511C97EE31001DD9B9 /* Assets.xcassets */; };
@@ -18,6 +28,20 @@
 /* Begin PBXFileReference section */
 		67981FB38F5840FA5D07AC7F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		706A4DEFC7FBB216AD8C4E61 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7A47640B1C9835BA0057A7D9 /* 搜索大主宰.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "搜索大主宰.plist"; sourceTree = "<group>"; };
+		7A47640D1C9835C20057A7D9 /* 坏蛋.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "坏蛋.plist"; sourceTree = "<group>"; };
+		7A47640F1C9835C90057A7D9 /* 精选.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "精选.plist"; sourceTree = "<group>"; };
+		7A4764111C98400C0057A7D9 /* 轮番图.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "轮番图.plist"; sourceTree = "<group>"; };
+		7A4764131C98408C0057A7D9 /* 分类.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "分类.plist"; sourceTree = "<group>"; };
+		7A4764151C9847750057A7D9 /* 分类--热门.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "分类--热门.plist"; sourceTree = "<group>"; };
+		7A4764181C984D900057A7D9 /* VOContentLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOContentLayer.h; sourceTree = "<group>"; };
+		7A4764191C984D900057A7D9 /* VOContentLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOContentLayer.m; sourceTree = "<group>"; };
+		7A47641A1C984D900057A7D9 /* VOIndicatorAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOIndicatorAnimation.h; sourceTree = "<group>"; };
+		7A47641B1C984D900057A7D9 /* VOIndicatorAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOIndicatorAnimation.m; sourceTree = "<group>"; };
+		7A47641C1C984D900057A7D9 /* VOSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSegment.h; sourceTree = "<group>"; };
+		7A47641D1C984D900057A7D9 /* VOSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSegment.m; sourceTree = "<group>"; };
+		7A47641E1C984D900057A7D9 /* VOSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSegmentedControl.h; sourceTree = "<group>"; };
+		7A47641F1C984D900057A7D9 /* VOSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSegmentedControl.m; sourceTree = "<group>"; };
 		7A99D4481C97EE31001DD9B9 /* LessionBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LessionBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A99D44C1C97EE31001DD9B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A99D44E1C97EE31001DD9B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,6 +82,21 @@
 				67981FB38F5840FA5D07AC7F /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		7A4764171C984D900057A7D9 /* VOSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				7A4764181C984D900057A7D9 /* VOContentLayer.h */,
+				7A4764191C984D900057A7D9 /* VOContentLayer.m */,
+				7A47641A1C984D900057A7D9 /* VOIndicatorAnimation.h */,
+				7A47641B1C984D900057A7D9 /* VOIndicatorAnimation.m */,
+				7A47641C1C984D900057A7D9 /* VOSegment.h */,
+				7A47641D1C984D900057A7D9 /* VOSegment.m */,
+				7A47641E1C984D900057A7D9 /* VOSegmentedControl.h */,
+				7A47641F1C984D900057A7D9 /* VOSegmentedControl.m */,
+			);
+			path = VOSegmentedControl;
 			sourceTree = "<group>";
 		};
 		7A99D43F1C97EE31001DD9B9 = {
@@ -134,6 +173,12 @@
 		7AA0C53E1C980BEA001275A0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7A4764131C98408C0057A7D9 /* 分类.plist */,
+				7A4764111C98400C0057A7D9 /* 轮番图.plist */,
+				7A47640F1C9835C90057A7D9 /* 精选.plist */,
+				7A4764151C9847750057A7D9 /* 分类--热门.plist */,
+				7A47640B1C9835BA0057A7D9 /* 搜索大主宰.plist */,
+				7A47640D1C9835C20057A7D9 /* 坏蛋.plist */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -250,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				7AE2889C1C980FB800596833 /* HWDefine.pch */,
+				7A4764171C984D900057A7D9 /* VOSegmentedControl */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -314,8 +360,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A47640E1C9835C20057A7D9 /* 坏蛋.plist in Resources */,
+				7A4764101C9835C90057A7D9 /* 精选.plist in Resources */,
 				7A99D4521C97EE31001DD9B9 /* Assets.xcassets in Resources */,
 				7A99D4551C97EE31001DD9B9 /* LaunchScreen.storyboard in Resources */,
+				7A4764161C9847750057A7D9 /* 分类--热门.plist in Resources */,
+				7A4764121C98400C0057A7D9 /* 轮番图.plist in Resources */,
+				7A4764141C98408C0057A7D9 /* 分类.plist in Resources */,
+				7A47640C1C9835BA0057A7D9 /* 搜索大主宰.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,9 +426,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A4764201C984D900057A7D9 /* VOContentLayer.m in Sources */,
 				7A99D4501C97EE31001DD9B9 /* AppDelegate.m in Sources */,
+				7A4764221C984D900057A7D9 /* VOSegment.m in Sources */,
+				7A4764211C984D900057A7D9 /* VOIndicatorAnimation.m in Sources */,
 				7AE2889F1C98118000596833 /* DiscoverViewController.m in Sources */,
 				7A99D44D1C97EE31001DD9B9 /* main.m in Sources */,
+				7A4764231C984D900057A7D9 /* VOSegmentedControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,403 @@
+data =     (
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 0;
+cid = 8509;
+cname = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U7684\U7b2c\U4e00\U90e8\U7b2c\U4e00\U8f91\Uff081...";
+desc = "";
+dimensionid = 939;
+duration = "1260.611338";
+id = 782219;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000002725452_24.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000002725452_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 435023;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000002725452_24.m4a";
+http = "/vod/00/00/0000000000000000000002725452_24.m4a";
+};
+};
+name = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U7684\U7b2c\U4e00\U90e8 \U7b2c1\U96c6";
+parentbackgroundpic = "http://pic.qingting.fm/2014/0624/20140624052113314.jpg";
+parentcover = "http://qingting-pic.b0.upaiyun.com/2014/0624/20140624052113314.jpg";
+parentdisplayname = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U7684";
+parentid = 33028;
+parentname = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U76841\Uff08hot\Uff09";
+parentoutline = "";
+parenttype = VirtualChannel;
+pic = "http://qingting-pic.b0.upaiyun.com/net/other/09d8a6343bcdb68aa9d05ad97c196689.jpg";
+programid = 425191;
+publishtime = 1394331589;
+script =             (
+);
+sequence = 1;
+"share_link" = "";
+source = "\U7528\U6237\U4e0a\U4f20";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1394331589;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 0;
+cid = 8509;
+cname = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U7684\U7b2c\U4e00\U90e8\U7b2c\U4e00\U8f91\Uff081...";
+desc = "";
+dimensionid = 939;
+duration = "1295.905669";
+id = 782221;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000002725453_24.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000002725453_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 435025;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000002725453_24.m4a";
+http = "/vod/00/00/0000000000000000000002725453_24.m4a";
+};
+};
+name = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U7684\U7b2c2\U96c6";
+parentbackgroundpic = "http://pic.qingting.fm/2014/0624/20140624052113314.jpg";
+parentcover = "http://qingting-pic.b0.upaiyun.com/2014/0624/20140624052113314.jpg";
+parentdisplayname = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U7684";
+parentid = 33028;
+parentname = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U76841\Uff08hot\Uff09";
+parentoutline = "";
+parenttype = VirtualChannel;
+pic = "http://qingting-pic.b0.upaiyun.com/net/other/09d8a6343bcdb68aa9d05ad97c196689.jpg";
+programid = 425193;
+publishtime = 1384243912;
+script =             (
+);
+sequence = 2;
+"share_link" = "";
+source = "\U7528\U6237\U4e0a\U4f20";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1384243912;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 0;
+cid = 8509;
+cname = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U7684\U7b2c\U4e00\U90e8\U7b2c\U4e00\U8f91\Uff081...";
+desc = "";
+dimensionid = 939;
+duration = "1205.487166";
+id = 782223;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000002725454_24.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000002725454_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 435027;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000002725454_24.m4a";
+http = "/vod/00/00/0000000000000000000002725454_24.m4a";
+};
+};
+name = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U7684\U7b2c3\U96c6";
+parentbackgroundpic = "http://pic.qingting.fm/2014/0624/20140624052113314.jpg";
+parentcover = "http://qingting-pic.b0.upaiyun.com/2014/0624/20140624052113314.jpg";
+parentdisplayname = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U7684";
+parentid = 33028;
+parentname = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U76841\Uff08hot\Uff09";
+parentoutline = "";
+parenttype = VirtualChannel;
+pic = "http://qingting-pic.b0.upaiyun.com/net/other/09d8a6343bcdb68aa9d05ad97c196689.jpg";
+programid = 425195;
+publishtime = 1384243912;
+script =             (
+);
+sequence = 3;
+"share_link" = "";
+source = "\U7528\U6237\U4e0a\U4f20";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1384243912;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 0;
+cid = 8509;
+cname = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U7684\U7b2c\U4e00\U90e8\U7b2c\U4e00\U8f91\Uff081...";
+desc = "";
+dimensionid = 939;
+duration = "1310.116281";
+id = 782225;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000002725455_24.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000002725455_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 435029;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000002725455_24.m4a";
+http = "/vod/00/00/0000000000000000000002725455_24.m4a";
+};
+};
+name = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U7684\U7b2c4\U96c6";
+parentbackgroundpic = "http://pic.qingting.fm/2014/0624/20140624052113314.jpg";
+parentcover = "http://qingting-pic.b0.upaiyun.com/2014/0624/20140624052113314.jpg";
+parentdisplayname = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U7684";
+parentid = 33028;
+parentname = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U76841\Uff08hot\Uff09";
+parentoutline = "";
+parenttype = VirtualChannel;
+pic = "http://qingting-pic.b0.upaiyun.com/net/other/09d8a6343bcdb68aa9d05ad97c196689.jpg";
+programid = 425197;
+publishtime = 1384243913;
+script =             (
+);
+sequence = 4;
+"share_link" = "";
+source = "\U7528\U6237\U4e0a\U4f20";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1384243913;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 0;
+cid = 8509;
+cname = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U7684\U7b2c\U4e00\U90e8\U7b2c\U4e00\U8f91\Uff081...";
+desc = "";
+dimensionid = 939;
+duration = "1231.447075";
+id = 782227;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000002725456_24.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000002725456_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 435031;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000002725456_24.m4a";
+http = "/vod/00/00/0000000000000000000002725456_24.m4a";
+};
+};
+name = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U7684\U7b2c5\U96c6";
+parentbackgroundpic = "http://pic.qingting.fm/2014/0624/20140624052113314.jpg";
+parentcover = "http://qingting-pic.b0.upaiyun.com/2014/0624/20140624052113314.jpg";
+parentdisplayname = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U7684";
+parentid = 33028;
+parentname = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U76841\Uff08hot\Uff09";
+parentoutline = "";
+parenttype = VirtualChannel;
+pic = "http://qingting-pic.b0.upaiyun.com/net/other/09d8a6343bcdb68aa9d05ad97c196689.jpg";
+programid = 425199;
+publishtime = 1384243913;
+script =             (
+);
+sequence = 5;
+"share_link" = "";
+source = "\U7528\U6237\U4e0a\U4f20";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1384243913;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 0;
+cid = 8509;
+cname = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U7684\U7b2c\U4e00\U90e8\U7b2c\U4e00\U8f91\Uff081...";
+desc = "";
+dimensionid = 939;
+duration = "1244.543129";
+id = 782231;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000002725457_24.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000002725457_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 435033;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000002725457_24.m4a";
+http = "/vod/00/00/0000000000000000000002725457_24.m4a";
+};
+};
+name = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U7684\U7b2c6\U96c6";
+parentbackgroundpic = "http://pic.qingting.fm/2014/0624/20140624052113314.jpg";
+parentcover = "http://qingting-pic.b0.upaiyun.com/2014/0624/20140624052113314.jpg";
+parentdisplayname = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U7684";
+parentid = 33028;
+parentname = "\U574f\U86cb\U662f\U600e\U6837\U70bc\U6210\U76841\Uff08hot\Uff09";
+parentoutline = "";
+parenttype = VirtualChannel;
+pic = "http://qingting-pic.b0.upaiyun.com/net/other/09d8a6343bcdb68aa9d05ad97c196689.jpg";
+programid = 425201;
+publishtime = 1384243913;
+script =             (
+);
+sequence = 100;
+"share_link" = "";
+source = "\U7528\U6237\U4e0a\U4f20";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1384243948;
+weight = 0;
+}
+);
+errormsg = "";
+errorno = 0;
+expiredtime = 1441315648;
+totalpage = 3;
+}
