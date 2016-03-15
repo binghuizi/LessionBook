@@ -7,9 +7,11 @@
 //
 
 #import "AppDelegate.h"
+
 #import "DownloadViewController.h"
 #import "SearchViewController.h"
 
+#import "DiscoverViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -19,6 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
     // Override point for customization after application launch.
     //下载
     DownloadViewController *downloadVC = [[DownloadViewController alloc] init];
@@ -29,6 +32,27 @@
     SearchViewController *searchVC = [[SearchViewController alloc] init];
     UINavigationController *searchNav = [[UINavigationController alloc] initWithRootViewController:searchVC];
     searchNav.tabBarItem.title = @"搜索";
+
+    
+    /**
+     *  创建UITabBarController
+     */
+    
+    UITabBarController *tabarVc = [UITabBarController new];
+   //发现
+    DiscoverViewController *discoVc = [DiscoverViewController new];
+    UINavigationController *disNav = [[UINavigationController alloc]initWithRootViewController:discoVc];
+    discoVc.tabBarItem.title = @"发现";
+    discoVc.tabBarItem.image = [UIImage imageNamed:@"tab_discovery"];
+    
+    
+    
+    
+    
+    tabarVc.viewControllers = @[disNav];
+    
+    self.window.rootViewController = tabarVc;
+    
     
     
     self.window.backgroundColor = [UIColor whiteColor];
