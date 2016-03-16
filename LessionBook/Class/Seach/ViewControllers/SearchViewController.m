@@ -8,6 +8,8 @@
 
 #import "SearchViewController.h"
 #import <AFNetworking.h>
+#import "VOSegmentedControl.h"
+
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -15,6 +17,8 @@
 @interface SearchViewController ()<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 @property (nonatomic, strong) UISearchBar *searchBar;
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) VOSegmentedControl *segmentControl;
+
 
 @property (nonatomic, strong) NSMutableArray *danjiArray;
 @property (nonatomic, strong) NSMutableArray *xiaoshuoArray;
@@ -27,9 +31,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.barTintColor = [UIColor brownColor];
+    self.navigationController.navigationBar.translucent = NO;
     [self showBackBtn];
     [self showRightBtn];
     self.navigationItem.titleView = self.searchBar;
+    [self.view addSubview:self.segmentControl];
     [self.view addSubview:self.tableView];
     [self requestModel];
 }
@@ -76,6 +82,10 @@
     }];
 }
 
+- (void)segmentCtrlValueChange:(VOSegmentedControl *)segmentCtrl{
+
+}
+
 
 #pragma mark ----------Lazyloading
 
@@ -90,12 +100,27 @@
 
 - (UITableView *)tableView{
     if (_tableView == nil) {
-        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kWideth, kHeight - 64) style:UITableViewStylePlain];
+        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, kWideth, kHeight - 108) style:UITableViewStylePlain];
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
         self.tableView.rowHeight = 90;
     }
     return _tableView;
+}
+
+- (VOSegmentedControl *)segmentControl{
+    if (_segmentControl == nil) {
+        self.segmentControl = [[VOSegmentedControl alloc] initWithSegments:@[@{VOSegmentText:@"全部"}, @{VOSegmentText:@"小说"}, @{VOSegmentText:@"单集"}]];
+        self.segmentControl.frame = CGRectMake(0, 0, kWideth, 44);
+        self.segmentControl.contentStyle = VOContentStyleTextAlone;
+        self.segmentControl.indicatorStyle = VOSegCtrlIndicatorStyleBottomLine;
+        self.segmentControl.backgroundColor = [UIColor whiteColor];
+        self.segmentControl.selectedTextColor = [UIColor orangeColor];
+        self.segmentControl.selectedIndicatorColor = [UIColor orangeColor];
+        self.segmentControl.indicatorThickness = 4;
+        [self.segmentControl addTarget:self action:@selector(segmentCtrlValueChange:) forControlEvents:UIControlEventValueChanged];
+    }
+    return _segmentControl;
 }
 
 #pragma mark ----------UITableViewDataSource
@@ -110,6 +135,8 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
+    cell.textLabel.text = @"大主宰";
+    
     return cell;
 }
 
