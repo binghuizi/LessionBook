@@ -558,7 +558,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT/LessionBook/Library/tools/HWDefine.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LessionBook/Library/tools/HWDefine.pch";
 				INFOPLIST_FILE = LessionBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iOS.huI.LessionBook;
@@ -572,7 +572,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT/LessionBook/Library/tools/HWDefine.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LessionBook/Library/tools/HWDefine.pch";
 				INFOPLIST_FILE = LessionBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iOS.huI.LessionBook;
