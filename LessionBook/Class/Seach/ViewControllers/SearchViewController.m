@@ -67,7 +67,7 @@
 - (void)requestModel{
     AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
     sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"application/json", nil];
-    [sessionManager GET:@"http://search.qingting.fm/api/newsearch/findvt?k=%E5%A4%A7%E4%B8%BB%E5%AE%B0&groups=all&curpage=1&pagesize=10&type=novel&deviceid=00000000-5f67-c5fa-ffff-ffff9ecd38da" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [sessionManager GET:kSearch parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"%@", responseObject);
@@ -90,7 +90,7 @@
 
 - (UITableView *)tableView{
     if (_tableView == nil) {
-        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - 64) style:UITableViewStylePlain];
+        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kWideth, kHeight - 64) style:UITableViewStylePlain];
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
         self.tableView.rowHeight = 90;

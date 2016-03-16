@@ -9,6 +9,10 @@
 #ifndef Header_h
 #define Header_h
 
+#define kSearch @"http://search.qingting.fm/api/newsearch/findvt?k=%E5%A4%A7%E4%B8%BB%E5%AE%B0&groups=all&curpage=1&pagesize=10&type=novel&deviceid=00000000-5f67-c5fa-ffff-ffff9ecd38da"
+
+
+
 
 #endif /* Header_h */
 
