@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DiscoverViewController : UIViewController
-
+//@property(nonatomic,assign)
 @end
