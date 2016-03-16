@@ -8,6 +8,8 @@
 
 #import "MyViewController.h"
 
+#import "FavoriteViewController.h"
+
 @interface MyViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, retain) UITableView *tableView;
 @property (nonatomic, retain) NSArray *myArray;
@@ -25,6 +27,7 @@
     self.detailArray = [NSArray arrayWithObjects:@"暂无收藏", @"暂无收听记录", @"", @"",nil];
     [self confineHeadView];
     [self.view addSubview:self.tableView];
+    
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
    return  self.myArray.count;
@@ -52,7 +55,19 @@
     }
     return cell;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    switch (indexPath.row) {
+        case 0:
+        {
+            FavoriteViewController *favoriteVC = [[FavoriteViewController alloc] init];
+            [self.navigationController pushViewController:favoriteVC animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
 - (void)confineHeadView{
     self.headView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, 200)];
     self.tableView.tableHeaderView = self.headView;
