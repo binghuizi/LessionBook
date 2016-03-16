@@ -103,6 +103,12 @@
         NSDictionary *secondDoc = seconddic[@"doclist"];
         NSArray *firstArray = firstDoc[@"docs"];
         NSArray *secondArray = secondDoc[@"docs"];
+        if (self.xiaoshuoArray.count > 0) {
+            [self.xiaoshuoArray removeAllObjects];
+        }
+        if (self.danjiArray.count > 0) {
+            [self.danjiArray removeAllObjects];
+        }
         for (NSDictionary *dic in firstArray) {
             SearchModel *model = [[SearchModel alloc] initWithDictionary:dic];
             [self.danjiArray addObject:model];
@@ -151,7 +157,7 @@
 
 - (UITableView *)tableView{
     if (_tableView == nil) {
-        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, kWideth, kHeight - 108) style:UITableViewStylePlain];
+        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, kWideth, kHeight - 172) style:UITableViewStylePlain];
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
         self.tableView.rowHeight = 50;
@@ -230,19 +236,25 @@
                 SearchModel *model = self.listArray[indexPath.section][indexPath.row];
                 cell.textLabel.text = model.name;
                 cell.detailTextLabel.text = model.catname;
+            if (cell.imageView.image != nil) {
+                cell.imageView.image = nil;
+            }
         }
             break;
         case 1:{
             SearchModel *model = self.listArray[0][indexPath.row];
             cell.textLabel.text = model.name;
             cell.detailTextLabel.text = model.catname;
-//            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.cover]];
+            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.cover]];
         }
             break;
         case 2:{
             SearchModel *model = self.listArray[1][indexPath.row];
             cell.textLabel.text = model.name;
             cell.detailTextLabel.text = model.cname;
+            if (cell.imageView.image != nil) {
+                cell.imageView.image = nil;
+            }
         }
             break;
 
