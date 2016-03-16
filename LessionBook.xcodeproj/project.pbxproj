@@ -20,6 +20,7 @@
 		7A965F751C99328A00DE2547 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A965F6E1C99328900DE2547 /* DownloadViewController.m */; };
 		7A965F761C99328A00DE2547 /* search.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A965F711C99328A00DE2547 /* search.plist */; };
 		7A965F771C99328A00DE2547 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A965F741C99328A00DE2547 /* SearchViewController.m */; };
+		7A965F7A1C993B2A00DE2547 /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A965F791C993B2A00DE2547 /* SearchModel.m */; };
 		7A99D44D1C97EE31001DD9B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A99D44C1C97EE31001DD9B9 /* main.m */; };
 		7A99D4501C97EE31001DD9B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A99D44F1C97EE31001DD9B9 /* AppDelegate.m */; };
 		7A99D4521C97EE31001DD9B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A99D4511C97EE31001DD9B9 /* Assets.xcassets */; };
@@ -52,6 +53,8 @@
 		7A965F711C99328A00DE2547 /* search.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = search.plist; sourceTree = "<group>"; };
 		7A965F731C99328A00DE2547 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		7A965F741C99328A00DE2547 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		7A965F781C993B2A00DE2547 /* SearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModel.h; sourceTree = "<group>"; };
+		7A965F791C993B2A00DE2547 /* SearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchModel.m; sourceTree = "<group>"; };
 		7A99D4481C97EE31001DD9B9 /* LessionBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LessionBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A99D44C1C97EE31001DD9B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A99D44E1C97EE31001DD9B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -151,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				7A965F711C99328A00DE2547 /* search.plist */,
+				7A965F781C993B2A00DE2547 /* SearchModel.h */,
+				7A965F791C993B2A00DE2547 /* SearchModel.m */,
 			);
 			path = Modeles;
 			sourceTree = "<group>";
@@ -441,6 +446,7 @@
 				7A99D4501C97EE31001DD9B9 /* AppDelegate.m in Sources */,
 				7A4764221C984D900057A7D9 /* VOSegment.m in Sources */,
 				7A4764211C984D900057A7D9 /* VOIndicatorAnimation.m in Sources */,
+				7A965F7A1C993B2A00DE2547 /* SearchModel.m in Sources */,
 				7AE2889F1C98118000596833 /* DiscoverViewController.m in Sources */,
 				7A99D44D1C97EE31001DD9B9 /* main.m in Sources */,
 				7A4764231C984D900057A7D9 /* VOSegmentedControl.m in Sources */,
@@ -498,7 +504,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -535,7 +541,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -550,6 +556,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LessionBook/Library/tools/HWDefine.pch";
 				INFOPLIST_FILE = LessionBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iOS.huI.LessionBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -564,6 +571,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LessionBook/Library/tools/HWDefine.pch";
 				INFOPLIST_FILE = LessionBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iOS.huI.LessionBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
