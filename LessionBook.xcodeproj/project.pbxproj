@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		7A4623EF1C992FED00A6750D /* TypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4623EE1C992FED00A6750D /* TypeModel.m */; };
 		7A4623F11C99474400A6750D /* 分类2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A4623F01C99474400A6750D /* 分类2.plist */; };
+		7A4623F41C998EA400A6750D /* ChoseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4623F31C998EA400A6750D /* ChoseModel.m */; };
+		7A4623F81C999C0B00A6750D /* ChoseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4623F61C999C0B00A6750D /* ChoseCollectionViewCell.m */; };
+		7A4623F91C999C0B00A6750D /* ChoseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A4623F71C999C0B00A6750D /* ChoseCollectionViewCell.xib */; };
 		7A47640C1C9835BA0057A7D9 /* 搜索大主宰.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A47640B1C9835BA0057A7D9 /* 搜索大主宰.plist */; };
 		7A47640E1C9835C20057A7D9 /* 坏蛋.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A47640D1C9835C20057A7D9 /* 坏蛋.plist */; };
 		7A4764101C9835C90057A7D9 /* 精选.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A47640F1C9835C90057A7D9 /* 精选.plist */; };
@@ -39,6 +42,11 @@
 		7A4623ED1C992FED00A6750D /* TypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeModel.h; sourceTree = "<group>"; };
 		7A4623EE1C992FED00A6750D /* TypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeModel.m; sourceTree = "<group>"; };
 		7A4623F01C99474400A6750D /* 分类2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = "分类2.plist"; sourceTree = "<group>"; };
+		7A4623F21C998EA400A6750D /* ChoseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoseModel.h; sourceTree = "<group>"; };
+		7A4623F31C998EA400A6750D /* ChoseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoseModel.m; sourceTree = "<group>"; };
+		7A4623F51C999C0B00A6750D /* ChoseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoseCollectionViewCell.h; sourceTree = "<group>"; };
+		7A4623F61C999C0B00A6750D /* ChoseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoseCollectionViewCell.m; sourceTree = "<group>"; };
+		7A4623F71C999C0B00A6750D /* ChoseCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChoseCollectionViewCell.xib; sourceTree = "<group>"; };
 		7A47640B1C9835BA0057A7D9 /* 搜索大主宰.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "搜索大主宰.plist"; sourceTree = "<group>"; };
 		7A47640D1C9835C20057A7D9 /* 坏蛋.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "坏蛋.plist"; sourceTree = "<group>"; };
 		7A47640F1C9835C90057A7D9 /* 精选.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "精选.plist"; sourceTree = "<group>"; };
@@ -257,6 +265,8 @@
 				7A47640D1C9835C20057A7D9 /* 坏蛋.plist */,
 				7A4623ED1C992FED00A6750D /* TypeModel.h */,
 				7A4623EE1C992FED00A6750D /* TypeModel.m */,
+				7A4623F21C998EA400A6750D /* ChoseModel.h */,
+				7A4623F31C998EA400A6750D /* ChoseModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -264,6 +274,9 @@
 		7AA0C53F1C980BEA001275A0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7A4623F51C999C0B00A6750D /* ChoseCollectionViewCell.h */,
+				7A4623F61C999C0B00A6750D /* ChoseCollectionViewCell.m */,
+				7A4623F71C999C0B00A6750D /* ChoseCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -381,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A4623F11C99474400A6750D /* 分类2.plist in Resources */,
+				7A4623F91C999C0B00A6750D /* ChoseCollectionViewCell.xib in Resources */,
 				7A47640E1C9835C20057A7D9 /* 坏蛋.plist in Resources */,
 				7A4764101C9835C90057A7D9 /* 精选.plist in Resources */,
 				7AE264B91C9841D4006C9A6D /* My.storyboard in Resources */,
@@ -450,6 +464,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A4764201C984D900057A7D9 /* VOContentLayer.m in Sources */,
+				7A4623F81C999C0B00A6750D /* ChoseCollectionViewCell.m in Sources */,
+				7A4623F41C998EA400A6750D /* ChoseModel.m in Sources */,
 				7AE264B71C9840A9006C9A6D /* MyViewController.m in Sources */,
 				7A4623EF1C992FED00A6750D /* TypeModel.m in Sources */,
 				7A965F771C99328A00DE2547 /* SearchViewController.m in Sources */,
