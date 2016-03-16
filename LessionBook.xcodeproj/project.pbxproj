@@ -23,6 +23,10 @@
 		7A965F761C99328A00DE2547 /* search.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A965F711C99328A00DE2547 /* search.plist */; };
 		7A965F771C99328A00DE2547 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A965F741C99328A00DE2547 /* SearchViewController.m */; };
 		7A965F7A1C993B2A00DE2547 /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A965F791C993B2A00DE2547 /* SearchModel.m */; };
+		7A965F7E1C9993B200DE2547 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A965F7C1C9993B200DE2547 /* TableViewCell.m */; };
+		7A965F7F1C9993B200DE2547 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A965F7D1C9993B200DE2547 /* TableViewCell.xib */; };
+		7A965F841C9998FF00DE2547 /* DownloadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A965F821C9998FF00DE2547 /* DownloadTableViewCell.m */; };
+		7A965F851C9998FF00DE2547 /* DownloadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A965F831C9998FF00DE2547 /* DownloadTableViewCell.xib */; };
 		7A99D44D1C97EE31001DD9B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A99D44C1C97EE31001DD9B9 /* main.m */; };
 		7A99D4501C97EE31001DD9B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A99D44F1C97EE31001DD9B9 /* AppDelegate.m */; };
 		7A99D4521C97EE31001DD9B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A99D4511C97EE31001DD9B9 /* Assets.xcassets */; };
@@ -63,6 +67,12 @@
 		7A965F741C99328A00DE2547 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		7A965F781C993B2A00DE2547 /* SearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModel.h; sourceTree = "<group>"; };
 		7A965F791C993B2A00DE2547 /* SearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchModel.m; sourceTree = "<group>"; };
+		7A965F7B1C9993B200DE2547 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewCell.h; path = LessionBook/Class/Seach/Modeles/TableViewCell.h; sourceTree = SOURCE_ROOT; };
+		7A965F7C1C9993B200DE2547 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewCell.m; path = LessionBook/Class/Seach/Modeles/TableViewCell.m; sourceTree = SOURCE_ROOT; };
+		7A965F7D1C9993B200DE2547 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableViewCell.xib; path = LessionBook/Class/Seach/Modeles/TableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		7A965F811C9998FF00DE2547 /* DownloadTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadTableViewCell.h; sourceTree = "<group>"; };
+		7A965F821C9998FF00DE2547 /* DownloadTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadTableViewCell.m; sourceTree = "<group>"; };
+		7A965F831C9998FF00DE2547 /* DownloadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloadTableViewCell.xib; sourceTree = "<group>"; };
 		7A99D4481C97EE31001DD9B9 /* LessionBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LessionBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A99D44C1C97EE31001DD9B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A99D44E1C97EE31001DD9B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -133,6 +143,7 @@
 		7A965F6A1C99328900DE2547 /* Download */ = {
 			isa = PBXGroup;
 			children = (
+				7A965F801C99989D00DE2547 /* viewes */,
 				7A965F6B1C99328900DE2547 /* modeles */,
 				7A965F6C1C99328900DE2547 /* viewControllers */,
 			);
@@ -181,6 +192,16 @@
 				7A965F741C99328A00DE2547 /* SearchViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7A965F801C99989D00DE2547 /* viewes */ = {
+			isa = PBXGroup;
+			children = (
+				7A965F811C9998FF00DE2547 /* DownloadTableViewCell.h */,
+				7A965F821C9998FF00DE2547 /* DownloadTableViewCell.m */,
+				7A965F831C9998FF00DE2547 /* DownloadTableViewCell.xib */,
+			);
+			path = viewes;
 			sourceTree = "<group>";
 		};
 		7A99D43F1C97EE31001DD9B9 = {
@@ -273,6 +294,9 @@
 		7AA0C53F1C980BEA001275A0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7A965F7B1C9993B200DE2547 /* TableViewCell.h */,
+				7A965F7C1C9993B200DE2547 /* TableViewCell.m */,
+				7A965F7D1C9993B200DE2547 /* TableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -396,10 +420,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A4623F11C99474400A6750D /* 分类2.plist in Resources */,
+				7A965F7F1C9993B200DE2547 /* TableViewCell.xib in Resources */,
 				7A47640E1C9835C20057A7D9 /* 坏蛋.plist in Resources */,
 				7A4764101C9835C90057A7D9 /* 精选.plist in Resources */,
 				7AE264B91C9841D4006C9A6D /* My.storyboard in Resources */,
 				7A99D4521C97EE31001DD9B9 /* Assets.xcassets in Resources */,
+				7A965F851C9998FF00DE2547 /* DownloadTableViewCell.xib in Resources */,
 				7A99D4551C97EE31001DD9B9 /* LaunchScreen.storyboard in Resources */,
 				7A4764161C9847750057A7D9 /* 分类--热门.plist in Resources */,
 				7A4764121C98400C0057A7D9 /* 轮番图.plist in Resources */,
@@ -465,6 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A4764201C984D900057A7D9 /* VOContentLayer.m in Sources */,
+				7A965F841C9998FF00DE2547 /* DownloadTableViewCell.m in Sources */,
 				7AE264B71C9840A9006C9A6D /* MyViewController.m in Sources */,
 				7A4623EF1C992FED00A6750D /* TypeModel.m in Sources */,
 				7A965F771C99328A00DE2547 /* SearchViewController.m in Sources */,
@@ -477,6 +504,7 @@
 				7A99D44D1C97EE31001DD9B9 /* main.m in Sources */,
 				7A9FFBAE1C99565A0045ECBC /* FavoriteViewController.m in Sources */,
 				7A4764231C984D900057A7D9 /* VOSegmentedControl.m in Sources */,
+				7A965F7E1C9993B200DE2547 /* TableViewCell.m in Sources */,
 				7A9FFBB41C9984080045ECBC /* TimerUpViewController.m in Sources */,
 				7A965F751C99328A00DE2547 /* DownloadViewController.m in Sources */,
 			);

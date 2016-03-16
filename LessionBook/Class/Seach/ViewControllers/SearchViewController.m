@@ -121,10 +121,11 @@
         }
         for (NSDictionary *dic in secondArray) {
             SearchModel *model = [[SearchModel alloc] initWithDictionary:dic];
-            if ([firstgroup isEqualToString:@"virtualchannel"]) {
-                [self.danjiArray addObject:model];
-            }else{
+            if ([secondgroup isEqualToString:@"virtualchannel"]) {
                 [self.xiaoshuoArray addObject:model];
+
+            }else{
+                [self.danjiArray addObject:model];
             }
         }
         [self.tableView reloadData];
