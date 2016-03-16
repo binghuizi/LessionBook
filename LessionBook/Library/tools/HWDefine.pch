@@ -14,6 +14,15 @@
 //Users/scjy/Desktop/UI---阶段/C段项目/LessionBook/LessionBook/Library/tools/HWDefine.pch
 //
 #endif /* HWDefine_pch */
+
+
+
+#ifdef DEBUG
+#	define DSNLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#	define ZJHLog(...)
+#endif
+
 #import "Header.h"
 
 
