@@ -50,7 +50,6 @@
     myNav.tabBarItem.image = [UIImage imageNamed:@"tab_personal"];
     myNav.tabBarItem.selectedImage = [UIImage imageNamed:@"tab_personal_s"];
     
->>>>>>> 6f48661b386d754d829fb4c15dd3cca836dc77ff
     
     
    //发现
