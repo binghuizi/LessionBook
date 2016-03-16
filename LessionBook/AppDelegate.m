@@ -56,7 +56,7 @@
     
     
     
-    tabarVc.viewControllers = @[disNav, myNav];
+    tabarVc.viewControllers = @[disNav,searchNav, downloadNav, myNav];
     
     self.window.rootViewController = tabarVc;
     
