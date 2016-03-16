@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+
+#import "DownloadViewController.h"
+#import "SearchViewController.h"
+#import "MyViewController.h"
 #import "DiscoverViewController.h"
 @interface AppDelegate ()
 
@@ -17,6 +21,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+    // Override point for customization after application launch.
+    //下载
+    DownloadViewController *downloadVC = [[DownloadViewController alloc] init];
+    UINavigationController *downloadNav = [[UINavigationController alloc] initWithRootViewController:downloadVC];
+    downloadNav.tabBarItem.title = @"下载";
+    
+    //搜索
+    SearchViewController *searchVC = [[SearchViewController alloc] init];
+    UINavigationController *searchNav = [[UINavigationController alloc] initWithRootViewController:searchVC];
+    searchNav.tabBarItem.title = @"搜索";
+
+    //我的
+    UIStoryboard *myStoryBoary = [UIStoryboard storyboardWithName:@"My" bundle:nil];
+   UINavigationController *myNav = [myStoryBoary instantiateInitialViewController];
+    myNav.tabBarItem.title = @"我的";
+    myNav.tabBarItem.image = [UIImage imageNamed:@"tab_personal"];
+    myNav.tabBarItem.selectedImage = [UIImage imageNamed:@"tab_personal_s"];
+    
     
     /**
      *  创建UITabBarController
@@ -33,14 +56,9 @@
     
     
     
-    tabarVc.viewControllers = @[disNav];
+    tabarVc.viewControllers = @[disNav, myNav];
     
     self.window.rootViewController = tabarVc;
-    
-    
-    
-    
-    
     
     
     
