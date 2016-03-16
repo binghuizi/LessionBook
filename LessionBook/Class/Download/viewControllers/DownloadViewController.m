@@ -42,6 +42,9 @@
 
 #pragma mark ----------UITableViewDelegate;
 
+#pragma mark ----------Lazyloding
+#pragma mark
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
