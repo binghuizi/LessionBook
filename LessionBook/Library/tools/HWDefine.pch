@@ -30,21 +30,16 @@
 //
 #endif /* HWDefine_pch */
 
-//发现-精选轮番图接口
-#define movePicture @"http://42.120.60.147/v5/media/categories/521/recommend/banner"
-//发现--分类接口
-#define typeBook @"http://42.120.60.147/v5/media/categories/521"
-//发现--分类--玄幻-最热
-#define TypeHot  @"http://api2.qingting.fm/v5/media/categories/919/channels/order/hot/curpage/1/pagesize/10"
-////分类 -都市-推荐
-///http://api2.qingting.fm/v5/media/categories/939/channels/order/recommend/curpage/1/pagesize/10
-////分类-最热门—热门
-//http://42.120.60.147/v5/media/categories/1097/channels/order/hot/curpage/1/pagesize/10
-//
-////分类-最热门—最新
-//http://42.120.60.147/v5/media/categories/1097/channels/order/latest/curpage/1/pagesize/10
-//
-//////分类-最热门—推荐
-//http://42.120.60.147/v5/media/categories/1097/channels/order/recommend/curpage/3/pagesize/10
 
 
+#ifdef DEBUG
+#	define DSNLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#	define ZJHLog(...)
+#endif
+
+#import "Header.h"
+
+
+#define kWideth  [UIScreen mainScreen].bounds.size.width
+#define kHeight  [UIScreen mainScreen].bounds.size.height

@@ -27,12 +27,12 @@
     DownloadViewController *downloadVC = [[DownloadViewController alloc] init];
     UINavigationController *downloadNav = [[UINavigationController alloc] initWithRootViewController:downloadVC];
     downloadNav.tabBarItem.title = @"下载";
-    
+    downloadNav.tabBarItem.image = [UIImage imageNamed:@"tab_download"];
     //搜索
     SearchViewController *searchVC = [[SearchViewController alloc] init];
     UINavigationController *searchNav = [[UINavigationController alloc] initWithRootViewController:searchVC];
     searchNav.tabBarItem.title = @"搜索";
-
+    searchNav.tabBarItem.image = [UIImage imageNamed:@"tab_search"];
     //我的
     UIStoryboard *myStoryBoary = [UIStoryboard storyboardWithName:@"My" bundle:nil];
    UINavigationController *myNav = [myStoryBoary instantiateInitialViewController];
@@ -56,7 +56,7 @@
     
     
     
-    tabarVc.viewControllers = @[disNav, myNav];
+    tabarVc.viewControllers = @[disNav,searchNav, downloadNav, myNav];
     
     self.window.rootViewController = tabarVc;
     
