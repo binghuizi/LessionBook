@@ -35,11 +35,11 @@
     downloadNav.tabBarItem.title = @"下载";
     downloadNav.tabBarItem.image = [UIImage imageNamed:@"tab_download"];
     downloadNav.tabBarItem.selectedImage = [UIImage imageNamed:@"tab_download_s"];
-//    imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal
+//imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal
     //搜索
     SearchViewController *searchVC = [[SearchViewController alloc] init];
     UINavigationController *searchNav = [[UINavigationController alloc] initWithRootViewController:searchVC];
-    searchNav.tabBarItem.title = @"搜索";
+//    searchNav.tabBarItem.title = @"搜索";
     searchNav.tabBarItem.image = [UIImage imageNamed:@"tab_search"];
     searchNav.tabBarItem.selectedImage = [UIImage imageNamed:@"tab_search_s"];
 
