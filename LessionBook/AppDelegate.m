@@ -7,10 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
 #import "DownloadViewController.h"
 #import "SearchViewController.h"
-
 #import "DiscoverViewController.h"
 @interface AppDelegate ()
 
@@ -23,22 +21,28 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     // Override point for customization after application launch.
-    //下载
-    DownloadViewController *downloadVC = [[DownloadViewController alloc] init];
-    UINavigationController *downloadNav = [[UINavigationController alloc] initWithRootViewController:downloadVC];
-    downloadNav.tabBarItem.title = @"下载";
-    
-    //搜索
-    SearchViewController *searchVC = [[SearchViewController alloc] init];
-    UINavigationController *searchNav = [[UINavigationController alloc] initWithRootViewController:searchVC];
-    searchNav.tabBarItem.title = @"搜索";
-
     
     /**
      *  创建UITabBarController
      */
     
     UITabBarController *tabarVc = [UITabBarController new];
+    
+    //下载
+    DownloadViewController *downloadVC = [[DownloadViewController alloc] init];
+    UINavigationController *downloadNav = [[UINavigationController alloc] initWithRootViewController:downloadVC];
+    downloadNav.tabBarItem.title = @"下载";
+    downloadNav.tabBarItem.image = [UIImage imageNamed:@"tab_download"];
+    downloadNav.tabBarItem.selectedImage = [UIImage imageNamed:@"tab_download_s"];
+//    imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal
+    //搜索
+    SearchViewController *searchVC = [[SearchViewController alloc] init];
+    UINavigationController *searchNav = [[UINavigationController alloc] initWithRootViewController:searchVC];
+    searchNav.tabBarItem.title = @"搜索";
+    searchNav.tabBarItem.image = [UIImage imageNamed:@"tab_search"];
+    searchNav.tabBarItem.selectedImage = [UIImage imageNamed:@"tab_search_s"];
+    
+    
    //发现
     DiscoverViewController *discoVc = [DiscoverViewController new];
     UINavigationController *disNav = [[UINavigationController alloc]initWithRootViewController:discoVc];
@@ -49,7 +53,7 @@
     
     
     
-    tabarVc.viewControllers = @[disNav];
+    tabarVc.viewControllers = @[disNav, searchNav, downloadNav];
     
     self.window.rootViewController = tabarVc;
     

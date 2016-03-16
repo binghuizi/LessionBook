@@ -11,11 +11,10 @@
 		7A99D4501C97EE31001DD9B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A99D44F1C97EE31001DD9B9 /* AppDelegate.m */; };
 		7A99D4521C97EE31001DD9B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A99D4511C97EE31001DD9B9 /* Assets.xcassets */; };
 		7A99D4551C97EE31001DD9B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A99D4531C97EE31001DD9B9 /* LaunchScreen.storyboard */; };
-
-		7AD9F7E91C9834460060FC13 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD9F7E81C9834460060FC13 /* DownloadViewController.m */; };
-		7AD9F7EC1C9834580060FC13 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD9F7EB1C9834580060FC13 /* SearchViewController.m */; };
+		7AD9F7F91C983FED0060FC13 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD9F7F11C983FED0060FC13 /* DownloadViewController.m */; };
+		7AD9F7FA1C983FED0060FC13 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD9F7F71C983FED0060FC13 /* SearchViewController.m */; };
+		7AD9F7FD1C98401A0060FC13 /* UIViewController+Commen.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD9F7FC1C98401A0060FC13 /* UIViewController+Commen.m */; };
 		7AE2889F1C98118000596833 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE2889E1C98118000596833 /* DiscoverViewController.m */; };
-
 		F3C52409254B7E14DA087F46 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E1B894ED2483C469F39545 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -29,15 +28,16 @@
 		7A99D4511C97EE31001DD9B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A99D4541C97EE31001DD9B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A99D4561C97EE31001DD9B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7AD9F7E71C9834460060FC13 /* DownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DownloadViewController.h; path = LessionBook/DownloadViewController.h; sourceTree = SOURCE_ROOT; };
-		7AD9F7E81C9834460060FC13 /* DownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DownloadViewController.m; path = LessionBook/DownloadViewController.m; sourceTree = SOURCE_ROOT; };
-		7AD9F7EA1C9834580060FC13 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = LessionBook/SearchViewController.h; sourceTree = SOURCE_ROOT; };
-		7AD9F7EB1C9834580060FC13 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = LessionBook/SearchViewController.m; sourceTree = SOURCE_ROOT; };
-
+		7AD9F7F01C983FED0060FC13 /* DownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
+		7AD9F7F11C983FED0060FC13 /* DownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
+		7AD9F7F61C983FED0060FC13 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		7AD9F7F71C983FED0060FC13 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		7AD9F7FB1C98401A0060FC13 /* UIViewController+Commen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Commen.h"; sourceTree = "<group>"; };
+		7AD9F7FC1C98401A0060FC13 /* UIViewController+Commen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Commen.m"; sourceTree = "<group>"; };
+		7AD9F7FE1C9848690060FC13 /* HWWDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWWDefine.h; sourceTree = "<group>"; };
 		7AE2889C1C980FB800596833 /* HWDefine.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWDefine.pch; sourceTree = "<group>"; };
 		7AE2889D1C98118000596833 /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
 		7AE2889E1C98118000596833 /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
-
 		B8E1B894ED2483C469F39545 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -114,10 +114,9 @@
 		7AA0C53B1C980BEA001275A0 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				7AD9F7ED1C983FED0060FC13 /* Download */,
+				7AD9F7F31C983FED0060FC13 /* Search */,
 				7AA0C53C1C980BEA001275A0 /* Discover */,
-				7AA0C5401C980BEA001275A0 /* Download */,
-				7AA0C5441C980BEA001275A0 /* My */,
-				7AA0C5481C980BEA001275A0 /* Search */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -155,97 +154,66 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		7AA0C5401C980BEA001275A0 /* Download */ = {
+		7AD9F7ED1C983FED0060FC13 /* Download */ = {
 			isa = PBXGroup;
 			children = (
-				7AA0C5411C980BEA001275A0 /* Controllers */,
-				7AA0C5421C980BEA001275A0 /* Models */,
-				7AA0C5431C980BEA001275A0 /* Views */,
+				7AD9F7EE1C983FED0060FC13 /* Modeles */,
+				7AD9F7EF1C983FED0060FC13 /* ViewControllers */,
+				7AD9F7F21C983FED0060FC13 /* Views */,
 			);
 			path = Download;
 			sourceTree = "<group>";
 		};
-		7AA0C5411C980BEA001275A0 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				7AD9F7E71C9834460060FC13 /* DownloadViewController.h */,
-				7AD9F7E81C9834460060FC13 /* DownloadViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		7AA0C5421C980BEA001275A0 /* Models */ = {
+		7AD9F7EE1C983FED0060FC13 /* Modeles */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Models;
+			path = Modeles;
 			sourceTree = "<group>";
 		};
-		7AA0C5431C980BEA001275A0 /* Views */ = {
+		7AD9F7EF1C983FED0060FC13 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7AD9F7F01C983FED0060FC13 /* DownloadViewController.h */,
+				7AD9F7F11C983FED0060FC13 /* DownloadViewController.m */,
 			);
-			path = Views;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		7AA0C5441C980BEA001275A0 /* My */ = {
-			isa = PBXGroup;
-			children = (
-				7AA0C5451C980BEA001275A0 /* Controllers */,
-				7AA0C5461C980BEA001275A0 /* Models */,
-				7AA0C5471C980BEA001275A0 /* Views */,
-			);
-			path = My;
-			sourceTree = "<group>";
-		};
-		7AA0C5451C980BEA001275A0 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		7AA0C5461C980BEA001275A0 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		7AA0C5471C980BEA001275A0 /* Views */ = {
+		7AD9F7F21C983FED0060FC13 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		7AA0C5481C980BEA001275A0 /* Search */ = {
+		7AD9F7F31C983FED0060FC13 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				7AA0C5491C980BEA001275A0 /* Controllers */,
-				7AA0C54A1C980BEA001275A0 /* Models */,
-				7AA0C54B1C980BEA001275A0 /* Views */,
+				7AD9F7F41C983FED0060FC13 /* Modeles */,
+				7AD9F7F51C983FED0060FC13 /* ViewControllers */,
+				7AD9F7F81C983FED0060FC13 /* Views */,
 			);
 			path = Search;
 			sourceTree = "<group>";
 		};
-		7AA0C5491C980BEA001275A0 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				7AD9F7EA1C9834580060FC13 /* SearchViewController.h */,
-				7AD9F7EB1C9834580060FC13 /* SearchViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		7AA0C54A1C980BEA001275A0 /* Models */ = {
+		7AD9F7F41C983FED0060FC13 /* Modeles */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Models;
+			path = Modeles;
 			sourceTree = "<group>";
 		};
-		7AA0C54B1C980BEA001275A0 /* Views */ = {
+		7AD9F7F51C983FED0060FC13 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7AD9F7F61C983FED0060FC13 /* SearchViewController.h */,
+				7AD9F7F71C983FED0060FC13 /* SearchViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7AD9F7F81C983FED0060FC13 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -264,6 +232,9 @@
 			isa = PBXGroup;
 			children = (
 				7AE2889C1C980FB800596833 /* HWDefine.pch */,
+				7AD9F7FE1C9848690060FC13 /* HWWDefine.h */,
+				7AD9F7FB1C98401A0060FC13 /* UIViewController+Commen.h */,
+				7AD9F7FC1C98401A0060FC13 /* UIViewController+Commen.m */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -389,10 +360,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A99D4501C97EE31001DD9B9 /* AppDelegate.m in Sources */,
+				7AD9F7FD1C98401A0060FC13 /* UIViewController+Commen.m in Sources */,
 				7AE2889F1C98118000596833 /* DiscoverViewController.m in Sources */,
+				7AD9F7FA1C983FED0060FC13 /* SearchViewController.m in Sources */,
+				7AD9F7F91C983FED0060FC13 /* DownloadViewController.m in Sources */,
 				7A99D44D1C97EE31001DD9B9 /* main.m in Sources */,
-				7AD9F7EC1C9834580060FC13 /* SearchViewController.m in Sources */,
-				7AD9F7E91C9834460060FC13 /* DownloadViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,7 +468,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT/LessionBook/Library/tools/HWDefine.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LessionBook/Library/tools/HWDefine.pch";
 				INFOPLIST_FILE = LessionBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iOS.huI.LessionBook;
@@ -510,7 +482,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT/LessionBook/Library/tools/HWDefine.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LessionBook/Library/tools/HWDefine.pch";
 				INFOPLIST_FILE = LessionBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iOS.huI.LessionBook;
