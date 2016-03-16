@@ -9,12 +9,15 @@
 #import "SearchViewController.h"
 #import <AFNetworking.h>
 #import "VOSegmentedControl.h"
-
-
-#define kScreenWidth [UIScreen mainScreen].bounds.size.width
-#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#import "SearchModel.h"
+#import <UIImageView+WebCache.h>
 
 @interface SearchViewController ()<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
+
+{
+    NSInteger _index;
+}
+
 @property (nonatomic, strong) UISearchBar *searchBar;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) VOSegmentedControl *segmentControl;
@@ -22,6 +25,10 @@
 
 @property (nonatomic, strong) NSMutableArray *danjiArray;
 @property (nonatomic, strong) NSMutableArray *xiaoshuoArray;
+
+@property (nonatomic, strong) NSMutableArray *listArray;
+@property (nonatomic, copy) NSString *Searchtext;
+
 
 @end
 
@@ -34,10 +41,15 @@
     self.navigationController.navigationBar.translucent = NO;
     [self showBackBtn];
     [self showRightBtn];
+    
+    //添加数组
+    [self.listArray addObject:self.danjiArray];
+    [self.listArray addObject:self.xiaoshuoArray];
     self.navigationItem.titleView = self.searchBar;
     [self.view addSubview:self.segmentControl];
     [self.view addSubview:self.tableView];
-    [self requestModel];
+    _index = 0;
+    
 }
 
 
@@ -53,7 +65,9 @@
 }
 
 - (void)backBtnAction{
-    
+    self.tableView.hidden = YES;
+    self.segmentControl.hidden = YES;
+    self.searchBar.text = nil;
 }
 
 - (void)showRightBtn{
@@ -66,24 +80,67 @@
 }
 
 - (void)rightBtnAction{
+    [self.searchBar resignFirstResponder];
+    self.segmentControl.hidden = NO;
+    self.tableView.hidden = NO;
+    self.Searchtext = [self.searchBar.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
+    [self requestModel];
     
     
 }
 - (void)requestModel{
     AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
     sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"application/json", nil];
-    [sessionManager GET:kSearch parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [sessionManager GET:[NSString stringWithFormat:kSearch, self.Searchtext] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@", responseObject);
+        NSDictionary *successDic = responseObject;
+        NSArray *dataArray = successDic[@"data"];
+        NSDictionary *firstdic = dataArray[0];
+        NSDictionary *seconddic = dataArray[1];
+        NSDictionary *firstDoc = firstdic[@"doclist"];
+        NSDictionary *secondDoc = seconddic[@"doclist"];
+        NSArray *firstArray = firstDoc[@"docs"];
+        NSArray *secondArray = secondDoc[@"docs"];
+        if (self.xiaoshuoArray.count > 0) {
+            [self.xiaoshuoArray removeAllObjects];
+        }
+        if (self.danjiArray.count > 0) {
+            [self.danjiArray removeAllObjects];
+        }
+        for (NSDictionary *dic in firstArray) {
+            SearchModel *model = [[SearchModel alloc] initWithDictionary:dic];
+            [self.danjiArray addObject:model];
+        }
+        for (NSDictionary *dic in secondArray) {
+            SearchModel *model = [[SearchModel alloc] initWithDictionary:dic];
+            [self.xiaoshuoArray addObject:model];
+        }
+        [self.tableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
     }];
 }
 
 - (void)segmentCtrlValueChange:(VOSegmentedControl *)segmentCtrl{
-
+    switch (segmentCtrl.selectedSegmentIndex) {
+        case 0:
+            _index = 0;
+            [self.tableView reloadData];
+            break;
+        case 1:
+            _index = 1;
+            [self.tableView reloadData];
+            break;
+        case 2:
+            _index = 2;
+            [self.tableView reloadData];
+            break;
+        default:
+            break;
+    }
+    
 }
 
 
@@ -91,7 +148,7 @@
 
 - (UISearchBar *)searchBar{
     if (_searchBar == nil) {
-        self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth - 120, 44)];
+        self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, kWideth - 120, 44)];
         self.searchBar.placeholder = @"搜索书名，作者";
         self.searchBar.searchBarStyle = UISearchBarStyleDefault;
     }
@@ -100,10 +157,11 @@
 
 - (UITableView *)tableView{
     if (_tableView == nil) {
-        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, kWideth, kHeight - 108) style:UITableViewStylePlain];
+        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, kWideth, kHeight - 172) style:UITableViewStylePlain];
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
-        self.tableView.rowHeight = 90;
+        self.tableView.rowHeight = 50;
+        self.tableView.hidden = YES;
     }
     return _tableView;
 }
@@ -119,14 +177,52 @@
         self.segmentControl.selectedIndicatorColor = [UIColor orangeColor];
         self.segmentControl.indicatorThickness = 4;
         [self.segmentControl addTarget:self action:@selector(segmentCtrlValueChange:) forControlEvents:UIControlEventValueChanged];
+        self.segmentControl.hidden = YES;
     }
     return _segmentControl;
 }
 
+- (NSMutableArray *)danjiArray{
+    if (_danjiArray == nil) {
+        self.danjiArray = [NSMutableArray new];
+    }
+    return _danjiArray;
+}
+
+- (NSMutableArray *)xiaoshuoArray{
+    if (_xiaoshuoArray == nil) {
+        self.xiaoshuoArray = [NSMutableArray new];
+    }
+    return _xiaoshuoArray;
+}
+-(NSMutableArray *)listArray{
+    if (_listArray == nil) {
+        self.listArray = [NSMutableArray new];
+    }
+    return _listArray;
+}
+
 #pragma mark ----------UITableViewDataSource
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    if (_index == 0) {
+        return 2;
+    }
+    return 1;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    if (_index == 0) {
+        if (section == 0) {
+            return [self.listArray[0] count];
+        }
+        return [self.listArray[1] count];
+    }else if (_index == 1){
+        return [self.listArray[0] count];
+    }else{
+        return [self.listArray[1] count];
+    }
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -135,12 +231,58 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
-    cell.textLabel.text = @"大主宰";
-    
+    switch (_index) {
+        case 0:{
+                SearchModel *model = self.listArray[indexPath.section][indexPath.row];
+                cell.textLabel.text = model.name;
+                cell.detailTextLabel.text = model.catname;
+            if (cell.imageView.image != nil) {
+                cell.imageView.image = nil;
+            }
+        }
+            break;
+        case 1:{
+            SearchModel *model = self.listArray[0][indexPath.row];
+            cell.textLabel.text = model.name;
+            cell.detailTextLabel.text = model.catname;
+            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.cover]];
+        }
+            break;
+        case 2:{
+            SearchModel *model = self.listArray[1][indexPath.row];
+            cell.textLabel.text = model.name;
+            cell.detailTextLabel.text = model.cname;
+            if (cell.imageView.image != nil) {
+                cell.imageView.image = nil;
+            }
+        }
+            break;
+
+    }
     return cell;
 }
 
 #pragma mark ----------UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    switch (_index) {
+        case 0:
+        {
+//            SearchModel *model = self.listArray[indexPath.section][indexPath.row];
+        }
+            break;
+        case 1:
+        {
+            
+        }
+            break;
+        case 2:
+        {
+        
+        }
+            break;
+    }
+}
 
 
 #pragma mark ----------UISearchBarDelegate

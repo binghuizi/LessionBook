@@ -7,8 +7,14 @@
 //
 
 #import "DownloadViewController.h"
+#import "VOSegmentedControl.h"
 
-@interface DownloadViewController ()
+
+@interface DownloadViewController ()<UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) VOSegmentedControl *segmentControl;
+@property (nonatomic, strong) UITableView *tableView;
+
 
 @end
 
@@ -18,6 +24,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+#pragma mark ----------UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 20;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+     static NSString *cellID = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
+    }
+    return cell;
+}
+
+#pragma mark ----------UITableViewDelegate;
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
