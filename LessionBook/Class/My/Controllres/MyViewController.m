@@ -35,13 +35,13 @@
     }
      cell.textLabel.text = self.myArray[indexPath.row];
     if (indexPath.row == 0) {
-        cell.imageView.image = [UIImage imageNamed:@""];
+        cell.imageView.image = [UIImage imageNamed:@"userinfo_collection"];
     }else if (indexPath.row == 1){
-        cell.imageView.image = [UIImage imageNamed:@""];
+        cell.imageView.image = [UIImage imageNamed:@"userinfo_history"];
     }else if (indexPath.row == 2){
-        cell.imageView.image = [UIImage imageNamed:@""];
+        cell.imageView.image = [UIImage imageNamed:@"userinfo_timer"];
     }else if (indexPath.row == 3){
-        cell.imageView.image = [UIImage imageNamed:@""];
+        cell.imageView.image = [UIImage imageNamed:@"userinfo_setting"];
     }
     return cell;
 }
