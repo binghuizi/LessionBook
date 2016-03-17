@@ -13,7 +13,8 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "ChoseModel.h"
 #import "ChoseCollectionViewCell.h"
-@interface DiscoverViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+#import "ChoseTableViewCell.h"
+@interface DiscoverViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,retain) VOSegmentedControl *segment1;
 @property(nonatomic,retain) UICollectionView *collectionView;
 @property(nonatomic,retain) UICollectionView *collectionView2;
@@ -24,8 +25,9 @@
 @property(nonatomic,strong) UIView *titleView;
 @property(nonatomic,strong) UIView *typeView;
 @property(nonatomic,strong) UIView *choseView;
-@property(nonatomic,retain) UISwipeGestureRecognizer *typeSwipeLeft;
+@property(nonatomic,retain) UISwipeGestureRecognizer *typeSwipeLeft;//清扫手势
 @property(nonatomic,retain) UISwipeGestureRecognizer *choseSwipeRight;
+@property(nonatomic,strong) UITableView *tableView;
 
 
 @end
@@ -44,9 +46,11 @@
     [self loadChosen]; //加载精选解析
     [self.titleView addSubview:self.segment1];
     [self.typeView addSubview:self.collectionView];
-    [self.choseView addSubview:self.collectionView2];
+    //[self.choseView addSubview:self.collectionView2];
+    [self.choseView addSubview:self.tableView];
 //精选CollectionView2  Nib
     [self.collectionView2 registerNib:[UINib nibWithNibName:@"ChoseCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"collection2"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"ChoseTableViewCell" bundle:nil] forCellReuseIdentifier:@"tableView"];
 //添加清扫手势
     
     self.typeSwipeLeft = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(oneFingerSwipeUp:)];
@@ -160,7 +164,7 @@
         self.typeView.hidden = YES;//隐藏分类
         self.choseView.hidden = NO;//显示精选
      
-        //[self chosen];
+        
     }
     
 }
@@ -180,8 +184,18 @@
 }
 //分区
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 5;
+    if ([collectionView isEqual:self.collectionView]) {
+        return 1;
+    }else{
+       return 20;
+    }
+    
 }
+//设置分区标题
+//-(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+//    
+//}
+
 //collectionView
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -216,8 +230,22 @@
     
 }
 
+#pragma mark --- tableView代理方法
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 20;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    ChoseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tableView" forIndexPath:indexPath];
+    
+    return cell;
+    
+}
 
-
+//自定义tableView高度
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 200;
+}
 
 
 //懒加载collectionView
@@ -256,7 +284,7 @@
         //垂直方向
         layOut.scrollDirection = UICollectionViewScrollDirectionVertical;
         //大小
-        layOut.itemSize = CGSizeMake(100, 100);
+        layOut.itemSize = CGSizeMake(120, 138);
         
         //每一行间距
         layOut.minimumLineSpacing = 5;
@@ -277,6 +305,16 @@
         [self.collectionView2 registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"item"];
     }
     return _collectionView2;
+}
+-(UITableView *)tableView{
+    if (_tableView == nil) {
+        self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kWideth, kHeight-155) style:UITableViewStylePlain];
+        self.tableView.dataSource = self;
+        self.tableView.delegate = self;
+        
+        
+    }
+    return _tableView;
 }
 //标题视图
 -(UIView *)titleView{
