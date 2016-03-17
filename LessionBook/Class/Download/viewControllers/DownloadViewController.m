@@ -8,7 +8,7 @@
 
 #import "DownloadViewController.h"
 #import "VOSegmentedControl.h"
-
+#import "DownloadTableViewCell.h"
 
 @interface DownloadViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -23,6 +23,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationController.navigationBar.barTintColor = [UIColor brownColor];
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationItem.title = @"下载";
+    [self.view addSubview:self.tableView];
+    [self.view addSubview:self.segmentControl];
+    [self.tableView registerNib:[UINib nibWithNibName:@"DownloadTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    
+    
+    
 }
 
 #pragma mark ----------UITableViewDataSource
@@ -32,15 +41,48 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-     static NSString *cellID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
-    }
+    DownloadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     return cell;
 }
 
 #pragma mark ----------UITableViewDelegate;
+
+
+
+#pragma mark ----------Lazyloding
+
+- (UITableView *)tableView{
+    if (_tableView == nil) {
+        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, kWideth, kHeight - 108) style:UITableViewStylePlain];
+        self.tableView.dataSource = self;
+        self.tableView.delegate = self;
+        self.tableView.rowHeight = 95;
+    }
+    return _tableView;
+}
+
+- (VOSegmentedControl *)segmentControl{
+    if (_segmentControl == nil) {
+        self.segmentControl = [[VOSegmentedControl alloc] initWithSegments:@[@{VOSegmentText:@"已下载"},@{VOSegmentText:@"正在下载"}]];
+        self.segmentControl.frame = CGRectMake(0, 0, kWideth, 44);
+        self.segmentControl.contentStyle = VOContentStyleTextAlone;
+        self.segmentControl.indicatorStyle = VOSegCtrlIndicatorStyleBottomLine;
+        self.segmentControl.selectedTextColor = [UIColor orangeColor];
+        self.segmentControl.selectedIndicatorColor = [UIColor orangeColor];
+        self.segmentControl.indicatorThickness = 2;
+        self.segmentControl.backgroundColor = [UIColor whiteColor];
+        [self.segmentControl addTarget:self action:@selector(segmentCtrlValueChange:) forControlEvents:UIControlEventValueChanged];
+    }
+    return _segmentControl;
+}
+
+#pragma mark ----------CustomMethod
+
+- (void)segmentCtrlValueChange:(VOSegmentedControl *)segmentctrl{
+
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

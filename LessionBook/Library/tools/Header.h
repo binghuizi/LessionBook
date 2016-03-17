@@ -11,6 +11,8 @@
 
 #define kSearch @"http://search.qingting.fm/api/newsearch/findvt?k=%@&groups=all&curpage=1&pagesize=10&type=novel&deviceid=00000000-5f67-c5fa-ffff-ffff9ecd38da"
 
+//详情页面
+#define kDetails @"http://api2.qingting.fm/v5/media/channels/33028/programs/curpage/1/pagesize/100"
 
 
 
@@ -19,10 +21,20 @@
 
 //发现-精选轮番图接口
 #define movePicture @"http://42.120.60.147/v5/media/categories/521/recommend/banner"
+//精选
+#define chose @"http://42.120.60.147/v5/media/categories/521/recommend/main"
 //发现--分类接口
 #define typeBook @"http://42.120.60.147/v5/media/categories/521"
 //发现--分类--玄幻-最热
 #define TypeHot  @"http://api2.qingting.fm/v5/media/categories/919/channels/order/hot/curpage/1/pagesize/10"
+
+
+
+
+
+
+
+
 
 ////分类 -都市-推荐
 ///http://api2.qingting.fm/v5/media/categories/939/channels/order/recommend/curpage/1/pagesize/10

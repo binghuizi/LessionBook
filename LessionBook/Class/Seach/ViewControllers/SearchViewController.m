@@ -100,7 +100,9 @@
         NSDictionary *firstdic = dataArray[0];
         NSDictionary *seconddic = dataArray[1];
         NSDictionary *firstDoc = firstdic[@"doclist"];
+        NSString *firstgroup = firstdic[@"groupValue"];
         NSDictionary *secondDoc = seconddic[@"doclist"];
+        NSString *secondgroup = seconddic[@"groupValue"];
         NSArray *firstArray = firstDoc[@"docs"];
         NSArray *secondArray = secondDoc[@"docs"];
         if (self.xiaoshuoArray.count > 0) {
@@ -111,11 +113,20 @@
         }
         for (NSDictionary *dic in firstArray) {
             SearchModel *model = [[SearchModel alloc] initWithDictionary:dic];
-            [self.danjiArray addObject:model];
+            if ([firstgroup isEqualToString:@"virtualprogram"]) {
+                  [self.danjiArray addObject:model];
+            }else{
+                  [self.xiaoshuoArray addObject:model];
+            }
         }
         for (NSDictionary *dic in secondArray) {
             SearchModel *model = [[SearchModel alloc] initWithDictionary:dic];
-            [self.xiaoshuoArray addObject:model];
+            if ([secondgroup isEqualToString:@"virtualchannel"]) {
+                [self.xiaoshuoArray addObject:model];
+
+            }else{
+                [self.danjiArray addObject:model];
+            }
         }
         [self.tableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -218,9 +229,9 @@
         }
         return [self.listArray[1] count];
     }else if (_index == 1){
-        return [self.listArray[0] count];
-    }else{
         return [self.listArray[1] count];
+    }else{
+        return [self.listArray[0] count];
     }
     return 0;
 }
@@ -242,14 +253,14 @@
         }
             break;
         case 1:{
-            SearchModel *model = self.listArray[0][indexPath.row];
+            SearchModel *model = self.listArray[1][indexPath.row];
             cell.textLabel.text = model.name;
             cell.detailTextLabel.text = model.catname;
             [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.cover]];
         }
             break;
         case 2:{
-            SearchModel *model = self.listArray[1][indexPath.row];
+            SearchModel *model = self.listArray[0][indexPath.row];
             cell.textLabel.text = model.name;
             cell.detailTextLabel.text = model.cname;
             if (cell.imageView.image != nil) {

@@ -11,9 +11,12 @@
 #import <AFNetworking/AFHTTPSessionManager.h>
 #import "TypeModel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "ChoseModel.h"
+#import "ChoseCollectionViewCell.h"
 @interface DiscoverViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 @property(nonatomic,retain) VOSegmentedControl *segment1;
 @property(nonatomic,retain) UICollectionView *collectionView;
+@property(nonatomic,retain) UICollectionView *collectionView2;
 @property(nonatomic,strong) UIImageView *imageView;
 @property(nonatomic,strong) UILabel *titleLabel;
 @property(nonatomic,strong) NSMutableArray *imageArray;
@@ -32,13 +35,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     [self.view addSubview:self.titleView];
     [self.view addSubview:self.typeView];
     [self.view addSubview:self.choseView];
     self.choseView.hidden = YES;//隐藏精选视图
-    [self loadTypeData];
+    [self loadTypeData];//加载分类解析
+    [self loadChosen]; //加载精选解析
     [self.titleView addSubview:self.segment1];
     [self.typeView addSubview:self.collectionView];
+    [self.choseView addSubview:self.collectionView2];
+//精选CollectionView2  Nib
+    [self.collectionView2 registerNib:[UINib nibWithNibName:@"ChoseCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"collection2"];
 //添加清扫手势
     
     self.typeSwipeLeft = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(oneFingerSwipeUp:)];
@@ -50,11 +58,14 @@
     [[self choseView ]addGestureRecognizer:self.choseSwipeRight];
     
 }
+#pragma mark --- 清扫手势
 //向右清扫
 - (void)oneFingerSwipeUp:(UISwipeGestureRecognizer *)recognizer{
     [UIView animateWithDuration:0.2 animations:^{
         self.typeView.hidden = YES;
         self.choseView.hidden = NO;
+        //下划线显示哪个
+        self.segment1.selectedSegmentIndex = 1;
     }];
     
 }
@@ -63,7 +74,8 @@
     [UIView animateWithDuration:0.2 animations:^{
         self.choseView.hidden = YES;//隐藏精选
         self.typeView.hidden = NO;//显示分类
-        
+        //下划线显示哪个
+        self.segment1.selectedSegmentIndex = 0;
     }];
     
 }
@@ -75,7 +87,9 @@
     [sessionManager GET:typeBook parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         DSNLog(@"%@",downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        DSNLog(@"%@",responseObject);
+
+       // DSNLog(@"%@",responseObject);
+
         
         NSDictionary *rootDic = responseObject;
         NSArray *dataArray = rootDic[@"data"];
@@ -96,8 +110,18 @@
 }
 #pragma mark --- 精选解析
 //精选
--(void)chosen{
-    
+-(void)loadChosen{
+    AFHTTPSessionManager *sessionManager = [[AFHTTPSessionManager alloc]init];
+     sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+     
+     [sessionManager GET:chose parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        DSNLog(@"%@",downloadProgress);
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        DSNLog(@"%@",responseObject);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        DSNLog(@"%@",error);
+    }];
 }
 
 #pragma mark --- 懒加载
@@ -118,6 +142,7 @@
         self.segment1.selectedIndicatorColor = [UIColor orangeColor];//选中时下划线的颜色
         self.segment1.allowNoSelection       = NO;
         self.segment1.indicatorThickness     = 2;//下划线粗细
+       
         //点击方法
         [self.segment1 addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
         
@@ -130,11 +155,12 @@
     if (segment.selectedSegmentIndex == 0) {
         self.choseView.hidden = YES;//隐藏精选
         self.typeView.hidden = NO;//显示分类
-        [self loadTypeData];
+      
     }else{
         self.typeView.hidden = YES;//隐藏分类
         self.choseView.hidden = NO;//显示精选
-        [self chosen];
+     
+        //[self chosen];
     }
     
 }
@@ -145,31 +171,49 @@
 #pragma mark --- collectionView代理方法
 //行
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return self.titleArray.count;
+    if ([collectionView isEqual:self.collectionView]) {
+        return self.titleArray.count;
+    }else{
+        return 3;
+    }
+    
+}
+//分区
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 5;
 }
 //collectionView
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"item" forIndexPath:indexPath];
-    //cell.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
-    self.imageView = [[UIImageView alloc]init];
-    self.imageView.frame = CGRectMake(10, 0, 70, 70);
-    self.imageView.layer.masksToBounds = YES;
-    self.imageView.layer.cornerRadius = 35;
-    self.imageView.backgroundColor = [UIColor lightGrayColor];
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.imageArray[indexPath.row]] placeholderImage:nil];
     
-    self.titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 75, 100, 30)];
-    self.titleLabel.text = self.titleArray[indexPath.row];
-    self.titleLabel.textAlignment = UIAlertActionStyleCancel;
-    for (id subView in cell.contentView.subviews) {
-        [subView removeFromSuperview];
+    //cell.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
+    if ([collectionView isEqual:self.collectionView]) {
+        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"item" forIndexPath:indexPath];
+        self.imageView = [[UIImageView alloc]init];
+        self.imageView.frame = CGRectMake(10, 0, 70, 70);
+        self.imageView.layer.masksToBounds = YES;
+        self.imageView.layer.cornerRadius = 35;
+        self.imageView.backgroundColor = [UIColor lightGrayColor];
+        [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.imageArray[indexPath.row]] placeholderImage:nil];
+        
+        self.titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 75, 100, 30)];
+        self.titleLabel.text = self.titleArray[indexPath.row];
+        self.titleLabel.textAlignment = UIAlertActionStyleCancel;
+        for (id subView in cell.contentView.subviews) {
+            [subView removeFromSuperview];
+        }
+        
+        [cell.contentView addSubview:self.imageView];
+        [cell.contentView addSubview:self.titleLabel];
+        return cell;
+    }else{
+        
+        ChoseCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collection2" forIndexPath:indexPath];
+        return cell;
     }
     
-    [cell.contentView addSubview:self.imageView];
-    [cell.contentView addSubview:self.titleLabel];
     
+    //return nil;
     
-    return cell;
 }
 
 
@@ -204,6 +248,35 @@
         
     }
     return _collectionView;
+}
+#pragma mark --- 精选中的collectionView2
+-(UICollectionView *)collectionView2{
+    if (_collectionView2 == nil) {
+        UICollectionViewFlowLayout *layOut = [[UICollectionViewFlowLayout alloc]init];
+        //垂直方向
+        layOut.scrollDirection = UICollectionViewScrollDirectionVertical;
+        //大小
+        layOut.itemSize = CGSizeMake(100, 100);
+        
+        //每一行间距
+        layOut.minimumLineSpacing = 5;
+        //item间距
+        layOut.minimumInteritemSpacing = 1;
+        
+        //边距
+        layOut.sectionInset = UIEdgeInsetsMake(5, 5, 6, 5);
+        
+        //  区头区尾大小
+        
+        self.collectionView2 = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, kWideth, kHeight-155) collectionViewLayout:layOut];
+        
+        self.collectionView2.backgroundColor = [UIColor whiteColor];
+        self.collectionView2.delegate = self;
+        self.collectionView2.dataSource = self;
+        //注册Item
+        [self.collectionView2 registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"item"];
+    }
+    return _collectionView2;
 }
 //标题视图
 -(UIView *)titleView{
