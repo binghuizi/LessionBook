@@ -119,9 +119,9 @@
      sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
      
      [sessionManager GET:chose parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        DSNLog(@"%@",downloadProgress);
+//        DSNLog(@"%@",downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        DSNLog(@"%@",responseObject);
+//        DSNLog(@"%@",responseObject);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         DSNLog(@"%@",error);
