@@ -32,7 +32,11 @@
 #pragma mark -----CustomMethod
 
 - (void)configView{
-
+    self.backgroundColor = [UIColor colorWithRed:240 / 255.0 green:240 / 255.0 blue:240 / 255.0 alpha:1.0];
+    [self addSubview:self.bookNameLabel];
+    [self addSubview:self.fileNameLabel];
+    [self addSubview:self.sizeLabel];
+    [self addSubview:self.timeLabel];
 }
 
 #pragma mark -----Lazyloading
@@ -40,8 +44,8 @@
 - (UILabel *)bookNameLabel{
     if (_bookNameLabel == nil) {
         self.bookNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 24)];
-        self.bookNameLabel.backgroundColor = [UIColor whiteColor];
         self.bookNameLabel.font = [UIFont systemFontOfSize:16.0];
+        self.bookNameLabel.text = @"熊猫";
     }
     return _bookNameLabel;
 }
@@ -51,10 +55,31 @@
         self.fileNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.bookNameLabel.bottom, kScreenWidth / 3, 20)];
         self.fileNameLabel.font = [UIFont systemFontOfSize:14];
         self.fileNameLabel.textColor = [UIColor lightGrayColor];
+        self.fileNameLabel.text = @"熊猫";
     }
     return _fileNameLabel;
 }
 
+- (UILabel *)sizeLabel{
+    if (_sizeLabel == nil) {
+        self.sizeLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.fileNameLabel.right, self.bookNameLabel.bottom, kScreenWidth / 3, 20)];
+        self.sizeLabel.font = [UIFont systemFontOfSize:14];
+        self.sizeLabel.textColor = [UIColor lightGrayColor];
+        self.sizeLabel.text = @"熊猫";
+    }
+    return _sizeLabel;
+}
+
+
+- (UILabel *)timeLabel{
+    if (_timeLabel == nil) {
+        self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.sizeLabel.right, self.bookNameLabel.bottom, kScreenWidth / 3, 20)];
+        self.timeLabel.font = [UIFont systemFontOfSize:14];
+        self.timeLabel.textColor = [UIColor lightGrayColor];
+        self.timeLabel.text = @"熊猫";
+    }
+    return _timeLabel;
+}
 
 - (void)awakeFromNib {
     // Initialization code
