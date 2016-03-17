@@ -9,12 +9,17 @@
 #import "DownloadViewController.h"
 #import "VOSegmentedControl.h"
 #import "DownloadTableViewCell.h"
+#import "DownloadDidTableViewCell.h"
+#import "DidDownLoadViewController.h"
+
+static NSString *_downloadcell = @"cell";
+static NSString *_didDownload = @"did";
 
 @interface DownloadViewController ()<UITableViewDataSource, UITableViewDelegate>
-
 @property (nonatomic, strong) VOSegmentedControl *segmentControl;
 @property (nonatomic, strong) UITableView *tableView;
 
+@property (nonatomic, assign) BOOL selectdidDownload;
 
 @end
 
@@ -28,10 +33,10 @@
     self.navigationItem.title = @"下载";
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.segmentControl];
-    [self.tableView registerNib:[UINib nibWithNibName:@"DownloadTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"DownloadTableViewCell" bundle:nil] forCellReuseIdentifier:_downloadcell];
+    [self.tableView registerClass:[DownloadDidTableViewCell class] forCellReuseIdentifier:_didDownload];
     
-    
-    
+    self.selectdidDownload = YES;
 }
 
 #pragma mark ----------UITableViewDataSource
@@ -41,11 +46,29 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    DownloadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    if (!self.selectdidDownload) {
+    DownloadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:_downloadcell forIndexPath:indexPath];
+        return cell;
+    }
+    DownloadDidTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:_didDownload forIndexPath:indexPath];
     return cell;
 }
 
 #pragma mark ----------UITableViewDelegate;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (!self.selectdidDownload) {
+        return 75;
+    }
+    return 45;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (self.selectdidDownload) {
+        DidDownLoadViewController *didDownloadVC = [[DidDownLoadViewController alloc] init];
+        [self.navigationController pushViewController:didDownloadVC animated:YES];
+    }
+}
 
 
 
@@ -56,7 +79,6 @@
         self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, kWideth, kHeight - 108) style:UITableViewStylePlain];
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
-        self.tableView.rowHeight = 95;
     }
     return _tableView;
 }
@@ -79,7 +101,16 @@
 #pragma mark ----------CustomMethod
 
 - (void)segmentCtrlValueChange:(VOSegmentedControl *)segmentctrl{
-
+    switch (segmentctrl.selectedSegmentIndex) {
+        case 0:
+            self.selectdidDownload = YES;
+            [self.tableView reloadData];
+            break;
+        case 1:
+            self.selectdidDownload = NO;
+            [self.tableView reloadData];
+            break;
+    }
 }
 
 
