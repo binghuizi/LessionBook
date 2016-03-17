@@ -22,6 +22,8 @@
 		7A4764211C984D900057A7D9 /* VOIndicatorAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A47641B1C984D900057A7D9 /* VOIndicatorAnimation.m */; };
 		7A4764221C984D900057A7D9 /* VOSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A47641D1C984D900057A7D9 /* VOSegment.m */; };
 		7A4764231C984D900057A7D9 /* VOSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A47641F1C984D900057A7D9 /* VOSegmentedControl.m */; };
+		7A6BE8431C9A428C006F6E17 /* DownloadDidTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6BE8421C9A428C006F6E17 /* DownloadDidTableViewCell.m */; };
+		7A6BE8461C9A47BD006F6E17 /* UIView+UIViewExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6BE8451C9A47BD006F6E17 /* UIView+UIViewExtension.m */; };
 		7A965F751C99328A00DE2547 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A965F6E1C99328900DE2547 /* DownloadViewController.m */; };
 		7A965F761C99328A00DE2547 /* search.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A965F711C99328A00DE2547 /* search.plist */; };
 		7A965F771C99328A00DE2547 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A965F741C99328A00DE2547 /* SearchViewController.m */; };
@@ -70,6 +72,10 @@
 		7A47641D1C984D900057A7D9 /* VOSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSegment.m; sourceTree = "<group>"; };
 		7A47641E1C984D900057A7D9 /* VOSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSegmentedControl.h; sourceTree = "<group>"; };
 		7A47641F1C984D900057A7D9 /* VOSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSegmentedControl.m; sourceTree = "<group>"; };
+		7A6BE8411C9A428C006F6E17 /* DownloadDidTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadDidTableViewCell.h; sourceTree = "<group>"; };
+		7A6BE8421C9A428C006F6E17 /* DownloadDidTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadDidTableViewCell.m; sourceTree = "<group>"; };
+		7A6BE8441C9A47BD006F6E17 /* UIView+UIViewExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIViewExtension.h"; sourceTree = "<group>"; };
+		7A6BE8451C9A47BD006F6E17 /* UIView+UIViewExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIViewExtension.m"; sourceTree = "<group>"; };
 		7A965F6D1C99328900DE2547 /* DownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
 		7A965F6E1C99328900DE2547 /* DownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
 		7A965F711C99328A00DE2547 /* search.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = search.plist; sourceTree = "<group>"; };
@@ -213,6 +219,8 @@
 				7A965F811C9998FF00DE2547 /* DownloadTableViewCell.h */,
 				7A965F821C9998FF00DE2547 /* DownloadTableViewCell.m */,
 				7A965F831C9998FF00DE2547 /* DownloadTableViewCell.xib */,
+				7A6BE8411C9A428C006F6E17 /* DownloadDidTableViewCell.h */,
+				7A6BE8421C9A428C006F6E17 /* DownloadDidTableViewCell.m */,
 			);
 			path = viewes;
 			sourceTree = "<group>";
@@ -373,6 +381,8 @@
 		7AE2889B1C980EEF00596833 /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				7A6BE8441C9A47BD006F6E17 /* UIView+UIViewExtension.h */,
+				7A6BE8451C9A47BD006F6E17 /* UIView+UIViewExtension.m */,
 				7AE2889C1C980FB800596833 /* HWDefine.pch */,
 				7ABFC11F1C98FFCF004B9AA6 /* Header.h */,
 				7A4764171C984D900057A7D9 /* VOSegmentedControl */,
@@ -522,6 +532,8 @@
 				7A965F771C99328A00DE2547 /* SearchViewController.m in Sources */,
 				7A9FFBB11C9983C80045ECBC /* RecordViewController.m in Sources */,
 				7A99D4501C97EE31001DD9B9 /* AppDelegate.m in Sources */,
+				7A6BE8461C9A47BD006F6E17 /* UIView+UIViewExtension.m in Sources */,
+				7A6BE8431C9A428C006F6E17 /* DownloadDidTableViewCell.m in Sources */,
 				7A4764221C984D900057A7D9 /* VOSegment.m in Sources */,
 				7A4764211C984D900057A7D9 /* VOIndicatorAnimation.m in Sources */,
 				7A965F7A1C993B2A00DE2547 /* SearchModel.m in Sources */,

@@ -8,7 +8,7 @@
 
 #import "DownloadViewController.h"
 #import "VOSegmentedControl.h"
-
+#import "DownloadTableViewCell.h"
 
 @interface DownloadViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -28,6 +28,9 @@
     self.navigationItem.title = @"下载";
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.segmentControl];
+    [self.tableView registerNib:[UINib nibWithNibName:@"DownloadTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    
+    
     
 }
 
@@ -38,11 +41,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-     static NSString *cellID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
-    }
+    DownloadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     return cell;
 }
 
@@ -57,7 +56,7 @@
         self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, kWideth, kHeight - 108) style:UITableViewStylePlain];
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
-        self.tableView.rowHeight = 50;
+        self.tableView.rowHeight = 95;
     }
     return _tableView;
 }
