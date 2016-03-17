@@ -8,8 +8,8 @@
 
 #import "RecordViewController.h"
 
-@interface RecordViewController ()
-
+@interface RecordViewController ()<UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, retain) UITableView *tableView;
 @end
 
 @implementation RecordViewController
@@ -17,6 +17,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"最近收听";
+    [self.view addSubview:self.tableView];
+    self.view.backgroundColor = [UIColor blueColor];
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 20;
+}
+
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *cellId = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
+    }
+    return cell;
+}
+
+
+- (UITableView *)tableView{
+    if (!_tableView) {
+        self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
+        self.tableView.delegate = self;
+        self.tableView.dataSource = self;
+        self.tableView.rowHeight = 80;
+    }
+    return _tableView;
 }
 
 - (void)didReceiveMemoryWarning {
