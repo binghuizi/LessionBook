@@ -14,6 +14,7 @@
 //详情页面
 #define kDetails @"http://api2.qingting.fm/v5/media/channels/33028/programs/curpage/1/pagesize/100"
 
+//http://upod.qingting.fm/vod/00/00/0000000000000000000024202041_24.m4a
 
 
 #endif /* Header_h */
