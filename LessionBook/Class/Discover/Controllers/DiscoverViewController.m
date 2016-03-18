@@ -13,10 +13,12 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "ChoseModel.h"
 #import "ChoseCollectionViewCell.h"
-@interface DiscoverViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+#import "ChoseTableViewCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+@interface DiscoverViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 @property(nonatomic,retain) VOSegmentedControl *segment1;
 @property(nonatomic,retain) UICollectionView *collectionView;
-@property(nonatomic,retain) UICollectionView *collectionView2;
+
 @property(nonatomic,strong) UIImageView *imageView;
 @property(nonatomic,strong) UILabel *titleLabel;
 @property(nonatomic,strong) NSMutableArray *imageArray;
@@ -24,10 +26,13 @@
 @property(nonatomic,strong) UIView *titleView;
 @property(nonatomic,strong) UIView *typeView;
 @property(nonatomic,strong) UIView *choseView;
-@property(nonatomic,retain) UISwipeGestureRecognizer *typeSwipeLeft;
+@property(nonatomic,retain) UISwipeGestureRecognizer *typeSwipeLeft;//清扫手势
 @property(nonatomic,retain) UISwipeGestureRecognizer *choseSwipeRight;
-
-
+@property(nonatomic,strong) UITableView *tableView;
+@property(nonatomic,strong) NSMutableArray *pictureArray;
+@property(nonatomic,strong) NSMutableArray *itemsArray;
+@property(nonatomic,strong) UIScrollView *scrollView;
+@property(nonatomic,strong) NSMutableArray *nameArray;
 @end
 
 @implementation DiscoverViewController
@@ -41,12 +46,13 @@
     [self.view addSubview:self.choseView];
     self.choseView.hidden = YES;//隐藏精选视图
     [self loadTypeData];//加载分类解析
+    [self loadpicture];//轮番图加载
     [self loadChosen]; //加载精选解析
     [self.titleView addSubview:self.segment1];
     [self.typeView addSubview:self.collectionView];
-    [self.choseView addSubview:self.collectionView2];
-//精选CollectionView2  Nib
-    [self.collectionView2 registerNib:[UINib nibWithNibName:@"ChoseCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"collection2"];
+    [self.choseView addSubview:self.tableView];
+
+    [self.tableView registerNib:[UINib nibWithNibName:@"ChoseTableViewCell" bundle:nil] forCellReuseIdentifier:@"tableView"];
 //添加清扫手势
     
     self.typeSwipeLeft = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(oneFingerSwipeUp:)];
@@ -100,13 +106,37 @@
             [self.titleArray addObject:model.name];
         }
         [self.collectionView reloadData];
-        NSLog(@"图片%ld",self.imageArray.count);
-        NSLog(@"标题%ld",self.titleArray.count);
         
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         DSNLog(@"%@",error);
     }];
+}
+#pragma mark ---轮番图解析
+-(void)loadpicture{
+    AFHTTPSessionManager *sessionManager = [[AFHTTPSessionManager alloc]init];
+    sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    [sessionManager GET:movePicture parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        //DSNLog(@"%@",downloadProgress);
+    
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+       // DSNLog(@"%@",responseObject);
+        NSDictionary *rootDic = responseObject;
+        NSArray *dataArray = rootDic[@"data"];
+        for (NSDictionary *itemDic in dataArray) {
+            [self.pictureArray addObject:itemDic[@"bigthumb"]];
+            [self.nameArray addObject:itemDic[@"name"]];
+            
+        }
+        
+        
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        DSNLog(@"%@",error);
+    }];
+
+
+
 }
 #pragma mark --- 精选解析
 //精选
@@ -115,10 +145,29 @@
      sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
      
      [sessionManager GET:chose parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+
        // DSNLog(@"%@",downloadProgress);
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
        // DSNLog(@"%@",responseObject);
         
+
+        
+
+
+            
+        NSDictionary *rootDic = responseObject;
+        
+        NSArray *dataArray = rootDic[@"data"];
+        for (NSDictionary *itemDic in dataArray) {
+           
+            ChoseModel *mol = [[ChoseModel alloc]init];
+           
+            [mol setValuesForKeysWithDictionary:itemDic];
+            [self.itemsArray addObject:mol];
+        }
+        
+        [self.tableView reloadData];
+        [self headTableView];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         DSNLog(@"%@",error);
     }];
@@ -160,7 +209,7 @@
         self.typeView.hidden = YES;//隐藏分类
         self.choseView.hidden = NO;//显示精选
      
-        //[self chosen];
+        
     }
     
 }
@@ -171,22 +220,15 @@
 #pragma mark --- collectionView代理方法
 //行
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    if ([collectionView isEqual:self.collectionView]) {
+   
         return self.titleArray.count;
-    }else{
-        return 3;
-    }
-    
 }
-//分区
--(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 5;
-}
-//collectionView
+
+
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    //cell.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
-    if ([collectionView isEqual:self.collectionView]) {
+    
+    
         UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"item" forIndexPath:indexPath];
         self.imageView = [[UIImageView alloc]init];
         self.imageView.frame = CGRectMake(10, 0, 70, 70);
@@ -205,19 +247,64 @@
         [cell.contentView addSubview:self.imageView];
         [cell.contentView addSubview:self.titleLabel];
         return cell;
-    }else{
-        
-        ChoseCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collection2" forIndexPath:indexPath];
-        return cell;
-    }
+   
     
-    
-    //return nil;
+   
     
 }
+#pragma mark -- 自定义tableView头部
+-(void)headTableView{
+    UIView *tableHeaderView = [[UIView alloc]init];
+    
+    tableHeaderView.frame = CGRectMake(0, 0, kWideth, 220);
+    [tableHeaderView addSubview:self.scrollView];
+  
+#pragma mark --给ScrollViewT添加图片
+    for (int i = 0; i < self.pictureArray.count; i++) {
+        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(kWideth * i, 0, kWideth, 180)];
+        UILabel *nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(kWideth * i, imageView.bottom, kWideth, 30)];
+        nameLabel.font = [UIFont systemFontOfSize:13.0];
+        nameLabel.userInteractionEnabled = YES;
+        //打开用户交互
+        imageView.userInteractionEnabled = YES;
+        [imageView sd_setImageWithURL:[NSURL URLWithString:self.pictureArray[i]] placeholderImage:nil];
+        nameLabel.text = self.nameArray[i];
+        [self.scrollView addSubview:imageView];
+        [self.scrollView addSubview:nameLabel];
+        
+        UIButton *touchButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        touchButton.frame = imageView.frame;
+        touchButton.tag = i;
+        [touchButton addTarget:self action:@selector(pictuAction:) forControlEvents:UIControlEventTouchUpInside];
+        [self.scrollView addSubview:touchButton];
+    }
+    
+    //区头添加
+    self.tableView.tableHeaderView = tableHeaderView;//添加区头；
 
+}
 
+#pragma mark --- tableView代理方法
+//行
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.itemsArray.count;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    ChoseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tableView" forIndexPath:indexPath];
 
+    
+    cell.model = self.itemsArray[indexPath.row];
+    
+    return cell;
+    
+}
+//分区
+
+//自定义tableView高度
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 200;
+}
 
 
 //懒加载collectionView
@@ -249,34 +336,30 @@
     }
     return _collectionView;
 }
-#pragma mark --- 精选中的collectionView2
--(UICollectionView *)collectionView2{
-    if (_collectionView2 == nil) {
-        UICollectionViewFlowLayout *layOut = [[UICollectionViewFlowLayout alloc]init];
-        //垂直方向
-        layOut.scrollDirection = UICollectionViewScrollDirectionVertical;
-        //大小
-        layOut.itemSize = CGSizeMake(100, 100);
+#pragma mark -- 轮番图ScrollView
+-(UIScrollView *)scrollView{
+    if (_scrollView == nil) {
+        self.scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, kWideth, kHeight *220/kHeight)];
+        self.scrollView.delegate = self;
+        //添加图片的个数
+        self.scrollView.contentSize = CGSizeMake(self.pictureArray.count *kWideth, 220);
+        //整屏滑动
+        self.scrollView.pagingEnabled = YES;
+        //垂直方向滚动条no不显示
+        self.scrollView.showsHorizontalScrollIndicator = NO;
         
-        //每一行间距
-        layOut.minimumLineSpacing = 5;
-        //item间距
-        layOut.minimumInteritemSpacing = 1;
-        
-        //边距
-        layOut.sectionInset = UIEdgeInsetsMake(5, 5, 6, 5);
-        
-        //  区头区尾大小
-        
-        self.collectionView2 = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, kWideth, kHeight-155) collectionViewLayout:layOut];
-        
-        self.collectionView2.backgroundColor = [UIColor whiteColor];
-        self.collectionView2.delegate = self;
-        self.collectionView2.dataSource = self;
-        //注册Item
-        [self.collectionView2 registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"item"];
     }
-    return _collectionView2;
+    return _scrollView;
+}
+-(UITableView *)tableView{
+    if (_tableView == nil) {
+        self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kWideth, kHeight-155) style:UITableViewStylePlain];
+        self.tableView.dataSource = self;
+        self.tableView.delegate = self;
+        
+        
+    }
+    return _tableView;
 }
 //标题视图
 -(UIView *)titleView{
@@ -314,18 +397,30 @@
     }
     return _titleArray;
 }
-//添加清扫手势
-//-(UISwipeGestureRecognizer *)typeSwipeLeft{
-//    if (_typeSwipeLeft == nil) {
-//        self.typeSwipeLeft = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(typeSwipeAction:)];
-//        [self.typeSwipeLeft setDirection:UISwipeGestureRecognizerDirectionRight];
-//        [[self typeView ]addGestureRecognizer:self.typeSwipeLeft];
-//    }
-//    return _typeSwipeLeft;
-//    
-//}
+//精选tableView cell传数据
+-(NSMutableArray *)itemsArray{
+    if (_itemsArray == nil) {
+        self.itemsArray = [NSMutableArray new];
+    }
+    return _itemsArray;
+}
 
-
+//轮番图片
+-(NSMutableArray *)pictureArray{
+    if (_pictureArray == nil) {
+        self.pictureArray = [NSMutableArray new];
+        
+    }
+    return _pictureArray;
+}
+//轮番图标题
+-(NSMutableArray *)nameArray{
+    if (_nameArray == nil) {
+        self.nameArray = [NSMutableArray new];
+        
+    }
+    return _nameArray;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
