@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A389CAA1C9B873000950794 /* ChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A389CA91C9B873000950794 /* ChatRoomViewController.m */; };
+		7A389CD91C9B90C900950794 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CD81C9B90C800950794 /* MobileCoreServices.framework */; };
+		7A389CDB1C9B90D300950794 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CDA1C9B90D300950794 /* CFNetwork.framework */; };
+		7A389CDD1C9B910C00950794 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CDC1C9B910C00950794 /* libsqlite3.tbd */; };
+		7A389CDF1C9B911F00950794 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CDE1C9B911F00950794 /* libstdc++.6.0.9.tbd */; };
+		7A389CE11C9B912B00950794 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CE01C9B912B00950794 /* libz.tbd */; };
+		7A389CE31C9B913C00950794 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CE21C9B913C00950794 /* libiconv.tbd */; };
+		7A389CE51C9B914B00950794 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CE41C9B914B00950794 /* libresolv.tbd */; };
+		7A389CE71C9B915600950794 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CE61C9B915600950794 /* libxml2.tbd */; };
 		7A4623EF1C992FED00A6750D /* TypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4623EE1C992FED00A6750D /* TypeModel.m */; };
 		7A4623F11C99474400A6750D /* 分类2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A4623F01C99474400A6750D /* 分类2.plist */; };
 		7A4623F41C998EA400A6750D /* ChoseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4623F31C998EA400A6750D /* ChoseModel.m */; };
@@ -25,6 +34,7 @@
 		7A6BE8431C9A428C006F6E17 /* DownloadDidTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6BE8421C9A428C006F6E17 /* DownloadDidTableViewCell.m */; };
 		7A6BE8461C9A47BD006F6E17 /* UIView+UIViewExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6BE8451C9A47BD006F6E17 /* UIView+UIViewExtension.m */; };
 		7A6BE8491C9A5F35006F6E17 /* DidDownLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6BE8481C9A5F35006F6E17 /* DidDownLoadViewController.m */; };
+		7A7501321C9BAD110002FA5C /* LinkManViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7501311C9BAD110002FA5C /* LinkManViewController.m */; };
 		7A965F751C99328A00DE2547 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A965F6E1C99328900DE2547 /* DownloadViewController.m */; };
 		7A965F761C99328A00DE2547 /* search.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A965F711C99328A00DE2547 /* search.plist */; };
 		7A965F771C99328A00DE2547 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A965F741C99328A00DE2547 /* SearchViewController.m */; };
@@ -42,6 +52,7 @@
 		7A9FFBB41C9984080045ECBC /* TimerUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FFBB31C9984080045ECBC /* TimerUpViewController.m */; };
 		7AB437061C9A4D2100532A9A /* ChoseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB437041C9A4D2100532A9A /* ChoseTableViewCell.m */; };
 		7AB437071C9A4D2100532A9A /* ChoseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB437051C9A4D2100532A9A /* ChoseTableViewCell.xib */; };
+		7AD1C4AC1C9BA204001346CA /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD1C4AB1C9BA204001346CA /* MessageViewController.m */; };
 		7AE264B71C9840A9006C9A6D /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE264B61C9840A9006C9A6D /* MyViewController.m */; };
 		7AE264B91C9841D4006C9A6D /* My.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE264B81C9841D4006C9A6D /* My.storyboard */; };
 		7AE2889F1C98118000596833 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE2889E1C98118000596833 /* DiscoverViewController.m */; };
@@ -51,6 +62,16 @@
 /* Begin PBXFileReference section */
 		67981FB38F5840FA5D07AC7F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		706A4DEFC7FBB216AD8C4E61 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7A389CA81C9B873000950794 /* ChatRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRoomViewController.h; sourceTree = "<group>"; };
+		7A389CA91C9B873000950794 /* ChatRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRoomViewController.m; sourceTree = "<group>"; };
+		7A389CD81C9B90C800950794 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		7A389CDA1C9B90D300950794 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		7A389CDC1C9B910C00950794 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		7A389CDE1C9B911F00950794 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		7A389CE01C9B912B00950794 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		7A389CE21C9B913C00950794 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		7A389CE41C9B914B00950794 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		7A389CE61C9B915600950794 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		7A4623ED1C992FED00A6750D /* TypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeModel.h; sourceTree = "<group>"; };
 		7A4623EE1C992FED00A6750D /* TypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeModel.m; sourceTree = "<group>"; };
 		7A4623F01C99474400A6750D /* 分类2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = "分类2.plist"; sourceTree = "<group>"; };
@@ -79,6 +100,8 @@
 		7A6BE8451C9A47BD006F6E17 /* UIView+UIViewExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIViewExtension.m"; sourceTree = "<group>"; };
 		7A6BE8471C9A5F35006F6E17 /* DidDownLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DidDownLoadViewController.h; sourceTree = "<group>"; };
 		7A6BE8481C9A5F35006F6E17 /* DidDownLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DidDownLoadViewController.m; sourceTree = "<group>"; };
+		7A7501301C9BAD110002FA5C /* LinkManViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkManViewController.h; sourceTree = "<group>"; };
+		7A7501311C9BAD110002FA5C /* LinkManViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkManViewController.m; sourceTree = "<group>"; };
 		7A965F6D1C99328900DE2547 /* DownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
 		7A965F6E1C99328900DE2547 /* DownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
 		7A965F711C99328A00DE2547 /* search.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = search.plist; sourceTree = "<group>"; };
@@ -109,6 +132,8 @@
 		7AB437041C9A4D2100532A9A /* ChoseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoseTableViewCell.m; sourceTree = "<group>"; };
 		7AB437051C9A4D2100532A9A /* ChoseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChoseTableViewCell.xib; sourceTree = "<group>"; };
 		7ABFC11F1C98FFCF004B9AA6 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		7AD1C4AA1C9BA204001346CA /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		7AD1C4AB1C9BA204001346CA /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		7AE264B51C9840A9006C9A6D /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		7AE264B61C9840A9006C9A6D /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		7AE264B81C9841D4006C9A6D /* My.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = My.storyboard; sourceTree = "<group>"; };
@@ -123,6 +148,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A389CE71C9B915600950794 /* libxml2.tbd in Frameworks */,
+				7A389CE51C9B914B00950794 /* libresolv.tbd in Frameworks */,
+				7A389CE31C9B913C00950794 /* libiconv.tbd in Frameworks */,
+				7A389CE11C9B912B00950794 /* libz.tbd in Frameworks */,
+				7A389CDF1C9B911F00950794 /* libstdc++.6.0.9.tbd in Frameworks */,
+				7A389CDD1C9B910C00950794 /* libsqlite3.tbd in Frameworks */,
+				7A389CDB1C9B90D300950794 /* CFNetwork.framework in Frameworks */,
+				7A389CD91C9B90C900950794 /* MobileCoreServices.framework in Frameworks */,
 				F3C52409254B7E14DA087F46 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,6 +166,14 @@
 		12BB96C7D9304EFD5EC9AB4C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A389CE61C9B915600950794 /* libxml2.tbd */,
+				7A389CE41C9B914B00950794 /* libresolv.tbd */,
+				7A389CE21C9B913C00950794 /* libiconv.tbd */,
+				7A389CE01C9B912B00950794 /* libz.tbd */,
+				7A389CDE1C9B911F00950794 /* libstdc++.6.0.9.tbd */,
+				7A389CDC1C9B910C00950794 /* libsqlite3.tbd */,
+				7A389CDA1C9B90D300950794 /* CFNetwork.framework */,
+				7A389CD81C9B90C800950794 /* MobileCoreServices.framework */,
 				B8E1B894ED2483C469F39545 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -186,6 +227,12 @@
 				7A965F6E1C99328900DE2547 /* DownloadViewController.m */,
 				7A6BE8471C9A5F35006F6E17 /* DidDownLoadViewController.h */,
 				7A6BE8481C9A5F35006F6E17 /* DidDownLoadViewController.m */,
+				7A389CA81C9B873000950794 /* ChatRoomViewController.h */,
+				7A389CA91C9B873000950794 /* ChatRoomViewController.m */,
+				7AD1C4AA1C9BA204001346CA /* MessageViewController.h */,
+				7AD1C4AB1C9BA204001346CA /* MessageViewController.m */,
+				7A7501301C9BAD110002FA5C /* LinkManViewController.h */,
+				7A7501311C9BAD110002FA5C /* LinkManViewController.m */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -530,9 +577,11 @@
 			files = (
 				7A4764201C984D900057A7D9 /* VOContentLayer.m in Sources */,
 				7A4623F81C999C0B00A6750D /* ChoseCollectionViewCell.m in Sources */,
+				7AD1C4AC1C9BA204001346CA /* MessageViewController.m in Sources */,
 				7A6BE8491C9A5F35006F6E17 /* DidDownLoadViewController.m in Sources */,
 				7A4623F41C998EA400A6750D /* ChoseModel.m in Sources */,
 				7A965F841C9998FF00DE2547 /* DownloadTableViewCell.m in Sources */,
+				7A7501321C9BAD110002FA5C /* LinkManViewController.m in Sources */,
 				7AE264B71C9840A9006C9A6D /* MyViewController.m in Sources */,
 				7A4623EF1C992FED00A6750D /* TypeModel.m in Sources */,
 				7A965F771C99328A00DE2547 /* SearchViewController.m in Sources */,
@@ -543,6 +592,7 @@
 				7A4764221C984D900057A7D9 /* VOSegment.m in Sources */,
 				7A4764211C984D900057A7D9 /* VOIndicatorAnimation.m in Sources */,
 				7A965F7A1C993B2A00DE2547 /* SearchModel.m in Sources */,
+				7A389CAA1C9B873000950794 /* ChatRoomViewController.m in Sources */,
 				7AB437061C9A4D2100532A9A /* ChoseTableViewCell.m in Sources */,
 				7AE2889F1C98118000596833 /* DiscoverViewController.m in Sources */,
 				7A99D44D1C97EE31001DD9B9 /* main.m in Sources */,
@@ -658,6 +708,11 @@
 				INFOPLIST_FILE = LessionBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LessionBook/Library/HyphenateSDK/lib",
+					"$(PROJECT_DIR)/LessionBook/Library/sdk-ios-cocoapods-integration/EaseMobSDKFull/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = iOS.huI.LessionBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -673,6 +728,11 @@
 				INFOPLIST_FILE = LessionBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LessionBook/Library/HyphenateSDK/lib",
+					"$(PROJECT_DIR)/LessionBook/Library/sdk-ios-cocoapods-integration/EaseMobSDKFull/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = iOS.huI.LessionBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

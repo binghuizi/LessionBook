@@ -16,6 +16,8 @@
 //Users/scjy/Desktop/UI---阶段/C段项目/LessionBook/LessionBook/Library/tools/HWDefine.pch
 
 
+#define kHuanxinAppKey @"coffee#dsnchat"
+
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 

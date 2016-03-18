@@ -11,6 +11,7 @@
 #import "DownloadTableViewCell.h"
 #import "DownloadDidTableViewCell.h"
 #import "DidDownLoadViewController.h"
+#import "ChatRoomViewController.h"
 
 static NSString *_downloadcell = @"cell";
 static NSString *_didDownload = @"did";
@@ -120,7 +121,8 @@ static NSString *_didDownload = @"did";
 }
 
 - (void)chatroom{
-    
+    ChatRoomViewController *chatVC = [[ChatRoomViewController alloc] init];
+    [self.navigationController pushViewController:chatVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
