@@ -8,6 +8,7 @@
 
 #import "MessageViewController.h"
 #import "LinkManViewController.h"
+#import <EaseMobSDKFull/EaseMob.h>
 
 @interface MessageViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -23,6 +24,8 @@
     self.title = @"消息";
     [self.view addSubview:self.tableView];
     [self showLinkMan];
+    
+    
 }
 
 #pragma mark -----CustomMethod

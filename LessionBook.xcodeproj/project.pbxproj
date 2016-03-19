@@ -35,6 +35,10 @@
 		7A6BE8461C9A47BD006F6E17 /* UIView+UIViewExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6BE8451C9A47BD006F6E17 /* UIView+UIViewExtension.m */; };
 		7A6BE8491C9A5F35006F6E17 /* DidDownLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6BE8481C9A5F35006F6E17 /* DidDownLoadViewController.m */; };
 		7A7501321C9BAD110002FA5C /* LinkManViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7501311C9BAD110002FA5C /* LinkManViewController.m */; };
+		7A7501351C9BE3BD0002FA5C /* NSString+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7501341C9BE3BD0002FA5C /* NSString+Common.m */; };
+		7A75013A1C9BE5180002FA5C /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7A7501371C9BE5180002FA5C /* ProgressHUD.bundle */; };
+		7A75013B1C9BE5180002FA5C /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7501391C9BE5180002FA5C /* ProgressHUD.m */; };
+		7A75016B1C9C09040002FA5C /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A75016A1C9C09040002FA5C /* RequestViewController.m */; };
 		7A965F751C99328A00DE2547 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A965F6E1C99328900DE2547 /* DownloadViewController.m */; };
 		7A965F761C99328A00DE2547 /* search.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A965F711C99328A00DE2547 /* search.plist */; };
 		7A965F771C99328A00DE2547 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A965F741C99328A00DE2547 /* SearchViewController.m */; };
@@ -47,6 +51,8 @@
 		7A99D4501C97EE31001DD9B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A99D44F1C97EE31001DD9B9 /* AppDelegate.m */; };
 		7A99D4521C97EE31001DD9B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A99D4511C97EE31001DD9B9 /* Assets.xcassets */; };
 		7A99D4551C97EE31001DD9B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A99D4531C97EE31001DD9B9 /* LaunchScreen.storyboard */; };
+		7A9BBA1C1C9CF5F100CA55D9 /* SingleChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9BBA1B1C9CF5F100CA55D9 /* SingleChatViewController.m */; };
+		7A9BBA1E1C9CF60700CA55D9 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A9BBA1D1C9CF60700CA55D9 /* Storyboard.storyboard */; };
 		7A9FFBAE1C99565A0045ECBC /* FavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FFBAD1C99565A0045ECBC /* FavoriteViewController.m */; };
 		7A9FFBB11C9983C80045ECBC /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FFBB01C9983C80045ECBC /* RecordViewController.m */; };
 		7A9FFBB41C9984080045ECBC /* TimerUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FFBB31C9984080045ECBC /* TimerUpViewController.m */; };
@@ -103,6 +109,13 @@
 		7A6BE8481C9A5F35006F6E17 /* DidDownLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DidDownLoadViewController.m; sourceTree = "<group>"; };
 		7A7501301C9BAD110002FA5C /* LinkManViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkManViewController.h; sourceTree = "<group>"; };
 		7A7501311C9BAD110002FA5C /* LinkManViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkManViewController.m; sourceTree = "<group>"; };
+		7A7501331C9BE3BD0002FA5C /* NSString+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Common.h"; sourceTree = "<group>"; };
+		7A7501341C9BE3BD0002FA5C /* NSString+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Common.m"; sourceTree = "<group>"; };
+		7A7501371C9BE5180002FA5C /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		7A7501381C9BE5180002FA5C /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		7A7501391C9BE5180002FA5C /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		7A7501691C9C09040002FA5C /* RequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestViewController.h; sourceTree = "<group>"; };
+		7A75016A1C9C09040002FA5C /* RequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestViewController.m; sourceTree = "<group>"; };
 		7A965F6D1C99328900DE2547 /* DownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
 		7A965F6E1C99328900DE2547 /* DownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
 		7A965F711C99328A00DE2547 /* search.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = search.plist; sourceTree = "<group>"; };
@@ -123,6 +136,9 @@
 		7A99D4511C97EE31001DD9B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A99D4541C97EE31001DD9B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A99D4561C97EE31001DD9B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A9BBA1A1C9CF5F100CA55D9 /* SingleChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleChatViewController.h; sourceTree = "<group>"; };
+		7A9BBA1B1C9CF5F100CA55D9 /* SingleChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleChatViewController.m; sourceTree = "<group>"; };
+		7A9BBA1D1C9CF60700CA55D9 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		7A9FFBAC1C99565A0045ECBC /* FavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteViewController.h; sourceTree = "<group>"; };
 		7A9FFBAD1C99565A0045ECBC /* FavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteViewController.m; sourceTree = "<group>"; };
 		7A9FFBAF1C9983C80045ECBC /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
@@ -206,6 +222,16 @@
 			path = VOSegmentedControl;
 			sourceTree = "<group>";
 		};
+		7A7501361C9BE5180002FA5C /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				7A7501371C9BE5180002FA5C /* ProgressHUD.bundle */,
+				7A7501381C9BE5180002FA5C /* ProgressHUD.h */,
+				7A7501391C9BE5180002FA5C /* ProgressHUD.m */,
+			);
+			path = ProgressHUD;
+			sourceTree = "<group>";
+		};
 		7A965F6A1C99328900DE2547 /* Download */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +262,10 @@
 				7AD1C4AB1C9BA204001346CA /* MessageViewController.m */,
 				7A7501301C9BAD110002FA5C /* LinkManViewController.h */,
 				7A7501311C9BAD110002FA5C /* LinkManViewController.m */,
+				7A7501691C9C09040002FA5C /* RequestViewController.h */,
+				7A75016A1C9C09040002FA5C /* RequestViewController.m */,
+				7A9BBA1A1C9CF5F100CA55D9 /* SingleChatViewController.h */,
+				7A9BBA1B1C9CF5F100CA55D9 /* SingleChatViewController.m */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -276,6 +306,7 @@
 				7A965F831C9998FF00DE2547 /* DownloadTableViewCell.xib */,
 				7A6BE8411C9A428C006F6E17 /* DownloadDidTableViewCell.h */,
 				7A6BE8421C9A428C006F6E17 /* DownloadDidTableViewCell.m */,
+				7A9BBA1D1C9CF60700CA55D9 /* Storyboard.storyboard */,
 			);
 			path = viewes;
 			sourceTree = "<group>";
@@ -438,11 +469,14 @@
 		7AE2889B1C980EEF00596833 /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				7A4764171C984D900057A7D9 /* VOSegmentedControl */,
+				7A7501361C9BE5180002FA5C /* ProgressHUD */,
 				7A6BE8441C9A47BD006F6E17 /* UIView+UIViewExtension.h */,
 				7A6BE8451C9A47BD006F6E17 /* UIView+UIViewExtension.m */,
+				7A7501331C9BE3BD0002FA5C /* NSString+Common.h */,
+				7A7501341C9BE3BD0002FA5C /* NSString+Common.m */,
 				7AE2889C1C980FB800596833 /* HWDefine.pch */,
 				7ABFC11F1C98FFCF004B9AA6 /* Header.h */,
-				7A4764171C984D900057A7D9 /* VOSegmentedControl */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -507,11 +541,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A75013A1C9BE5180002FA5C /* ProgressHUD.bundle in Resources */,
 				7A4623F11C99474400A6750D /* 分类2.plist in Resources */,
 				7A4623F91C999C0B00A6750D /* ChoseCollectionViewCell.xib in Resources */,
 				7A965F7F1C9993B200DE2547 /* TableViewCell.xib in Resources */,
 				7A47640E1C9835C20057A7D9 /* 坏蛋.plist in Resources */,
 				7A4764101C9835C90057A7D9 /* 精选.plist in Resources */,
+				7A9BBA1E1C9CF60700CA55D9 /* Storyboard.storyboard in Resources */,
 				7AB437071C9A4D2100532A9A /* ChoseTableViewCell.xib in Resources */,
 				7AE264B91C9841D4006C9A6D /* My.storyboard in Resources */,
 				7A99D4521C97EE31001DD9B9 /* Assets.xcassets in Resources */,
@@ -596,13 +632,17 @@
 				7A6BE8461C9A47BD006F6E17 /* UIView+UIViewExtension.m in Sources */,
 				7A6BE8431C9A428C006F6E17 /* DownloadDidTableViewCell.m in Sources */,
 				7A4764221C984D900057A7D9 /* VOSegment.m in Sources */,
+				7A7501351C9BE3BD0002FA5C /* NSString+Common.m in Sources */,
 				7A4764211C984D900057A7D9 /* VOIndicatorAnimation.m in Sources */,
 				7A965F7A1C993B2A00DE2547 /* SearchModel.m in Sources */,
 				7A389CAA1C9B873000950794 /* ChatRoomViewController.m in Sources */,
+				7A75016B1C9C09040002FA5C /* RequestViewController.m in Sources */,
 				7AB437061C9A4D2100532A9A /* ChoseTableViewCell.m in Sources */,
+				7A75013B1C9BE5180002FA5C /* ProgressHUD.m in Sources */,
 				7AE2889F1C98118000596833 /* DiscoverViewController.m in Sources */,
 				7A99D44D1C97EE31001DD9B9 /* main.m in Sources */,
 				7A9FFBAE1C99565A0045ECBC /* FavoriteViewController.m in Sources */,
+				7A9BBA1C1C9CF5F100CA55D9 /* SingleChatViewController.m in Sources */,
 				7A4764231C984D900057A7D9 /* VOSegmentedControl.m in Sources */,
 				7A965F7E1C9993B200DE2547 /* TableViewCell.m in Sources */,
 				7A9FFBB41C9984080045ECBC /* TimerUpViewController.m in Sources */,
@@ -718,6 +758,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/LessionBook/Library/HyphenateSDK/lib",
 					"$(PROJECT_DIR)/LessionBook/Library/sdk-ios-cocoapods-integration/EaseMobSDKFull/lib",
+					"$(PROJECT_DIR)/LessionBook/Library/tools/HyphenateSDK/lib",
+					"$(PROJECT_DIR)/LessionBook/Library/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
+					"$(PROJECT_DIR)/LessionBook/Library/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iOS.huI.LessionBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -738,6 +781,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/LessionBook/Library/HyphenateSDK/lib",
 					"$(PROJECT_DIR)/LessionBook/Library/sdk-ios-cocoapods-integration/EaseMobSDKFull/lib",
+					"$(PROJECT_DIR)/LessionBook/Library/tools/HyphenateSDK/lib",
+					"$(PROJECT_DIR)/LessionBook/Library/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
+					"$(PROJECT_DIR)/LessionBook/Library/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iOS.huI.LessionBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";

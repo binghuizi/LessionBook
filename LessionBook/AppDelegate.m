@@ -30,7 +30,9 @@
     //registerSDKWithAppKey
     [[EaseMob sharedInstance] registerSDKWithAppKey:kHuanxinAppKey apnsCertName:nil];
     [[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
+    [[EaseMob sharedInstance].chatManager setIsAutoFetchBuddyList:YES];
     
+
     // Override point for customization after application launch.
     //下载
     DownloadViewController *downloadVC = [[DownloadViewController alloc] init];
@@ -100,5 +102,8 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     [[EaseMob sharedInstance] applicationWillTerminate:application];
 }
+
+
+
 
 @end

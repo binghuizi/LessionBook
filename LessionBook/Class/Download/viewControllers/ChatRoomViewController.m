@@ -9,8 +9,9 @@
 #import "ChatRoomViewController.h"
 #import "MessageViewController.h"
 #import <EaseMob.h>
+#import "ProgressHUD.h"
 
-@interface ChatRoomViewController ()<UITextFieldDelegate>
+@interface ChatRoomViewController ()<UITextFieldDelegate, EMChatManagerDelegate>
 
 @property (nonatomic, strong) UITextField *username;
 @property (nonatomic, strong) UITextField *userPassword;
@@ -32,6 +33,7 @@
     [self.view addSubview:self.userPassword];
     [self.view addSubview:self.registBtn];
     [self.view addSubview:self.loginBtn];
+    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
 }
 
 
@@ -83,16 +85,32 @@
         //隐藏键盘
         [self.view endEditing:YES];
         //判断是否是中文，但不支持中英文混编
-//        if ([self.username.text is]) {
-//            <#statements#>
-//        }
+        if ([self.username.text isChinese]) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"login", @"用户名不支持中文") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", @"OK")otherButtonTitles:nil];
+            [alert show];
+            return;
+        }
+        [ProgressHUD show:@"正在注册"];
+        __weak typeof(self) weakself = self;
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+          [[EaseMob sharedInstance].chatManager registerNewAccount:weakself.username.text password:weakself.userPassword.text error:nil];
+        [ProgressHUD showSuccess:@"注册成功, 请登录"];
+        });
     }
 }
 
 //登录
 - (void)loginAction{
-    MessageViewController *messageVC = [[MessageViewController alloc] init];
-    [self.navigationController pushViewController:messageVC animated:YES];
+    [ProgressHUD show:@"正在抢滩登陆"];
+    //异步登陆账号
+    [[EaseMob sharedInstance].chatManager loginWithUsername:self.username.text password:self.userPassword.text error:nil];
+        [ProgressHUD showSuccess:@"登陆成功"];
+        //获取数据库中数据
+        [[EaseMob sharedInstance].chatManager loadDataFromDatabase];
+        //获取群组列表
+        [[EaseMob sharedInstance].chatManager asyncFetchMyGroupsList];
+        MessageViewController *messageVC = [[MessageViewController alloc] init];
+        [self.navigationController pushViewController:messageVC animated:YES];
 }
 
 //判断输入的内容是否为空
@@ -107,17 +125,28 @@
     return NO;
 }
 
-//判断字符串是否是中文
 
-- (BOOL)isChinese
-{
-    NSString *match = @"(^[\u4e00-\u9fa5]+$)";
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF matches %@", match];
-    return [predicate evaluateWithObject:self];
-}
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
+}
+
+- (void)didReceiveBuddyRequest:(NSString *)username
+                       message:(NSString *)message{
+    NSString *str = [NSString stringWithFormat:@"%@请求加你为好友", username];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    [alert show];
+    EMError *error = nil;
+    BOOL isSuccess = [[EaseMob sharedInstance].chatManager acceptBuddyRequest:username error:&error];
+    if (isSuccess && !error) {
+        NSLog(@"发送同意成功");
+    }
+}
+
+- (void)didAcceptedByBuddy:(NSString *)username{
+    NSString *str = [NSString stringWithFormat:@"%@同意加你为好友", username];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    [alert show];
 }
 
 - (void)didReceiveMemoryWarning {
