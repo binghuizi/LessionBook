@@ -17,6 +17,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "DetailViewController.h"
 #import "detailModel.h"
+#import "TypeViewController.h"
 @interface DiscoverViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate, imageviewDelegate>
 {
    
@@ -267,6 +268,11 @@
     
    
     
+}
+#pragma mark --collectionView点击方法
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    TypeViewController *typeVc = [[TypeViewController alloc]init];
+    [self.navigationController pushViewController:typeVc animated:YES];
 }
 #pragma mark -- 自定义tableView头部
 -(void)headTableView{

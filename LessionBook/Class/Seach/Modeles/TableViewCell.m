@@ -27,6 +27,11 @@
 
 -(void)setModel:(detailModel *)model{
     self.bookNameLabel.text = model.name;
+    NSInteger num = [HWTools number:model.duration];
+    NSInteger n1 = num/60;
+    NSInteger n2 = num%60;
+    self.timesLabel.text = [NSString stringWithFormat:@"时长：%ld分%ld秒",n1,n2];
+    
     
 }
 

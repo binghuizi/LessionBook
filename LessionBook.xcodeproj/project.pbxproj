@@ -37,6 +37,13 @@
 		7A54D2581C9C3F6A0012224E /* detailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A54D2571C9C3F6A0012224E /* detailModel.m */; };
 		7A68D4E71C9CF0730090DB08 /* 精选.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A68D4E61C9CF0730090DB08 /* 精选.plist */; };
 		7A68D4EA1C9D40100090DB08 /* UIViewController+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A68D4E81C9D40100090DB08 /* UIViewController+Common.m */; };
+		7A68D4ED1C9D450D0090DB08 /* HWTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A68D4EC1C9D450D0090DB08 /* HWTools.m */; };
+		7A68D4F01C9D50360090DB08 /* TypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A68D4EF1C9D50360090DB08 /* TypeViewController.m */; };
+		7A68D4F41C9D587C0090DB08 /* TypeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A68D4F21C9D587C0090DB08 /* TypeTableViewCell.m */; };
+		7A68D4F51C9D587C0090DB08 /* TypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A68D4F31C9D587C0090DB08 /* TypeTableViewCell.xib */; };
+		7A68D4FB1C9D5F750090DB08 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A68D4F71C9D5F750090DB08 /* blueArrow.png */; };
+		7A68D4FC1C9D5F750090DB08 /* blueArrowDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A68D4F81C9D5F750090DB08 /* blueArrowDown.png */; };
+		7A68D4FD1C9D5F750090DB08 /* PullingRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A68D4FA1C9D5F750090DB08 /* PullingRefreshTableView.m */; };
 		7A6BE8431C9A428C006F6E17 /* DownloadDidTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6BE8421C9A428C006F6E17 /* DownloadDidTableViewCell.m */; };
 		7A6BE8461C9A47BD006F6E17 /* UIView+UIViewExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6BE8451C9A47BD006F6E17 /* UIView+UIViewExtension.m */; };
 		7A6BE8491C9A5F35006F6E17 /* DidDownLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6BE8481C9A5F35006F6E17 /* DidDownLoadViewController.m */; };
@@ -118,6 +125,17 @@
 		7A68D4E61C9CF0730090DB08 /* 精选.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = "精选.plist"; sourceTree = "<group>"; };
 		7A68D4E81C9D40100090DB08 /* UIViewController+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Common.m"; sourceTree = "<group>"; };
 		7A68D4E91C9D40100090DB08 /* UIViewController+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Common.h"; sourceTree = "<group>"; };
+		7A68D4EB1C9D450D0090DB08 /* HWTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTools.h; sourceTree = "<group>"; };
+		7A68D4EC1C9D450D0090DB08 /* HWTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWTools.m; sourceTree = "<group>"; };
+		7A68D4EE1C9D50360090DB08 /* TypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeViewController.h; sourceTree = "<group>"; };
+		7A68D4EF1C9D50360090DB08 /* TypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeViewController.m; sourceTree = "<group>"; };
+		7A68D4F11C9D587C0090DB08 /* TypeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeTableViewCell.h; sourceTree = "<group>"; };
+		7A68D4F21C9D587C0090DB08 /* TypeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeTableViewCell.m; sourceTree = "<group>"; };
+		7A68D4F31C9D587C0090DB08 /* TypeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TypeTableViewCell.xib; sourceTree = "<group>"; };
+		7A68D4F71C9D5F750090DB08 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
+		7A68D4F81C9D5F750090DB08 /* blueArrowDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrowDown.png; sourceTree = "<group>"; };
+		7A68D4F91C9D5F750090DB08 /* PullingRefreshTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullingRefreshTableView.h; sourceTree = "<group>"; };
+		7A68D4FA1C9D5F750090DB08 /* PullingRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullingRefreshTableView.m; sourceTree = "<group>"; };
 		7A6BE8411C9A428C006F6E17 /* DownloadDidTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadDidTableViewCell.h; sourceTree = "<group>"; };
 		7A6BE8421C9A428C006F6E17 /* DownloadDidTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadDidTableViewCell.m; sourceTree = "<group>"; };
 		7A6BE8441C9A47BD006F6E17 /* UIView+UIViewExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIViewExtension.h"; sourceTree = "<group>"; };
@@ -240,6 +258,17 @@
 				7A47641F1C984D900057A7D9 /* VOSegmentedControl.m */,
 			);
 			path = VOSegmentedControl;
+			sourceTree = "<group>";
+		};
+		7A68D4F61C9D5F750090DB08 /* PullingRefreshTableView */ = {
+			isa = PBXGroup;
+			children = (
+				7A68D4F71C9D5F750090DB08 /* blueArrow.png */,
+				7A68D4F81C9D5F750090DB08 /* blueArrowDown.png */,
+				7A68D4F91C9D5F750090DB08 /* PullingRefreshTableView.h */,
+				7A68D4FA1C9D5F750090DB08 /* PullingRefreshTableView.m */,
+			);
+			path = PullingRefreshTableView;
 			sourceTree = "<group>";
 		};
 		7A7501361C9BE5180002FA5C /* ProgressHUD */ = {
@@ -400,6 +429,8 @@
 				7AE2889E1C98118000596833 /* DiscoverViewController.m */,
 				7A54D24C1C9BA0070012224E /* DetailViewController.h */,
 				7A54D24D1C9BA0070012224E /* DetailViewController.m */,
+				7A68D4EE1C9D50360090DB08 /* TypeViewController.h */,
+				7A68D4EF1C9D50360090DB08 /* TypeViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -440,6 +471,9 @@
 				7A54D24F1C9BA0890012224E /* DetailHeadView.h */,
 				7A54D2501C9BA0890012224E /* DetailHeadView.m */,
 				7A54D2521C9BA0B80012224E /* DetailHeadView.xib */,
+				7A68D4F11C9D587C0090DB08 /* TypeTableViewCell.h */,
+				7A68D4F21C9D587C0090DB08 /* TypeTableViewCell.m */,
+				7A68D4F31C9D587C0090DB08 /* TypeTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -497,6 +531,7 @@
 		7AE2889B1C980EEF00596833 /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				7A68D4F61C9D5F750090DB08 /* PullingRefreshTableView */,
 				7A4764171C984D900057A7D9 /* VOSegmentedControl */,
 				7A7501361C9BE5180002FA5C /* ProgressHUD */,
 				7A6BE8441C9A47BD006F6E17 /* UIView+UIViewExtension.h */,
@@ -507,6 +542,8 @@
 				7A68D4E91C9D40100090DB08 /* UIViewController+Common.h */,
 				7AE2889C1C980FB800596833 /* HWDefine.pch */,
 				7ABFC11F1C98FFCF004B9AA6 /* Header.h */,
+				7A68D4EB1C9D450D0090DB08 /* HWTools.h */,
+				7A68D4EC1C9D450D0090DB08 /* HWTools.m */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -586,8 +623,11 @@
 				7A54D2551C9C3C8E0012224E /* 大圈.plist in Resources */,
 				7A99D4551C97EE31001DD9B9 /* LaunchScreen.storyboard in Resources */,
 				7A4764161C9847750057A7D9 /* 分类--热门.plist in Resources */,
+				7A68D4FC1C9D5F750090DB08 /* blueArrowDown.png in Resources */,
+				7A68D4F51C9D587C0090DB08 /* TypeTableViewCell.xib in Resources */,
 				7A4764121C98400C0057A7D9 /* 轮番图.plist in Resources */,
 				7A4764141C98408C0057A7D9 /* 分类.plist in Resources */,
+				7A68D4FB1C9D5F750090DB08 /* blueArrow.png in Resources */,
 				7A965F761C99328A00DE2547 /* search.plist in Resources */,
 				7A47640C1C9835BA0057A7D9 /* 搜索大主宰.plist in Resources */,
 			);
@@ -652,12 +692,15 @@
 				7A4623F81C999C0B00A6750D /* ChoseCollectionViewCell.m in Sources */,
 				7AD1C4AC1C9BA204001346CA /* MessageViewController.m in Sources */,
 				7A6BE8491C9A5F35006F6E17 /* DidDownLoadViewController.m in Sources */,
+				7A68D4FD1C9D5F750090DB08 /* PullingRefreshTableView.m in Sources */,
 				7A9BBA211C9D08C900CA55D9 /* SingleViewController.m in Sources */,
 				7A4623F41C998EA400A6750D /* ChoseModel.m in Sources */,
 				7AFE6E011C9A512D0041A33B /* TimeView.m in Sources */,
 				7A965F841C9998FF00DE2547 /* DownloadTableViewCell.m in Sources */,
+				7A68D4F01C9D50360090DB08 /* TypeViewController.m in Sources */,
 				7A7501321C9BAD110002FA5C /* LinkManViewController.m in Sources */,
 				7AE264B71C9840A9006C9A6D /* MyViewController.m in Sources */,
+				7A68D4F41C9D587C0090DB08 /* TypeTableViewCell.m in Sources */,
 				7A4623EF1C992FED00A6750D /* TypeModel.m in Sources */,
 				7A965F771C99328A00DE2547 /* SearchViewController.m in Sources */,
 				7A9FFBB11C9983C80045ECBC /* RecordViewController.m in Sources */,
@@ -672,6 +715,7 @@
 				7A4764211C984D900057A7D9 /* VOIndicatorAnimation.m in Sources */,
 				7A965F7A1C993B2A00DE2547 /* SearchModel.m in Sources */,
 				7A389CAA1C9B873000950794 /* ChatRoomViewController.m in Sources */,
+				7A68D4ED1C9D450D0090DB08 /* HWTools.m in Sources */,
 				7A75016B1C9C09040002FA5C /* RequestViewController.m in Sources */,
 				7AB437061C9A4D2100532A9A /* ChoseTableViewCell.m in Sources */,
 				7A75013B1C9BE5180002FA5C /* ProgressHUD.m in Sources */,
