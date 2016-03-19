@@ -23,14 +23,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self showBackButton:@"ic_arrow_general2"];
    
     self.title = self.titleString;
+   
     [self loadAction];
     [self.view addSubview:self.tableView];
     [self.tableView registerNib:[UINib nibWithNibName:@"TableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     
     [self loadHeadView];
 }
+
 -(void)loadHeadView{
     //[[[NSBundle mainBundle] loadNibNamed:@"DetailHeaderView" owner:nil options:nil] lastObject];DetailHeadView
     DetailHeadView *tableViewHead = [[[NSBundle mainBundle] loadNibNamed:@"DetailHeadView" owner:nil options:nil] lastObject];

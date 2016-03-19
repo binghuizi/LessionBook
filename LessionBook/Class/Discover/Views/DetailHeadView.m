@@ -7,7 +7,7 @@
 //
 
 #import "DetailHeadView.h"
-
+#import <SDWebImage/UIImageView+WebCache.h>
 @implementation DetailHeadView
 
 /*

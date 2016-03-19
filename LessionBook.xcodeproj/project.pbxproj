@@ -36,6 +36,7 @@
 		7A54D2551C9C3C8E0012224E /* 大圈.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A54D2541C9C3C8E0012224E /* 大圈.plist */; };
 		7A54D2581C9C3F6A0012224E /* detailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A54D2571C9C3F6A0012224E /* detailModel.m */; };
 		7A68D4E71C9CF0730090DB08 /* 精选.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A68D4E61C9CF0730090DB08 /* 精选.plist */; };
+		7A68D4EA1C9D40100090DB08 /* UIViewController+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A68D4E81C9D40100090DB08 /* UIViewController+Common.m */; };
 		7A6BE8431C9A428C006F6E17 /* DownloadDidTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6BE8421C9A428C006F6E17 /* DownloadDidTableViewCell.m */; };
 		7A6BE8461C9A47BD006F6E17 /* UIView+UIViewExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6BE8451C9A47BD006F6E17 /* UIView+UIViewExtension.m */; };
 		7A6BE8491C9A5F35006F6E17 /* DidDownLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6BE8481C9A5F35006F6E17 /* DidDownLoadViewController.m */; };
@@ -114,6 +115,8 @@
 		7A54D2561C9C3F6A0012224E /* detailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailModel.h; sourceTree = "<group>"; };
 		7A54D2571C9C3F6A0012224E /* detailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailModel.m; sourceTree = "<group>"; };
 		7A68D4E61C9CF0730090DB08 /* 精选.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = "精选.plist"; sourceTree = "<group>"; };
+		7A68D4E81C9D40100090DB08 /* UIViewController+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Common.m"; sourceTree = "<group>"; };
+		7A68D4E91C9D40100090DB08 /* UIViewController+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Common.h"; sourceTree = "<group>"; };
 		7A6BE8411C9A428C006F6E17 /* DownloadDidTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadDidTableViewCell.h; sourceTree = "<group>"; };
 		7A6BE8421C9A428C006F6E17 /* DownloadDidTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadDidTableViewCell.m; sourceTree = "<group>"; };
 		7A6BE8441C9A47BD006F6E17 /* UIView+UIViewExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIViewExtension.h"; sourceTree = "<group>"; };
@@ -496,6 +499,8 @@
 				7A6BE8451C9A47BD006F6E17 /* UIView+UIViewExtension.m */,
 				7A7501331C9BE3BD0002FA5C /* NSString+Common.h */,
 				7A7501341C9BE3BD0002FA5C /* NSString+Common.m */,
+				7A68D4E81C9D40100090DB08 /* UIViewController+Common.m */,
+				7A68D4E91C9D40100090DB08 /* UIViewController+Common.h */,
 				7AE2889C1C980FB800596833 /* HWDefine.pch */,
 				7ABFC11F1C98FFCF004B9AA6 /* Header.h */,
 			);
@@ -569,9 +574,7 @@
 				7A965F7F1C9993B200DE2547 /* TableViewCell.xib in Resources */,
 				7A54D2531C9BA0B80012224E /* DetailHeadView.xib in Resources */,
 				7A47640E1C9835C20057A7D9 /* 坏蛋.plist in Resources */,
-				7A4764101C9835C90057A7D9 /* 精选.plist in Resources */,
 				7A9BBA1E1C9CF60700CA55D9 /* Storyboard.storyboard in Resources */,
-
 				7AB437071C9A4D2100532A9A /* ChoseTableViewCell.xib in Resources */,
 				7AE264B91C9841D4006C9A6D /* My.storyboard in Resources */,
 				7A99D4521C97EE31001DD9B9 /* Assets.xcassets in Resources */,
@@ -659,6 +662,7 @@
 				7A54D24E1C9BA0070012224E /* DetailViewController.m in Sources */,
 				7A6BE8431C9A428C006F6E17 /* DownloadDidTableViewCell.m in Sources */,
 				7A4764221C984D900057A7D9 /* VOSegment.m in Sources */,
+				7A68D4EA1C9D40100090DB08 /* UIViewController+Common.m in Sources */,
 				7A7501351C9BE3BD0002FA5C /* NSString+Common.m in Sources */,
 				7A4764211C984D900057A7D9 /* VOIndicatorAnimation.m in Sources */,
 				7A965F7A1C993B2A00DE2547 /* SearchModel.m in Sources */,
