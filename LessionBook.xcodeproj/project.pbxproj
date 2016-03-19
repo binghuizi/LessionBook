@@ -57,8 +57,9 @@
 		7A99D4501C97EE31001DD9B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A99D44F1C97EE31001DD9B9 /* AppDelegate.m */; };
 		7A99D4521C97EE31001DD9B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A99D4511C97EE31001DD9B9 /* Assets.xcassets */; };
 		7A99D4551C97EE31001DD9B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A99D4531C97EE31001DD9B9 /* LaunchScreen.storyboard */; };
-		7A9BBA1C1C9CF5F100CA55D9 /* SingleChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9BBA1B1C9CF5F100CA55D9 /* SingleChatViewController.m */; };
 		7A9BBA1E1C9CF60700CA55D9 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A9BBA1D1C9CF60700CA55D9 /* Storyboard.storyboard */; };
+		7A9BBA211C9D08C900CA55D9 /* SingleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9BBA201C9D08C900CA55D9 /* SingleViewController.m */; };
+		7A9BBA231C9D3AA200CA55D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9BBA221C9D3AA200CA55D9 /* CoreGraphics.framework */; };
 		7A9FFBAE1C99565A0045ECBC /* FavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FFBAD1C99565A0045ECBC /* FavoriteViewController.m */; };
 		7A9FFBB11C9983C80045ECBC /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FFBB01C9983C80045ECBC /* RecordViewController.m */; };
 		7A9FFBB41C9984080045ECBC /* TimerUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FFBB31C9984080045ECBC /* TimerUpViewController.m */; };
@@ -152,9 +153,10 @@
 		7A99D4511C97EE31001DD9B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A99D4541C97EE31001DD9B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A99D4561C97EE31001DD9B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A9BBA1A1C9CF5F100CA55D9 /* SingleChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleChatViewController.h; sourceTree = "<group>"; };
-		7A9BBA1B1C9CF5F100CA55D9 /* SingleChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleChatViewController.m; sourceTree = "<group>"; };
 		7A9BBA1D1C9CF60700CA55D9 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		7A9BBA1F1C9D08C900CA55D9 /* SingleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleViewController.h; sourceTree = "<group>"; };
+		7A9BBA201C9D08C900CA55D9 /* SingleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleViewController.m; sourceTree = "<group>"; };
+		7A9BBA221C9D3AA200CA55D9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7A9FFBAC1C99565A0045ECBC /* FavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteViewController.h; sourceTree = "<group>"; };
 		7A9FFBAD1C99565A0045ECBC /* FavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteViewController.m; sourceTree = "<group>"; };
 		7A9FFBAF1C9983C80045ECBC /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A9BBA231C9D3AA200CA55D9 /* CoreGraphics.framework in Frameworks */,
 				7A389CE71C9B915600950794 /* libxml2.tbd in Frameworks */,
 				7A389CE51C9B914B00950794 /* libresolv.tbd in Frameworks */,
 				7A389CE31C9B913C00950794 /* libiconv.tbd in Frameworks */,
@@ -201,6 +204,7 @@
 		12BB96C7D9304EFD5EC9AB4C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A9BBA221C9D3AA200CA55D9 /* CoreGraphics.framework */,
 				7A389CE61C9B915600950794 /* libxml2.tbd */,
 				7A389CE41C9B914B00950794 /* libresolv.tbd */,
 				7A389CE21C9B913C00950794 /* libiconv.tbd */,
@@ -280,8 +284,8 @@
 				7A7501311C9BAD110002FA5C /* LinkManViewController.m */,
 				7A7501691C9C09040002FA5C /* RequestViewController.h */,
 				7A75016A1C9C09040002FA5C /* RequestViewController.m */,
-				7A9BBA1A1C9CF5F100CA55D9 /* SingleChatViewController.h */,
-				7A9BBA1B1C9CF5F100CA55D9 /* SingleChatViewController.m */,
+				7A9BBA1F1C9D08C900CA55D9 /* SingleViewController.h */,
+				7A9BBA201C9D08C900CA55D9 /* SingleViewController.m */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -648,6 +652,7 @@
 				7A4623F81C999C0B00A6750D /* ChoseCollectionViewCell.m in Sources */,
 				7AD1C4AC1C9BA204001346CA /* MessageViewController.m in Sources */,
 				7A6BE8491C9A5F35006F6E17 /* DidDownLoadViewController.m in Sources */,
+				7A9BBA211C9D08C900CA55D9 /* SingleViewController.m in Sources */,
 				7A4623F41C998EA400A6750D /* ChoseModel.m in Sources */,
 				7AFE6E011C9A512D0041A33B /* TimeView.m in Sources */,
 				7A965F841C9998FF00DE2547 /* DownloadTableViewCell.m in Sources */,
@@ -673,7 +678,6 @@
 				7AE2889F1C98118000596833 /* DiscoverViewController.m in Sources */,
 				7A99D44D1C97EE31001DD9B9 /* main.m in Sources */,
 				7A9FFBAE1C99565A0045ECBC /* FavoriteViewController.m in Sources */,
-				7A9BBA1C1C9CF5F100CA55D9 /* SingleChatViewController.m in Sources */,
 				7A4764231C984D900057A7D9 /* VOSegmentedControl.m in Sources */,
 				7A965F7E1C9993B200DE2547 /* TableViewCell.m in Sources */,
 				7A9FFBB41C9984080045ECBC /* TimerUpViewController.m in Sources */,
@@ -781,6 +785,7 @@
 			baseConfigurationReference = 706A4DEFC7FBB216AD8C4E61 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LessionBook/Library/tools/HWDefine.pch";
 				INFOPLIST_FILE = LessionBook/Info.plist;
@@ -804,6 +809,7 @@
 			baseConfigurationReference = 67981FB38F5840FA5D07AC7F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LessionBook/Library/tools/HWDefine.pch";
 				INFOPLIST_FILE = LessionBook/Info.plist;
