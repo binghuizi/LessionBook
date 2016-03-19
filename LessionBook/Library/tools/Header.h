@@ -12,10 +12,8 @@
 #define kSearch @"http://search.qingting.fm/api/newsearch/findvt?k=%@&groups=all&curpage=1&pagesize=10&type=novel&deviceid=00000000-5f67-c5fa-ffff-ffff9ecd38da"
 
 //详情页面
-#define kDetails @"http://api2.qingting.fm/v5/media/channels/33028/programs/curpage/1/pagesize/100"
 
-//http://upod.qingting.fm/vod/00/00/0000000000000000000024202041_24.m4a
-
+#define kDetails @"http://42.120.60.147/v5/media/channels/"
 
 #endif /* Header_h */
 

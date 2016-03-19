@@ -15,7 +15,11 @@
 #import "ChoseCollectionViewCell.h"
 #import "ChoseTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-@interface DiscoverViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
+#import "DetailViewController.h"
+@interface DiscoverViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate, imageviewDelegate>
+{
+   
+}
 @property(nonatomic,retain) VOSegmentedControl *segment1;
 @property(nonatomic,retain) UICollectionView *collectionView;
 
@@ -33,6 +37,8 @@
 @property(nonatomic,strong) NSMutableArray *itemsArray;
 @property(nonatomic,strong) UIScrollView *scrollView;
 @property(nonatomic,strong) NSMutableArray *nameArray;
+@property(nonatomic,strong) NSTimer *timer;//定时器用于图片滚动
+@property(nonatomic,strong) UIPageControl *pageControl;
 @end
 
 @implementation DiscoverViewController
@@ -40,7 +46,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    [self startTimer];
     [self.view addSubview:self.titleView];
     [self.view addSubview:self.typeView];
     [self.view addSubview:self.choseView];
@@ -62,6 +68,7 @@
     [self.choseSwipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
     [[self typeView ]addGestureRecognizer:self.typeSwipeLeft];
     [[self choseView ]addGestureRecognizer:self.choseSwipeRight];
+    
     
 }
 #pragma mark --- 清扫手势
@@ -129,8 +136,6 @@
             
         }
         
-        
-        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         DSNLog(@"%@",error);
     }];
@@ -146,15 +151,11 @@
      
      [sessionManager GET:chose parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
 
-       // DSNLog(@"%@",downloadProgress);
-        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-       // DSNLog(@"%@",responseObject);
+
+      //  DSNLog(@"%@",downloadProgress);
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //DSNLog(@"%@",responseObject);
         
-
-        
-
-
-            
         NSDictionary *rootDic = responseObject;
         
         NSArray *dataArray = rootDic[@"data"];
@@ -214,9 +215,6 @@
     
 }
 
-
-
-
 #pragma mark --- collectionView代理方法
 //行
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -258,7 +256,10 @@
     
     tableHeaderView.frame = CGRectMake(0, 0, kWideth, 220);
     [tableHeaderView addSubview:self.scrollView];
-  
+  //圆点个数
+    self.pageControl.numberOfPages = self.pictureArray.count;
+    [tableHeaderView addSubview:self.pageControl];
+    
 #pragma mark --给ScrollViewT添加图片
     for (int i = 0; i < self.pictureArray.count; i++) {
         UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(kWideth * i, 0, kWideth, 180)];
@@ -278,12 +279,79 @@
         [touchButton addTarget:self action:@selector(pictuAction:) forControlEvents:UIControlEventTouchUpInside];
         [self.scrollView addSubview:touchButton];
     }
-    
     //区头添加
     self.tableView.tableHeaderView = tableHeaderView;//添加区头；
 
 }
-
+-(void)pictuAction:(UIButton *)btn{
+    switch (btn.tag) {
+        case 0:
+        {
+            DetailViewController *detailVc = [[DetailViewController alloc]init];
+            
+            [self.navigationController pushViewController:detailVc animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+//首页轮番
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    //scrollView的宽度
+    CGFloat pageWidth = self.scrollView.frame.size.width;
+    //偏移量
+    CGPoint offSet = self.scrollView.contentOffset;
+    //偏移量除以宽度就是圆点个数
+    NSInteger pageNumber = offSet.x/pageWidth;
+    self.pageControl.currentPage = pageNumber;
+    
+    
+}
+#pragma mark --- 圆点动视图也动
+-(void)touchActionPage:(UIPageControl *)pageConrol{
+    //当前圆点个数
+    NSInteger pageNumber = pageConrol.currentPage;
+    //洒出rollView的宽度
+    
+    CGFloat pageWidth = self.scrollView.frame.size.width;
+    //scrollView的偏移量
+    self.scrollView.contentOffset = CGPointMake(pageNumber *pageWidth, 0);
+    
+    
+}
+//开始定时轮番
+-(void)startTimer{
+    if (self.timer != nil) {
+        return;
+    }
+    self.timer = [NSTimer timerWithTimeInterval:2.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
+    
+    
+     [[NSRunLoop currentRunLoop]addTimer:self.timer forMode:NSRunLoopCommonModes];
+}
+-(void)updateTimer{
+    if (self.pictureArray.count > 0) {
+    //当前页数+1
+        NSInteger page = self.pageControl.currentPage + 1;
+        //获取圆点个数
+        CGFloat offSex = page % self.pictureArray.count;
+        self.pageControl.currentPage = offSex;
+        [self touchActionPage:self.pageControl];
+    }
+}
+//挡手动滑动scrollView的时候定时器依然在计算事件可能我们刚刚滑动到那  定时器有高好书法导致当前也停留的事件补不够两秒
+//解决方案 scroll开始移动时 结束定时器在scroll在移动完毕时候  在启动定时器
+//将要开始拖拽  定时器取消
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    [self.timer invalidate];
+    self.timer = nil;//定时器停止
+}
+//拖拽完毕
+-(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
+    [self startTimer];
+}
 #pragma mark --- tableView代理方法
 //行
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -292,9 +360,10 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     ChoseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tableView" forIndexPath:indexPath];
-
     
+    cell.delgate = self;
     cell.model = self.itemsArray[indexPath.row];
+    
     
     return cell;
     
@@ -305,8 +374,33 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 200;
 }
+#pragma mark --- tableView点击方法
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
 
 
+#pragma mark -- 详情代理
+//代理方法
+-(void)showImage:(NSString *)imageUrl anchor:(NSString *)anchor author:(NSString *)author describe:(NSString *)describe titleName:(NSString *)titleName
+        idString:(NSString *)idString{
+
+    DetailViewController *detailVc = [[DetailViewController alloc]init];
+  
+    detailVc.pictchString = imageUrl;
+    detailVc.zhuboString = anchor;
+    detailVc.zuozheString = author;
+    detailVc.miaoshuString = describe;
+    detailVc.titleString = titleName;
+    detailVc.idString = idString;
+    
+    [self.navigationController pushViewController:detailVc animated:YES];
+
+
+}
+-(void)titleName:(NSString *)titleName idString:(NSString *)idString{
+    
+}
 //懒加载collectionView
 -(UICollectionView *)collectionView{
     if (_collectionView == nil) {
@@ -421,6 +515,20 @@
     }
     return _nameArray;
 }
+//pageControl
+-(UIPageControl *)pageControl{
+    if (_pageControl == nil) {
+        self.pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(80, 186 - 30, kWideth, 30)];
+        //当前选中的颜色
+        self.pageControl.currentPageIndicatorTintColor = [UIColor orangeColor];
+        //点击圆点触发事件
+        [self.pageControl addTarget:self action:@selector(touchActionPage:) forControlEvents:UIControlEventValueChanged];
+        //分页初始化页数
+        self.pageControl.currentPage = 0;
+    }
+    return _pageControl;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
