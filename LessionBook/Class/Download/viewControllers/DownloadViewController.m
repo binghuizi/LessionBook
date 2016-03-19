@@ -11,6 +11,7 @@
 #import "DownloadTableViewCell.h"
 #import "DownloadDidTableViewCell.h"
 #import "DidDownLoadViewController.h"
+#import "ChatRoomViewController.h"
 
 static NSString *_downloadcell = @"cell";
 static NSString *_didDownload = @"did";
@@ -33,6 +34,7 @@ static NSString *_didDownload = @"did";
     self.navigationItem.title = @"下载";
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.segmentControl];
+    [self showRightBtn];
     [self.tableView registerNib:[UINib nibWithNibName:@"DownloadTableViewCell" bundle:nil] forCellReuseIdentifier:_downloadcell];
     [self.tableView registerClass:[DownloadDidTableViewCell class] forCellReuseIdentifier:_didDownload];
     
@@ -113,7 +115,15 @@ static NSString *_didDownload = @"did";
     }
 }
 
+- (void)showRightBtn{
+    UIBarButtonItem *barBtn = [[UIBarButtonItem alloc]initWithTitle:@"聊天室" style:UIBarButtonItemStyleDone target:self action:@selector(chatroom)];
+    self.navigationItem.rightBarButtonItem = barBtn;
+}
 
+- (void)chatroom{
+    ChatRoomViewController *chatVC = [[ChatRoomViewController alloc] init];
+    [self.navigationController pushViewController:chatVC animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -10,6 +10,7 @@
 #import "FavoriteViewController.h"
 #import "RecordViewController.h"
 #import "TimerUpViewController.h"
+#import "TimeView.h"
 
 @interface MyViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, retain) UITableView *tableView;
@@ -74,9 +75,10 @@
             break;
         case 2:
         {
-//            TimerUpViewController *timeUpVC = [[TimerUpViewController alloc] init];
-//            [self.navigationController pushViewController:timeUpVC animated:YES];
-            [self timeUp];
+
+            TimeView *timeView = [[TimeView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+            UIWindow *window = [[UIApplication sharedApplication].delegate window];
+            [window addSubview:timeView];
         }
             break;
         default:
@@ -103,46 +105,11 @@
     [self.headView addSubview:loginBtn];
     [self.headView addSubview:welcomeLabel];
 }
-//点击定时关机cell
-- (void)timeUp{
-    self.timeUpView = [[UIView alloc] initWithFrame:CGRectMake(40, kHeight - 400, 295, 250)];
-    self.timeUpView.backgroundColor = [UIColor colorWithRed:225/255.0 green:225/255.0 blue:220/255.0 alpha:1];
-
-   UILabel *timeShowLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 220, 50)];
-    timeShowLabel.text = @"定时关机";
-    NSArray *timeArray = [NSArray arrayWithObjects:@"10分钟", @"20分钟", @"30分钟", @"60分钟", @"90分钟", @"120分钟", nil];
-    
-    UISwitch *timeSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(230, 10, 45, 30)];
-    timeSwitch.on = NO;
-    [timeSwitch addTarget:self action:@selector(timeUpGo) forControlEvents:UIControlEventValueChanged];
-    timeSwitch.backgroundColor = [UIColor whiteColor];
-        [self.timeUpView addSubview:timeSwitch];
-    for (int i = 0; i < 6; i++) {
-        UIButton *timeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        timeBtn.frame = CGRectMake((i % 3) * 100, 50 + (i / 3) * 100, 95, 95);
-        [timeBtn setTitle:timeArray[i] forState:UIControlStateNormal];
-        [timeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        timeBtn.tag = i;
-        timeBtn.backgroundColor = [UIColor whiteColor];
-        [timeBtn addTarget:self action:@selector(timeUpStart:) forControlEvents:UIControlEventTouchUpInside];
-        [self.timeUpView addSubview:timeBtn];
-    }
-    [self.timeUpView addSubview:timeShowLabel];
-    [self.view addSubview:self.timeUpView];
-    
-}
 //登录注册按钮
 - (void)loginAction{
     
 }
-//switch点击事件
-- (void)timeUpGo{
-    
-}
-//定时按钮点击
-- (void)timeUpStart:(UIButton *)btn{
-    
-}
+
 
 ////点击屏幕隐藏timeUpView
 //- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

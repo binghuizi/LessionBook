@@ -151,6 +151,7 @@
      
      [sessionManager GET:chose parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
 
+
       //  DSNLog(@"%@",downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         //DSNLog(@"%@",responseObject);
@@ -287,6 +288,7 @@
         case 0:
         {
             DetailViewController *detailVc = [[DetailViewController alloc]init];
+            
             [self.navigationController pushViewController:detailVc animated:YES];
         }
             break;

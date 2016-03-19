@@ -83,8 +83,8 @@
     [self.searchBar resignFirstResponder];
     self.segmentControl.hidden = NO;
     self.tableView.hidden = NO;
-    self.Searchtext = [self.searchBar.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    
+    self.Searchtext = [self.searchBar.text stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
+    NSLog(@"%@", self.Searchtext);
     [self requestModel];
     
     
