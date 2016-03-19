@@ -9,6 +9,7 @@
 #import "LinkManViewController.h"
 #import <EaseMob.h>
 #import "RequestViewController.h"
+#import "SingleViewController.h"
 
 @interface LinkManViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -86,6 +87,13 @@
             break;
         case 2:
             
+            break;
+        case 3:
+        {
+            EMBuddy *buddy = self.array[0];
+            SingleViewController *singleVC = [[SingleViewController alloc] initWithConversationChatter:buddy.username conversationType:eConversationTypeChat];
+            [self.navigationController pushViewController:singleVC animated:YES];
+        }
             break;
         default:
             break;

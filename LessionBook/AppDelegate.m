@@ -13,6 +13,8 @@
 #import "MyViewController.h"
 #import "DiscoverViewController.h"
 #import <EaseMobSDKFull/EaseMob.h>
+#import <EaseUI.h>
+
 
 @interface AppDelegate ()
 
@@ -32,6 +34,12 @@
     [[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
     [[EaseMob sharedInstance].chatManager setIsAutoFetchBuddyList:YES];
     
+    [[EaseSDKHelper shareHelper] easemobApplication:application
+                      didFinishLaunchingWithOptions:launchOptions
+                                             appkey:kHuanxinAppKey
+                                       apnsCertName:nil
+                                        otherConfig:@{kSDKConfigEnableConsoleLogger:[NSNumber numberWithBool:YES]}];
+
 
     // Override point for customization after application launch.
     //下载
