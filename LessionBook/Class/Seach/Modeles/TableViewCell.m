@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *sizeLabel;
 @property (strong, nonatomic) IBOutlet UIButton *downloadBtn;
 
+
 @end
 
 @implementation TableViewCell
@@ -23,6 +24,12 @@
 - (void)awakeFromNib {
     // Initialization code
 }
+
+-(void)setModel:(detailModel *)model{
+    self.bookNameLabel.text = model.name;
+    
+}
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

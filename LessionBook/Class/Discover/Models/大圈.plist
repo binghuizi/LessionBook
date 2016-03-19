@@ -1,0 +1,3392 @@
+{
+data =     (
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1270.002833";
+id = 13072292;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000026077234_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000026077234_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000026077234_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3953519;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000026077234_24.m4a";
+http = "/vod/00/00/0000000000000000000026077234_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_1";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3807110;
+publishtime = 1437104246;
+script =             (
+);
+sequence = 1;
+"share_link" = "";
+source = 1;
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1437104246;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1244.947062";
+id = 9256451;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433535_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433535_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433535_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419978;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433535_24.m4a";
+http = "/vod/00/00/0000000000000000000025433535_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_2";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398420;
+publishtime = 1407920177;
+script =             (
+);
+sequence = 2;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920177;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1296.195875";
+id = 9256450;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433534_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433534_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433534_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419977;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433534_24.m4a";
+http = "/vod/00/00/0000000000000000000025433534_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_3";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398419;
+publishtime = 1407920176;
+script =             (
+);
+sequence = 3;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920176;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1191.810563";
+id = 9256449;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433533_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433533_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433533_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419976;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433533_24.m4a";
+http = "/vod/00/00/0000000000000000000025433533_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_4";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398418;
+publishtime = 1407920175;
+script =             (
+);
+sequence = 4;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920175;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1190.844063";
+id = 9256448;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433532_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433532_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433532_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419975;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433532_24.m4a";
+http = "/vod/00/00/0000000000000000000025433532_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_5";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398417;
+publishtime = 1407920174;
+script =             (
+);
+sequence = 5;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920174;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1258.527312";
+id = 9256447;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433531_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433531_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433531_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419974;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433531_24.m4a";
+http = "/vod/00/00/0000000000000000000025433531_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_6";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398416;
+publishtime = 1407920173;
+script =             (
+);
+sequence = 6;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920173;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1315.343625";
+id = 9256446;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433530_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433530_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433530_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419973;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433530_24.m4a";
+http = "/vod/00/00/0000000000000000000025433530_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_7";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398415;
+publishtime = 1407920172;
+script =             (
+);
+sequence = 7;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920172;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1315.291375";
+id = 9256445;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433529_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433529_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433529_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419972;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433529_24.m4a";
+http = "/vod/00/00/0000000000000000000025433529_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_8";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398414;
+publishtime = 1407920171;
+script =             (
+);
+sequence = 8;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920171;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1221.720812";
+id = 9256444;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433528_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433528_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433528_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419971;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433528_24.m4a";
+http = "/vod/00/00/0000000000000000000025433528_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_9";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398413;
+publishtime = 1407920170;
+script =             (
+);
+sequence = 9;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920170;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1277.727312";
+id = 9256443;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433527_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433527_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433527_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419970;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433527_24.m4a";
+http = "/vod/00/00/0000000000000000000025433527_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_10";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398412;
+publishtime = 1407920169;
+script =             (
+);
+sequence = 10;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920169;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1284.493062";
+id = 9256442;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433526_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433526_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433526_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419969;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433526_24.m4a";
+http = "/vod/00/00/0000000000000000000025433526_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_11";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398411;
+publishtime = 1407920168;
+script =             (
+);
+sequence = 11;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920168;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1278.093063";
+id = 9256441;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433525_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433525_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433525_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419968;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433525_24.m4a";
+http = "/vod/00/00/0000000000000000000025433525_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_12";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398410;
+publishtime = 1407920167;
+script =             (
+);
+sequence = 12;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920167;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1246.093063";
+id = 9256440;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433524_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433524_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433524_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419967;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433524_24.m4a";
+http = "/vod/00/00/0000000000000000000025433524_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_13";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398409;
+publishtime = 1407920166;
+script =             (
+);
+sequence = 13;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920166;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1289.116687";
+id = 9256439;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433523_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433523_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433523_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419966;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433523_24.m4a";
+http = "/vod/00/00/0000000000000000000025433523_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_14";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398408;
+publishtime = 1407920165;
+script =             (
+);
+sequence = 14;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920165;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1313.697938";
+id = 9256438;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433522_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433522_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433522_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419965;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433522_24.m4a";
+http = "/vod/00/00/0000000000000000000025433522_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_15";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398407;
+publishtime = 1407920164;
+script =             (
+);
+sequence = 15;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920164;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1306.488125";
+id = 9256437;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433521_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433521_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433521_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419964;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433521_24.m4a";
+http = "/vod/00/00/0000000000000000000025433521_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_16";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398406;
+publishtime = 1407920163;
+script =             (
+);
+sequence = 16;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920163;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1267.800812";
+id = 9256436;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433520_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433520_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433520_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419963;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433520_24.m4a";
+http = "/vod/00/00/0000000000000000000025433520_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_17";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398405;
+publishtime = 1407920162;
+script =             (
+);
+sequence = 17;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920162;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1275.350187";
+id = 9256435;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433519_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433519_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433519_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419962;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433519_24.m4a";
+http = "/vod/00/00/0000000000000000000025433519_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_18";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398404;
+publishtime = 1407920161;
+script =             (
+);
+sequence = 18;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920161;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1306.226938";
+id = 9256434;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433518_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433518_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433518_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419961;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433518_24.m4a";
+http = "/vod/00/00/0000000000000000000025433518_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_19";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398403;
+publishtime = 1407920160;
+script =             (
+);
+sequence = 19;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920160;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1319.079125";
+id = 9256433;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433517_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433517_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433517_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419960;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433517_24.m4a";
+http = "/vod/00/00/0000000000000000000025433517_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_20";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398402;
+publishtime = 1407920159;
+script =             (
+);
+sequence = 20;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920159;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1289.351813";
+id = 9256432;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433516_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433516_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433516_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419959;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433516_24.m4a";
+http = "/vod/00/00/0000000000000000000025433516_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_21";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398401;
+publishtime = 1407920158;
+script =             (
+);
+sequence = 21;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920158;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1295.647312";
+id = 9256431;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433515_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433515_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433515_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419958;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433515_24.m4a";
+http = "/vod/00/00/0000000000000000000025433515_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_22";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398400;
+publishtime = 1407920157;
+script =             (
+);
+sequence = 22;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920157;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1298.207312";
+id = 9256430;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433514_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433514_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433514_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419957;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433514_24.m4a";
+http = "/vod/00/00/0000000000000000000025433514_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_23";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398399;
+publishtime = 1407920156;
+script =             (
+);
+sequence = 23;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920156;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1253.172188";
+id = 9256429;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433513_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433513_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433513_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419956;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433513_24.m4a";
+http = "/vod/00/00/0000000000000000000025433513_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_24";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398398;
+publishtime = 1407920155;
+script =             (
+);
+sequence = 24;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920155;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1309.805687";
+id = 9256428;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433512_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433512_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433512_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419955;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433512_24.m4a";
+http = "/vod/00/00/0000000000000000000025433512_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_25";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398397;
+publishtime = 1407920154;
+script =             (
+);
+sequence = 25;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920154;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1311.94775";
+id = 9256427;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433511_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433511_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433511_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419954;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433511_24.m4a";
+http = "/vod/00/00/0000000000000000000025433511_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_26";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398396;
+publishtime = 1407920153;
+script =             (
+);
+sequence = 26;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920153;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1297.057937";
+id = 9256426;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433510_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433510_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433510_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419953;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433510_24.m4a";
+http = "/vod/00/00/0000000000000000000025433510_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_27";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398395;
+publishtime = 1407920152;
+script =             (
+);
+sequence = 27;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920152;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1307.89875";
+id = 9256425;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433509_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433509_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433509_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419952;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433509_24.m4a";
+http = "/vod/00/00/0000000000000000000025433509_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_28";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398394;
+publishtime = 1407920151;
+script =             (
+);
+sequence = 28;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920151;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1275.350187";
+id = 9256424;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433508_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433508_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433508_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419951;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433508_24.m4a";
+http = "/vod/00/00/0000000000000000000025433508_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_29";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398393;
+publishtime = 1407920150;
+script =             (
+);
+sequence = 29;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920150;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1313.515062";
+id = 9256423;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433507_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433507_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433507_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419950;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433507_24.m4a";
+http = "/vod/00/00/0000000000000000000025433507_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_30";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398392;
+publishtime = 1407920149;
+script =             (
+);
+sequence = 30;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920149;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1304.842437";
+id = 9256422;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433506_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433506_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433506_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419949;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433506_24.m4a";
+http = "/vod/00/00/0000000000000000000025433506_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_31";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398391;
+publishtime = 1407920148;
+script =             (
+);
+sequence = 31;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920148;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1102.106063";
+id = 9256421;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433505_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433505_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433505_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419948;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433505_24.m4a";
+http = "/vod/00/00/0000000000000000000025433505_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_32";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398390;
+publishtime = 1407920147;
+script =             (
+);
+sequence = 32;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920147;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1240.241625";
+id = 9256420;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433504_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433504_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433504_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419947;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433504_24.m4a";
+http = "/vod/00/00/0000000000000000000025433504_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_33";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398389;
+publishtime = 1407920146;
+script =             (
+);
+sequence = 33;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920146;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1277.44";
+id = 9256419;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433503_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433503_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433503_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419946;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433503_24.m4a";
+http = "/vod/00/00/0000000000000000000025433503_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_34";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398388;
+publishtime = 1407920145;
+script =             (
+);
+sequence = 34;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920145;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1136.953438";
+id = 9256418;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433502_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433502_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433502_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419945;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433502_24.m4a";
+http = "/vod/00/00/0000000000000000000025433502_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_35";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398387;
+publishtime = 1407920144;
+script =             (
+);
+sequence = 35;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920144;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1270.857125";
+id = 9256417;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433501_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433501_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433501_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419944;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433501_24.m4a";
+http = "/vod/00/00/0000000000000000000025433501_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_36";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398386;
+publishtime = 1407920143;
+script =             (
+);
+sequence = 36;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920143;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1268.401625";
+id = 9256416;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433500_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433500_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433500_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419943;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433500_24.m4a";
+http = "/vod/00/00/0000000000000000000025433500_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_37";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398385;
+publishtime = 1407920142;
+script =             (
+);
+sequence = 37;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920142;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1283.160813";
+id = 9256415;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433499_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433499_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433499_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419942;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433499_24.m4a";
+http = "/vod/00/00/0000000000000000000025433499_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_38";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398384;
+publishtime = 1407920141;
+script =             (
+);
+sequence = 38;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920141;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1255.5755";
+id = 9256414;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433498_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433498_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433498_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419941;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433498_24.m4a";
+http = "/vod/00/00/0000000000000000000025433498_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_39";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398383;
+publishtime = 1407920140;
+script =             (
+);
+sequence = 39;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920140;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1312.130562";
+id = 9256413;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433497_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433497_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433497_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419940;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433497_24.m4a";
+http = "/vod/00/00/0000000000000000000025433497_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_40";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398382;
+publishtime = 1407920139;
+script =             (
+);
+sequence = 40;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920139;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1287.601625";
+id = 9256412;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433496_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433496_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433496_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419939;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433496_24.m4a";
+http = "/vod/00/00/0000000000000000000025433496_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_41";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398381;
+publishtime = 1407920138;
+script =             (
+);
+sequence = 41;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920138;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1242.61875";
+id = 9256411;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433495_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433495_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433495_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419938;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433495_24.m4a";
+http = "/vod/00/00/0000000000000000000025433495_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_42";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398380;
+publishtime = 1407920137;
+script =             (
+);
+sequence = 42;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920137;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1274.958312";
+id = 9256410;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433494_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433494_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433494_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419937;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433494_24.m4a";
+http = "/vod/00/00/0000000000000000000025433494_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_43";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398379;
+publishtime = 1407920136;
+script =             (
+);
+sequence = 43;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920136;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1289.273438";
+id = 9256408;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433492_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433492_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433492_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419935;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433492_24.m4a";
+http = "/vod/00/00/0000000000000000000025433492_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_45";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398377;
+publishtime = 1407920134;
+script =             (
+);
+sequence = 44;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920134;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1319.183625";
+id = 9256407;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433491_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433491_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433491_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419934;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433491_24.m4a";
+http = "/vod/00/00/0000000000000000000025433491_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_46";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398376;
+publishtime = 1407920133;
+script =             (
+);
+sequence = 45;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920133;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1219.186937";
+id = 9256406;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433490_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433490_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433490_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419933;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433490_24.m4a";
+http = "/vod/00/00/0000000000000000000025433490_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_47";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398375;
+publishtime = 1407920132;
+script =             (
+);
+sequence = 46;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920132;
+weight = 0;
+},
+{
+backgroundpic = "";
+broadcasters =             (
+);
+catid = 521;
+channelstatus = 99;
+cid = 51530;
+cname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+desc = "";
+dimensionid = 939;
+duration = "1170.8865";
+id = 9256405;
+listennum = 0;
+livechannel = "";
+liveprogram = "";
+mediainfo =             {
+"bitrates_url" =                 (
+{
+bitrate = 24;
+path = "/vod/00/00/0000000000000000000025433489_24.m4a";
+},
+{
+bitrate = 64;
+path = "/vod/00/00/0000000000000000000025433489_64.m4a";
+}
+);
+download = "/vod/00/00/0000000000000000000025433489_24.m4a";
+downloadnum = 0;
+host =                 {
+live = "http://http.hz.qingting.fm";
+od = "http://od.qingting.fm";
+};
+id = 3419932;
+original =                 (
+);
+replay =                 {
+};
+seekEndTime = 0;
+seekStartTime = 0;
+slidereplay =                 {
+};
+transbitrate =                 (
+24,
+64
+);
+transcode =                 {
+hls = "/vod/00/00/0000000000000000000025433489_24.m4a";
+http = "/vod/00/00/0000000000000000000025433489_24.m4a";
+};
+};
+name = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e_48";
+parentbackgroundpic = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentcover = "http://pic.qingting.fm/2015/0210/20150210024118368.jpg";
+parentdisplayname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentid = 97600;
+parentname = "\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e";
+parentoutline = "\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U4ece\U6700\U771f\U5b9e\U7684\U89d2\U5ea6\U8fd8\U539f\U8fd9\U4e2a\U771f\U6b63\U7531\U4e2d\U56fd\U4eba\U5efa\U7acb\U8d77\U6765\U7684\U5b8c\U5168\U7684\U5730\U4e0b\U738b\U56fd\U3002\U300a\U5927\U5708\Uff1a\U51b2\U51fa\U4e9a\U6d32\U7684\U534e\U4eba\U7b2c\U4e00\U9ed1\U5e2e\U300b\U8bb2\U8ff0\U4e2d\U56fd\U6ca1\U6709\U771f\U6b63\U610f\U4e49\U4e0a\U7684\U9ed1\U793e\U4f1a\Uff0c\U4f46\U662f\U4e2d\U56fd\U4eba\U5728\U8fd9\U4e2a\U4e16\U754c\U4e0a\U7684\U5730\U4e0b\U79e9\U5e8f\U4e2d\U5374\U5e76\U975e\U6beb\U65e0\U53d1\U8a00\U6743\Uff0c\U76f8\U53cd\U4e2d\U56fd\U4eba\U4e00\U76f4\U5728\U56fd\U9645\U9ed1\U5e2e\U4e2d\U626e\U6f14\U7740\U91cd\U8981\U7684\U89d2\U8272\Uff0c\U4ed6\U4eec\U4e1d\U6beb\U4e0d\U6bd4\U8fd9\U4e2a\U4e16\U754c\U4e0a\U4efb\U4f55\U4e00\U4e2a\U6709\U5b9e\U529b\U7684\U72af\U7f6a\U7ec4\U7ec7\U900a\U8272\Uff0c\U4ed6\U4eec\U662f\U5317\U7f8e\U5510\U4eba\U8857\U7684\U5730\U4e0b\U738b\U8005\Uff0c\U4ed6\U4eec\U79f0\U547c\U81ea\U5df1\U4e3a\U2014\U2014\U5927\U5708\U3002
+\n\U3000\U3000\U6f14\U64ad\Uff1a\U672a\U6765";
+parenttype = VirtualChannel;
+pic = "";
+programid = 3398374;
+publishtime = 1407920131;
+script =             (
+);
+sequence = 47;
+"share_link" = "";
+source = "\U592e\U5e7f";
+subtype = PodcastProgram;
+type = VirtualProgram;
+updatetime = 1407920131;
+weight = 0;
+}
+);
+errormsg = "";
+errorno = 0;
+expiredtime = 1438164772;
+totalpage = 1;
+}
