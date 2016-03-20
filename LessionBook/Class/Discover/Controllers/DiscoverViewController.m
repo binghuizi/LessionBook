@@ -46,6 +46,7 @@
 @property(nonatomic,strong) NSMutableArray *descArray;
 @property(nonatomic,strong) NSMutableArray *biaotiArray;
 @property(nonatomic,strong) NSMutableArray *idArray;
+@property(nonatomic,strong) NSMutableArray *typeIdArray;
 
 @end
 
@@ -119,6 +120,7 @@
             [model setValuesForKeysWithDictionary:itemDic];
             [self.imageArray addObject:model.thumb];
             [self.titleArray addObject:model.name];
+            [self.typeIdArray addObject:model.id];
         }
         [self.collectionView reloadData];
         
@@ -272,6 +274,10 @@
 #pragma mark --collectionView点击方法
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     TypeViewController *typeVc = [[TypeViewController alloc]init];
+    
+    typeVc.idString = self.typeIdArray[indexPath.row];
+    
+    
     [self.navigationController pushViewController:typeVc animated:YES];
 }
 #pragma mark -- 自定义tableView头部
@@ -630,6 +636,13 @@
         self.idArray = [NSMutableArray new];
     }
     return _idArray;
+}
+//分类id数组
+-(NSMutableArray *)typeIdArray{
+    if (_typeIdArray == nil) {
+        self.typeIdArray = [NSMutableArray new];
+    }
+    return _typeIdArray;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

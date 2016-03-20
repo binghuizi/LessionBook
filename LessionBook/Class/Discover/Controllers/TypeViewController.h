@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TypeViewController : UIViewController
-
+@property(nonatomic,strong) NSString *idString;
+@property(nonatomic,strong) NSString *weight;
 @end

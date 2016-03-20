@@ -19,5 +19,8 @@
 
     // Configure the view for the selected state
 }
-
+-(void)setModel:(TypeModel *)model{
+    self.displaynameLabel.text = model.displayname;
+    self.countLabel.text = model.programsCnt;
+}
 @end

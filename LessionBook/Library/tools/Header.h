@@ -25,8 +25,8 @@
 //发现--分类接口
 #define typeBook @"http://42.120.60.147/v5/media/categories/521"
 //发现--分类--玄幻-最热
-#define TypeHot  @"http://api2.qingting.fm/v5/media/categories/919/channels/order/hot/curpage/1/pagesize/10"
-
+//#define TypeSuggestion  @"http://api2.qingting.fm/v5/media/categories/"
+#define TypeSuggestion @"http://42.120.60.147/v5/media/categories/"
 
 
 
