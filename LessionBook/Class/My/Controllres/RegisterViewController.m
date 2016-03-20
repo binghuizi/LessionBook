@@ -1,23 +1,22 @@
 //
-//  TimerUpViewController.m
+//  RegisterViewController.m
 //  LessionBook
 //
-//  Created by scjy on 16/3/16.
+//  Created by scjy on 16/3/18.
 //  Copyright © 2016年 迪士尼工作室. All rights reserved.
 //
 
-#import "TimerUpViewController.h"
+#import "RegisterViewController.h"
 
-@interface TimerUpViewController ()
+@interface RegisterViewController ()
 
 @end
 
-@implementation TimerUpViewController
+@implementation RegisterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
 }
 
 - (void)didReceiveMemoryWarning {

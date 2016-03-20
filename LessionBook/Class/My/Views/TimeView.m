@@ -15,6 +15,7 @@
 @property (nonatomic, assign) BOOL timeStart;
 @property (nonatomic, assign) NSInteger tg;
 @property (nonatomic, retain) NSTimer *timer;
+
 @end
 
 @implementation TimeView
@@ -23,6 +24,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self configTimeUpView];
+                
     }
     return self;
 }
@@ -49,7 +51,7 @@
     self.timeUpView.backgroundColor = [UIColor colorWithRed:225/255.0 green:225/255.0 blue:220/255.0 alpha:1];
     
     self.timeShowLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 220, 50)];
-    self.timeShowLabel.text = @"定时关机";
+//    self.timeShowLabel.text = @"定时关机";
     NSArray *timeArray = [NSArray arrayWithObjects:@"10分钟", @"20分钟", @"30分钟", @"60分钟", @"90分钟", @"120分钟", nil];
     
     UISwitch *timeSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(230, 10, 45, 30)];
@@ -83,13 +85,20 @@
         [self timeUpStart:nil];
     }
     else{
-        
+        self.timeShowLabel.text = @"定时关机";
         [self.timer invalidate];
     }
 }
 //定时按钮点击
 - (void)timeUpStart:(UIButton *)btn{
-  self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerFireMethod:) userInfo:nil repeats:YES];
+//    dispatch_queue_t mySerialDispatchQueue = dispatch_queue_create("com.mango.mySerialDispatchQueue", DISPATCH_QUEUE_SERIAL);
+//    dispatch_sync(mySerialDispatchQueue, ^{
+//        self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerFireMethod:) userInfo:nil repeats:YES];
+//        self.tg = btn.tag;
+//        self.timeStart = YES;
+//         NSLog(@"%d, %@", [NSThread isMainThread], [NSThread currentThread]);
+//    });
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerFireMethod:) userInfo:nil repeats:YES];
     self.tg = btn.tag;
     self.timeStart = YES;
 }

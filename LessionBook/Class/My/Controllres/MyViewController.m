@@ -9,8 +9,9 @@
 #import "MyViewController.h"
 #import "FavoriteViewController.h"
 #import "RecordViewController.h"
-#import "TimerUpViewController.h"
 #import "TimeView.h"
+#import "LoginViewController.h"
+#import "RegisterViewController.h"
 
 @interface MyViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, retain) UITableView *tableView;
@@ -69,13 +70,12 @@
             break;
         case 1:
         {
-            RecordViewController *recordVC = [[RecordViewController alloc] init];
-            [self.navigationController pushViewController:recordVC animated:YES];
+           RecordViewController *recordVC = [[RecordViewController alloc] init];
+           [self.navigationController pushViewController:recordVC animated:YES];
         }
             break;
         case 2:
         {
-
             TimeView *timeView = [[TimeView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
             UIWindow *window = [[UIApplication sharedApplication].delegate window];
             [window addSubview:timeView];
@@ -107,14 +107,13 @@
 }
 //登录注册按钮
 - (void)loginAction{
+    UIStoryboard *myStoryBoard = [UIStoryboard storyboardWithName:@"My" bundle:nil];
+    
+    LoginViewController *loginVC = [myStoryBoard instantiateViewControllerWithIdentifier:@"loginVC"];
+    [self.navigationController pushViewController:loginVC animated:YES];
     
 }
 
-
-////点击屏幕隐藏timeUpView
-//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//    self.timeUpView.hidden = YES;
-//}
 
 - (UITableView *)tableView{
     if (!_tableView) {

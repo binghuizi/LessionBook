@@ -39,9 +39,10 @@
 		7A99D4551C97EE31001DD9B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A99D4531C97EE31001DD9B9 /* LaunchScreen.storyboard */; };
 		7A9FFBAE1C99565A0045ECBC /* FavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FFBAD1C99565A0045ECBC /* FavoriteViewController.m */; };
 		7A9FFBB11C9983C80045ECBC /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FFBB01C9983C80045ECBC /* RecordViewController.m */; };
-		7A9FFBB41C9984080045ECBC /* TimerUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FFBB31C9984080045ECBC /* TimerUpViewController.m */; };
 		7AB437061C9A4D2100532A9A /* ChoseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB437041C9A4D2100532A9A /* ChoseTableViewCell.m */; };
 		7AB437071C9A4D2100532A9A /* ChoseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB437051C9A4D2100532A9A /* ChoseTableViewCell.xib */; };
+		7AB7FC7C1C9C2B31001ECB51 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB7FC7B1C9C2B31001ECB51 /* LoginViewController.m */; };
+		7AB7FC7F1C9C2B49001ECB51 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB7FC7E1C9C2B49001ECB51 /* RegisterViewController.m */; };
 		7AE264B71C9840A9006C9A6D /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE264B61C9840A9006C9A6D /* MyViewController.m */; };
 		7AE264B91C9841D4006C9A6D /* My.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE264B81C9841D4006C9A6D /* My.storyboard */; };
 		7AE2889F1C98118000596833 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE2889E1C98118000596833 /* DiscoverViewController.m */; };
@@ -104,11 +105,13 @@
 		7A9FFBAD1C99565A0045ECBC /* FavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteViewController.m; sourceTree = "<group>"; };
 		7A9FFBAF1C9983C80045ECBC /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
 		7A9FFBB01C9983C80045ECBC /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
-		7A9FFBB21C9984080045ECBC /* TimerUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerUpViewController.h; sourceTree = "<group>"; };
-		7A9FFBB31C9984080045ECBC /* TimerUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerUpViewController.m; sourceTree = "<group>"; };
 		7AB437031C9A4D2100532A9A /* ChoseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoseTableViewCell.h; sourceTree = "<group>"; };
 		7AB437041C9A4D2100532A9A /* ChoseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoseTableViewCell.m; sourceTree = "<group>"; };
 		7AB437051C9A4D2100532A9A /* ChoseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChoseTableViewCell.xib; sourceTree = "<group>"; };
+		7AB7FC7A1C9C2B31001ECB51 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		7AB7FC7B1C9C2B31001ECB51 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		7AB7FC7D1C9C2B49001ECB51 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		7AB7FC7E1C9C2B49001ECB51 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		7ABFC11F1C98FFCF004B9AA6 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		7AE264B51C9840A9006C9A6D /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		7AE264B61C9840A9006C9A6D /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
@@ -357,8 +360,10 @@
 				7A9FFBAD1C99565A0045ECBC /* FavoriteViewController.m */,
 				7A9FFBAF1C9983C80045ECBC /* RecordViewController.h */,
 				7A9FFBB01C9983C80045ECBC /* RecordViewController.m */,
-				7A9FFBB21C9984080045ECBC /* TimerUpViewController.h */,
-				7A9FFBB31C9984080045ECBC /* TimerUpViewController.m */,
+				7AB7FC7A1C9C2B31001ECB51 /* LoginViewController.h */,
+				7AB7FC7B1C9C2B31001ECB51 /* LoginViewController.m */,
+				7AB7FC7D1C9C2B49001ECB51 /* RegisterViewController.h */,
+				7AB7FC7E1C9C2B49001ECB51 /* RegisterViewController.m */,
 			);
 			path = Controllres;
 			sourceTree = "<group>";
@@ -541,12 +546,14 @@
 				7A965F841C9998FF00DE2547 /* DownloadTableViewCell.m in Sources */,
 				7AE264B71C9840A9006C9A6D /* MyViewController.m in Sources */,
 				7A4623EF1C992FED00A6750D /* TypeModel.m in Sources */,
+				7AB7FC7C1C9C2B31001ECB51 /* LoginViewController.m in Sources */,
 				7A965F771C99328A00DE2547 /* SearchViewController.m in Sources */,
 				7A9FFBB11C9983C80045ECBC /* RecordViewController.m in Sources */,
 				7A99D4501C97EE31001DD9B9 /* AppDelegate.m in Sources */,
 				7A6BE8461C9A47BD006F6E17 /* UIView+UIViewExtension.m in Sources */,
 				7A6BE8431C9A428C006F6E17 /* DownloadDidTableViewCell.m in Sources */,
 				7A4764221C984D900057A7D9 /* VOSegment.m in Sources */,
+				7AB7FC7F1C9C2B49001ECB51 /* RegisterViewController.m in Sources */,
 				7A4764211C984D900057A7D9 /* VOIndicatorAnimation.m in Sources */,
 				7A965F7A1C993B2A00DE2547 /* SearchModel.m in Sources */,
 				7AB437061C9A4D2100532A9A /* ChoseTableViewCell.m in Sources */,
@@ -555,7 +562,6 @@
 				7A9FFBAE1C99565A0045ECBC /* FavoriteViewController.m in Sources */,
 				7A4764231C984D900057A7D9 /* VOSegmentedControl.m in Sources */,
 				7A965F7E1C9993B200DE2547 /* TableViewCell.m in Sources */,
-				7A9FFBB41C9984080045ECBC /* TimerUpViewController.m in Sources */,
 				7A965F751C99328A00DE2547 /* DownloadViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
