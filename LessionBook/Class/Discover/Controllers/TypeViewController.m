@@ -157,7 +157,10 @@
             [model setValuesForKeysWithDictionary:itemDic];
             
             NSArray *broadArray = itemDic[@"broadcasters"];
-            [model setValuesForKeysWithDictionary:broadArray[0]];
+            if (broadArray.count > 0) {
+                [model setValuesForKeysWithDictionary:broadArray[0]];
+            }
+            
           
             [self.dataArray addObject:model];
             
