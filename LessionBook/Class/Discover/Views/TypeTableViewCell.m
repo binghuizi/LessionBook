@@ -21,6 +21,8 @@
 }
 -(void)setModel:(TypeModel *)model{
     self.displaynameLabel.text = model.displayname;
-    self.countLabel.text = model.programsCnt;
+    //self.countLabel.text = model.programsCnt;
+    self.anchorLabel.text = [NSString stringWithFormat:@"主播：%@",model.name];
+    
 }
 @end
