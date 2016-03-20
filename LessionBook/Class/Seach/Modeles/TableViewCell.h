@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "detailModel.h"
 @interface TableViewCell : UITableViewCell
-
+@property(nonatomic,strong) detailModel *model;
 @end
