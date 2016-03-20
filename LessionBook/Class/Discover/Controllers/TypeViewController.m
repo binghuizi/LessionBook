@@ -153,7 +153,7 @@
         NSArray *dataArray = rootDic[@"data"];
         for (NSDictionary *itemDic in dataArray) {
             TypeModel *model = [[TypeModel alloc]init];
-           
+     
             [model setValuesForKeysWithDictionary:itemDic];
             
             NSArray *broadArray = itemDic[@"broadcasters"];
