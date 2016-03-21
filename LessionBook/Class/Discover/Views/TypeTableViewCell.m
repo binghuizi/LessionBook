@@ -20,7 +20,12 @@
     // Configure the view for the selected state
 }
 -(void)setModel:(TypeModel *)model{
-    self.displaynameLabel.text = model.displayname;
+    if (model.displayname.length == 0) {
+        self.displaynameLabel.text = model.name;
+    }else{
+        self.displaynameLabel.text = model.displayname;
+    }
+    
     self.countLabel.text = [NSString stringWithFormat:@"集数：%ld",model.programsCnt];
     self.anchorLabel.text = [NSString stringWithFormat:@"主播：%@",model.name];
     

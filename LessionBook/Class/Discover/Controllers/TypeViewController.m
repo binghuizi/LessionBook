@@ -14,6 +14,7 @@
 #import "TypeModel.h"
 #import "typeDetailModel.h"
 #import "ProgressHUD.h"
+#import "DetailViewController.h"
 @interface TypeViewController ()<UITableViewDataSource,UITableViewDelegate,PullingRefreshTableViewDelegate>{
     NSInteger _pageCount;//定义请求页码
 }
@@ -28,9 +29,18 @@
 @property(nonatomic,strong) NSMutableArray *dataArray1;
 @property(nonatomic,strong) NSMutableArray *dataArray2;
 @property(nonatomic,assign) BOOL refreshing;
-@property(nonatomic,strong) NSMutableArray *nameArray;
-@property(nonatomic,strong) NSMutableArray *nameArray1;
-@property(nonatomic,strong) NSMutableArray *nameArray2;
+@property(nonatomic,strong) NSMutableArray *idArray;
+@property(nonatomic,strong) NSMutableArray *idArray1;
+@property(nonatomic,strong) NSMutableArray *idArray2;
+//添加清扫手势
+@property(nonatomic,retain) UISwipeGestureRecognizer *typeDetailSwipeLeft;
+@property(nonatomic,retain) UISwipeGestureRecognizer *typeDetailSwipeMidLeft;
+@property(nonatomic,strong) UISwipeGestureRecognizer *typeDetailSwipeMidRight;
+@property(nonatomic,strong) UISwipeGestureRecognizer *typeDetailSwipeRight;
+
+
+
+
 @end
 
 @implementation TypeViewController
@@ -48,15 +58,67 @@
     [self.recommendView addSubview:self.tableView];
     [self.hotView addSubview:self.tableView1];
     [self.latestView addSubview:self.tableView2];
-//
+//cell
     [self.tableView registerNib:[UINib nibWithNibName:@"TypeTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     [self.tableView1 registerNib:[UINib nibWithNibName:@"TypeTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell1"];
     [self.tableView2 registerNib:[UINib nibWithNibName:@"TypeTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell2"];
    
-    
     [self loadData];
     [self loadData1];
     [self loadData2];
+  //清扫手势事件
+    self.typeDetailSwipeLeft = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(oneFingerSwipeUp:)];
+    self.typeDetailSwipeMidLeft = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(twoFingerSwipeUp:)];
+    self.typeDetailSwipeMidRight = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(threeFingerSwipeUp:)];
+    self.typeDetailSwipeRight = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(fourFingerSwipeUp:)];
+    
+    //添加手势方向 左右
+    [self.typeDetailSwipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [self.typeDetailSwipeMidLeft setDirection:UISwipeGestureRecognizerDirectionRight];
+    [self.typeDetailSwipeMidRight setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [self.typeDetailSwipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
+    //手势所在的视图
+    [self.tableView addGestureRecognizer:self.typeDetailSwipeLeft];
+    [self.tableView1 addGestureRecognizer:self.typeDetailSwipeMidLeft];
+    [self.tableView1 addGestureRecognizer:self.typeDetailSwipeMidRight];
+    [self.tableView2 addGestureRecognizer:self.typeDetailSwipeRight];
+    
+    
+    
+}
+#pragma mark --- 清扫手势触发事件
+-(void)oneFingerSwipeUp:(UISwipeGestureRecognizer *)recognizer{
+    [UIView animateWithDuration:0.2 animations:^{
+       // self.tableView.hidden = YES;
+        self.tableView1.hidden = NO;
+       // self.tableView2.hidden = YES;
+        //下划线显示哪个
+        self.segment1.selectedSegmentIndex = 1;
+    }];
+}
+-(void)twoFingerSwipeUp:(UISwipeGestureRecognizer *)recognizer{
+    [UIView animateWithDuration:0.2 animations:^{
+        self.tableView.hidden = NO;
+        //self.tableView1.hidden = YES;
+        //self.tableView2.hidden = YES;
+        self.segment1.selectedSegmentIndex = 0;
+    }];
+}
+-(void)threeFingerSwipeUp:(UISwipeGestureRecognizer *)recognizer{
+    [UIView animateWithDuration:0.2 animations:^{
+       // self.tableView.hidden = YES;
+        //self.tableView1.hidden = YES;
+        self.tableView2.hidden = NO;
+        self.segment1.selectedSegmentIndex = 2;
+    }];
+}
+-(void)fourFingerSwipeUp:(UISwipeGestureRecognizer *)recognizer{
+    [UIView animateWithDuration:0.2 animations:^{
+       // self.tableView.hidden = YES;
+        self.tableView1.hidden = NO;
+       // self.tableView2.hidden = YES;
+        self.segment1.selectedSegmentIndex = 1;
+    }];
 }
 #pragma mark --- PullingRefreshTableView下拉刷新
 //下拉刷新
@@ -153,9 +215,9 @@
         NSArray *dataArray = rootDic[@"data"];
         for (NSDictionary *itemDic in dataArray) {
             TypeModel *model = [[TypeModel alloc]init];
-     
+          
             [model setValuesForKeysWithDictionary:itemDic];
-            
+            [self.idArray addObject:model.id];
             NSArray *broadArray = itemDic[@"broadcasters"];
             if (broadArray.count > 0) {
                 [model setValuesForKeysWithDictionary:broadArray[0]];
@@ -197,7 +259,7 @@
             TypeModel *model = [[TypeModel alloc]init];
            
             [model setValuesForKeysWithDictionary:itemDic];
-            
+            [self.idArray1 addObject:model.id];
             
             NSArray *broadArray = itemDic[@"broadcasters"];
             if (broadArray.count != 0) {
@@ -236,7 +298,7 @@
             TypeModel *model = [[TypeModel alloc]init];
             
             [model setValuesForKeysWithDictionary:itemDic];
-            
+            [self.idArray2 addObject:model.id];
             
             NSArray *broadArray = itemDic[@"broadcasters"];
             if (broadArray.count != 0) {
@@ -290,6 +352,46 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 81;
 }
+#pragma mark ---点击cell触发事件
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    DetailViewController *detailVc = [[DetailViewController alloc]init];
+    TypeModel *model = [[TypeModel alloc]init];
+    
+    if ([tableView isEqual:self.tableView]) {
+       
+        model = self.dataArray[indexPath.row];
+        detailVc.idString = self.idArray[indexPath.row];
+        detailVc.zhuboString = model.name;
+        detailVc.miaoshuString = model.desc;
+        detailVc.pictchString = model.cover;
+        detailVc.titleString = model.displayname;
+        
+        [self.navigationController pushViewController:detailVc animated:YES];
+    }else if ([tableView isEqual:self.tableView1]){
+        model = self.dataArray1[indexPath.row];
+        detailVc.idString = self.idArray1[indexPath.row];
+        detailVc.zhuboString = model.name;
+        detailVc.miaoshuString = model.desc;
+        detailVc.pictchString = model.cover;
+        detailVc.titleString = model.displayname;
+        [self.navigationController pushViewController:detailVc animated:YES];
+    }else{
+        model = self.dataArray2[indexPath.row];
+        detailVc.idString = self.idArray2[indexPath.row];
+        detailVc.zhuboString = model.name;
+        detailVc.miaoshuString = model.desc;
+        detailVc.pictchString = model.cover;
+        if (model.displayname.length == 0) {
+             detailVc.titleString = model.name;
+        }else{
+            detailVc.titleString = model.displayname;
+        }
+        
+        [self.navigationController pushViewController:detailVc animated:YES];
+    }
+    
+}
+#pragma mark --- 懒加载
 -(PullingRefreshTableView *)tableView{
     if (_tableView == nil) {
         self.tableView = [[PullingRefreshTableView alloc]initWithFrame:CGRectMake(0, kHeight * 50/kHeight, kWideth, kHeight - kHeight * 50/kHeight) pullingDelegate:self];
@@ -402,31 +504,32 @@
     }
     return _dataArray2;
 }
-//主播名字数组
--(NSMutableArray *)nameArray{
-    if (_nameArray == nil) {
-        self.nameArray = [NSMutableArray new];
+
+//分类 最新  推荐 最热 点击进入详情 idArry
+-(NSMutableArray *)idArray{
+    if (_idArray == nil) {
+        self.idArray = [NSMutableArray new];
     }
-    return _nameArray;
+    
+    return _idArray;
 }
--(NSMutableArray *)nameArray1{
-    if (_nameArray1 == nil) {
-        self.nameArray1 = [NSMutableArray new];
+
+-(NSMutableArray *)idArray1{
+    if (_idArray1 == nil) {
+        self.idArray1 = [NSMutableArray new];
     }
-    return _nameArray1;
-}
--(NSMutableArray *)nameArray2{
-    if (_nameArray2 == nil) {
-        self.nameArray2 = [NSMutableArray new];
-    }
-    return _nameArray2;
+    
+    return _idArray1;
 }
 
 
-
-
-
-
+-(NSMutableArray *)idArray2{
+    if (_idArray2 == nil) {
+        self.idArray2 = [NSMutableArray new];
+    }
+    
+    return _idArray2;
+}
 
 
 

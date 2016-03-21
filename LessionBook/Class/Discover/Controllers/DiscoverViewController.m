@@ -34,6 +34,7 @@
 @property(nonatomic,strong) UIView *choseView;
 @property(nonatomic,retain) UISwipeGestureRecognizer *typeSwipeLeft;//清扫手势
 @property(nonatomic,retain) UISwipeGestureRecognizer *choseSwipeRight;
+
 @property(nonatomic,strong) UITableView *tableView;
 @property(nonatomic,strong) NSMutableArray *pictureArray;
 @property(nonatomic,strong) NSMutableArray *itemsArray;
@@ -75,6 +76,7 @@
     
     [self.typeSwipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
     [self.choseSwipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
+    
     [[self typeView ]addGestureRecognizer:self.typeSwipeLeft];
     [[self choseView ]addGestureRecognizer:self.choseSwipeRight];
     
