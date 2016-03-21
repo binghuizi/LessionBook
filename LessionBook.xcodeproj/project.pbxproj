@@ -30,6 +30,7 @@
 		7A4764211C984D900057A7D9 /* VOIndicatorAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A47641B1C984D900057A7D9 /* VOIndicatorAnimation.m */; };
 		7A4764221C984D900057A7D9 /* VOSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A47641D1C984D900057A7D9 /* VOSegment.m */; };
 		7A4764231C984D900057A7D9 /* VOSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A47641F1C984D900057A7D9 /* VOSegmentedControl.m */; };
+		7A4E32CC1C9FE27900FEF17C /* DownlaodTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4E32CB1C9FE27900FEF17C /* DownlaodTask.m */; };
 		7A54D24E1C9BA0070012224E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A54D24D1C9BA0070012224E /* DetailViewController.m */; };
 		7A54D2511C9BA0890012224E /* DetailHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A54D2501C9BA0890012224E /* DetailHeadView.m */; };
 		7A54D2531C9BA0B80012224E /* DetailHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A54D2521C9BA0B80012224E /* DetailHeadView.xib */; };
@@ -114,6 +115,8 @@
 		7A47641D1C984D900057A7D9 /* VOSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSegment.m; sourceTree = "<group>"; };
 		7A47641E1C984D900057A7D9 /* VOSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSegmentedControl.h; sourceTree = "<group>"; };
 		7A47641F1C984D900057A7D9 /* VOSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSegmentedControl.m; sourceTree = "<group>"; };
+		7A4E32CA1C9FE27900FEF17C /* DownlaodTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownlaodTask.h; sourceTree = "<group>"; };
+		7A4E32CB1C9FE27900FEF17C /* DownlaodTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownlaodTask.m; sourceTree = "<group>"; };
 		7A54D24C1C9BA0070012224E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		7A54D24D1C9BA0070012224E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		7A54D24F1C9BA0890012224E /* DetailHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailHeadView.h; sourceTree = "<group>"; };
@@ -298,6 +301,8 @@
 		7A965F6B1C99328900DE2547 /* modeles */ = {
 			isa = PBXGroup;
 			children = (
+				7A4E32CA1C9FE27900FEF17C /* DownlaodTask.h */,
+				7A4E32CB1C9FE27900FEF17C /* DownlaodTask.m */,
 			);
 			path = modeles;
 			sourceTree = "<group>";
@@ -708,6 +713,7 @@
 				7A68D4F01C9D50360090DB08 /* TypeViewController.m in Sources */,
 				7A7501321C9BAD110002FA5C /* LinkManViewController.m in Sources */,
 				7AE264B71C9840A9006C9A6D /* MyViewController.m in Sources */,
+				7A4E32CC1C9FE27900FEF17C /* DownlaodTask.m in Sources */,
 				7A68D4F41C9D587C0090DB08 /* TypeTableViewCell.m in Sources */,
 				7A4623EF1C992FED00A6750D /* TypeModel.m in Sources */,
 				7A965F771C99328A00DE2547 /* SearchViewController.m in Sources */,

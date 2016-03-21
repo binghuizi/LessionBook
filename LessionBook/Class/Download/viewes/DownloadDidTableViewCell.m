@@ -39,6 +39,17 @@
     [self addSubview:self.timeLabel];
 }
 
+
+#pragma mark -----setter方法
+
+- (void)setModel:(detailModel *)model{
+    self.bookNameLabel.text = model.parentname;
+    self.fileNameLabel.text = model.name;
+    NSInteger times = [model.duration integerValue];
+    self.timeLabel.text = [NSString stringWithFormat:@"%ld分%ld秒", times / 60, times % 60];
+    self.sizeLabel.text = @"";
+}
+
 #pragma mark -----Lazyloading
 
 - (UILabel *)bookNameLabel{

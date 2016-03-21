@@ -38,7 +38,11 @@
 @property (nonatomic, copy) NSString *totalscore;
 //类型
 @property (nonatomic, copy) NSString *type;
+//图片
 @property (nonatomic, copy) NSString *cover;
+//描述
+@property (nonatomic, strong) NSString *miaoshu;
+
 -(instancetype)initWithDictionary:(NSDictionary *)dic;
 
 @end
