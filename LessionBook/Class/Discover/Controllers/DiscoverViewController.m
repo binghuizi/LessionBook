@@ -16,6 +16,8 @@
 #import "ChoseTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "DetailViewController.h"
+#import "detailModel.h"
+#import "TypeViewController.h"
 @interface DiscoverViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate, imageviewDelegate>
 {
    
@@ -39,6 +41,13 @@
 @property(nonatomic,strong) NSMutableArray *nameArray;
 @property(nonatomic,strong) NSTimer *timer;//定时器用于图片滚动
 @property(nonatomic,strong) UIPageControl *pageControl;
+@property(nonatomic,strong) NSMutableArray *detallArray;
+@property(nonatomic,strong) NSMutableArray *pichArray;
+@property(nonatomic,strong) NSMutableArray *descArray;
+@property(nonatomic,strong) NSMutableArray *biaotiArray;
+@property(nonatomic,strong) NSMutableArray *idArray;
+@property(nonatomic,strong) NSMutableArray *typeIdArray;
+
 @end
 
 @implementation DiscoverViewController
@@ -111,6 +120,7 @@
             [model setValuesForKeysWithDictionary:itemDic];
             [self.imageArray addObject:model.thumb];
             [self.titleArray addObject:model.name];
+            [self.typeIdArray addObject:model.id];
         }
         [self.collectionView reloadData];
         
@@ -134,7 +144,18 @@
             [self.pictureArray addObject:itemDic[@"bigthumb"]];
             [self.nameArray addObject:itemDic[@"name"]];
             
+            detailModel *model = [[detailModel alloc]init];
+            [model setValuesForKeysWithDictionary:itemDic[@"detall"]];
+           
+            NSDictionary *detadic = itemDic[@"detail"];
+            [self.pichArray   addObject:detadic[@"parentcover"]];
+            [self.descArray   addObject:detadic[@"parentoutline"]];
+            [self.biaotiArray addObject:detadic[@"parentname"]];
+            [self.idArray     addObject:detadic[@"parentid"]];
+            
         }
+        
+        
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         DSNLog(@"%@",error);
@@ -250,6 +271,15 @@
    
     
 }
+#pragma mark --collectionView点击方法
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    TypeViewController *typeVc = [[TypeViewController alloc]init];
+    
+    typeVc.idString = self.typeIdArray[indexPath.row];
+    
+    
+    [self.navigationController pushViewController:typeVc animated:YES];
+}
 #pragma mark -- 自定义tableView头部
 -(void)headTableView{
     UIView *tableHeaderView = [[UIView alloc]init];
@@ -288,11 +318,58 @@
         case 0:
         {
             DetailViewController *detailVc = [[DetailViewController alloc]init];
+            detailVc.pictchString = self.pichArray[btn.tag];
+            detailVc.miaoshuString = self.descArray[btn.tag];
+            detailVc.titleString = self.biaotiArray[btn.tag];
+            detailVc.idString = self.idArray[btn.tag];
             
             [self.navigationController pushViewController:detailVc animated:YES];
         }
             break;
+        case 1:
+        {
+            DetailViewController *detailVc = [[DetailViewController alloc]init];
+            detailVc.pictchString = self.pichArray[btn.tag];
+            detailVc.miaoshuString = self.descArray[btn.tag];
+            detailVc.titleString = self.biaotiArray[btn.tag];
+            detailVc.idString = self.idArray[btn.tag];
             
+            [self.navigationController pushViewController:detailVc animated:YES];
+        }
+            break;
+        case 2:
+        {
+            DetailViewController *detailVc = [[DetailViewController alloc]init];
+            detailVc.pictchString = self.pichArray[btn.tag];
+            detailVc.miaoshuString = self.descArray[btn.tag];
+            detailVc.titleString = self.biaotiArray[btn.tag];
+            detailVc.idString = self.idArray[btn.tag];
+            
+            [self.navigationController pushViewController:detailVc animated:YES];
+        }
+            break;
+        case 3:
+        {
+            DetailViewController *detailVc = [[DetailViewController alloc]init];
+            detailVc.pictchString = self.pichArray[btn.tag];
+            detailVc.miaoshuString = self.descArray[btn.tag];
+            detailVc.titleString = self.biaotiArray[btn.tag];
+            detailVc.idString = self.idArray[btn.tag];
+            
+            [self.navigationController pushViewController:detailVc animated:YES];
+        }
+            break;
+        case 4:
+        {
+            DetailViewController *detailVc = [[DetailViewController alloc]init];
+            detailVc.pictchString = self.pichArray[btn.tag];
+            detailVc.miaoshuString = self.descArray[btn.tag];
+            detailVc.titleString = self.biaotiArray[btn.tag];
+            detailVc.idString = self.idArray[btn.tag];
+            
+            [self.navigationController pushViewController:detailVc animated:YES];
+        }
+            break;
         default:
             break;
     }
@@ -528,7 +605,45 @@
     }
     return _pageControl;
 }
-
+//轮番图片数组详情数组
+-(NSMutableArray *)detallArray{
+    if (_detallArray == nil) {
+        self.detallArray = [NSMutableArray new];
+    }
+    return _detallArray;
+}
+//轮番图片详情
+-(NSMutableArray *)pichArray{
+    if (_pichArray == nil) {
+        self.pichArray = [NSMutableArray new];
+    }
+    return _pichArray;
+}
+-(NSMutableArray *)descArray{
+    if (_descArray == nil) {
+        self.descArray = [NSMutableArray new];
+    }
+    return _descArray;
+}
+-(NSMutableArray *)biaotiArray{
+    if (_biaotiArray == nil) {
+        self.biaotiArray = [NSMutableArray new];
+    }
+    return _biaotiArray;
+}
+-(NSMutableArray *)idArray{
+    if (_idArray == nil) {
+        self.idArray = [NSMutableArray new];
+    }
+    return _idArray;
+}
+//分类id数组
+-(NSMutableArray *)typeIdArray{
+    if (_typeIdArray == nil) {
+        self.typeIdArray = [NSMutableArray new];
+    }
+    return _typeIdArray;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

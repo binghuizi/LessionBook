@@ -5,90 +5,13 @@ audience = 0;
 autoplay = 0;
 broadcasters =             (
 {
-avatar = "http://qingting-pic.b0.upaiyun.com/2012/sina_logo/1224645681-80x80.jpg";
-belongsRadio = "\U5409\U6797\U7ecf\U6d4e\U5e7f\U64ad -\U8d85\U7ea7\U8f66\U53cb\U5927\U8d5b ";
-bgphoto = "";
-diggCount = 22;
-diggRealTimeDiggCount = 0;
-id = 2378;
-name = "\U9752\U96ea";
-socialInfo =                     (
-{
-provider = weibo;
-socialId = 1224645681;
-vtag = "\U9752\U96ea\U6545\U4e8b2010";
-},
-{
-provider = qq;
-socialId = "";
-vtag = "";
-}
-);
-title = PODCASTER;
-type = BaseUser;
-updatetime = 0;
-vip = 1;
-virtualChannelId = 0;
-},
-{
 avatar = "";
 belongsRadio = "";
 bgphoto = "";
 diggCount = 0;
 diggRealTimeDiggCount = 0;
-id = 53341;
-name = "\U6700\U7231MISIC\U4f2f\U7235";
-socialInfo =                     (
-);
-title = AUTHOR;
-type = BaseUser;
-updatetime = 0;
-vip = 0;
-virtualChannelId = 0;
-}
-);
-catid = 521;
-cover = "http://qingting-pic.b0.upaiyun.com/2014/0512/20140512023530872.jpg";
-desc = "\U67e5\U6587\U658c\U662f\U8305\U5c71\U6d3e\U6700\U540e\U4e00\U4f4d\U7956\U5370\U7684\U6301\U6709\U8005\Uff0c\U4ed6\U7684\U80fd\U529b\U5f88\U5927\Uff0c\U80fd\U964d\U5996\U9664\U9b54\U3001\U62db\U9b42\U5f15\U9b44\Uff0c\U5374\U8fd8\U662f\U5f15\U706b\U70e7\U8eab\Uff0c\U5973\U513f\U66b4\U6bd9\U3002\U4ed6\U6551\U8fc7\U5f88\U591a\U4eba\U7684\U547d\Uff0c\U5176\U4e2d\U5305\U62ec\U6211\U7684\Uff0c\U4e5f\U5305\U62ec\U6211\U5c0f\U59e8\U7684\Uff1b\U4ece\U8001\U5bb6\U5f88\U591a\U4eba\U90a3\U91cc\U6253\U542c\U8fd9\U4e2a\U9053\U58eb\U7684\U4e00\U751f\Uff0c\U4ed6\U7684\U4e00\U751f\U662f\U4f20\U5947\U7684\Uff0c\U4e5f\U662f\U66f2\U6298\U7684\Uff0c\U66f4\U591a\U7684\U662f\U65e0\U5948\U7684\Uff0c\U5370\U8bc1\U90a3\U53e5\Uff1a\U5929\U673a\U4e0d\U53ef\U6cc4\U9732\Uff01\U4e00\U4e2a\U51e1\U4eba\U80fd\U5426\U6539\U53d8\U4e0a\U5929\U6ce8\U5b9a\U7684\U547d\U8fd0\Uff0c\U5931\U843d\U7684\U6751\U5e84\U53c8\U85cf\U4e86\U591a\U5c11\U6050\U6016\U7684\U6545\U4e8b\Uff1f";
-dimensionid = 919;
-displayname = "\U6700\U540e\U4e00\U4e2a\U9053\U58eb";
-group =             (
-);
-id = 24408;
-latest =             {
-duration = 1239;
-name = "\U7b2c01\U96c6_\U6700\U540e\U4e00\U4e2a\U9053\U58eb";
-publishtime = 1387182866;
-updated = 1387182866;
-};
-listorder = 0;
-mediainfo =             {
-};
-name = "\U6700\U540e\U4e00\U4e2a\U9053\U58eb";
-outline = "\U67e5\U6587\U658c\U662f\U8305\U5c71\U6d3e\U6700\U540e\U4e00\U4f4d\U7956\U5370\U7684\U6301\U6709\U8005\Uff0c\U4ed6\U7684\U80fd\U529b\U5f88\U5927\Uff0c\U80fd\U964d\U5996\U9664\U9b54\U3001\U62db\U9b42\U5f15\U9b44\Uff0c\U5374\U8fd8\U662f\U5f15\U706b\U70e7\U8eab\Uff0c\U5973\U513f\U66b4\U6bd9\U3002\U4ed6\U6551\U8fc7\U5f88\U591a\U4eba\U7684\U547d\Uff0c\U5176\U4e2d\U5305\U62ec\U6211\U7684\Uff0c\U4e5f\U5305\U62ec\U6211\U5c0f\U59e8\U7684\Uff1b\U4ece\U8001\U5bb6\U5f88\U591a\U4eba\U90a3\U91cc\U6253\U542c\U8fd9\U4e2a\U9053\U58eb\U7684\U4e00\U751f\Uff0c\U4ed6\U7684\U4e00\U751f\U662f\U4f20\U5947\U7684\Uff0c\U4e5f\U662f\U66f2\U6298\U7684\Uff0c\U66f4\U591a\U7684\U662f\U65e0\U5948\U7684\Uff0c\U5370\U8bc1\U90a3\U53e5\Uff1a\U5929\U673a\U4e0d\U53ef\U6cc4\U9732\Uff01\U4e00\U4e2a\U51e1\U4eba\U80fd\U5426\U6539\U53d8\U4e0a\U5929\U6ce8\U5b9a\U7684\U547d\U8fd0\Uff0c\U5931\U843d\U7684\U6751\U5e84\U53c8\U85cf\U4e86\U591a\U5c11\U6050\U6016\U7684\U6545\U4e8b\Uff1f";
-parentid = 919;
-parentname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
-parenttype = Category;
-playcount = 542261;
-programsCnt = 46;
-"record_enable" = 0;
-subtype = Novel;
-thumb = "http://pic.qingting.fm/2014/0512/20140512023530872.jpg";
-type = VirtualChannel;
-updatetime = 1438313793;
-},
-{
-audience = 0;
-autoplay = 0;
-broadcasters =             (
-{
-avatar = "";
-belongsRadio = "";
-bgphoto = "";
-diggCount = 0;
-diggRealTimeDiggCount = 0;
-id = 59407;
-name = "\U5927\U7070\U72fc";
+id = 56913;
+name = "\U6211\U5f71\U968f\U98ce";
 socialInfo =                     (
 );
 title = PODCASTER;
@@ -103,8 +26,8 @@ belongsRadio = "";
 bgphoto = "";
 diggCount = 0;
 diggRealTimeDiggCount = 0;
-id = 57911;
-name = "\U65b9\U60f3";
+id = 51622;
+name = "\U98ce\U51cc\U5929\U4e0b";
 socialInfo =                     (
 );
 title = AUTHOR;
@@ -115,34 +38,34 @@ virtualChannelId = 0;
 }
 );
 catid = 521;
-cover = "http://qingting-pic.b0.upaiyun.com/2014/0430/20140430032945338.jpg";
-desc = "\U201c\U522b\U5fd8\Uff01\U201d\U201c\U5c31\U7b97\U6b7b\Uff0c\U4e5f\U4e0d\U80fd\U5fd8\Uff01\U201d\U2026\U2026\U4e00\U4e2a\U964c\U751f\U53c8\U719f\U6089\U7684\U58f0\U97f3\Uff0c\U5982\U540c\U4ece\U4e91\U7aef\U6df1\U5904\U4f20\U6765\U3002\U4e00\U904d\U53c8\U4e00\U904d\Uff0c\U56de\U97f3\U98d8\U6e3a\Uff0c\U5c42\U5c42\U76f8\U53e0\Uff0c\U7ecf\U4e45\U4e0d\U606f\U3002\U8c01\Uff1f\U4e0d\U80fd\U5fd8\Uff1f\U4e0d\U80fd\U5fd8\U4ec0\U4e48\Uff1f\U4e00\U4e2a\U5947\U602a\U7684\U68a6\Uff0c\U4e00\U6bb5\U4e0d\U53ef\U601d\U8bae\U7684\U4ed9\U4fa0\U4e4b\U8def\U3002";
+cover = "http://qingting-pic.b0.upaiyun.com/2014/0901/20140901015539473.jpg";
+desc = "\U4e00\U773c\U98ce\U96f7\U9707\Uff0c\U4e00\U6012\U6ca7\U6d77\U5bd2\Uff1b\U4e00\U624b\U7834\U82cd\U7a79\Uff0c\U4e00\U5251\U821e\U957f\U5929\Uff01\U597d\U7537\U513f\Uff0c\U5c31\U662f\U8981\U821e\U98ce\U4e91\U3001\U51cc\U5929\U4e0b\U3001\U505a\U541b\U4e3b\U3001\U50b2\U4e16\U4e5d\U91cd\U5929\Uff01\U8c01\U966a\U6211\Uff0c\U743c\U9704\U821e\U98ce\U4e91\Uff1f\U8c01\U4f34\U6211\Uff0c\U50b2\U4e16\U4e5d\U91cd\U5929\Uff1f\Uff01";
 dimensionid = 919;
-displayname = "\U4fee\U771f\U4e16\U754c";
+displayname = "\U50b2\U4e16\U4e5d\U91cd\U5929";
 group =             (
 );
-id = 31034;
+id = 25154;
 latest =             {
-duration = 1323;
-name = "\U4fee\U771f\U4e16\U754c_001";
-publishtime = 1389927307;
-updated = 1382945149;
+duration = 985;
+name = "1_\U82e5\U662f\U6709\U6765\U751f\Uff0c\U4f34\U541b\U5929\U4e0b\U821e";
+publishtime = 1407919789;
+updated = 1407919789;
 };
 listorder = 0;
 mediainfo =             {
 };
-name = "\U4fee\U771f\U4e16\U754c\Uff08hot\Uff09";
+name = "\U50b2\U4e16\U4e5d\U91cd\U5929\Uff08\U9ad8\U97f3\U8d28\Uff09";
 outline = "";
 parentid = 919;
 parentname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
 parenttype = Category;
-playcount = 300304;
-programsCnt = 663;
+playcount = 0;
+programsCnt = 1279;
 "record_enable" = 0;
 subtype = Novel;
-thumb = "http://pic.qingting.fm/2014/0430/20140430032945338.jpg";
+thumb = "http://pic.qingting.fm/2014/0901/20140901015539473.jpg";
 type = VirtualChannel;
-updatetime = 1413871154;
+updatetime = 1412762234;
 },
 {
 audience = 0;
@@ -154,8 +77,8 @@ belongsRadio = "";
 bgphoto = "";
 diggCount = 0;
 diggRealTimeDiggCount = 0;
-id = 55089;
-name = "\U4f5a\U540d";
+id = 55936;
+name = "\U6469\U5d16";
 socialInfo =                     (
 );
 title = PODCASTER;
@@ -170,8 +93,8 @@ belongsRadio = "";
 bgphoto = "";
 diggCount = 0;
 diggRealTimeDiggCount = 0;
-id = 51685;
-name = "\U5fc3\U68a6\U65e0\U75d5";
+id = 51860;
+name = "\U6211\U5403\U897f\U7ea2\U67ff";
 socialInfo =                     (
 );
 title = AUTHOR;
@@ -182,102 +105,42 @@ virtualChannelId = 0;
 }
 );
 catid = 521;
-cover = "http://qingting-pic.b0.upaiyun.com/2014/1022/20141022142529567.jpg";
-desc = "\U5929\U751f\U6b8b\U7f3a\U4e00\U9b42\U4e00\U9b44\U7684\U5c11\U5e74\U9646\U4e91\Uff0c\U65e0\U610f\U968f\U7236\U4eb2\U5165\U897f\U8700\Uff0c\U5f97\U9047\U4e00\U602a\U4eba\U4f20\U6388\U5341\U5e74\U4fee\U771f\U6cd5\U8bc0\Uff0c\U540e\U5f97\U5230\U516d\U5343\U5e74\U524d\Uff0c\U767e\U4e16\U5148\U7956\U6240\U7559\U4e4b\U795e\U5175\Uff0c\U5e76\U8fdb\U5165\U516d\U9662\U4e2d\U7684\U6613\U56ed\U4fee\U70bc\Uff0c\U4ece\U800c\U8fdb\U5165\U4e00\U4e2a\U795e\U5947\U7684\U4e16\U754c\U3002\U968f\U7740\U9646\U4e91\U4fee\U4e3a\U7684\U52a0\U6df1\Uff0c\U4e5f\U6e10\U6e10\U4e86\U89e3\U5230\U4e86\U6240\U8c13\U7684\U4e03\U754c\U4f20\U8bf4\Uff0c\U5e76\U4ece\U4fee\U8eab\U754c\Uff0c\U9010\U4e00\U8fdb\U5165\U5176\U4f59\U516d\U754c\Uff0c\U5c55\U5f00\U4e86\U4e00\U6bb5\U795e\U5947\U8be1\U5f02\U3001\U522b\U5f00\U751f\U9762\U7684\U65c5\U884c\U2026\U2026";
+cover = "http://qingting-pic.b0.upaiyun.com/2014/0901/20140901024634493.jpg";
+desc = "\U5728\U300a\U83bd\U8352\U7eaa\U300b\U8fd9\U4e2a\U4e16\U754c\U91cc\U2014\U2014
+\n\U6709\U4e3a\U4e86\U751f\U5b58\Uff0c\U548c\U5929\U6597\Uff0c\U548c\U5730\U6597\Uff0c\U548c\U5996\U6597\U7684\U90e8\U843d\U4eba\U4eec\U3002
+\n\U6709\U4e3a\U4e86\U900d\U9065\U957f\U751f\Uff0c\U5386\U4e09\U707e\U4e5d\U52ab\Uff0c\U7eb5\U6b7b\U65e0\U6094\U7684\U4fee\U4ed9\U8005\U3002
+\n\U66f4\U6709\U5938\U7236\U9010\U65e5\U2026\U2026
+\n\U66f4\U6709\U540e\U7fbf\U5c04\U91d1\U4e4c\U2026\U2026
+\n\U800c\U4e00\U5929\Uff0c\U7eaa\U5b81\U5728\U4e00\U4e2a\U5c0f\U5c0f\U7684\U90e8\U65cf\U2018\U7eaa\U6c0f\U2019\U51fa\U751f\U4e86\U2026\U2026
+\n\U8eab\U4e3a\U90e8\U843d\U5ae1\U7cfb\U4e00\U8109\Uff0c\U627f\U62c5\U7740\U5b88\U62a4\U5bb6\U65cf\Uff0c\U58ee\U5927\U90e8\U843d\U7684\U8d23\U4efb\Uff0c\U4ed6\U6bc5\U7136\U8e0f\U4e0a\U9006\U5929\U6210\U4ed9\U7684\U6f2b\U6f2b\U5f81\U9014\U3002
+\n\U8eab\U6000\U5730\U5e9c\U5e26\U6765\U7684\U81f3\U9ad8\U89c2\U60f3\U6cd5\U95e8\Uff0c\U53ef\U89c2\U60f3\U201c\U81f3\U5584\U81f3\U5723\U76d8\U53e4\U795e\U5973\U5a32\U5a18\U5a18\U201d\Uff0c\U4fee\U70bc\U795e\U9b54\U7b2c\U4e00\U70bc\U4f53\U6cd5\U95e8\U300a\U8d64\U660e\U4e5d\U5929\U56fe\U300b\Uff0c\U80fd\U64cd\U63a7\U6c34\U706b\Uff0c\U5de8\U529b\U6ed4\U5929\U3002
+\n\U4fee\U4ed9\U4e00\U9014\Uff0c\U8bb2\U7a76\U540e\U5929\U8fd4\U7167\U5148\U5929\Uff0c\U5386\U7d2b\U5e9c\U4e07\U8c61\U5143\U795e\Uff0c\U800c\U540e\U8fd4\U865a\U6210\U5c31\U5730\U4ed9\Uff0c\U8fc8\U5411\U5929\U4ed9\U5883\U754c\Uff0c\U523b\U82e6\U7684\U4fee\U6301\Uff0c\U53ea\U4e3a\U8df3\U51fa\U4e09\U754c\U5916\Uff0c\U4e0d\U5728\U4e94\U884c\U4e2d\Uff0c\U5bff\U4e0e\U5929\U5730\U540c\Uff0c\U957f\U751f\U900d\U9065\U4ed9\U3002\U4e00\U4e2a\U6062\U5b8f\U6d69\U701a\U7684\U4ed9\U4fa0\U4e16\U754c\U3002";
 dimensionid = 919;
-displayname = "\U4e03\U754c\U4f20\U8bf4";
+displayname = "\U83bd\U8352\U7eaa";
 group =             (
 );
-id = 42342;
+id = 66114;
 latest =             {
-duration = 844;
-name = "\U4e03\U754c\U4f20\U8bf4_0";
-publishtime = 1386749768;
-updated = 1382945150;
+duration = 1182;
+name = "\U83bd\U8352\U7eaa_1";
+publishtime = 1407920178;
+updated = 1407920178;
 };
 listorder = 0;
 mediainfo =             {
 };
-name = "\U4e03\U754c\U4f20\U8bf4";
-outline = "\U5929\U751f\U6b8b\U7f3a\U4e00\U9b42\U4e00\U9b44\U7684\U5c11\U5e74\U9646\U4e91\Uff0c\U65e0\U610f\U968f\U7236\U4eb2\U5165\U897f\U8700\Uff0c\U5f97\U9047\U4e00\U602a\U4eba\U4f20\U6388\U5341\U5e74\U4fee\U771f\U6cd5\U8bc0\Uff0c\U540e\U5f97\U5230\U516d\U5343\U5e74\U524d\Uff0c\U767e\U4e16\U5148\U7956\U6240\U7559\U4e4b\U795e\U5175\Uff0c\U5e76\U8fdb\U5165\U516d\U9662\U4e2d\U7684\U6613\U56ed\U4fee\U70bc\Uff0c\U4ece\U800c\U8fdb\U5165\U4e00\U4e2a\U795e\U5947\U7684\U4e16\U754c\U3002\U968f\U7740\U9646\U4e91\U4fee\U4e3a\U7684\U52a0\U6df1\Uff0c\U4e5f\U6e10\U6e10\U4e86\U89e3\U5230\U4e86\U6240\U8c13\U7684\U4e03\U754c\U4f20\U8bf4\Uff0c\U5e76\U4ece\U4fee\U8eab\U754c\Uff0c\U9010\U4e00\U8fdb\U5165\U5176\U4f59\U516d\U754c\Uff0c\U5c55\U5f00\U4e86\U4e00\U6bb5\U795e\U5947\U8be1\U5f02\U3001\U522b\U5f00\U751f\U9762\U7684\U65c5\U884c\U2026\U2026";
-parentid = 919;
-parentname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
-parenttype = Category;
-playcount = 153265;
-programsCnt = 2190;
-"record_enable" = 0;
-subtype = Novel;
-thumb = "http://pic.qingting.fm/2014/1022/20141022022543709.jpg";
-type = VirtualChannel;
-updatetime = 1445311135;
-},
-{
-audience = 0;
-autoplay = 0;
-broadcasters =             (
-{
-avatar = "";
-belongsRadio = "";
-bgphoto = "";
-diggCount = 0;
-diggRealTimeDiggCount = 0;
-id = 50328;
-name = "\U5e03\U5170\U5fb7,\U7a7a\U65e0\U7684\U5ff5";
-socialInfo =                     (
-);
-title = PODCASTER;
-type = BaseUser;
-updatetime = 0;
-vip = 0;
-virtualChannelId = 0;
-},
-{
-avatar = "";
-belongsRadio = "";
-bgphoto = "";
-diggCount = 0;
-diggRealTimeDiggCount = 0;
-id = 54037;
-name = "\U8df3\U821e";
-socialInfo =                     (
-);
-title = AUTHOR;
-type = BaseUser;
-updatetime = 0;
-vip = 0;
-virtualChannelId = 0;
-}
-);
-catid = 521;
-cover = "http://pic.qingting.fm/2014/1022/20141022022814959.jpg";
-desc = "\U201c\U4e00\U4e2a\U4e00\U65e0\U662f\U5904\U7684\Uff0c\U88ab\U8ba4\U4e3a\U662f\U5e9f\U7269\U548c\U767d\U75f4\U5bb6\U4f19\U201d\Uff0c\U628a\U7075\U9b42\U5356\U7ed9\U4e86\U6076\U9b54\Uff0c\U80fd\U6362\U53d6\U5230\U4ec0\U4e48\Uff1f\U7f8e\U8272\Uff1f\U529b\U91cf\Uff1f\U8d22\U5bcc\Uff1f\U6743\U529b\Uff1f
-\n\U98a0\U8986\U8fd9\U4e16\U754c\U7684\U6240\U6709\U89c4\U5219\U5427\Uff0c\U8ba9\U6211\U4eec\U9075\U5bfb\U7740\U6076\U9b54\U7684\U8f68\U8ff9\U3002\U201c\U6211\U77e5\U9053\Uff0c\U7ec8\U6709\U4e00\U5929\Uff0c\U8fd9\U4e2a\U4e16\U754c\U5c06\U88ab\U6211\U8e29\U5728\U811a\U4e0b\Uff01\U201d\U675c\U7ef4\U00b7\U7f57\U6797\U00b7\U9c81\U9053\U592b\U5145\U6ee1\U5e0c\U671b\U7684\U8bf4\U3002";
-dimensionid = 919;
-displayname = "\U6076\U9b54\U6cd5\U5219";
-group =             (
-);
-id = 63366;
-latest =             {
-duration = 999;
-name = "\U6076\U9b54\U6cd5\U5219001";
-publishtime = 1394094561;
-updated = 1394094561;
-};
-listorder = 0;
-mediainfo =             {
-};
-name = "\U6076\U9b54\U6cd5\U5219\Uff08hot\Uff09";
+name = "\U83bd\U8352\U7eaa\Uff08\U9ad8\U97f3\U8d28\Uff09";
 outline = "";
 parentid = 919;
 parentname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
 parenttype = Category;
-playcount = 113834;
-programsCnt = 674;
+playcount = 0;
+programsCnt = 684;
 "record_enable" = 0;
 subtype = Novel;
-thumb = "http://pic.qingting.fm/2014/1022/20141022022814959.jpg";
+thumb = "http://pic.qingting.fm/2014/0901/20140901024634493.jpg";
 type = VirtualChannel;
-updatetime = 1415330166;
+updatetime = 1413432342;
 },
 {
 audience = 0;
@@ -289,141 +152,7 @@ belongsRadio = "";
 bgphoto = "";
 diggCount = 0;
 diggRealTimeDiggCount = 0;
-id = 54471;
-name = "\U4f5a\U540d";
-socialInfo =                     (
-);
-title = PODCASTER;
-type = BaseUser;
-updatetime = 0;
-vip = 0;
-virtualChannelId = 0;
-},
-{
-avatar = "";
-belongsRadio = "";
-bgphoto = "";
-diggCount = 0;
-diggRealTimeDiggCount = 0;
-id = 51647;
-name = "\U65e7\U8f69";
-socialInfo =                     (
-);
-title = AUTHOR;
-type = BaseUser;
-updatetime = 0;
-vip = 0;
-virtualChannelId = 0;
-}
-);
-catid = 521;
-cover = "http://pic.qingting.fm/2015/0827/20150827153028432.jpg";
-desc = "\U6211\U53eb\U90ed\U4f1f\Uff0c\U7537\Uff0c22\U5c81\Uff0c\U672a\U5a5a\U3002\U7f51\U6e38\U804c\U4e1a\U73a9\U5bb6\U3002\U73b0\U5728\U6211\U5de6\U624b\U7aef\U7740\U7897\U65b9\U4fbf\U9762\Uff0c\U53f3\U624b\U62ff\U7740\U53cc\U7b77\U5b50\Uff0c\U770b\U7740\U7897\U91cc\U7684\U90a3\U51e0\U6839\U9762\U6761\Uff0c\U5fc3\U91cc\U5728\U5bfb\U601d\Uff0c\U5230\U5e95\U5403\U8fd8\U662f\U4e0d\U5403\Uff1f\U5403\U4e86\U8fd9\U51e0\U6839\U9762\U6761\Uff0c\U665a\U4e0a\U6211\U5c31\U53ea\U80fd\U7a7a\U7740\U809a\U5b50\U4e86\Uff0c\U53ef\U662f\U73b0\U5728\U4e0d\U5403\Uff0c\U6211\U5df2\U7ecf\U7a7a\U7740\U809a\U5b50\U4e00\U5929\U4e86\U2026\U2026";
-dimensionid = 919;
-displayname = "\U4e00\U4e2a\U4eba\U7684\U7f51\U6e38";
-group =             (
-);
-id = 58434;
-latest =             {
-duration = 664;
-name = "\U7b2c001\U96c6_\U4e00\U4e2a\U4eba\U7684\U7f51\U6e38";
-publishtime = 1392889661;
-updated = 1382945149;
-};
-listorder = 0;
-mediainfo =             {
-};
-name = "\U4e00\U4e2a\U4eba\U7684\U7f51\U6e38";
-outline = "\U6211\U53eb\U90ed\U4f1f\Uff0c\U7537\Uff0c22\U5c81\Uff0c\U672a\U5a5a\U3002\U7f51\U6e38\U804c\U4e1a\U73a9\U5bb6\U3002\U73b0\U5728\U6211\U5de6\U624b\U7aef\U7740\U7897\U65b9\U4fbf\U9762\Uff0c\U53f3\U624b\U62ff\U7740\U53cc\U7b77\U5b50\Uff0c\U770b\U7740\U7897\U91cc\U7684\U90a3\U51e0\U6839\U9762\U6761\Uff0c\U5fc3\U91cc\U5728\U5bfb\U601d\Uff0c\U5230\U5e95\U5403\U8fd8\U662f\U4e0d\U5403\Uff1f\U5403\U4e86\U8fd9\U51e0\U6839\U9762\U6761\Uff0c\U665a\U4e0a\U6211\U5c31\U53ea\U80fd\U7a7a\U7740\U809a\U5b50\U4e86\Uff0c\U53ef\U662f\U73b0\U5728\U4e0d\U5403\Uff0c\U6211\U5df2\U7ecf\U7a7a\U7740\U809a\U5b50\U4e00\U5929\U4e86\U2026\U2026";
-parentid = 919;
-parentname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
-parenttype = Category;
-playcount = 110155;
-programsCnt = 500;
-"record_enable" = 0;
-subtype = Novel;
-thumb = "http://pic.qingting.fm/2014/0220/20140220055244841.jpg";
-type = VirtualChannel;
-updatetime = 1445832121;
-},
-{
-audience = 0;
-autoplay = 0;
-broadcasters =             (
-{
-avatar = "";
-belongsRadio = "";
-bgphoto = "";
-diggCount = 0;
-diggRealTimeDiggCount = 0;
-id = 57323;
-name = "\U4f5a\U540d";
-socialInfo =                     (
-);
-title = PODCASTER;
-type = BaseUser;
-updatetime = 0;
-vip = 0;
-virtualChannelId = 0;
-},
-{
-avatar = "";
-belongsRadio = "";
-bgphoto = "";
-diggCount = 0;
-diggRealTimeDiggCount = 0;
-id = 53829;
-name = "\U516d\U9053";
-socialInfo =                     (
-);
-title = AUTHOR;
-type = BaseUser;
-updatetime = 0;
-vip = 0;
-virtualChannelId = 0;
-}
-);
-catid = 521;
-cover = "http://pic.qingting.fm/2015/0802/20150802145813731.jpg";
-desc = "\U5510\U5bc5\Uff0c\U4e00\U4e2a\U6740\U624b\Uff0c\U4ed6\U6709\U4e00\U8eab\U51fa\U7c7b\U62d4\U8403\U7684\U529f\U592b\Uff0c\U4f46\U5728\U73b0\U5b9e\U4e16\U754c\U4e2d\U5374\U6ca1\U6709\U7528\U6b66\U4e4b\U5730\Uff0c\U53ea\U80fd\U505a\U4e2a\U89c1\U4e0d\U5f97\U5149\U7684\U6740\U624b\Uff0c\U610f\U5916\U4e4b\U95f4\U7a7f\U8d8a\U5230\U4e00\U4e2a\U6218\U4e71\U65f6\U4ee3\U2014\U2014\U5f02\U754c\U3002\U5728\U8fd9\U91cc\Uff0c\U4ed6\U53ef\U4ee5\U8086\U65e0\U5fcc\U60ee\U5730\U6325\U821e\U624b\U4e2d\U7684\U6b66\U5668\Uff0c\U7a7f\U4e0a\U4e00\U4e2a\U98ce\U56fd\U58eb\U5175\U7684\U9ed1\U8863\Uff0c\U8d70\U4e0a\U738b\U8005\U4e4b\U8def\U3002\U5728\U78b0\U5de7\U9047\U89c1\U4e86\U4e94\U767e\U5e74\U524d\U7684\U7075\U6b66\U9ad8\U624b\U4e25\U70c8\U7684\U5c38\U4f53\U540e\Uff0c\U4e25\U70c8\U7528\U6b7b\U4ea1\U732e\U796d\U5c06\U81ea\U5df2\U4e0e\U5510\U5bc5\U878d\U4e3a\U4e00\U4f53\Uff0c\U6b64\U540e\Uff0c\U5510\U5bc5\U4e0d\U518d\U662f\U5510\U5bc5\Uff0c\U800c\U662f\U4e25\U70c8\U4e0e\U5510\U5bc5\U3002\U4ed6\U7684\U4e00\U5207\Uff0c\U53ea\U662f\U5b58\U5728\U4e8e\U4f20\U8bf4\U4e2d\U2026\U2026 ";
-dimensionid = 919;
-displayname = "\U5510\U5bc5\U5728\U5f02\U754c";
-group =             (
-);
-id = 30682;
-latest =             {
-duration = 1415;
-name = "\U5510\U5bc5\U5728\U5f02\U754c_001";
-publishtime = 1411544393;
-updated = 1411544411;
-};
-listorder = 0;
-mediainfo =             {
-};
-name = "\U5510\U5bc5\U5728\U5f02\U754c\U3010\U516d\U9053\U7384\U5e7b\U7ecf\U5178\U3011";
-outline = "\U5510\U5bc5\Uff0c\U4e00\U4e2a\U6740\U624b\Uff0c\U4ed6\U6709\U4e00\U8eab\U51fa\U7c7b\U62d4\U8403\U7684\U529f\U592b\Uff0c\U4f46\U5728\U73b0\U5b9e\U4e16\U754c\U4e2d\U5374\U6ca1\U6709\U7528\U6b66\U4e4b\U5730\Uff0c\U53ea\U80fd\U505a\U4e2a\U89c1\U4e0d\U5f97\U5149\U7684\U6740\U624b\Uff0c\U610f\U5916\U4e4b\U95f4\U7a7f\U8d8a\U5230\U4e00\U4e2a\U6218\U4e71\U65f6\U4ee3\U2014\U2014\U5f02\U754c\U3002\U5728\U8fd9\U91cc\Uff0c\U4ed6\U53ef\U4ee5\U8086\U65e0\U5fcc\U60ee\U5730\U6325\U821e\U624b\U4e2d\U7684\U6b66\U5668\Uff0c\U7a7f\U4e0a\U4e00\U4e2a\U98ce\U56fd\U58eb\U5175\U7684\U9ed1\U8863\Uff0c\U8d70\U4e0a\U738b\U8005\U4e4b\U8def\U3002\U5728\U78b0\U5de7\U9047\U89c1\U4e86\U4e94\U767e\U5e74\U524d\U7684\U7075\U6b66\U9ad8\U624b\U4e25\U70c8\U7684\U5c38\U4f53\U540e\Uff0c\U4e25\U70c8\U7528\U6b7b\U4ea1\U732e\U796d\U5c06\U81ea\U5df2\U4e0e\U5510\U5bc5\U878d\U4e3a\U4e00\U4f53\Uff0c\U6b64\U540e\Uff0c\U5510\U5bc5\U4e0d\U518d\U662f\U5510\U5bc5\Uff0c\U800c\U662f\U4e25\U70c8\U4e0e\U5510\U5bc5\U3002\U4ed6\U7684\U4e00\U5207\Uff0c\U53ea\U662f\U5b58\U5728\U4e8e\U4f20\U8bf4\U4e2d\U2026\U2026 ";
-parentid = 919;
-parentname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
-parenttype = Category;
-playcount = 90694;
-programsCnt = 979;
-"record_enable" = 0;
-subtype = Novel;
-thumb = "http://pic.qingting.fm/2014/0805/20140805111256238.jpg";
-type = VirtualChannel;
-updatetime = 1438604120;
-},
-{
-audience = 0;
-autoplay = 0;
-broadcasters =             (
-{
-avatar = "";
-belongsRadio = "";
-bgphoto = "";
-diggCount = 0;
-diggRealTimeDiggCount = 0;
-id = 53388;
+id = 54752;
 name = "\U98ce\U95f4\U5c9a\U6708";
 socialInfo =                     (
 );
@@ -439,8 +168,8 @@ belongsRadio = "";
 bgphoto = "";
 diggCount = 0;
 diggRealTimeDiggCount = 0;
-id = 53832;
-name = "\U706b\U661f\U5f15\U529b";
+id = 52968;
+name = "\U95f7\U9a9a\U7684\U874e\U5b50";
 socialInfo =                     (
 );
 title = AUTHOR;
@@ -451,34 +180,34 @@ virtualChannelId = 0;
 }
 );
 catid = 521;
-cover = "http://qingting-pic.b0.upaiyun.com/2014/1022/20141022155428523.jpg";
-desc = "\U4e00\U4e2a\U80cc\U8d1f\U795e\U79d8\U8eab\U4e16\U7684\U5c11\U5e74\Uff0c\U5728\U7236\U4eb2\U7684\U9057\U547d\U4e0b\Uff0c\U8fdb\U5165\U4e86\U4e00\U4e2a\U6e38\U620f\U7684\U4e16\U754c\U300a\U8f6e\U56de\U300b\Uff0c\U5728\U8fd9\U4e2a\U8ba9\U5168\U4e16\U754c\U4eba\U4e3a\U5176\U75af\U72c2\U7684\U4e16\U754c\U5f53\U4e2d\Uff0c\U4ed6\U5c61\U5c61\U4e3a\U5e78\U8fd0\U5973\U795e\U7737\U987e\U3002\U662f\U5e78\U8fd0\Uff1f\U8fd8\U662f\U4f7f\U547d\U4e4b\U6240\U5728\U5462\Uff1f\U4e00\U5207\U4ece\U4e3b\U89d2\U8f6c\U804c\U4fee\U7f57\U5f00\U59cb\U3002\U4fee\U7f57\U2014\U2014\U6740\U622e\U3001\U65ad\U4e49\U3001\U7edd\U60c5\U3002\U8fd9\U662f\U4e00\U4e2a\U64bc\U52a8\U4e16\U754c\U7684\U795e\U8bdd\Uff0c\U4e00\U4e2a\U4fee\U7f57\U7684\U4f20\U8bf4\U3002";
+cover = "http://pic.qingting.fm/2015/0806/20150806183817831.jpg";
+desc = "\U8427\U9038\Uff0c\U672c\U662f\U7384\U533b\U95e8\U4e00\U4ee3\U70bc\U4e39\U5b97\U5e08\Uff0c\U610f\U5916\U8eab\U6b7b\Uff0c\U9644\U8eab\U4e8e\U6d77\U57ce\U5e02\U4e00\U4e2a\U843d\U9b44\U9752\U5e74\U8eab\U4e0a\Uff0c\U91cd\U751f\U4e8e\U4e00\U5bb6\U4e2d\U533b\U9986\U5185\U3002\U5931\U4f20\U5df2\U4e45\U7684\U56db\U8c61\U9488\U6cd5\U7edd\U6280\U5f97\U4ee5\U91cd\U89c1\U5929\U65e5\Uff0c\U9752\U6625\U7f8e\U4e3d\U7684\U9986\U4e3b\U5973\U513f\Uff0c\U6027\U611f\U7684\U5fa1\U59d0\Uff0c\U51b7\U8273\U7684\U6253\U5973\Uff0c\U5404\U79cd\U7f8e\U5973\U7eb7\U81f3\U6c93\U6765\U2026\U2026";
 dimensionid = 919;
-displayname = "\U7f51\U6e38\U4e4b\U4fee\U7f57\U4f20\U8bf4";
+displayname = "\U5927\U4ed9\U533b";
 group =             (
 );
-id = 58542;
+id = 76048;
 latest =             {
-duration = 969;
-name = "\U7f51\U6e38\U4e4b\U4fee\U7f57\U4f20\U8bf4001";
-publishtime = 1392880095;
-updated = 1382945149;
+duration = 1254;
+name = "\U5927\U4ed9\U533b_1";
+publishtime = 1407920178;
+updated = 1407920178;
 };
 listorder = 0;
 mediainfo =             {
 };
-name = "\U7f51\U6e38\U4e4b\U4fee\U7f57\U4f20\U8bf4";
-outline = "\U4e00\U4e2a\U80cc\U8d1f\U795e\U79d8\U8eab\U4e16\U7684\U5c11\U5e74\Uff0c\U5728\U7236\U4eb2\U7684\U9057\U547d\U4e0b\Uff0c\U8fdb\U5165\U4e86\U4e00\U4e2a\U6e38\U620f\U7684\U4e16\U754c\U300a\U8f6e\U56de\U300b\Uff0c\U5728\U8fd9\U4e2a\U8ba9\U5168\U4e16\U754c\U4eba\U4e3a\U5176\U75af\U72c2\U7684\U4e16\U754c\U5f53\U4e2d\Uff0c\U4ed6\U5c61\U5c61\U4e3a\U5e78\U8fd0\U5973\U795e\U7737\U987e\U3002\U662f\U5e78\U8fd0\Uff1f\U8fd8\U662f\U4f7f\U547d\U4e4b\U6240\U5728\U5462\Uff1f\U4e00\U5207\U4ece\U4e3b\U89d2\U8f6c\U804c\U4fee\U7f57\U5f00\U59cb\U3002\U4fee\U7f57\U2014\U2014\U6740\U622e\U3001\U65ad\U4e49\U3001\U7edd\U60c5\U3002\U8fd9\U662f\U4e00\U4e2a\U64bc\U52a8\U4e16\U754c\U7684\U795e\U8bdd\Uff0c\U4e00\U4e2a\U4fee\U7f57\U7684\U4f20\U8bf4\U3002";
+name = "\U5927\U4ed9\U533b";
+outline = "\U8427\U9038\Uff0c\U672c\U662f\U7384\U533b\U95e8\U4e00\U4ee3\U70bc\U4e39\U5b97\U5e08\Uff0c\U610f\U5916\U8eab\U6b7b\Uff0c\U9644\U8eab\U4e8e\U6d77\U57ce\U5e02\U4e00\U4e2a\U843d\U9b44\U9752\U5e74\U8eab\U4e0a\Uff0c\U91cd\U751f\U4e8e\U4e00\U5bb6\U4e2d\U533b\U9986\U5185\U3002\U5931\U4f20\U5df2\U4e45\U7684\U56db\U8c61\U9488\U6cd5\U7edd\U6280\U5f97\U4ee5\U91cd\U89c1\U5929\U65e5\Uff0c\U9752\U6625\U7f8e\U4e3d\U7684\U9986\U4e3b\U5973\U513f\Uff0c\U6027\U611f\U7684\U5fa1\U59d0\Uff0c\U51b7\U8273\U7684\U6253\U5973\Uff0c\U5404\U79cd\U7f8e\U5973\U7eb7\U81f3\U6c93\U6765\U2026\U2026";
 parentid = 919;
 parentname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
 parenttype = Category;
-playcount = 85717;
-programsCnt = 616;
+playcount = 0;
+programsCnt = 530;
 "record_enable" = 0;
 subtype = Novel;
-thumb = "http://pic.qingting.fm/2014/0220/20140220031209633.jpg";
+thumb = "http://pic.qingting.fm/2014/0901/20140901013241842.jpg";
 type = VirtualChannel;
-updatetime = 1446534464;
+updatetime = 1446434353;
 },
 {
 audience = 0;
@@ -490,7 +219,151 @@ belongsRadio = "";
 bgphoto = "";
 diggCount = 0;
 diggRealTimeDiggCount = 0;
-id = 59449;
+id = 57948;
+name = "\U5fe7\U84dd";
+socialInfo =                     (
+);
+title = PODCASTER;
+type = BaseUser;
+updatetime = 0;
+vip = 0;
+virtualChannelId = 0;
+},
+{
+avatar = "";
+belongsRadio = "";
+bgphoto = "";
+diggCount = 0;
+diggRealTimeDiggCount = 0;
+id = 54177;
+name = "\U82e5\U96ea\U4e09\U5343";
+socialInfo =                     (
+);
+title = AUTHOR;
+type = BaseUser;
+updatetime = 0;
+vip = 0;
+virtualChannelId = 0;
+}
+);
+catid = 521;
+cover = "http://pic.qingting.fm/2015/0727/20150727180049359.jpg";
+desc = "\U6ca1\U843d\U5bb6\U65cf\Uff0c\U88ab\U4eba\U4f24\U5bb3\U81f4\U6b7b\U7684\U4e91\U5bb6\U4e09\U5c0f\U59d0\U5c31\U662f\U5979\U518d\U4e00\U4e16\U7684\U8eab\U4efd\Uff0c\U62a4\U5979\U5982\U547d\U7684\U7236\U4eb2\U548c\U5144\U957f\Uff0c\U6210\U4e3a\U4e86\U5979\U518d\U4e00\U6b21\U6d3b\U4e0b\U53bb\U7684\U529b\U91cf\Uff0c\U504c\U5927\U5bb6\U4e1a\U7cdf\U4eba\U7aa5\U89c6\Uff0c\U5f15\U6765\U4e86\U6740\U8eab\U4e4b\U7978\U3002\U65e2\U7136\U5979\U6210\U4e3a\U4e86\U4e91\U67ab\Uff0c\U522b\U4eba\U4e5f\U4f11\U60f3\U518d\U52a8\U4e91\U5bb6\U4e00\U5206\U4e00\U6beb\Uff01 \U593a\U4e91\U5bb6\U8d22\U4ea7\U8005\Uff0c\U4e94\U500d\U4e4b\U529b\U8fd8\U4e4b\Uff01 \U8c0b\U4e91\U5bb6\U6027\U547d\U8005\Uff0c\U5341\U500d\U4e4b\U529b\U8fd8\U4e4b\Uff01 \U5982\U6b64\U8fd8\U6709\U5984\U52a8\U4e91\U5bb6\U4e4b\U4eba\Uff0c\U5979\U5b9a\U4f1a\U5168\U529b\U8fd8\U4e4b\Uff0c\U4e0d\U6b7b\U4e0d\U4f11\Uff01 \U6240\U4ee5\Uff0c\U5979\U9009\U62e9\U4e86\U6beb\U4e0d\U72b9\U8c6b\U7684\U7ad9\U8d77\Uff01\U4ece\U6b64\Uff0c\U5927\U9646\U4e0a\U5c11\U4e86\U4e00\U4e2a\U5e9f\U67f4\Uff0c\U591a\U4e86\U4e00\U4e2a\U7edd\U4e16\U5929\U624d\Uff01 \U6218\U58eb\U5f88\U96be\U664b\U7ea7\U5417\Uff1f\U5bf9\U4e0d\U8d77\Uff0c\U6211\U62e5\U6709\U79d8\U5b9d\U70bc\U4f53\Uff0c\U4e09\U5929\U8e7f\U4e24\U7ea7\U54e6\U3002 \U9b54\U6cd5\U5e08\U5f88\U5389\U5bb3\U5417\Uff1f\U5bf9\U4e0d\U8d77\Uff0c\U6211\U4e0d\U7a00\U7f55\U3002\U5979\U611f\U77e5\U4e94\U7cfb\U7684\U5143\U7d20\Uff0c\U4e94\U7cfb\U7684\U9b54\U6cd5\U5e08\U6084\U7136\U8bde\U751f\U3002";
+dimensionid = 919;
+displayname = "\U5929\U624d\U53ec\U5524\U5e08";
+group =             (
+);
+id = 75420;
+latest =             {
+duration = 1037;
+name = "\U5929\U624d\U53ec\U5524\U5e08_1";
+publishtime = 1407920178;
+updated = 1407920178;
+};
+listorder = 0;
+mediainfo =             {
+};
+name = "\U5929\U624d\U53ec\U5524\U5e08";
+outline = "\U6ca1\U843d\U5bb6\U65cf\Uff0c\U88ab\U4eba\U4f24\U5bb3\U81f4\U6b7b\U7684\U4e91\U5bb6\U4e09\U5c0f\U59d0\U5c31\U662f\U5979\U518d\U4e00\U4e16\U7684\U8eab\U4efd\Uff0c\U62a4\U5979\U5982\U547d\U7684\U7236\U4eb2\U548c\U5144\U957f\Uff0c\U6210\U4e3a\U4e86\U5979\U518d\U4e00\U6b21\U6d3b\U4e0b\U53bb\U7684\U529b\U91cf\Uff0c\U504c\U5927\U5bb6\U4e1a\U7cdf\U4eba\U7aa5\U89c6\Uff0c\U5f15\U6765\U4e86\U6740\U8eab\U4e4b\U7978\U3002\U65e2\U7136\U5979\U6210\U4e3a\U4e86\U4e91\U67ab\Uff0c\U522b\U4eba\U4e5f\U4f11\U60f3\U518d\U52a8\U4e91\U5bb6\U4e00\U5206\U4e00\U6beb\Uff01 \U593a\U4e91\U5bb6\U8d22\U4ea7\U8005\Uff0c\U4e94\U500d\U4e4b\U529b\U8fd8\U4e4b\Uff01 \U8c0b\U4e91\U5bb6\U6027\U547d\U8005\Uff0c\U5341\U500d\U4e4b\U529b\U8fd8\U4e4b\Uff01 \U5982\U6b64\U8fd8\U6709\U5984\U52a8\U4e91\U5bb6\U4e4b\U4eba\Uff0c\U5979\U5b9a\U4f1a\U5168\U529b\U8fd8\U4e4b\Uff0c\U4e0d\U6b7b\U4e0d\U4f11\Uff01 \U6240\U4ee5\Uff0c\U5979\U9009\U62e9\U4e86\U6beb\U4e0d\U72b9\U8c6b\U7684\U7ad9\U8d77\Uff01\U4ece\U6b64\Uff0c\U5927\U9646\U4e0a\U5c11\U4e86\U4e00\U4e2a\U5e9f\U67f4\Uff0c\U591a\U4e86\U4e00\U4e2a\U7edd\U4e16\U5929\U624d\Uff01 \U6218\U58eb\U5f88\U96be\U664b\U7ea7\U5417\Uff1f\U5bf9\U4e0d\U8d77\Uff0c\U6211\U62e5\U6709\U79d8\U5b9d\U70bc\U4f53\Uff0c\U4e09\U5929\U8e7f\U4e24\U7ea7\U54e6\U3002 \U9b54\U6cd5\U5e08\U5f88\U5389\U5bb3\U5417\Uff1f\U5bf9\U4e0d\U8d77\Uff0c\U6211\U4e0d\U7a00\U7f55\U3002\U5979\U611f\U77e5\U4e94\U7cfb\U7684\U5143\U7d20\Uff0c\U4e94\U7cfb\U7684\U9b54\U6cd5\U5e08\U6084\U7136\U8bde\U751f\U3002";
+parentid = 919;
+parentname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+parenttype = Category;
+playcount = 0;
+programsCnt = 646;
+"record_enable" = 0;
+subtype = Novel;
+thumb = "http://pic.qingting.fm/2014/0904/20140904025915780.jpg";
+type = VirtualChannel;
+updatetime = 1438924024;
+},
+{
+audience = 0;
+autoplay = 0;
+broadcasters =             (
+{
+avatar = "http://qingting-pic.b0.upaiyun.com/2012/sina_logo/1385487894-80x80.jpg";
+belongsRadio = "";
+bgphoto = "";
+diggCount = 0;
+diggRealTimeDiggCount = 0;
+id = 388;
+name = "\U94a7\U6d69";
+socialInfo =                     (
+{
+provider = weibo;
+socialId = 1385487894;
+vtag = "Wradio\U94a7\U6d69";
+},
+{
+provider = qq;
+socialId = "";
+vtag = "";
+}
+);
+title = PODCASTER;
+type = BaseUser;
+updatetime = 0;
+vip = 1;
+virtualChannelId = 0;
+},
+{
+avatar = "";
+belongsRadio = "";
+bgphoto = "";
+diggCount = 0;
+diggRealTimeDiggCount = 0;
+id = 53399;
+name = "\U68a6\U5165\U795e\U673a";
+socialInfo =                     (
+);
+title = AUTHOR;
+type = BaseUser;
+updatetime = 0;
+vip = 0;
+virtualChannelId = 0;
+}
+);
+catid = 521;
+cover = "http://pic.qingting.fm/2015/0803/20150803184410827.jpg";
+desc = "\U6c14\U4e43\U4e00\U5207\U751f\U547d\U4e4b\U672c\U6e90\U3002\U6c14\U529f\U4e43\U662f\U751f\U547d\U672c\U6e90\U7684\U4fee\U884c\U3002\U4fee\U70bc\U5230\U8fbe\U7edd\U9876\Uff0c\U5c31\U4f1a\U6709\U79cd\U79cd\U7684\U5f02\U80fd\U3002\U6c14\U529f\U5f3a\U8005\Uff0c\U53ef\U4ee5\U201c\U624b\U7834\U5ca9\U58c1\U201d\U201c\U8033\U95fb\U8681\U6597\U201d\U201c\U8db3\U8e0f\U6ce2\U9762\U201d\U201c\U53e3\U5410\U78a7\U706b\U201d\U201c\U5200\U67aa\U4e0d\U5165\U201d\U201c\U6c14\U63a5\U4e91\U971e\U201d\U201c\U541e\U6c14\U8f9f\U8c37\U201d\U201c\U4e0d\U98df\U70df\U706b\U201d\U201c\U5ff5\U901a\U5929\U5730\U201d\U201c\U5343\U91cc\U8ffd\U9b42\U201d\U2026\U2026\U6768\U5947\U5c31\U662f\U8fd9\U6837\U7684\U4e00\U4e2a\U6c14\U529f\U4fee\U884c\U8005\U3002";
+dimensionid = 919;
+displayname = "\U5723\U738b";
+group =             (
+);
+id = 75514;
+latest =             {
+duration = 1082;
+name = "\U5723\U738b_1";
+publishtime = 1407920178;
+updated = 1407920178;
+};
+listorder = 0;
+mediainfo =             {
+};
+name = "\U5723\U738b\U3010\U300a\U6597\U7834\U82cd\U7a79\U300b\U7684\U70ed\U8840 \U300a\U795e\U5370\U738b\U5ea7\U300b\U7684\U9738\U6c14\Uff01\U3011";
+outline = "\U6c14\U4e43\U4e00\U5207\U751f\U547d\U4e4b\U672c\U6e90\U3002\U6c14\U529f\U4e43\U662f\U751f\U547d\U672c\U6e90\U7684\U4fee\U884c\U3002\U4fee\U70bc\U5230\U8fbe\U7edd\U9876\Uff0c\U5c31\U4f1a\U6709\U79cd\U79cd\U7684\U5f02\U80fd\U3002\U6c14\U529f\U5f3a\U8005\Uff0c\U53ef\U4ee5\U201c\U624b\U7834\U5ca9\U58c1\U201d\U201c\U8033\U95fb\U8681\U6597\U201d\U201c\U8db3\U8e0f\U6ce2\U9762\U201d\U201c\U53e3\U5410\U78a7\U706b\U201d\U201c\U5200\U67aa\U4e0d\U5165\U201d\U201c\U6c14\U63a5\U4e91\U971e\U201d\U201c\U541e\U6c14\U8f9f\U8c37\U201d\U201c\U4e0d\U98df\U70df\U706b\U201d\U201c\U5ff5\U901a\U5929\U5730\U201d\U201c\U5343\U91cc\U8ffd\U9b42\U201d\U2026\U2026\U6768\U5947\U5c31\U662f\U8fd9\U6837\U7684\U4e00\U4e2a\U6c14\U529f\U4fee\U884c\U8005\U3002";
+parentid = 919;
+parentname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+parenttype = Category;
+playcount = 0;
+programsCnt = 642;
+"record_enable" = 0;
+subtype = Novel;
+thumb = "http://pic.qingting.fm/2014/0822/20140822101907208.jpg";
+type = VirtualChannel;
+updatetime = 1438599925;
+},
+{
+audience = 0;
+autoplay = 0;
+broadcasters =             (
+{
+avatar = "";
+belongsRadio = "";
+bgphoto = "";
+diggCount = 0;
+diggRealTimeDiggCount = 0;
+id = 51967;
 name = "\U6668\U8bf5\U65e0\U58f0";
 socialInfo =                     (
 );
@@ -506,8 +379,8 @@ belongsRadio = "";
 bgphoto = "";
 diggCount = 0;
 diggRealTimeDiggCount = 0;
-id = 53895;
-name = "\U8427\U6f5c";
+id = 50298;
+name = "\U5510\U5bb6\U4e09\U5c11";
 socialInfo =                     (
 );
 title = AUTHOR;
@@ -518,34 +391,34 @@ virtualChannelId = 0;
 }
 );
 catid = 521;
-cover = "http://pic.qingting.fm/2015/0727/20150727182337868.jpg";
-desc = "\U8d44\U4ea7\U8fc7\U5343\U4e07\U7684\U6210\U529f\U5546\U4eba\U674e\U5f3a\U906d\U9047\U5973\U53cb\U4e0e\U597d\U53cb\U7684\U80cc\U53db\Uff0c\U6124\U6012\U4f24\U4eba\U3002\U5c31\U5728\U4ed6\U4e07\U5ff5\U4ff1\U7070\U65f6\Uff0c\U795e\U79d8\U4eba\U7269\U5085\U5c71\U5229\U7528\U771f\U6c14\U5c06\U674e\U5f3a\U6539\U9020\U6210\U9ad8\U5927\U4fca\U7f8e\U7684\U5e74\U8f7b\U4eba\Uff0c\U5e26\U9886\U4ed6\U7a7f\U8d8a\U661f\U7a7a\Uff0c\U4ece\U5730\U7403\U77ac\U79fb\U5230\U706b\U661f\U3002\U5f53\U4ed6\U4eec\U8fdb\U5165\U53e4\U4ee3\U4f20\U9001\U9635\U51c6\U5907\U524d\U5f80\U201c\U5c01\U7f18\U661f \U201d\U65f6\Uff0c\U7531\U4e8e\U82b1\U5a9a\U5a18\U7684\U6363\U4e71\Uff0c\U674e\U5f3a\U5355\U72ec\U4e00\U4eba\U88ab\U9001\U5230\U4e86\U4e00\U4e2a\U4e0d\U77e5\U540d\U7684\U661f\U7403\Uff0c\U8e0f\U4e0a\U4e86\U60ca\U5f02\U672a\U77e5\U7684\U98d8\U9088\U4e4b\U65c5\U2026\U2026";
+cover = "http://pic.qingting.fm/2015/0709/20150709150547770.jpg";
+desc = "\U5510\U95e8\U5916\U95e8\U5f1f\U5b50\U5510\U4e09\Uff0c\U56e0\U5077\U5b66\U5185\U95e8\U7edd\U5b66\U4e3a\U5510\U95e8\U6240\U4e0d\U5bb9\Uff0c\U8df3\U5d16\U660e\U5fd7\U65f6\U5374\U6765\U5230\U4e86\U53e6\U4e00\U4e2a\U4e16\U754c\Uff0c\U4e00\U4e2a\U5c5e\U4e8e\U6b66\U9b42\U7684\U4e16\U754c\U3002\U540d\U53eb\U6597\U7f57\U6d77\U6d0b\U3002\U5f53\U5510\U95e8\U6697\U5668\U6765\U5230\U6597\U7f57\U6d77\U6d0b\Uff0c\U5f53\U5510\U4e09\U6b66\U9b42\U89c9\U9192\Uff0c\U4ed6\U80fd\U5426\U5728\U8fd9\U7247\U6b66\U9b42\U7684\U4e16\U754c\U91cd\U5851\U5510\U95e8\U8f89\U714c\Uff1f";
 dimensionid = 919;
-displayname = "\U98d8\U6e3a\U4e4b\U65c5";
+displayname = "\U6597\U7f57\U5927\U9646";
 group =             (
 );
-id = 42328;
+id = 75006;
 latest =             {
-duration = 1409;
-name = "\U98d8\U6e3a\U4e4b\U65c51";
-publishtime = 1386748058;
-updated = 1382945149;
+duration = 1380;
+name = "\U6597\U7f57\U5927\U9646_001";
+publishtime = 1414985467;
+updated = 1414985905;
 };
 listorder = 0;
 mediainfo =             {
 };
-name = "\U98d8\U6e3a\U4e4b\U65c5";
-outline = "\U8d44\U4ea7\U8fc7\U5343\U4e07\U7684\U6210\U529f\U5546\U4eba\U674e\U5f3a\U906d\U9047\U5973\U53cb\U4e0e\U597d\U53cb\U7684\U80cc\U53db\Uff0c\U6124\U6012\U4f24\U4eba\U3002\U5c31\U5728\U4ed6\U4e07\U5ff5\U4ff1\U7070\U65f6\Uff0c\U795e\U79d8\U4eba\U7269\U5085\U5c71\U5229\U7528\U771f\U6c14\U5c06\U674e\U5f3a\U6539\U9020\U6210\U9ad8\U5927\U4fca\U7f8e\U7684\U5e74\U8f7b\U4eba\Uff0c\U5e26\U9886\U4ed6\U7a7f\U8d8a\U661f\U7a7a\Uff0c\U4ece\U5730\U7403\U77ac\U79fb\U5230\U706b\U661f\U3002\U5f53\U4ed6\U4eec\U8fdb\U5165\U53e4\U4ee3\U4f20\U9001\U9635\U51c6\U5907\U524d\U5f80\U201c\U5c01\U7f18\U661f \U201d\U65f6\Uff0c\U7531\U4e8e\U82b1\U5a9a\U5a18\U7684\U6363\U4e71\Uff0c\U674e\U5f3a\U5355\U72ec\U4e00\U4eba\U88ab\U9001\U5230\U4e86\U4e00\U4e2a\U4e0d\U77e5\U540d\U7684\U661f\U7403\Uff0c\U8e0f\U4e0a\U4e86\U60ca\U5f02\U672a\U77e5\U7684\U98d8\U9088\U4e4b\U65c5\U2026\U2026";
+name = "\U6597\U7f57\U5927\U9646";
+outline = "\U5510\U95e8\U5916\U95e8\U5f1f\U5b50\U5510\U4e09\Uff0c\U56e0\U5077\U5b66\U5185\U95e8\U7edd\U5b66\U4e3a\U5510\U95e8\U6240\U4e0d\U5bb9\Uff0c\U8df3\U5d16\U660e\U5fd7\U65f6\U5374\U6765\U5230\U4e86\U53e6\U4e00\U4e2a\U4e16\U754c\Uff0c\U4e00\U4e2a\U5c5e\U4e8e\U6b66\U9b42\U7684\U4e16\U754c\U3002\U540d\U53eb\U6597\U7f57\U6d77\U6d0b\U3002\U5f53\U5510\U95e8\U6697\U5668\U6765\U5230\U6597\U7f57\U6d77\U6d0b\Uff0c\U5f53\U5510\U4e09\U6b66\U9b42\U89c9\U9192\Uff0c\U4ed6\U80fd\U5426\U5728\U8fd9\U7247\U6b66\U9b42\U7684\U4e16\U754c\U91cd\U5851\U5510\U95e8\U8f89\U714c\Uff1f";
 parentid = 919;
 parentname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
 parenttype = Category;
-playcount = 69023;
-programsCnt = 329;
+playcount = 0;
+programsCnt = 498;
 "record_enable" = 0;
 subtype = Novel;
-thumb = "http://pic.qingting.fm/2014/1022/20141022024048394.jpg";
+thumb = "http://pic.qingting.fm/2014/0818/20140818025744925.jpg";
 type = VirtualChannel;
-updatetime = 1438924086;
+updatetime = 1445915156;
 },
 {
 audience = 0;
@@ -555,98 +428,15 @@ broadcasters =             (
 avatar = "";
 belongsRadio = "";
 bgphoto = "";
-diggCount = 0;
+diggCount = 1;
 diggRealTimeDiggCount = 0;
-id = 51070;
-name = "\U54c8\U54c8\U7b11";
-socialInfo =                     (
-);
-title = PODCASTER;
-type = BaseUser;
-updatetime = 0;
-vip = 0;
-virtualChannelId = 0;
-},
-{
-avatar = "";
-belongsRadio = "";
-bgphoto = "";
-diggCount = 0;
-diggRealTimeDiggCount = 0;
-id = 56517;
-name = "\U5218\U6148\U6b23";
-socialInfo =                     (
-);
-title = AUTHOR;
-type = BaseUser;
-updatetime = 0;
-vip = 0;
-virtualChannelId = 0;
-}
-);
-catid = 521;
-cover = "http://qingting-pic.b0.upaiyun.com/2014/1016/20141016152309587.jpg";
-desc = "\U8fd9\U662f\U4e00\U4e2a\U5173\U4e8e\U80cc\U53db\U7684\U6545\U4e8b\Uff0c\U4e5f\U662f\U4e00\U4e2a\U751f\U5b58\U4e0e\U6b7b\U4ea1\U7684\U6545\U4e8b\Uff0c\U6709\U65f6\U5019\Uff0c\U6bd4\U8d77\U751f\U5b58\U8fd8\U662f\U6b7b\U4ea1\U6765\Uff0c\U5fe0\U8bda\U4e0e\U80cc\U53db\U53ef\U80fd\U66f4\U662f\U4e00\U4e2a\U95ee\U9898\U3002\U75af\U72c2\U4e0e\U504f\U6267\Uff0c\U6700\U7ec8\U5c06\U5728\U4eba\U7c7b\U6587\U660e\U7684\U5185\U90e8\U5f02\U5316\U51fa\U600e\U6837\U7684\U529b\U91cf\Uff1f\U51b7\U9177\U7684\U661f\U7a7a\U5c06\U5982\U4f55\U62f7\U95ee\U5fc3\U4e2d\U9053\U5fb7\Uff1f\U4f5c\U8005\U8bd5\U56fe\U8bb2\U8ff0\U4e00\U90e8\U5728\U5149\U5e74\U5c3a\U5ea6\U4e0a\U91cd\U65b0\U6f14\U7ece\U7684\U4e2d\U56fd\U73b0\U4ee3\U53f2\Uff0c\U8bb2\U8ff0\U4e00\U4e2a\U6587\U660e\U4e8c\U767e\U6b21\U6bc1\U706d\U4e0e\U91cd\U751f\U7684\U4f20\U5947\U3002";
-dimensionid = 919;
-displayname = "\U4e09\U4f531";
-group =             (
-);
-id = 32430;
-latest =             {
-duration = 1418;
-name = "\U4e09\U4f5301";
-publishtime = 1386671678;
-updated = 1386671678;
-};
-listorder = 0;
-mediainfo =             {
-};
-name = "\U4e09\U4f53\Uff08hot\Uff09";
-outline = "";
-parentid = 919;
-parentname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
-parenttype = Category;
-playcount = 67268;
-programsCnt = 50;
-"record_enable" = 0;
-subtype = Novel;
-thumb = "http://pic.qingting.fm/2013/1212/20131212091855655.jpg";
-type = VirtualChannel;
-updatetime = 1413444227;
-},
-{
-audience = 0;
-autoplay = 0;
-broadcasters =             (
-{
-avatar = "";
-belongsRadio = "";
-bgphoto = "";
-diggCount = 0;
-diggRealTimeDiggCount = 0;
-id = 53626;
-name = "\U5f20\U5b87\U8fb0";
-socialInfo =                     (
-);
-title = PODCASTER;
-type = BaseUser;
-updatetime = 0;
-vip = 0;
-virtualChannelId = 0;
-},
-{
-avatar = "http://qingting-pic.b0.upaiyun.com/2012/sina_logo/1890144872-80x80.jpg";
-belongsRadio = "\U5b89\U5fbd\U4ea4\U901a\U5e7f\U64ad-\U91d1\U58f0\U91d1\U66f2 \U6c55\U5934\U65b0\U95fb\U8d44\U8baf\U4e4b\U58f0-\U8d85\U7ea7\U9017\U7ffb\U5929\U00a0 \U6c55\U5934\U65b0\U95fb\U8d44\U8baf\U4e4b\U58f0-\U8d85\U7ea7\U9017\U7ffb\U5929  \U7389\U6797\U65b0\U95fb\U5e7f\U64ad-\U7389\U6797\U65b0\U95fb \U5b89\U5fbd\U4ea4\U901a\U5e7f\U64ad-\U7231\U8f66\U5730\U5e26 \U5b89\U5fbd\U4ea4\U901a\U5e7f\U64ad-\U6863\U6848\U63ed\U79d8 \U7389\U6797\U65b0\U95fb\U5e7f\U64ad-\U6211\U76841530 ";
-bgphoto = "";
-diggCount = 99;
-diggRealTimeDiggCount = 0;
-id = 1686;
-name = "\U6c5f\U5357";
+id = 11036;
+name = "\U539f\U91ce";
 socialInfo =                     (
 {
 provider = weibo;
-socialId = 1890144872;
-vtag = "908\U6c5f\U5357";
+socialId = "";
+vtag = "";
 },
 {
 provider = qq;
@@ -654,48 +444,270 @@ socialId = "";
 vtag = "";
 }
 );
-title = AUTHOR;
+title = PODCASTER;
 type = BaseUser;
 updatetime = 0;
 vip = 1;
 virtualChannelId = 0;
+},
+{
+avatar = "";
+belongsRadio = "";
+bgphoto = "";
+diggCount = 0;
+diggRealTimeDiggCount = 0;
+id = 51570;
+name = "\U5929\U8695\U571f\U8c46";
+socialInfo =                     (
+);
+title = AUTHOR;
+type = BaseUser;
+updatetime = 0;
+vip = 0;
+virtualChannelId = 0;
 }
 );
 catid = 521;
-cover = "http://pic.qingting.fm/2015/0727/20150727115122246.jpg";
-desc = "\U5728\U4e5d\U5dde\U5317\U9646\U7684\U5927\U6f20\U8349\U539f\U4e0a\U6709\U7740\U8fd9\U6837\U4e00\U4e2a\U6e38\U7267\U6c11\U65cf\Uff1a\U4ed6\U4eec\U5c1a\U6b66\Uff0c\U4fe1\U4ef0\U76d8\U9791\U5929\U795e\Uff0c\U5d07\U62dc\U82f1\U96c4\U3002\U90a3\U91cc\U7684\U7537\U513f\U5404\U4e2a\U90fd\U662f\U70ed\U8840\U6c49\U5b50\Uff0c\U90a3\U91cc\U7684\U5973\U5b50\U5404\U4e2a\U90fd\U662f\U5dfe\U5e3c\U4e0d\U8ba9\U987b\U7709\Uff0c\U4ed6\U4eec\U7684\U738b\U671d\U53eb\U505a\U9752\U9633\U3002\U6545\U4e8b\U53d1\U751f\U5728\U9752\U9633\U3002\U8bb2\U8ff0\U7740\U5317\U9646\U6e38\U7267\U90e8\U843d\U5185\U90e8\U7684\U6743\U529b\U4e4b\U4e89\Uff0c\U4ee5\U53ca\U9752\U9633\U4e0e\U4e1c\U9646\U738b\U671d\U7684\U6069\U6028\U3002
-\n\U3000\U3000\U6f14\U64ad\Uff1a\U5f20\U5b87\U8fb0";
+cover = "http://pic.qingting.fm/2014/1022/20141022025920388.jpg";
+desc = "\U4e3b\U4eba\U516c\U662f\U7267\U5c18\Uff0c\U6545\U4e8b\U53d1\U751f\U5728\U201c\U708e\U5e1d\U201d\U8427\U708e\U4e0e\U201c\U6b66\U7956\U201d\U6797\U52a8\U6765\U5230\U7684\U65b0\U4e16\U754c\U3002
+\n\U5927\U5343\U4e16\U754c\Uff0c\U4f4d\U9762\U4ea4\U6c47\Uff0c\U4e07\U65cf\U6797\U7acb\Uff0c\U7fa4\U96c4\U835f\U8403\Uff0c\U4e00\U4f4d\U4f4d\U6765\U81ea\U4e0b\U4f4d\U9762\U7684\U5929\U4e4b\U81f3\U5c0a\Uff0c\U5728\U8fd9\U65e0\U5c3d\U4e16\U754c\Uff0c\U6f14\U7ece\U7740\U4ee4\U4eba\U5411\U5f80\U7684\U4f20\U5947\Uff0c\U8ffd\U6c42\U7740\U90a3\U4e3b\U5bb0\U4e4b\U8def\U3002
+\n\U65e0\U5c3d\U706b\U57df\Uff0c\U708e\U5e1d\U6267\U638c\Uff0c\U4e07\U706b\U711a\U82cd\U7a79\U3002
+\n\U6b66\U5883\U4e4b\U5185\Uff0c\U6b66\U7956\U4e4b\U5a01\Uff0c\U9707\U6151\U4e7e\U5764\U3002
+\n\U897f\U5929\U4e4b\U6bbf\Uff0c\U767e\U6218\U4e4b\U7687\Uff0c\U6218\U5a01\U65e0\U53ef\U654c\U3002
+\n\U5317\U8352\U4e4b\U4e18\Uff0c\U4e07\U5893\U4e4b\U5730\Uff0c\U4e0d\U6b7b\U4e4b\U4e3b\U9547\U5929\U5730\U3002
+\n\U5c11\U5e74\U81ea\U5317\U7075\U5883\U800c\U51fa\Uff0c\U9a91\U4e5d\U5e7d\U51a5\U96c0\Uff0c\U95ef\U5411\U4e86\U90a3\U7cbe\U5f69\U7edd\U4f26\U7684\U7eb7\U7ead\U4e16\U754c\Uff0c\U4e3b\U5bb0\U4e4b\U8def\Uff0c\U8c01\U4e3b\U6c89\U6d6e\Uff1f
+\n\U5927\U5343\U4e16\U754c\Uff0c\U4e07\U9053\U4e89\U950b\Uff0c\U543e\U4e3a\U5927\U4e3b\U5bb0\U3002";
 dimensionid = 919;
-displayname = "\U4e5d\U5dde\U7f25\U7f08\U5f55";
+displayname = "\U5927\U4e3b\U5bb0";
 group =             (
 );
-id = 64148;
+id = 65292;
 latest =             {
-duration = 754;
-name = "\U4e5d\U5dde\U7f25\U7f08\U5f55\U00b7\U86ee\U8352 01";
-publishtime = 1395282380;
-updated = 1395282380;
+duration = 1183;
+name = "\U5927\U4e3b\U5bb0_1";
+publishtime = 1407920178;
+updated = 1407920178;
 };
 listorder = 0;
 mediainfo =             {
 };
-name = "\U4e5d\U5dde\U7f25\U7f08\U5f55\Uff086\U90e8\U5168\Uff09\U3010\U6c5f\U5357\U4ee3\U8868\U4f5c\Uff0c\U873b\U8713\U72ec\U5bb6\U7248\U6743\U3011";
-outline = "\U5728\U4e5d\U5dde\U5317\U9646\U7684\U5927\U6f20\U8349\U539f\U4e0a\U6709\U7740\U8fd9\U6837\U4e00\U4e2a\U6e38\U7267\U6c11\U65cf\Uff1a\U4ed6\U4eec\U5c1a\U6b66\Uff0c\U4fe1\U4ef0\U76d8\U9791\U5929\U795e\Uff0c\U5d07\U62dc\U82f1\U96c4\U3002\U90a3\U91cc\U7684\U7537\U513f\U5404\U4e2a\U90fd\U662f\U70ed\U8840\U6c49\U5b50\Uff0c\U90a3\U91cc\U7684\U5973\U5b50\U5404\U4e2a\U90fd\U662f\U5dfe\U5e3c\U4e0d\U8ba9\U987b\U7709\Uff0c\U4ed6\U4eec\U7684\U738b\U671d\U53eb\U505a\U9752\U9633\U3002\U6545\U4e8b\U53d1\U751f\U5728\U9752\U9633\U3002\U8bb2\U8ff0\U7740\U5317\U9646\U6e38\U7267\U90e8\U843d\U5185\U90e8\U7684\U6743\U529b\U4e4b\U4e89\Uff0c\U4ee5\U53ca\U9752\U9633\U4e0e\U4e1c\U9646\U738b\U671d\U7684\U6069\U6028\U3002
-\n\U3000\U3000\U6f14\U64ad\Uff1a\U5f20\U5b87\U8fb0";
+name = "\U5927\U4e3b\U5bb0\Uff08\U9ad8\U97f3\U8d28\Uff09";
+outline = "";
 parentid = 919;
 parentname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
 parenttype = Category;
-playcount = 41268;
-programsCnt = 353;
+playcount = 0;
+programsCnt = 442;
 "record_enable" = 0;
 subtype = Novel;
-thumb = "http://pic.qingting.fm/2014/0320/20140320111147997.jpg";
+thumb = "http://pic.qingting.fm/2014/1022/20141022025920388.jpg";
 type = VirtualChannel;
-updatetime = 1441768129;
+updatetime = 1413961164;
+},
+{
+audience = 0;
+autoplay = 0;
+broadcasters =             (
+{
+avatar = "";
+belongsRadio = "";
+bgphoto = "";
+diggCount = 0;
+diggRealTimeDiggCount = 0;
+id = 54488;
+name = "\U7eaa\U6db5\U90a6\U7b49";
+socialInfo =                     (
+);
+title = PODCASTER;
+type = BaseUser;
+updatetime = 0;
+vip = 0;
+virtualChannelId = 0;
+},
+{
+avatar = "";
+belongsRadio = "";
+bgphoto = "";
+diggCount = 0;
+diggRealTimeDiggCount = 0;
+id = 56189;
+name = "\U7eaa\U6db5\U90a6\U7b49";
+socialInfo =                     (
+);
+title = AUTHOR;
+type = BaseUser;
+updatetime = 0;
+vip = 0;
+virtualChannelId = 0;
+}
+);
+catid = 521;
+cover = "http://pic.qingting.fm/2015/0114/20150114054216210.jpg";
+desc = "\U57282046\U5e74\U7684\U9999\U6e2f\Uff0c\U4e00\U4e2a\U6709\U9b54\U517d\U51fa\U6ca1\U7684\U65f6\U95f4\Uff0c\U4f1a\U6709\U4ec0\U4e48\U6837\U7684\U4e0d\U53ef\U601d\U8bae\U4e8b\U60c5\U53d1\U751f\U5462\Uff1f\U9999\U6e2f\U56db\U5927\U4e16\U5bb6\U4e4b\U4e00\U7684\U590f\U5bb6\U60e8\U906d\U53d8\U6545,\U4e8c\U516c\U5b50\U590f\U83ab\U8a00\U88ab\U72d0\U4ed9\U9644\U4f53\U3002\U5c01\U5370\U5f88\U4e45\U7684\U5343\U5e74\U8001\U5996\U88ab\U63ed\U5f00\U4e86\U5c01\U5370\U73b0\U8eab\Uff0c\U590f\U5bb6\U7a81\U73b0\U5927\U706b\Uff0c\U660f\U8ff7\U7684\U590f\U83ab\U8a00\U91cd\U751f\U4e4b\U540e\U53c8\U4f1a\U662f\U600e\U6837\U7684\U60c5\U5f62...";
+dimensionid = 919;
+displayname = "\U590f\U5bb6\U4e4b\U8c1c";
+group =             (
+);
+id = 93624;
+latest =             {
+duration = 826;
+name = "\U590f\U5bb6\U4e4b\U8c1c_1";
+publishtime = 1407920178;
+updated = 1407920178;
+};
+listorder = 0;
+mediainfo =             {
+};
+name = "\U590f\U5bb6\U4e4b\U8c1c";
+outline = "\U57282046\U5e74\U7684\U9999\U6e2f\Uff0c\U4e00\U4e2a\U6709\U9b54\U517d\U51fa\U6ca1\U7684\U65f6\U95f4\Uff0c\U4f1a\U6709\U4ec0\U4e48\U6837\U7684\U4e0d\U53ef\U601d\U8bae\U4e8b\U60c5\U53d1\U751f\U5462\Uff1f\U9999\U6e2f\U56db\U5927\U4e16\U5bb6\U4e4b\U4e00\U7684\U590f\U5bb6\U60e8\U906d\U53d8\U6545,\U4e8c\U516c\U5b50\U590f\U83ab\U8a00\U88ab\U72d0\U4ed9\U9644\U4f53\U3002\U5c01\U5370\U5f88\U4e45\U7684\U5343\U5e74\U8001\U5996\U88ab\U63ed\U5f00\U4e86\U5c01\U5370\U73b0\U8eab\Uff0c\U590f\U5bb6\U7a81\U73b0\U5927\U706b\Uff0c\U660f\U8ff7\U7684\U590f\U83ab\U8a00\U91cd\U751f\U4e4b\U540e\U53c8\U4f1a\U662f\U600e\U6837\U7684\U60c5\U5f62...";
+parentid = 919;
+parentname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+parenttype = Category;
+playcount = 0;
+programsCnt = 30;
+"record_enable" = 0;
+subtype = Novel;
+thumb = "http://pic.qingting.fm/2015/0114/20150114054216210.jpg";
+type = VirtualChannel;
+updatetime = 1433844500;
+},
+{
+audience = 0;
+autoplay = 0;
+broadcasters =             (
+{
+avatar = "";
+belongsRadio = "";
+bgphoto = "";
+diggCount = 0;
+diggRealTimeDiggCount = 0;
+id = 50558;
+name = "\U5f64\U534e";
+socialInfo =                     (
+);
+title = PODCASTER;
+type = BaseUser;
+updatetime = 0;
+vip = 0;
+virtualChannelId = 0;
+},
+{
+avatar = "";
+belongsRadio = "";
+bgphoto = "";
+diggCount = 0;
+diggRealTimeDiggCount = 0;
+id = 54335;
+name = "\U6155\U748e\U73de";
+socialInfo =                     (
+);
+title = AUTHOR;
+type = BaseUser;
+updatetime = 0;
+vip = 0;
+virtualChannelId = 0;
+}
+);
+catid = 521;
+cover = "http://qingting-pic.b0.upaiyun.com/2014/0918/20140918024018676.jpg";
+desc = "\U5e9f\U67f4\U5d1b\U8d77\Uff0c\U82cd\U7a79\U6d69\U52ab\Uff0c\U8c01\U4e3a\U5979\U503e\U7ea2\U989c\Uff0c\U5979\U4e3a\U8c01\U8e0f\U5929\U4e0b\Uff01\U534e\U590f\U533b\U5973\U653e\U9010\U5f02\U4e16\Uff0c\U4e00\U624b\U94f6\U9488\U518d\U7834\U82cd\U7a79\U7ee7\U300a\U6597\U7834\U82cd\U7a79\U300b\U300a\U50b2\U98ce\U300b\U540e\Uff0c\U7384\U5e7b\U6b66\U4fa0\U65b0\U4e00\U4ee3\U9886\U519b\U4eba\U6155\U748e\U73de\U5f00\U5c71\U4e4b\U4f5c\U6f47\U6e58\U4e3b\U7f16\U96e8\U4e2d\U5c0f\U5996 \U5973\U6027\U7384\U5e7b\U7b2c\U4e00\U4eba\U98ce\U884c\U70c8 \U7545\U9500\U4e66\U4f5c\U5bb6\U70fd\U706b\U620f\U8bf8\U4faf\U9f0e\U529b\U63a8\U8350";
+dimensionid = 919;
+displayname = "\U533b\U624b\U906e\U5929";
+group =             (
+);
+id = 65228;
+latest =             {
+duration = 1082;
+name = "\U533b\U624b\U906e\U5929_1";
+publishtime = 1407920178;
+updated = 1407920178;
+};
+listorder = 0;
+mediainfo =             {
+};
+name = "\U533b\U624b\U906e\U5929\Uff08\U9ad8\U97f3\U8d28\Uff09";
+outline = "";
+parentid = 919;
+parentname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+parenttype = Category;
+playcount = 14422;
+programsCnt = 499;
+"record_enable" = 0;
+subtype = Novel;
+thumb = "http://pic.qingting.fm/2014/0918/20140918024018676.jpg";
+type = VirtualChannel;
+updatetime = 1412996057;
+},
+{
+audience = 0;
+autoplay = 0;
+broadcasters =             (
+{
+avatar = "";
+belongsRadio = "";
+bgphoto = "";
+diggCount = 0;
+diggRealTimeDiggCount = 0;
+id = 59422;
+name = "\U7626\U4e86\U53c8\U7626\U3001\U5c0f\U5446";
+socialInfo =                     (
+);
+title = PODCASTER;
+type = BaseUser;
+updatetime = 0;
+vip = 0;
+virtualChannelId = 0;
+},
+{
+avatar = "";
+belongsRadio = "";
+bgphoto = "";
+diggCount = 0;
+diggRealTimeDiggCount = 0;
+id = 57319;
+name = "\U5510\U5bb6\U4e09\U5c11";
+socialInfo =                     (
+);
+title = AUTHOR;
+type = BaseUser;
+updatetime = 0;
+vip = 0;
+virtualChannelId = 0;
+}
+);
+catid = 521;
+cover = "http://pic.qingting.fm/2015/0802/20150802161844704.jpg";
+desc = "\U9b54\U65cf\U5f3a\U52bf\Uff0c\U5728\U4eba\U7c7b\U5373\U5c06\U88ab\U706d\U7edd\U4e4b\U65f6\Uff0c\U516d\U5927\U5723\U6bbf\U5d1b\U8d77\Uff0c\U5e26\U9886\U7740\U4eba\U7c7b\U5b88\U4f4f\U6700\U540e\U7684\U9886\U571f\U3002\U4e00\U540d\U5c11\U5e74\Uff0c\U4e3a\U6551\U6bcd\U52a0\U5165\U9a91\U58eb\U5723\U6bbf\Uff0c\U5947\U8ff9\U3001\U8be1\U8ba1\Uff0c\U4e0d\U65ad\U5728\U4ed6\U8eab\U4e0a\U4e0a\U6f14\U3002\U5728\U8fd9\U4eba\U7c7b\U516d\U5927\U5723\U6bbf\U4e0e\U9b54\U65cf\U4e03\U5341\U4e8c\U67f1\U9b54\U795e\U76f8\U4e92\U503e\U8f67\U7684\U4e16\U754c\Uff0c\U4ed6\U80fd\U5426\U767b\U4e0a\U8c61\U5f81\U7740\U9a91\U58eb\U6700\U9ad8\U8363\U8000\U7684\U795e\U5370\U738b\U5ea7\Uff1f";
+dimensionid = 919;
+displayname = "\U795e\U5370\U738b\U5ea7";
+group =             (
+);
+id = 42332;
+latest =             {
+duration = 1093;
+name = "1_\U4f8d\U4ece\U9a91\U58eb\U8003\U6838";
+publishtime = 1407920068;
+updated = 1407920068;
+};
+listorder = 0;
+mediainfo =             {
+};
+name = "\U795e\U5370\U738b\U5ea7\U3010\U5510\U5bb6\U4e09\U5c11\U5947\U5e7b\U5de8\U4f5c\U3011";
+outline = "\U9b54\U65cf\U5f3a\U52bf\Uff0c\U5728\U4eba\U7c7b\U5373\U5c06\U88ab\U706d\U7edd\U4e4b\U65f6\Uff0c\U516d\U5927\U5723\U6bbf\U5d1b\U8d77\Uff0c\U5e26\U9886\U7740\U4eba\U7c7b\U5b88\U4f4f\U6700\U540e\U7684\U9886\U571f\U3002\U4e00\U540d\U5c11\U5e74\Uff0c\U4e3a\U6551\U6bcd\U52a0\U5165\U9a91\U58eb\U5723\U6bbf\Uff0c\U5947\U8ff9\U3001\U8be1\U8ba1\Uff0c\U4e0d\U65ad\U5728\U4ed6\U8eab\U4e0a\U4e0a\U6f14\U3002\U5728\U8fd9\U4eba\U7c7b\U516d\U5927\U5723\U6bbf\U4e0e\U9b54\U65cf\U4e03\U5341\U4e8c\U67f1\U9b54\U795e\U76f8\U4e92\U503e\U8f67\U7684\U4e16\U754c\Uff0c\U4ed6\U80fd\U5426\U767b\U4e0a\U8c61\U5f81\U7740\U9a91\U58eb\U6700\U9ad8\U8363\U8000\U7684\U795e\U5370\U738b\U5ea7\Uff1f";
+parentid = 919;
+parentname = "\U7384\U5e7b\U00b7\U79d1\U5e7b";
+parenttype = Category;
+playcount = 28132;
+programsCnt = 730;
+"record_enable" = 0;
+subtype = Novel;
+thumb = "http://pic.qingting.fm/2014/1016/20141016022853336.jpg";
+type = VirtualChannel;
+updatetime = 1446091535;
 }
 );
 errormsg = "";
 errorno = 0;
-expiredtime = 1447062033;
+expiredtime = 1447042539;
 totalpage = 13;
 }
