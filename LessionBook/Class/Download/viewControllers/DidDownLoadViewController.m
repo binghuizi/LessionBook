@@ -12,6 +12,7 @@
 @interface DidDownLoadViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *listArray;
 
 @end
 
@@ -51,7 +52,16 @@
     return _tableView;
 }
 
+- (NSMutableArray *)listArray{
+    if (_listArray == nil) {
+        self.listArray = [NSMutableArray new];
+    }
+    return _listArray;
+}
+
 #pragma mark --------CustomMethod
+
+
 
 
 - (void)didReceiveMemoryWarning {

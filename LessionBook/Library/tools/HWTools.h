@@ -11,6 +11,7 @@
 @interface HWTools : NSObject
 //字符串转化成整型
 +(NSInteger)number:(NSString *)numString;
-
+//获取当前系统时间
++ (NSDate *)getSystemNowDate;
 
 @end

@@ -44,15 +44,24 @@
 
     // Override point for customization after application launch.
     //下载
+    [[UITabBar appearance] setTintColor:[UIColor orangeColor]];
     DownloadViewController *downloadVC = [[DownloadViewController alloc] init];
     UINavigationController *downloadNav = [[UINavigationController alloc] initWithRootViewController:downloadVC];
     downloadNav.tabBarItem.title = @"下载";
+    downloadNav.tabBarController.tabBar.tintColor = [UIColor orangeColor];
     downloadNav.tabBarItem.image = [UIImage imageNamed:@"tab_download"];
+    UIImage *downloadSelectImage = [UIImage imageNamed:@"tab_download_s"];
+    downloadNav.tabBarItem.selectedImage = [downloadSelectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
     //搜索
     SearchViewController *searchVC = [[SearchViewController alloc] init];
     UINavigationController *searchNav = [[UINavigationController alloc] initWithRootViewController:searchVC];
     searchNav.tabBarItem.title = @"搜索";
+    searchNav.tabBarController.tabBar.tintColor = [UIColor orangeColor];
     searchNav.tabBarItem.image = [UIImage imageNamed:@"tab_search"];
+    UIImage *searchImage = [UIImage imageNamed:@"tab_search_s"];
+    searchNav.tabBarItem.selectedImage = [searchImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
     //我的
     UIStoryboard *myStoryBoary = [UIStoryboard storyboardWithName:@"My" bundle:nil];
    UINavigationController *myNav = [myStoryBoary instantiateInitialViewController];

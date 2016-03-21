@@ -20,8 +20,13 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *bookNameLabel;
 
-//下载属性
 
+//下载条件
+@property (nonatomic, strong) NSString *url;
+@property (nonatomic, strong) NSString *files;
+@property (nonatomic, strong) detailModel *twoModel;
+
+//下载属性
 @property (nonatomic, assign) NSInteger totalSize;
 @property (nonatomic, assign) NSInteger currentSize;
 @property (nonatomic, copy) NSString *fileName;
@@ -40,16 +45,37 @@
     self.downloadBtn.layer.cornerRadius = 30;
     self.downloadBtn.layer.borderColor = [UIColor orangeColor].CGColor;
     self.downloadBtn.layer.borderWidth = 1;
-    
 }
+
+- (void)setModel:(detailModel *)model{
+    //已下载的对象
+    self.twoModel = model;
+    //下载的文件名
+    self.files = model.name;
+    //下载
+    self.bookNameLabel.text = model.parentname;
+    self.url = model.mediainfo[@"download"];
+    self.downloadProgress.hidden = NO;
+//    [self downloadfile];
+    if (self.downloadBtn.titleLabel.text != nil) {
+        [self.downloadBtn setTitle:@"下载" forState:UIControlStateNormal];
+        self.timeLabel.text = @"未下载";
+        self.sizeLabel.text = @"";
+        self.download = NO;
+    }
+}
+
+
 
 #pragma mark ---------CustomMethod
 
+
+
 - (void)downloadfile{
     NSLog(@"-------------");
-    
+    self.timeLabel.text = @"正在下载";
     //1.确定url
-    NSURL *url = [NSURL URLWithString:@"http://upod.qingting.fm/vod/00/00/0000000000000000000024202041_24.m4a"];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:kDownload, self.url]];
     //2.创建请求对象
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     NSString *range = [NSString stringWithFormat:@"bytes=%zd-", self.currentSize];
@@ -76,13 +102,13 @@
     //0.获得文件的总大小
     //expectedContentLength是本次请求的数据的大小，并不是整个
     self.totalSize = response.expectedContentLength;
-    
+    self.sizeLabel.text = [NSString stringWithFormat:@"%.2fMb", (double)self.totalSize / (1024 * 1024)];
     //1.得到文件的名称
     self.fileName = response.suggestedFilename;
     //2.获得文件的全路径
     //caches
     NSString *caches = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    NSString *fullPath = [caches stringByAppendingPathComponent:self.fileName];
+    NSString *fullPath = [caches stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.m4a", self.files]];
     self.fullPath = fullPath;
     NSLog(@"%@", fullPath);
     //3.创建一个空的文件
@@ -96,6 +122,8 @@
     if ([fileManager fileExistsAtPath:fullPath]) {
         NSLog(@"----------------文件已存在");
         self.downloadProgress.hidden = YES;
+        self.timeLabel.text = @"已下载";
+        [self.downloadBtn setTitle:@"完成" forState:UIControlStateNormal];
         [self.connect cancel];
         return;
     }
@@ -132,7 +160,13 @@
     self.currentSize = 0;
     self.totalSize = 0;
     self.downloadProgress.hidden = YES;
+    self.timeLabel.text = @"已下载";
     [self.downloadBtn setTitle:@"完成" forState:UIControlStateNormal];
+    
+    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(didDownlaod:)]) {
+        [self.delegate didDownlaod:self.twoModel];
+    }
+    
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{

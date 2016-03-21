@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "detailModel.h"
 
 @interface DownloadDidTableViewCell : UITableViewCell
+
+@property (nonatomic, strong) detailModel *model;
 
 @end

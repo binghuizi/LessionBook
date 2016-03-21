@@ -10,9 +10,11 @@
 #import "LinkManViewController.h"
 #import <EaseMobSDKFull/EaseMob.h>
 
-@interface MessageViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface MessageViewController ()<UITableViewDataSource, UITableViewDelegate, EMChatManagerDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSArray *array;
+@property (nonatomic, strong) NSMutableArray *textArray;
 
 @end
 
@@ -24,7 +26,9 @@
     self.title = @"消息";
     [self.view addSubview:self.tableView];
     [self showLinkMan];
-    
+    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
+    //消息文本数组
+    self.textArray = [NSMutableArray new];
     
 }
 
@@ -50,6 +54,11 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    if (self.textArray.count > 0) {
+        if (indexPath.row < self.textArray.count) {
+            cell.textLabel.text = self.textArray[indexPath.row];
+        }
+}
     return cell;
 }
 
@@ -65,6 +74,25 @@
         [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     }
     return _tableView;
+}
+
+#pragma mark -------EMChatManagerDelegate
+
+- (void)didReceiveOfflineMessages:(NSArray *)offlineMessages{
+    EMMessage *message = offlineMessages[0];
+    id<IEMMessageBody> msBody = message.messageBodies.firstObject;
+    switch (msBody.messageBodyType) {
+        case eMessageBodyType_Text:{
+            NSString *txt = ((EMTextMessageBody *)msBody).text;
+            NSLog(@"%@", txt);
+            [self.textArray addObject:txt];
+            [self.tableView reloadData];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

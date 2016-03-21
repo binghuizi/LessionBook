@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TypeModel.h"
+#import "typeDetailModel.h"
 @interface TypeTableViewCell : UITableViewCell
-
+@property (weak, nonatomic) IBOutlet UILabel *displaynameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *countLabel;
+@property (weak, nonatomic) IBOutlet UILabel *anchorLabel;
+@property(nonatomic,strong) TypeModel *model;
+//@property(nonatomic,strong) typeDetailModel *model;
 @end

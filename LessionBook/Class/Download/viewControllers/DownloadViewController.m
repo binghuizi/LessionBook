@@ -12,15 +12,20 @@
 #import "DownloadDidTableViewCell.h"
 #import "DidDownLoadViewController.h"
 #import "ChatRoomViewController.h"
+#import "DownlaodTask.h"
 
 static NSString *_downloadcell = @"cell";
 static NSString *_didDownload = @"did";
 
-@interface DownloadViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface DownloadViewController ()<UITableViewDataSource, UITableViewDelegate, downloadDelegate>
 @property (nonatomic, strong) VOSegmentedControl *segmentControl;
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, assign) BOOL selectdidDownload;
+
+@property (nonatomic, strong) NSMutableArray *downlistArray;
+//已完成列表
+@property (nonatomic, strong) NSMutableArray *didloadArray;
 
 @end
 
@@ -41,18 +46,33 @@ static NSString *_didDownload = @"did";
     self.selectdidDownload = YES;
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    DownlaodTask *task = [DownlaodTask shareInstance];
+    self.downlistArray = [task getdownLoadModel];
+    [self.tableView reloadData];
+    
+}
+
 #pragma mark ----------UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    if (!self.selectdidDownload) {
+        return self.downlistArray.count;
+    }
+    return self.didloadArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (!self.selectdidDownload) {
     DownloadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:_downloadcell forIndexPath:indexPath];
+        cell.model = self.downlistArray[indexPath.row];
+        cell.delegate = self;
         return cell;
     }
     DownloadDidTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:_didDownload forIndexPath:indexPath];
+    if (self.didloadArray.count > 0) {
+        cell.model = self.didloadArray[indexPath.row];
+    }
     return cell;
 }
 
@@ -67,8 +87,10 @@ static NSString *_didDownload = @"did";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.selectdidDownload) {
-        DidDownLoadViewController *didDownloadVC = [[DidDownLoadViewController alloc] init];
-        [self.navigationController pushViewController:didDownloadVC animated:YES];
+        NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+        detailModel *model = self.didloadArray[indexPath.row];
+        NSString *filePath = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.m4a", model.name]];
+        NSLog(@"---%@", filePath);
     }
 }
 
@@ -100,6 +122,20 @@ static NSString *_didDownload = @"did";
     return _segmentControl;
 }
 
+- (NSMutableArray *)downlistArray{
+    if (_downlistArray == nil) {
+        self.downlistArray = [NSMutableArray new];
+    }
+    return _downlistArray;
+}
+
+- (NSMutableArray *)didloadArray{
+    if (_didloadArray == nil) {
+        self.didloadArray = [NSMutableArray new];
+    }
+    return _didloadArray;
+}
+
 #pragma mark ----------CustomMethod
 
 - (void)segmentCtrlValueChange:(VOSegmentedControl *)segmentctrl{
@@ -120,10 +156,23 @@ static NSString *_didDownload = @"did";
     self.navigationItem.rightBarButtonItem = barBtn;
 }
 
-- (void)chatroom{
-    ChatRoomViewController *chatVC = [[ChatRoomViewController alloc] init];
-    [self.navigationController pushViewController:chatVC animated:YES];
+#pragma mark -------DownloadDelegate
+
+- (void)didDownlaod:(detailModel *)models{
+    [self.didloadArray addObject:models];
+    [self.downlistArray removeObject:models];
+    DownlaodTask *task = [DownlaodTask shareInstance];
+    [task deleteModel:models];
+    NSLog(@"-166--------------%lu", self.didloadArray.count);
+    [self.tableView reloadData];
+
 }
+
+- (void)chatroom{
+//    ChatRoomViewController *chatVC = [[ChatRoomViewController alloc] init];
+//    [self.navigationController pushViewController:chatVC animated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -102,6 +102,9 @@
     }
     return _dateArray;
 }
+
+#pragma mark ---------DownLoad
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

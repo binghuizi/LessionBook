@@ -28,6 +28,7 @@
         self.subtype = dic[@"subtype"];
         self.type = dic[@"type"];
         self.cover = dic[@"cover"];
+        self.miaoshu = dic[@"description"];
     }
     return self;
 }

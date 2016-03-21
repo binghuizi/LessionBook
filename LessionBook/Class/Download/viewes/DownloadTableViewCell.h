@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "detailModel.h"
+
+@protocol downloadDelegate <NSObject>
+
+- (void)didDownlaod:(detailModel *)models;
+
+@end
 
 @interface DownloadTableViewCell : UITableViewCell
+
+@property (nonatomic, strong) detailModel *model;
+@property (nonatomic, assign) id<downloadDelegate>delegate;
+
 
 @end
