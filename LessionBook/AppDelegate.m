@@ -14,7 +14,7 @@
 #import "DiscoverViewController.h"
 #import <EaseMobSDKFull/EaseMob.h>
 #import <EaseUI.h>
-
+#import <BmobSDK/Bmob.h>
 
 @interface AppDelegate ()
 
@@ -26,7 +26,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    
+    //设置应用的BmobKey
+    [Bmob registerWithAppKey:@"209affb0270dad4053ab8b1ded9b56fa"];
     
     //注册环信
     //registerSDKWithAppKey
