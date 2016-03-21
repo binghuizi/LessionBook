@@ -31,7 +31,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     self.showRefreshHeader = YES;
     self.delegate  = self;
     self.dataSource = self;
@@ -41,10 +40,7 @@
     [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    self.tabBarController.tabBar.hidden = YES;
-}
+
 
 #pragma mark ----------EaseMessageViewControllerDataSource
 

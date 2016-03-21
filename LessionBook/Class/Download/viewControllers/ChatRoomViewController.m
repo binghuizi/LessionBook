@@ -27,7 +27,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"聊天登录";
-    self.navigationController.navigationBar.translucent = NO;
+
     self.navigationController.navigationBar.barTintColor = [UIColor brownColor];
     [self.view addSubview:self.username];
     [self.view addSubview:self.userPassword];
@@ -36,6 +36,11 @@
     [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = YES;
+    self.tabBarController.tabBar.translucent = NO;
+}
 
 #pragma mark -----LazyLoading
 
