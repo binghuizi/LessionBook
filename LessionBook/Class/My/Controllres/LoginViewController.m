@@ -19,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
 @property (weak, nonatomic) IBOutlet UIButton *mcroblogLoginBtn;
 @property (weak, nonatomic) IBOutlet UIButton *QQLoginBtn;
-@property (weak, nonatomic) IBOutlet UIButton *weChatLoginBtn;
+
 
 @end
 
@@ -32,6 +32,8 @@
     [self showBackButton:@"ic_arrow_general2"];
     [self showRightBarButton:@"注册"];
     [self.accountLoginBtn addTarget:self action:@selector(accountLogin:) forControlEvents:UIControlEventTouchUpInside];
+    [self.mcroblogLoginBtn addTarget:self action:@selector(mcroblogLoginBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [self.QQLoginBtn addTarget:self action:@selector(QQLoginBtn:) forControlEvents:UIControlEventTouchUpInside];
     
 }
 - (void)leftTitleAction:(UIBarButtonItem *)btn{
@@ -50,6 +52,14 @@
                                         [ProgressHUD showError:[NSString stringWithFormat:@"%@", error] Interaction:YES];
                                     }
                                 }];
+}
+
+//新浪微博登录
+- (void)mcroblogLoginBtn:(UIButton *)btn{
+    
+}
+- (void)QQLoginBtn:(UIButton *)btn{
+    
 }
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     //这个是逐个的textFiled回收键盘，比较麻烦
