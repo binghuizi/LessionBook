@@ -42,6 +42,8 @@
     //设置应用的BmobKey
     [Bmob registerWithAppKey:@"209affb0270dad4053ab8b1ded9b56fa"];
     
+    
+    
     //注册环信
     //registerSDKWithAppKey
     [[EaseMob sharedInstance] registerSDKWithAppKey:kHuanxinAppKey apnsCertName:nil];
