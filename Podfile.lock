@@ -22,6 +22,7 @@ PODS:
     - MWPhotoBrowser (~> 2.1.1)
   - MBProgressHUD (0.9.2)
   - MJRefresh (3.0.8)
+  - MOBFoundation (1.5.1)
   - MWPhotoBrowser (2.1.1):
     - DACircularProgress (~> 2.3)
     - MBProgressHUD (~> 0.9)
@@ -29,13 +30,26 @@ PODS:
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
+  - ShareSDK3 (3.2.3):
+    - ShareSDK3/ShareSDK (= 3.2.3)
+  - ShareSDK3/ShareSDK (3.2.3)
+  - ShareSDK3/ShareSDKPlatforms/QQ (3.2.3)
+  - ShareSDK3/ShareSDKPlatforms/SinaWeibo (3.2.3)
+  - ShareSDK3/ShareSDKPlatforms/WeChat (3.2.3)
+  - ShareSDK3/ShareSDKUI (3.2.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0.4)
   - BmobSDK
   - EaseMobSDKFull (from `https://github.com/easemob/sdk-ios-cocoapods-integration.git`)
   - EaseUI (from `https://github.com/easemob/easeui-ios-cocoapods.git`)
+  - MOBFoundation
   - SDWebImage
+  - ShareSDK3
+  - ShareSDK3/ShareSDKPlatforms/QQ
+  - ShareSDK3/ShareSDKPlatforms/SinaWeibo
+  - ShareSDK3/ShareSDKPlatforms/WeChat
+  - ShareSDK3/ShareSDKUI
 
 EXTERNAL SOURCES:
   EaseMobSDKFull:
@@ -59,7 +73,9 @@ SPEC CHECKSUMS:
   EaseUI: d62934d78e680c36d70b281ed31c9195a465a145
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
+  MOBFoundation: 79efc94db961fe5a08cf32de69166f6a29a3b2b5
   MWPhotoBrowser: ba0d0c09ffda3a7ea10093518738c502c1c7141c
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  ShareSDK3: 76a2b7bee33fc7360fbc9670adb3e9e06534ee82
 
 COCOAPODS: 0.39.0

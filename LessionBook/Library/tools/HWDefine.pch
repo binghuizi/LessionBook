@@ -19,7 +19,8 @@
 
 
 #define kHuanxinAppKey @"coffee#dsnchat"
-
+#define kWeiboAppKey @"10ba8566561dc"
+#define kAppSecret @"59e57eba68cbb3e45858ad737475c0c9"
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 

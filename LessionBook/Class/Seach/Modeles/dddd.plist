@@ -1,0 +1,34 @@
+{
+data =     (
+{
+doclist =             {
+docs =                 (
+{
+broadcaster = "\U65e0";
+catid = 521;
+catname = "\U5c0f\U8bf4";
+cid = 93670;
+cname = "\U60ac\U7075\U56fe\Uff08\U9ad8\U54c1\U8d28\Uff09";
+dimensionid = 925;
+dimensionname = "\U6050\U6016\U00b7\U7075\U5f02";
+id = "radio_virtual_program_8514661";
+name = "003.\U718a\U732b\U65e5\U5fd7";
+parentid = 93670;
+parenttype = VirtualChannel;
+pid = 8514661;
+rank = 1;
+score = "4.648552";
+subtype = PodcastProgram;
+totalscore = "4321.807";
+type = VirtualProgram;
+}
+);
+maxScore = "4321.807";
+numFound = 1;
+start = 0;
+};
+groupValue = virtualprogram;
+}
+);
+title = "\U641c\U7d22\U7ed3\U679c";
+}
