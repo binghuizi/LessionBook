@@ -14,11 +14,15 @@
 #import "DiscoverViewController.h"
 #import <EaseMobSDKFull/EaseMob.h>
 #import <EaseUI.h>
+
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKConnector/ShareSDKConnector.h>
 
 #import "WeiboSDK.h"
 #import <WXApi.h>
+
+#import <BmobSDK/Bmob.h>
+
 
 
 //腾讯开放平台（对应QQ和QQ空间）SDK头文件
@@ -35,7 +39,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    
+    //设置应用的BmobKey
+    [Bmob registerWithAppKey:@"209affb0270dad4053ab8b1ded9b56fa"];
     
     //注册环信
     //registerSDKWithAppKey
@@ -52,15 +57,24 @@
 
     // Override point for customization after application launch.
     //下载
+    [[UITabBar appearance] setTintColor:[UIColor orangeColor]];
     DownloadViewController *downloadVC = [[DownloadViewController alloc] init];
     UINavigationController *downloadNav = [[UINavigationController alloc] initWithRootViewController:downloadVC];
     downloadNav.tabBarItem.title = @"下载";
+    downloadNav.tabBarController.tabBar.tintColor = [UIColor orangeColor];
     downloadNav.tabBarItem.image = [UIImage imageNamed:@"tab_download"];
+    UIImage *downloadSelectImage = [UIImage imageNamed:@"tab_download_s"];
+    downloadNav.tabBarItem.selectedImage = [downloadSelectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
     //搜索
     SearchViewController *searchVC = [[SearchViewController alloc] init];
     UINavigationController *searchNav = [[UINavigationController alloc] initWithRootViewController:searchVC];
     searchNav.tabBarItem.title = @"搜索";
+    searchNav.tabBarController.tabBar.tintColor = [UIColor orangeColor];
     searchNav.tabBarItem.image = [UIImage imageNamed:@"tab_search"];
+    UIImage *searchImage = [UIImage imageNamed:@"tab_search_s"];
+    searchNav.tabBarItem.selectedImage = [searchImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
     //我的
     UIStoryboard *myStoryBoary = [UIStoryboard storyboardWithName:@"My" bundle:nil];
    UINavigationController *myNav = [myStoryBoary instantiateInitialViewController];

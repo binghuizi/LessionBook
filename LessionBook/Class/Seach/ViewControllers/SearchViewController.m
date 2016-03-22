@@ -11,6 +11,7 @@
 #import "VOSegmentedControl.h"
 #import "SearchModel.h"
 #import <UIImageView+WebCache.h>
+#import "DetailViewController.h"
 
 @interface SearchViewController ()<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
@@ -280,12 +281,24 @@
     switch (_index) {
         case 0:
         {
-//            SearchModel *model = self.listArray[indexPath.section][indexPath.row];
+            DetailViewController *detailVC = [[DetailViewController alloc] init];
+            SearchModel *model = self.listArray[1][indexPath.row];
+            detailVC.titleString = model.name;
+            detailVC.pictchString = model.cover;
+            detailVC.miaoshuString = model.miaoshu;
+            detailVC.idString = model.cid;
+            [self.navigationController pushViewController:detailVC animated:YES];
         }
             break;
         case 1:
         {
-            
+            DetailViewController *detailVC = [[DetailViewController alloc] init];
+            SearchModel *model = self.xiaoshuoArray[indexPath.row];
+            detailVC.titleString = model.name;
+            detailVC.pictchString = model.cover;
+            detailVC.miaoshuString = model.miaoshu;
+            detailVC.idString = model.cid;
+            [self.navigationController pushViewController:detailVC animated:YES];
         }
             break;
         case 2:
