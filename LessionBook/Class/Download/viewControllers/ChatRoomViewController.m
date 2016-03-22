@@ -63,8 +63,8 @@
 - (UIButton *)registBtn{
     if (_registBtn == nil) {
         self.registBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.registBtn.frame = CGRectMake(40, 200, 80, 44);
-        self.registBtn.backgroundColor = [UIColor brownColor];
+        self.registBtn.frame = CGRectMake(40, 200, kScreenWidth - 80, 44);
+        self.registBtn.backgroundColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:255 / 255.0 alpha:1.0];
         [self.registBtn setTitle:@"注册" forState:UIControlStateNormal];
         [self.registBtn addTarget:self action:@selector(registAction) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -74,8 +74,8 @@
 - (UIButton *)loginBtn{
     if (_loginBtn == nil) {
         self.loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.loginBtn.frame = CGRectMake(200, 200, 80, 44);
-        self.loginBtn.backgroundColor = [UIColor brownColor];
+        self.loginBtn.frame = CGRectMake(40, 250, kScreenWidth - 80, 44);
+        self.loginBtn.backgroundColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:255 / 255.0 alpha:1.0];
         [self.loginBtn setTitle:@"登录" forState:UIControlStateNormal];
         [self.loginBtn addTarget:self action:@selector(loginAction) forControlEvents:UIControlEventTouchUpInside];
     }

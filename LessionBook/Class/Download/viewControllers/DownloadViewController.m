@@ -39,7 +39,6 @@ static NSString *_didDownload = @"did";
     self.navigationItem.title = @"下载";
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.segmentControl];
-    [self showRightBtn];
     [self.tableView registerNib:[UINib nibWithNibName:@"DownloadTableViewCell" bundle:nil] forCellReuseIdentifier:_downloadcell];
     [self.tableView registerClass:[DownloadDidTableViewCell class] forCellReuseIdentifier:_didDownload];
     
@@ -151,11 +150,6 @@ static NSString *_didDownload = @"did";
     }
 }
 
-- (void)showRightBtn{
-    UIBarButtonItem *barBtn = [[UIBarButtonItem alloc]initWithTitle:@"聊天室" style:UIBarButtonItemStyleDone target:self action:@selector(chatroom)];
-    self.navigationItem.rightBarButtonItem = barBtn;
-}
-
 #pragma mark -------DownloadDelegate
 
 - (void)didDownlaod:(detailModel *)models{
@@ -166,11 +160,6 @@ static NSString *_didDownload = @"did";
     NSLog(@"-166--------------%lu", self.didloadArray.count);
     [self.tableView reloadData];
 
-}
-
-- (void)chatroom{
-//    ChatRoomViewController *chatVC = [[ChatRoomViewController alloc] init];
-//    [self.navigationController pushViewController:chatVC animated:YES];
 }
 
 

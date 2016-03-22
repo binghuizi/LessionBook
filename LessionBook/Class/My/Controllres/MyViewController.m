@@ -12,6 +12,7 @@
 #import "TimeView.h"
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
+#import "ChatRoomViewController.h"
 
 @interface MyViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, retain) UITableView *tableView;
