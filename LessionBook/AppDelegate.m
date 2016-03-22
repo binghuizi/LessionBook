@@ -102,6 +102,8 @@
     
     self.window.rootViewController = tabarVc;
     
+
+#pragma mark ---分享事件
 //调用registerApp方法来初始化SDK并且初始化第三方平台
     /**
      *  设置ShareSDK的appKey，如果尚未在ShareSDK官网注册过App，请移步到http://mob.com/login 登录后台进行应用注册，
