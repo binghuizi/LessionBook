@@ -73,6 +73,7 @@
 		7AB437061C9A4D2100532A9A /* ChoseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB437041C9A4D2100532A9A /* ChoseTableViewCell.m */; };
 		7AB437071C9A4D2100532A9A /* ChoseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB437051C9A4D2100532A9A /* ChoseTableViewCell.xib */; };
 		7AD1C4AC1C9BA204001346CA /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD1C4AB1C9BA204001346CA /* MessageViewController.m */; };
+		7ADC1BEB1CA0F14A000DF95B /* dddd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7ADC1BEA1CA0F14A000DF95B /* dddd.plist */; };
 		7AE264B71C9840A9006C9A6D /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE264B61C9840A9006C9A6D /* MyViewController.m */; };
 		7AE264B91C9841D4006C9A6D /* My.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE264B81C9841D4006C9A6D /* My.storyboard */; };
 		7AE2889F1C98118000596833 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE2889E1C98118000596833 /* DiscoverViewController.m */; };
@@ -192,6 +193,7 @@
 		7ABFC11F1C98FFCF004B9AA6 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		7AD1C4AA1C9BA204001346CA /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		7AD1C4AB1C9BA204001346CA /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		7ADC1BEA1CA0F14A000DF95B /* dddd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dddd.plist; sourceTree = "<group>"; };
 		7AE264B51C9840A9006C9A6D /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		7AE264B61C9840A9006C9A6D /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		7AE264B81C9841D4006C9A6D /* My.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = My.storyboard; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 				7A965F711C99328A00DE2547 /* search.plist */,
 				7A965F781C993B2A00DE2547 /* SearchModel.h */,
 				7A965F791C993B2A00DE2547 /* SearchModel.m */,
+				7ADC1BEA1CA0F14A000DF95B /* dddd.plist */,
 			);
 			path = Modeles;
 			sourceTree = "<group>";
@@ -631,6 +634,7 @@
 				7A9BBA1E1C9CF60700CA55D9 /* Storyboard.storyboard in Resources */,
 				7AB437071C9A4D2100532A9A /* ChoseTableViewCell.xib in Resources */,
 				7AE264B91C9841D4006C9A6D /* My.storyboard in Resources */,
+				7ADC1BEB1CA0F14A000DF95B /* dddd.plist in Resources */,
 				7A99D4521C97EE31001DD9B9 /* Assets.xcassets in Resources */,
 				7A965F851C9998FF00DE2547 /* DownloadTableViewCell.xib in Resources */,
 				7A54D2551C9C3C8E0012224E /* 大圈.plist in Resources */,
