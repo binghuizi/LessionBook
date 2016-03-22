@@ -106,6 +106,7 @@
                 <outlet property="authorNameLabel" destination="K5f-L9-b1z" id="KFX-JV-kqZ"/>
                 <outlet property="describeLabel" destination="Isg-ga-l8O" id="exx-aO-4X5"/>
                 <outlet property="imageView" destination="Swt-GZ-tUK" id="I0d-n9-VnL"/>
+                <outlet property="shareBtn" destination="mki-O6-Gfv" id="aPg-mj-14C"/>
             </connections>
             <point key="canvasLocation" x="1259.5" y="306.5"/>
         </view>

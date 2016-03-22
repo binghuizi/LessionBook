@@ -12,9 +12,12 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <AFHTTPSessionManager.h>
 #import "detailModel.h"
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKUI/ShareSDK+SSUI.h>
 @interface DetailViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,strong) UITableView *tableView;
 @property(nonatomic,strong) NSMutableArray *dateArray;
+
 @end
 
 @implementation DetailViewController
@@ -33,7 +36,7 @@
     
     [self loadHeadView];
 }
-
+#pragma mark --- 头部
 -(void)loadHeadView{
     //[[[NSBundle mainBundle] loadNibNamed:@"DetailHeaderView" owner:nil options:nil] lastObject];DetailHeadView
     DetailHeadView *tableViewHead = [[[NSBundle mainBundle] loadNibNamed:@"DetailHeadView" owner:nil options:nil] lastObject];
@@ -41,10 +44,60 @@
     tableViewHead.anchorNameLabel.text = self.zhuboString;
     tableViewHead.authorNameLabel.text = self.zuozheString;
     tableViewHead.describeLabel.text   = self.miaoshuString;
-    
+    [tableViewHead.shareBtn addTarget:self action:@selector(shareAction) forControlEvents:UIControlEventTouchUpInside];
     
     self.tableView.tableHeaderView = tableViewHead;
 }
+#pragma mark -- 头部分享按钮
+-(void)shareAction{
+    //1、创建分享参数
+    NSArray* imageArray = @[[UIImage imageNamed:@"DIDI2.jpg"]];
+      if (imageArray) {
+    NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
+    [shareParams SSDKSetupShareParamsByText:@"分享内容"
+                                     images:imageArray
+                                        url:[NSURL URLWithString:@"http://mob.com"]
+                                      title:@"分享标题"
+                                       type:SSDKContentTypeAuto];
+  //2、分享（可以弹出我们的分享菜单和编辑界面）
+    //要显示菜单的视图, iPad版中此参数作为弹出菜单的参照视图，只有传这个才可以弹出我们的分享菜单，可以传分享的
+    [ShareSDK showShareActionSheet:nil items:nil shareParams:shareParams onShareStateChanged:^(SSDKResponseState state, SSDKPlatformType platformType, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error, BOOL end) {
+        switch (state) {
+            case SSDKResponseStateSuccess:
+            {
+                UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:@"分享成功" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    
+                }];
+                [alertVc addAction:action];
+                [self presentViewController:alertVc animated:YES completion:nil];
+                
+            
+            
+            break;
+            }
+                
+             case SSDKResponseStateFail:
+            {
+                UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:@"分享失败" message:[NSString stringWithFormat:@"%@",error] preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    
+                }];
+                [alertVc addAction:action];
+                [self presentViewController:alertVc animated:YES completion:nil];
+                break;
+            }
+            default:
+                break;
+        }
+    }];
+    
+    
+      }
+    
+    
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dateArray.count;
     
@@ -102,6 +155,7 @@
     }
     return _dateArray;
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

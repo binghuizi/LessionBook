@@ -15,4 +15,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *describeLabel;
 @property(nonatomic,strong) detailModel *model;
 
+@property (weak, nonatomic) IBOutlet UIButton *shareBtn;
+
+
+
 @end

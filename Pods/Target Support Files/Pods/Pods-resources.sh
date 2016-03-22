@@ -61,12 +61,20 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "EaseMobSDKFull/EaseMobSDKFull/resources/EaseMob.bundle"
   install_resource "EaseUI/EaseUI/resources/EaseUIResource.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "ShareSDK3/ShareSDK/Support/Required/ShareSDK.bundle"
+  install_resource "ShareSDK3/ShareSDK/Support/PlatformSDK/QQSDK/TencentOpenApi_IOS_Bundle.bundle"
+  install_resource "ShareSDK3/ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle"
+  install_resource "ShareSDK3/ShareSDK/Support/Optional/ShareSDKUI.bundle"
   install_resource "${BUILT_PRODUCTS_DIR}/MWPhotoBrowser.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "EaseMobSDKFull/EaseMobSDKFull/resources/EaseMob.bundle"
   install_resource "EaseUI/EaseUI/resources/EaseUIResource.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "ShareSDK3/ShareSDK/Support/Required/ShareSDK.bundle"
+  install_resource "ShareSDK3/ShareSDK/Support/PlatformSDK/QQSDK/TencentOpenApi_IOS_Bundle.bundle"
+  install_resource "ShareSDK3/ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle"
+  install_resource "ShareSDK3/ShareSDK/Support/Optional/ShareSDKUI.bundle"
   install_resource "${BUILT_PRODUCTS_DIR}/MWPhotoBrowser.bundle"
 fi
 

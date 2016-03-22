@@ -11,4 +11,5 @@
 @interface TypeViewController : UIViewController
 @property(nonatomic,strong) NSString *idString;
 @property(nonatomic,strong) NSString *weight;
+@property(nonatomic,strong) NSString *navigationItemTitle;
 @end

@@ -19,4 +19,5 @@
 @property(nonatomic,assign) NSInteger programsCnt;//有多少集
 @property(nonatomic,strong) NSString *desc;//描述
 @property(nonatomic,strong) NSString *cover;
+@property(nonatomic,strong) NSString *parentname; //分类 例：玄幻、校园、恐怖
 @end
