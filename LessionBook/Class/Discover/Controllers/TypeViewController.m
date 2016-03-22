@@ -15,6 +15,8 @@
 #import "typeDetailModel.h"
 #import "ProgressHUD.h"
 #import "DetailViewController.h"
+#import "SearchViewController.h"
+
 @interface TypeViewController ()<UITableViewDataSource,UITableViewDelegate,PullingRefreshTableViewDelegate>{
     NSInteger _pageCount;//定义请求页码
 }
@@ -47,6 +49,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//标题
+    self.navigationItem.title = self.navigationItemTitle;
+
+//返回按钮
     [self showBackButton:@"ic_arrow_general2"];
     [self.view addSubview:self.recommendView];
     [self.view addSubview:self.hotView];
@@ -62,29 +68,34 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"TypeTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     [self.tableView1 registerNib:[UINib nibWithNibName:@"TypeTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell1"];
     [self.tableView2 registerNib:[UINib nibWithNibName:@"TypeTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell2"];
-   
+//解析数据
     [self loadData];
     [self loadData1];
     [self loadData2];
-  //清扫手势事件
-    self.typeDetailSwipeLeft = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(oneFingerSwipeUp:)];
-    self.typeDetailSwipeMidLeft = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(twoFingerSwipeUp:)];
-    self.typeDetailSwipeMidRight = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(threeFingerSwipeUp:)];
-    self.typeDetailSwipeRight = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(fourFingerSwipeUp:)];
+//手势事件
+    [self headAction];
+   
     
-    //添加手势方向 左右
+}
+
+
+-(void)headAction{
+//清扫手势事件
+    self.typeDetailSwipeLeft     = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(oneFingerSwipeUp:)];
+    self.typeDetailSwipeMidLeft  = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(twoFingerSwipeUp:)];
+    self.typeDetailSwipeMidRight = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(threeFingerSwipeUp:)];
+    self.typeDetailSwipeRight    = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(fourFingerSwipeUp:)];
+    
+//添加手势方向 左右
     [self.typeDetailSwipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
     [self.typeDetailSwipeMidLeft setDirection:UISwipeGestureRecognizerDirectionRight];
     [self.typeDetailSwipeMidRight setDirection:UISwipeGestureRecognizerDirectionLeft];
     [self.typeDetailSwipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
-    //手势所在的视图
+//手势所在的视图
     [self.tableView addGestureRecognizer:self.typeDetailSwipeLeft];
     [self.tableView1 addGestureRecognizer:self.typeDetailSwipeMidLeft];
     [self.tableView1 addGestureRecognizer:self.typeDetailSwipeMidRight];
     [self.tableView2 addGestureRecognizer:self.typeDetailSwipeRight];
-    
-    
-    
 }
 #pragma mark --- 清扫手势触发事件
 -(void)oneFingerSwipeUp:(UISwipeGestureRecognizer *)recognizer{
@@ -99,24 +110,22 @@
 -(void)twoFingerSwipeUp:(UISwipeGestureRecognizer *)recognizer{
     [UIView animateWithDuration:0.2 animations:^{
         self.tableView.hidden = NO;
-        //self.tableView1.hidden = YES;
-        //self.tableView2.hidden = YES;
+        
         self.segment1.selectedSegmentIndex = 0;
     }];
 }
 -(void)threeFingerSwipeUp:(UISwipeGestureRecognizer *)recognizer{
     [UIView animateWithDuration:0.2 animations:^{
-       // self.tableView.hidden = YES;
-        //self.tableView1.hidden = YES;
+       
         self.tableView2.hidden = NO;
         self.segment1.selectedSegmentIndex = 2;
     }];
 }
 -(void)fourFingerSwipeUp:(UISwipeGestureRecognizer *)recognizer{
     [UIView animateWithDuration:0.2 animations:^{
-       // self.tableView.hidden = YES;
+      ;
         self.tableView1.hidden = NO;
-       // self.tableView2.hidden = YES;
+       
         self.segment1.selectedSegmentIndex = 1;
     }];
 }

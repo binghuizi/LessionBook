@@ -278,7 +278,7 @@
     TypeViewController *typeVc = [[TypeViewController alloc]init];
     
     typeVc.idString = self.typeIdArray[indexPath.row];
-    
+    typeVc.navigationItemTitle = self.titleArray[indexPath.row];
     
     [self.navigationController pushViewController:typeVc animated:YES];
 }

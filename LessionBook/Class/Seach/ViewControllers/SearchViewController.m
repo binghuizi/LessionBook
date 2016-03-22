@@ -69,6 +69,7 @@
     self.tableView.hidden = YES;
     self.segmentControl.hidden = YES;
     self.searchBar.text = nil;
+
 }
 
 - (void)showRightBtn{
