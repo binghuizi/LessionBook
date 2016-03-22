@@ -88,8 +88,6 @@
     self.Searchtext = [self.searchBar.text stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
     NSLog(@"%@", self.Searchtext);
     [self requestModel];
-    
-    
 }
 - (void)requestModel{
     AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
@@ -97,41 +95,72 @@
     [sessionManager GET:[NSString stringWithFormat:kSearch, self.Searchtext] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@", responseObject);
+        
         NSDictionary *successDic = responseObject;
         NSArray *dataArray = successDic[@"data"];
-        NSDictionary *firstdic = dataArray[0];
-        NSDictionary *seconddic = dataArray[1];
-        NSDictionary *firstDoc = firstdic[@"doclist"];
-        NSString *firstgroup = firstdic[@"groupValue"];
-        NSDictionary *secondDoc = seconddic[@"doclist"];
-        NSString *secondgroup = seconddic[@"groupValue"];
-        NSArray *firstArray = firstDoc[@"docs"];
-        NSArray *secondArray = secondDoc[@"docs"];
-        if (self.xiaoshuoArray.count > 0) {
-            [self.xiaoshuoArray removeAllObjects];
-        }
-        if (self.danjiArray.count > 0) {
-            [self.danjiArray removeAllObjects];
-        }
-        for (NSDictionary *dic in firstArray) {
-            SearchModel *model = [[SearchModel alloc] initWithDictionary:dic];
-            if ([firstgroup isEqualToString:@"virtualprogram"]) {
-                  [self.danjiArray addObject:model];
+        if (dataArray.count > 0) {
+            //如果请求的数据小说单集都有则赋值
+            if (dataArray.count == 2) {
+                NSDictionary *firstdic = dataArray[0];
+                NSDictionary *seconddic = dataArray[1];
+                NSDictionary *firstDoc = firstdic[@"doclist"];
+                NSString *firstgroup = firstdic[@"groupValue"];
+                NSDictionary *secondDoc = seconddic[@"doclist"];
+                NSString *secondgroup = seconddic[@"groupValue"];
+                NSArray *firstArray = firstDoc[@"docs"];
+                NSArray *secondArray = secondDoc[@"docs"];
+                if (self.xiaoshuoArray.count > 0) {
+                    [self.xiaoshuoArray removeAllObjects];
+                }
+                if (self.danjiArray.count > 0) {
+                    [self.danjiArray removeAllObjects];
+                }
+                for (NSDictionary *dic in firstArray) {
+                    SearchModel *model = [[SearchModel alloc] initWithDictionary:dic];
+                    if ([firstgroup isEqualToString:@"virtualprogram"]) {
+                        [self.danjiArray addObject:model];
+                    }else{
+                        [self.xiaoshuoArray addObject:model];
+                    }
+                }
+                for (NSDictionary *dic in secondArray) {
+                    SearchModel *model = [[SearchModel alloc] initWithDictionary:dic];
+                    if ([secondgroup isEqualToString:@"virtualchannel"]) {
+                        [self.xiaoshuoArray addObject:model];
+                        
+                    }else{
+                        [self.danjiArray addObject:model];
+                    }
+                }
+                [self.tableView reloadData];
             }else{
-                  [self.xiaoshuoArray addObject:model];
+                NSDictionary *firstdic = dataArray[0];
+                NSDictionary *firstDoc = firstdic[@"doclist"];
+                NSString *firstgroup = firstdic[@"groupValue"];
+                NSArray *firstArray = firstDoc[@"docs"];
+                if (self.xiaoshuoArray.count > 0) {
+                    [self.xiaoshuoArray removeAllObjects];
+                }
+                if (self.danjiArray.count > 0) {
+                    [self.danjiArray removeAllObjects];
+                }
+                for (NSDictionary *dic in firstArray) {
+                    SearchModel *model = [[SearchModel alloc] initWithDictionary:dic];
+                    if ([firstgroup isEqualToString:@"virtualprogram"]) {
+                        [self.danjiArray addObject:model];
+                    }else{
+                        [self.xiaoshuoArray addObject:model];
+                    }
+                }
+                [self.tableView reloadData];
             }
+            //返回数据中无数据
+        }else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"暂无相关数据" delegate:self cancelButtonTitle:@"取消" otherButtonTitles: nil];
+            [alert show];
         }
-        for (NSDictionary *dic in secondArray) {
-            SearchModel *model = [[SearchModel alloc] initWithDictionary:dic];
-            if ([secondgroup isEqualToString:@"virtualchannel"]) {
-                [self.xiaoshuoArray addObject:model];
-
-            }else{
-                [self.danjiArray addObject:model];
-            }
-        }
-        [self.tableView reloadData];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+           } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
     }];
 }
@@ -246,31 +275,38 @@
     }
     switch (_index) {
         case 0:{
-                SearchModel *model = self.listArray[indexPath.section][indexPath.row];
-                cell.textLabel.text = model.name;
-                cell.detailTextLabel.text = model.catname;
-            if (cell.imageView.image != nil) {
-                cell.imageView.image = nil;
+            if (self.listArray.count > 0) {
+                if ([self.listArray[indexPath.section] count] > 0) {
+                    SearchModel *model = self.listArray[indexPath.section][indexPath.row];
+                    cell.textLabel.text = model.name;
+                    cell.detailTextLabel.text = model.catname;
+                    if (cell.imageView.image != nil) {
+                        cell.imageView.image = nil;
+                    }
+                }
             }
         }
             break;
         case 1:{
-            SearchModel *model = self.listArray[1][indexPath.row];
-            cell.textLabel.text = model.name;
-            cell.detailTextLabel.text = model.catname;
-            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.cover]];
-        }
-            break;
-        case 2:{
-            SearchModel *model = self.listArray[0][indexPath.row];
-            cell.textLabel.text = model.name;
-            cell.detailTextLabel.text = model.cname;
-            if (cell.imageView.image != nil) {
-                cell.imageView.image = nil;
+            if ([self.listArray[1] count] > 0) {
+                SearchModel *model = self.listArray[1][indexPath.row];
+                cell.textLabel.text = model.name;
+                cell.detailTextLabel.text = model.catname;
+                [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.cover]];
             }
         }
             break;
-
+        case 2:{
+            if ([self.listArray[0] count] > 0) {
+                SearchModel *model = self.listArray[0][indexPath.row];
+                cell.textLabel.text = model.name;
+                cell.detailTextLabel.text = model.cname;
+                if (cell.imageView.image != nil) {
+                    cell.imageView.image = nil;
+                }
+            }
+        }
+            break;
     }
     return cell;
 }

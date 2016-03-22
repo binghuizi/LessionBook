@@ -12,6 +12,7 @@
 #import "TimeView.h"
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
+#import "ChatRoomViewController.h"
 
 @interface MyViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, retain) UITableView *tableView;
@@ -28,8 +29,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.backgroundColor = [UIColor greenColor];
-    self.myArray = [NSArray arrayWithObjects:@"我的收藏", @"最近收听", @"定时关闭", @"更多设置", nil];
-    self.detailArray = [NSArray arrayWithObjects:@"暂无收藏", @"暂无收听记录", @"", @"",nil];
+    self.myArray = [NSArray arrayWithObjects:@"我的收藏", @"最近收听", @"定时关闭", @"更多设置", @"书友畅聊", nil];
+    self.detailArray = [NSArray arrayWithObjects:@"暂无收藏", @"暂无收听记录", @"", @"", @"", nil];
     [self confineHeadView];
     [self.view addSubview:self.tableView];
     
@@ -57,6 +58,8 @@
         cell.imageView.image = [UIImage imageNamed:@"userinfo_timer"];
     }else if (indexPath.row == 3){
         cell.imageView.image = [UIImage imageNamed:@"userinfo_setting"];
+    }else if (indexPath.row == 4){
+        cell.imageView.image = [UIImage imageNamed:@"exp_watch"];
     }
     return cell;
 }
@@ -79,6 +82,11 @@
             TimeView *timeView = [[TimeView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
             UIWindow *window = [[UIApplication sharedApplication].delegate window];
             [window addSubview:timeView];
+        }
+            break;
+        case 4:
+        {
+            
         }
             break;
         default:

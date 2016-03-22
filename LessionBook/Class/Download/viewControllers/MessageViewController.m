@@ -32,11 +32,14 @@
     
 }
 
+
+
 #pragma mark -----CustomMethod
 
 - (void)showLinkMan{
     UIBarButtonItem *rightBarBtn = [[UIBarButtonItem alloc] initWithTitle:@"联系人" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarBtnAction)];
     self.navigationItem.rightBarButtonItem = rightBarBtn;
+    
 }
 
 - (void)rightBarBtnAction{
