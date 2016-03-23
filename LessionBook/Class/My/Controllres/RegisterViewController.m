@@ -35,6 +35,8 @@
         
     }];
 }
+
+/*
 - (void)backLogin:(UIButton *)btn{
     BmobUser *buser = [[BmobUser alloc] init];
     buser.mobilePhoneNumber = self.mobilePhoneNumber.text;
@@ -62,6 +64,22 @@
             }];
         }
 
+*/
+- (void)backLogin:(UIButton *)btn{
+    BmobUser *buser = [[BmobUser alloc] init];
+    buser.mobilePhoneNumber = self.mobilePhoneNumber.text;
+    buser.password = self.passWord.text;
+    buser.username = @"xiaoming";
+    [buser signUpInBackgroundWithBlock:^ (BOOL isSuccessful, NSError *error){
+        if (isSuccessful){
+            [ProgressHUD showSuccess:@"注册成功" Interaction:YES];
+        } else {
+            NSLog(@"%@",error);
+            [ProgressHUD showError:@"注册失败" Interaction:YES];
+        }
+    }];
+    
+}
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     //这个是逐个的textFiled回收键盘，比较麻烦
