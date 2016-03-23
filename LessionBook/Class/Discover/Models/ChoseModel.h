@@ -13,4 +13,5 @@
 @property(nonatomic,strong) NSString *bigthumb;//图片
 @property(nonatomic,strong) NSString *name;    //书名
 @property(nonatomic,strong) NSArray *items;
+@property(nonatomic,strong) NSString *id;
 @end

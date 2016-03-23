@@ -25,6 +25,11 @@
 #define kWeiboAppSecret @"2ca4018d41a598cefa1e68ba0ad7fe4d"
 #define kQQAppId        @"1105274568"
 #define kQQAppKey       @"V6VOkoOofraoXv13"
+#define kHuiDiao        @"https://api.weibo.com/oauth2/default.html"
+
+#define kWeiXinAppID @"wxcd68582298f97128"
+#define kWeiXinAppKey @"db4edda7a6e5ac341bdd70cedd465e31"
+
 
 
 

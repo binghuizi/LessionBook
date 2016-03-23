@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
     self.title = @"最近收听";
     [self.view addSubview:self.tableView];
     self.view.backgroundColor = [UIColor blueColor];

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A0042821CA23E0D00904873 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CDC1C9B910C00950794 /* libsqlite3.tbd */; };
 		7A1A79B31C9FE7AE0001C962 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1A79B21C9FE7AE0001C962 /* libicucore.tbd */; };
 		7A1A79B51C9FE7CE0001C962 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1A79B41C9FE7CE0001C962 /* libstdc++.tbd */; };
 		7A1A79B71C9FE7FE0001C962 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1A79B61C9FE7FE0001C962 /* JavaScriptCore.framework */; };
@@ -15,7 +16,6 @@
 		7A389CAA1C9B873000950794 /* ChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A389CA91C9B873000950794 /* ChatRoomViewController.m */; };
 		7A389CD91C9B90C900950794 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CD81C9B90C800950794 /* MobileCoreServices.framework */; };
 		7A389CDB1C9B90D300950794 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CDA1C9B90D300950794 /* CFNetwork.framework */; };
-		7A389CDD1C9B910C00950794 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CDC1C9B910C00950794 /* libsqlite3.tbd */; };
 		7A389CDF1C9B911F00950794 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CDE1C9B911F00950794 /* libstdc++.6.0.9.tbd */; };
 		7A389CE11C9B912B00950794 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CE01C9B912B00950794 /* libz.tbd */; };
 		7A389CE31C9B913C00950794 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CE21C9B913C00950794 /* libiconv.tbd */; };
@@ -29,7 +29,6 @@
 		7A45325A1C9F9C1800EDB43C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4532591C9F9C1800EDB43C /* CoreTelephony.framework */; };
 		7A45325C1C9F9C3500EDB43C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A45325B1C9F9C3500EDB43C /* SystemConfiguration.framework */; };
 		7A45325E1C9F9C4700EDB43C /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A45325D1C9F9C4700EDB43C /* libz.1.2.5.tbd */; };
-		7A4532601C9F9C7700EDB43C /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A45325F1C9F9C7700EDB43C /* libicucore.tbd */; };
 		7A4532621C9F9C9F00EDB43C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4532611C9F9C9F00EDB43C /* AVFoundation.framework */; };
 		7A4532641C9F9CAE00EDB43C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4532631C9F9CAE00EDB43C /* MediaPlayer.framework */; };
 		7A4623EF1C992FED00A6750D /* TypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4623EE1C992FED00A6750D /* TypeModel.m */; };
@@ -89,6 +88,7 @@
 		7AB437071C9A4D2100532A9A /* ChoseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB437051C9A4D2100532A9A /* ChoseTableViewCell.xib */; };
 		7AD1C4AC1C9BA204001346CA /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD1C4AB1C9BA204001346CA /* MessageViewController.m */; };
 		7ADC1BEB1CA0F14A000DF95B /* dddd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7ADC1BEA1CA0F14A000DF95B /* dddd.plist */; };
+		7ADC1BF11CA14F3B000DF95B /* ChatBoxeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADC1BF01CA14F3B000DF95B /* ChatBoxeViewController.m */; };
 		7AE264B71C9840A9006C9A6D /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE264B61C9840A9006C9A6D /* MyViewController.m */; };
 		7AE264B91C9841D4006C9A6D /* My.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE264B81C9841D4006C9A6D /* My.storyboard */; };
 		7AE2889F1C98118000596833 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE2889E1C98118000596833 /* DiscoverViewController.m */; };
@@ -222,6 +222,8 @@
 		7AD1C4AA1C9BA204001346CA /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		7AD1C4AB1C9BA204001346CA /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		7ADC1BEA1CA0F14A000DF95B /* dddd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dddd.plist; sourceTree = "<group>"; };
+		7ADC1BEF1CA14F3B000DF95B /* ChatBoxeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatBoxeViewController.h; sourceTree = "<group>"; };
+		7ADC1BF01CA14F3B000DF95B /* ChatBoxeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatBoxeViewController.m; sourceTree = "<group>"; };
 		7AE264B51C9840A9006C9A6D /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		7AE264B61C9840A9006C9A6D /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		7AE264B81C9841D4006C9A6D /* My.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = My.storyboard; sourceTree = "<group>"; };
@@ -240,6 +242,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
+
+				7A0042821CA23E0D00904873 /* libsqlite3.tbd in 
 				7A1A79B91C9FE81B0001C962 /* ImageIO.framework in Frameworks */,
 				7A389CDD1C9B910C00950794 /* libsqlite3.tbd in Frameworks */,
 				7A1A79B71C9FE7FE0001C962 /* JavaScriptCore.framework in Frameworks */,
@@ -248,8 +253,6 @@
 				7A1A79B31C9FE7AE0001C962 /* libicucore.tbd in Frameworks */,
 				7A4532641C9F9CAE00EDB43C /* MediaPlayer.framework in Frameworks */,
 				7A4532621C9F9C9F00EDB43C /* AVFoundation.framework in Frameworks */,
-				7A389CDD1C9B910C00950794 /* libsqlite3.tbd in Frameworks */,
-				7A4532601C9F9C7700EDB43C /* libicucore.tbd in Frameworks */,
 				7A45325E1C9F9C4700EDB43C /* libz.1.2.5.tbd in Frameworks */,
 				7A45325C1C9F9C3500EDB43C /* SystemConfiguration.framework in Frameworks */,
 				7A45325A1C9F9C1800EDB43C /* CoreTelephony.framework in Frameworks */,
@@ -379,6 +382,8 @@
 				7A75016A1C9C09040002FA5C /* RequestViewController.m */,
 				7A9BBA1F1C9D08C900CA55D9 /* SingleViewController.h */,
 				7A9BBA201C9D08C900CA55D9 /* SingleViewController.m */,
+				7ADC1BEF1CA14F3B000DF95B /* ChatBoxeViewController.h */,
+				7ADC1BF01CA14F3B000DF95B /* ChatBoxeViewController.m */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -652,6 +657,7 @@
 				TargetAttributes = {
 					7A99D4471C97EE31001DD9B9 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = DE92S34P85;
 					};
 				};
 			};
@@ -775,6 +781,7 @@
 				7AE264B71C9840A9006C9A6D /* MyViewController.m in Sources */,
 				7A4E32CC1C9FE27900FEF17C /* DownlaodTask.m in Sources */,
 				7A68D4F41C9D587C0090DB08 /* TypeTableViewCell.m in Sources */,
+				7ADC1BF11CA14F3B000DF95B /* ChatBoxeViewController.m in Sources */,
 				7A4623EF1C992FED00A6750D /* TypeModel.m in Sources */,
 				7A4532351C9E426800EDB43C /* RegisterViewController.m in Sources */,
 				7A965F771C99328A00DE2547 /* SearchViewController.m in Sources */,
@@ -904,6 +911,8 @@
 			baseConfigurationReference = 706A4DEFC7FBB216AD8C4E61 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -928,6 +937,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iOS.huI.LessionBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -936,6 +946,8 @@
 			baseConfigurationReference = 67981FB38F5840FA5D07AC7F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -960,6 +972,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iOS.huI.LessionBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

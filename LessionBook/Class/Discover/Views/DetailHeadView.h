@@ -16,6 +16,7 @@
 @property(nonatomic,strong) detailModel *model;
 
 @property (weak, nonatomic) IBOutlet UIButton *shareBtn;
+@property (weak, nonatomic) IBOutlet UIButton *collectionBtn;
 
 
 

@@ -18,6 +18,7 @@
 #import "DetailViewController.h"
 #import "detailModel.h"
 #import "TypeViewController.h"
+
 @interface DiscoverViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate, imageviewDelegate>
 {
    
@@ -56,6 +57,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"马里亚纳听书";
+    //导航栏颜色
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
+    
+    
     [self startTimer];
     [self.view addSubview:self.titleView];
     [self.view addSubview:self.typeView];
@@ -309,6 +315,7 @@
         touchButton.frame = imageView.frame;
         touchButton.tag = i;
         [touchButton addTarget:self action:@selector(pictuAction:) forControlEvents:UIControlEventTouchUpInside];
+        
         [self.scrollView addSubview:touchButton];
     }
     //区头添加
@@ -477,9 +484,14 @@
 
 
 }
--(void)titleName:(NSString *)titleName idString:(NSString *)idString{
-    
+-(void)typeIdString:(NSString *)typeId{
+    TypeViewController *typeVc = [[TypeViewController alloc]init];
+    typeVc.idString = typeId;
+    [self.navigationController pushViewController:typeVc animated:YES];
 }
+
+
+
 //懒加载collectionView
 -(UICollectionView *)collectionView{
     if (_collectionView == nil) {

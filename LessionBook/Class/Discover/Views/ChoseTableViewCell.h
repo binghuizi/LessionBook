@@ -17,6 +17,7 @@
          describe:(NSString *)describe
         titleName:(NSString *)titleName
         idString:(NSString *)idString;
+-(void)typeIdString:(NSString *)typeId;
 
 @end
 
@@ -37,4 +38,5 @@
 @property(nonatomic,strong) NSMutableArray *miaosuArray;
 @property(nonatomic,strong) NSMutableArray *titleArray;
 @property(nonatomic,strong) NSMutableArray *idArray;
+@property(nonatomic,strong) NSMutableArray *typeIdArray;
 @end

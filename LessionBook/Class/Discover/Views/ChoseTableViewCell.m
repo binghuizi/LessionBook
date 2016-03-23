@@ -23,11 +23,11 @@
 -(void)setModel:(ChoseModel *)model{
     if (model.items.count == 4) {
        
-        
-        
         self.zhuboArray  = [NSMutableArray new];
         self.zuozheArray = [NSMutableArray new];
         self.idArray     = [NSMutableArray new];
+        self.typeIdArray = [NSMutableArray new];
+        [self.typeIdArray addObject:model.id];
         NSDictionary *itemDic  = model.items[0];
         NSDictionary *itemDic1 = model.items[1];
         NSDictionary *itemDic2 = model.items[2];
@@ -120,6 +120,7 @@
                            itemDic2[@"name"], nil];
         
         
+        [self.manyBtn addTarget:self action:@selector(manyAction) forControlEvents:UIControlEventTouchUpInside];
         
         
         
@@ -156,5 +157,12 @@
             break;
     }
 }
+
+-(void)manyAction{
+    [self.delgate typeIdString:self.typeIdArray[0]];
+}
+
+
+
 
 @end

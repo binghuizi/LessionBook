@@ -41,8 +41,6 @@
 @property(nonatomic,strong) UISwipeGestureRecognizer *typeDetailSwipeRight;
 
 
-
-
 @end
 
 @implementation TypeViewController
@@ -51,7 +49,7 @@
     [super viewDidLoad];
 //标题
     self.navigationItem.title = self.navigationItemTitle;
-
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
 //返回按钮
     [self showBackButton:@"ic_arrow_general2"];
     [self.view addSubview:self.recommendView];
