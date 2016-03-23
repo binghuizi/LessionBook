@@ -13,7 +13,9 @@
 #import <AFHTTPSessionManager.h>
 #import "detailModel.h"
 #import <ShareSDK/ShareSDK.h>
-#import <ShareSDKUI/ShareSDK+SSUI.h>
+
+
+#import <QuartzCore/QuartzCore.h>
 @interface DetailViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,strong) UITableView *tableView;
 @property(nonatomic,strong) NSMutableArray *dateArray;
@@ -50,51 +52,46 @@
 }
 #pragma mark -- 头部分享按钮
 -(void)shareAction{
-    //1、创建分享参数
-    NSArray* imageArray = @[[UIImage imageNamed:@"DIDI2.jpg"]];
-      if (imageArray) {
-    NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
-    [shareParams SSDKSetupShareParamsByText:@"分享内容"
-                                     images:imageArray
-                                        url:[NSURL URLWithString:@"http://mob.com"]
-                                      title:@"分享标题"
-                                       type:SSDKContentTypeAuto];
-  //2、分享（可以弹出我们的分享菜单和编辑界面）
-    //要显示菜单的视图, iPad版中此参数作为弹出菜单的参照视图，只有传这个才可以弹出我们的分享菜单，可以传分享的
-    [ShareSDK showShareActionSheet:nil items:nil shareParams:shareParams onShareStateChanged:^(SSDKResponseState state, SSDKPlatformType platformType, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error, BOOL end) {
-        switch (state) {
-            case SSDKResponseStateSuccess:
-            {
-                UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:@"分享成功" message:@"" preferredStyle:UIAlertControllerStyleAlert];
-                UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                    
-                }];
-                [alertVc addAction:action];
-                [self presentViewController:alertVc animated:YES completion:nil];
-                
-            
-            
-            break;
-            }
-                
-             case SSDKResponseStateFail:
-            {
-                UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:@"分享失败" message:[NSString stringWithFormat:@"%@",error] preferredStyle:UIAlertControllerStyleAlert];
-                UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                    
-                }];
-                [alertVc addAction:action];
-                [self presentViewController:alertVc animated:YES completion:nil];
-                break;
-            }
-            default:
-                break;
-        }
-    }];
+
     
     
-      }
     
+    
+    NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"DIDI2" ofType:@"jpg"];
+    NSData *date = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.pictchString]];
+    NSLog(@"%@",imagePath);
+    //构造分享内容
+    id<ISSContent> publishContent = [ShareSDK content:[NSString stringWithFormat:@"%@%@",self.titleString,self.pictchString]
+                                       defaultContent:@"测试一下"
+                                                image:[ShareSDK imageWithPath:[NSString stringWithContentsOfURL:[NSURL URLWithString:self.pictchString] encoding:NSUTF8StringEncoding error:nil]]
+                                                title:self.titleString
+                                                  url:[NSString stringWithFormat:@"%@",self.pictchString]
+                                          description:self.miaoshuString
+                                            mediaType:SSPublishContentMediaTypeNews];
+    
+    //创建iPad弹出菜单容器,详见第六步
+    id<ISSContainer> container = [ShareSDK container];
+   // [container setIPadContainerWithView:sender arrowDirect:UIPopoverArrowDirectionUp];
+    
+    //弹出分享菜单
+    [ShareSDK showShareActionSheet:container
+                         shareList:nil
+                           content:publishContent
+                     statusBarTips:YES
+                       authOptions:nil
+                      shareOptions:nil
+                            result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
+                                
+                                if (state == SSResponseStateSuccess)
+                                {
+                                    NSLog(@"分享成功");
+                                    
+                                }
+                                else if (state == SSResponseStateFail)
+                                {
+                                    NSLog(@"分享失败,错误码:%ld,错误描述:%@", [error errorCode], [error errorDescription]);
+                                }
+                            }];
     
 }
 

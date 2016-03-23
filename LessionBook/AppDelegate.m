@@ -14,14 +14,16 @@
 #import "DiscoverViewController.h"
 #import <EaseMobSDKFull/EaseMob.h>
 #import <EaseUI.h>
-
 #import <ShareSDK/ShareSDK.h>
-#import <ShareSDKConnector/ShareSDKConnector.h>
-
+#import <TencentOpenAPI/QQApiInterface.h>
+#import <TencentOpenAPI/TencentOAuth.h>
+#import "WXApi.h"
 #import "WeiboSDK.h"
-#import <WXApi.h>
+
 
 #import <BmobSDK/Bmob.h>
+
+
 
 
 
@@ -104,50 +106,33 @@
     
 
 #pragma mark ---分享事件
-//调用registerApp方法来初始化SDK并且初始化第三方平台
-    /**
-     *  设置ShareSDK的appKey，如果尚未在ShareSDK官网注册过App，请移步到http://mob.com/login 登录后台进行应用注册，
-     *  在将生成的AppKey传入到此方法中。
-     *  方法中的第二个第三个参数为需要连接社交平台SDK时触发，
-     *  在此事件中写入连接代码。第四个参数则为配置本地社交平台时触发，根据返回的平台类型来配置平台信息。
-     *  如果您使用的时服务端托管平台信息时，第二、四项参数可以传入nil，第三项参数则根据服务端托管平台来决定要连接的社交SDK。
-     */
+    [ShareSDK registerApp:kShareAppKey];//字符串api20为您的ShareSDK的AppKey
     
-    [ShareSDK registerApp:kShareAppKey activePlatforms:@[
-          @(SSDKPlatformTypeSinaWeibo),
-          @(SSDKPlatformTypeQQ),
-          @(SSDKPlatformTypeSMS),
-          @(SSDKPlatformTypeCopy),
-          @(SSDKPlatformTypeWechat),] onImport:^(SSDKPlatformType platformType) {
-              switch (platformType) {
-                  case SSDKPlatformTypeWechat:
-                      [ShareSDKConnector connectWeChat:[WXApi class]];
-                      break;
-                  case SSDKPlatformTypeSinaWeibo:
-                      [ShareSDKConnector connectWeibo:[WeiboSDK class]];
-                      break;
-                  case SSDKPlatformTypeQQ:
-                      [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
-                      break;
-                  default:
-                      break;
-              }
-          } onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo) {
-              switch (platformType) {
-                      //设置新浪微博应用信息,其中authType设置为使用SSO＋Web形式授权
-                  case SSDKPlatformTypeSinaWeibo:
-                      [appInfo SSDKSetupSinaWeiboByAppKey:kWeiboAppKey appSecret:kWeiboAppSecret redirectUri:@"https://api.weibo.com/oauth2/default.html" authType:SSDKAuthTypeBoth];
-                      break;
-//                      case SSDKPlatformTypeWechat:
-//                      [appInfo SSDKSetupWeChatByAppId:<#(NSString *)#> appSecret:<#(NSString *)#>]
-//                      break;
-                      case SSDKPlatformTypeQQ:
-                      [appInfo SSDKSetupQQByAppId:kQQAppId appKey:kQQAppKey authType:SSDKAuthTypeBoth];
-                      break;
-                  default:
-                      break;
-              }
-          }];
+    //添加新浪微博应用 注册网址 http://open.weibo.com
+    [ShareSDK connectSinaWeiboWithAppKey:kWeiboAppKey
+                               appSecret:kWeiboAppSecret
+                             redirectUri:kHuiDiao];
+    //当使用新浪微博客户端分享的时候需要按照下面的方法来初始化新浪的平台
+    [ShareSDK  connectSinaWeiboWithAppKey:kWeiboAppKey
+                                appSecret:kWeiboAppSecret
+                              redirectUri:kHuiDiao
+                              weiboSDKCls:[WeiboSDK class]];
+    
+    //添加QQ空间应用  注册网址  http://connect.qq.com/intro/login/
+    [ShareSDK connectQZoneWithAppKey:kQQAppId
+                           appSecret:kQQAppKey
+                   qqApiInterfaceCls:[QQApiInterface class]
+                     tencentOAuthCls:[TencentOAuth class]];
+    
+    //添加QQ应用  注册网址   http://mobile.qq.com/api/
+    [ShareSDK connectQQWithQZoneAppKey:kQQAppId
+                     qqApiInterfaceCls:[QQApiInterface class]
+                       tencentOAuthCls:[TencentOAuth class]];
+    
+    //微信登陆的时候需要初始化
+    [ShareSDK connectWeChatWithAppId:kWeiXinAppID
+                           appSecret:kWeiXinAppKey
+                           wechatCls:[WXApi class]];
     
     
     
@@ -162,13 +147,30 @@
     return YES;
 }
 
--(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
-    return [WeiboSDK handleOpenURL:url delegate:self];
-}
--(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-    return [WeiboSDK handleOpenURL:url delegate:self];
+//-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+//    return [WeiboSDK handleOpenURL:url delegate:self];
+//}
+//-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+//    return [WeiboSDK handleOpenURL:url delegate:self];
+//}
+
+- (BOOL)application:(UIApplication *)application
+      handleOpenURL:(NSURL *)url
+{
+    return [ShareSDK handleOpenURL:url
+                        wxDelegate:self];
 }
 
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+    return [ShareSDK handleOpenURL:url
+                 sourceApplication:sourceApplication
+                        annotation:annotation
+                        wxDelegate:self];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
