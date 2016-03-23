@@ -13,7 +13,7 @@
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UITextField *search;
 
-@property (nonatomic, strong) NSArray *listArray;
+@property (nonatomic, strong) NSMutableArray *listArray;
 
 @end
 
@@ -22,12 +22,13 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.navigationItem.title = @"添加好友";
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
     self.navigationController.navigationBar.translucent = NO;
     [self.view addSubview:self.tableView];
     self.navigationItem.titleView = self.search;
     [self showRightBtn];
+    [self showBackButton:@"ic_arrow_general2"];
     
-    self.listArray = [[EaseMob sharedInstance].chatManager fetchBuddyListWithError:nil];
 }
 
 #pragma mark -------------UITableViewDataSource
@@ -38,8 +39,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    EMBuddy *buddy = self.listArray[indexPath.row];
-    cell.textLabel.text = buddy.username;
     return cell;
 }
 
@@ -68,6 +67,13 @@
     return _search;
 }
 
+- (NSMutableArray *)listArray{
+    if (_listArray == nil) {
+        self.listArray = [NSMutableArray new];
+    }
+    return _listArray;
+}
+
 
 //右侧搜索按钮
 
@@ -75,6 +81,8 @@
     UIBarButtonItem *barBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(seachFriend)];
     self.navigationItem.rightBarButtonItem = barBtn;
 }
+
+
 
 #pragma mark -------------CustomMethod
 
@@ -91,11 +99,21 @@
             
             return;
         }
-        BOOL isSuccess = [[EaseMob sharedInstance].chatManager addBuddy:_search.text message:@"我想加您为好友" error:nil];
-        if (isSuccess) {
-            NSLog(@"添加成功");
-        }
-        
+        UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"申请提示" message:@"你想说点什么" preferredStyle:UIAlertControllerStyleAlert];
+        __weak typeof(alertC) weakAlert = alertC;
+        [alertC addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+            NSString *str = [weakAlert.message stringByAppendingString:textField.text];
+            weakAlert.message = str;
+        }];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            EMError *error = nil;
+            [[EaseMob sharedInstance].chatManager addBuddy:_search.text message:@"我想加您为好友" error:&error];
+            if (error == nil) {
+                NSLog(@"发送成功");
+            }
+        }];
+        [alertC addAction:action];
+        [self.navigationController presentViewController:alertC animated:YES completion:nil];
     }
 }
 

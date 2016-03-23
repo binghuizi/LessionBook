@@ -86,7 +86,9 @@
             break;
         case 4:
         {
-            
+            ChatRoomViewController *chatroomVC = [[ChatRoomViewController alloc] init];
+            UINavigationController *chatroomNav = [[UINavigationController alloc] initWithRootViewController:chatroomVC];
+            [self.navigationController presentViewController:chatroomNav animated:YES completion:nil];
         }
             break;
         default:
