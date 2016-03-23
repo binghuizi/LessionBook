@@ -93,6 +93,7 @@
 		7AB437071C9A4D2100532A9A /* ChoseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB437051C9A4D2100532A9A /* ChoseTableViewCell.xib */; };
 		7AD1C4AC1C9BA204001346CA /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD1C4AB1C9BA204001346CA /* MessageViewController.m */; };
 		7ADC1BEB1CA0F14A000DF95B /* dddd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7ADC1BEA1CA0F14A000DF95B /* dddd.plist */; };
+		7ADC1BF11CA14F3B000DF95B /* ChatBoxeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADC1BF01CA14F3B000DF95B /* ChatBoxeViewController.m */; };
 		7AE264B71C9840A9006C9A6D /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE264B61C9840A9006C9A6D /* MyViewController.m */; };
 		7AE264B91C9841D4006C9A6D /* My.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE264B81C9841D4006C9A6D /* My.storyboard */; };
 		7AE2889F1C98118000596833 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE2889E1C98118000596833 /* DiscoverViewController.m */; };
@@ -241,6 +242,8 @@
 		7AD1C4AA1C9BA204001346CA /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		7AD1C4AB1C9BA204001346CA /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		7ADC1BEA1CA0F14A000DF95B /* dddd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dddd.plist; sourceTree = "<group>"; };
+		7ADC1BEF1CA14F3B000DF95B /* ChatBoxeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatBoxeViewController.h; sourceTree = "<group>"; };
+		7ADC1BF01CA14F3B000DF95B /* ChatBoxeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatBoxeViewController.m; sourceTree = "<group>"; };
 		7AE264B51C9840A9006C9A6D /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		7AE264B61C9840A9006C9A6D /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		7AE264B81C9841D4006C9A6D /* My.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = My.storyboard; sourceTree = "<group>"; };
@@ -461,6 +464,8 @@
 				7A75016A1C9C09040002FA5C /* RequestViewController.m */,
 				7A9BBA1F1C9D08C900CA55D9 /* SingleViewController.h */,
 				7A9BBA201C9D08C900CA55D9 /* SingleViewController.m */,
+				7ADC1BEF1CA14F3B000DF95B /* ChatBoxeViewController.h */,
+				7ADC1BF01CA14F3B000DF95B /* ChatBoxeViewController.m */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -861,6 +866,7 @@
 				7AE264B71C9840A9006C9A6D /* MyViewController.m in Sources */,
 				7A4E32CC1C9FE27900FEF17C /* DownlaodTask.m in Sources */,
 				7A68D4F41C9D587C0090DB08 /* TypeTableViewCell.m in Sources */,
+				7ADC1BF11CA14F3B000DF95B /* ChatBoxeViewController.m in Sources */,
 				7A4623EF1C992FED00A6750D /* TypeModel.m in Sources */,
 				7A4532351C9E426800EDB43C /* RegisterViewController.m in Sources */,
 				7A965F771C99328A00DE2547 /* SearchViewController.m in Sources */,

@@ -34,16 +34,16 @@
     self.showRefreshHeader = YES;
     self.delegate  = self;
     self.dataSource = self;
+    self.tabBarController.tabBar.frame = CGRectMake(0, kScreenHeight, 0, 0);
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
     [[EaseChatBarMoreView appearance] setMoreViewBackgroundColor:[UIColor colorWithRed:240 / 255.0 green:242 / 255.0 blue:247 / 255.0 alpha:1.0]];
     [self setBarBtnItem];
-    self.navigationController.navigationBar.translucent = NO;
     [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
 }
 
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    //self.tabBarController.tabBar.hidden = YES;
 }
 
 

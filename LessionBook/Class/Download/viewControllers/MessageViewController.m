@@ -9,12 +9,14 @@
 #import "MessageViewController.h"
 #import "LinkManViewController.h"
 #import <EaseMobSDKFull/EaseMob.h>
+#import "SingleViewController.h"
 
 @interface MessageViewController ()<UITableViewDataSource, UITableViewDelegate, EMChatManagerDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSArray *array;
-@property (nonatomic, strong) NSMutableArray *textArray;
+
+//会话列表数组
+@property (nonatomic, strong) NSArray *conversionArray;
 
 @end
 
@@ -24,48 +26,69 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"消息";
+    //导航栏颜色
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
+    [self showBackButton:@"ic_arrow_general2"];
+    self.tableView.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:self.tableView];
-    [self showLinkMan];
     [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-    //消息文本数组
-    self.textArray = [NSMutableArray new];
     
 }
 
-
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    //tabBar显示
+    self.tabBarController.tabBar.hidden = NO;
+    self.tabBarController.tabBar.frame = CGRectMake(0, kScreenHeight - 44, kScreenWidth, 44);
+    //获取数据库中的所有会话列表以及是否更新内存中的会话
+    self.conversionArray = [[EaseMob sharedInstance].chatManager loadAllConversationsFromDatabaseWithAppend2Chat:YES];
+    [self.tableView reloadData];
+}
 
 #pragma mark -----CustomMethod
 
-- (void)showLinkMan{
-    UIBarButtonItem *rightBarBtn = [[UIBarButtonItem alloc] initWithTitle:@"联系人" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarBtnAction)];
-    self.navigationItem.rightBarButtonItem = rightBarBtn;
-    
+- (void)backAction:(UIButton *)btn{
+    [self.tabBarController dismissViewControllerAnimated:YES completion:nil];
 }
-
-- (void)rightBarBtnAction{
-    LinkManViewController *linkVC = [[LinkManViewController alloc] init];
-    [self.navigationController pushViewController:linkVC animated:YES];
-    
-}
-
 
 #pragma mark --------------UITableViewDataSource
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    return self.conversionArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    if (self.textArray.count > 0) {
-        if (indexPath.row < self.textArray.count) {
-            cell.textLabel.text = self.textArray[indexPath.row];
+    static NSString *cellID = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
+    }
+    EMConversation *conversation = self.conversionArray[indexPath.row];
+    cell.textLabel.text = conversation.chatter;
+    EMMessage *message = conversation.latestMessage;
+    id<IEMMessageBody> msBody = message.messageBodies.firstObject;
+    switch (msBody.messageBodyType) {
+        case eMessageBodyType_Text:{
+            NSString *txt = ((EMTextMessageBody *)msBody).text;
+            cell.detailTextLabel.text = txt;
+            cell.imageView.layer.cornerRadius = 25;
+            cell.imageView.clipsToBounds = YES;
+            cell.imageView.image = [UIImage imageNamed:@"EaseUIResource.bundle/user"];
         }
-}
+            break;
+        default:
+            break;
+    }
     return cell;
 }
 
 #pragma mark --------------UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    EMConversation *conversation = self.conversionArray[indexPath.row];
+    SingleViewController *singleVC = [[SingleViewController alloc] initWithConversationChatter:conversation.chatter conversationType:conversation.conversationType];
+    [self.navigationController pushViewController:singleVC animated:YES];
+}
 
 #pragma mark --------------Lazyloading
 
@@ -74,7 +97,7 @@
         self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - 64) style:UITableViewStylePlain];
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
-        [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+        self.tableView.rowHeight = 50;
     }
     return _tableView;
 }
@@ -82,20 +105,7 @@
 #pragma mark -------EMChatManagerDelegate
 
 - (void)didReceiveOfflineMessages:(NSArray *)offlineMessages{
-    EMMessage *message = offlineMessages[0];
-    id<IEMMessageBody> msBody = message.messageBodies.firstObject;
-    switch (msBody.messageBodyType) {
-        case eMessageBodyType_Text:{
-            NSString *txt = ((EMTextMessageBody *)msBody).text;
-            NSLog(@"%@", txt);
-            [self.textArray addObject:txt];
-            [self.tableView reloadData];
-        }
-            break;
-            
-        default:
-            break;
-    }
+
 }
 
 - (void)didReceiveMemoryWarning {

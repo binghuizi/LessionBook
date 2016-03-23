@@ -8,6 +8,7 @@
 
 #import "ChatRoomViewController.h"
 #import "MessageViewController.h"
+#import "LinkManViewController.h"
 #import <EaseMob.h>
 #import "ProgressHUD.h"
 
@@ -17,6 +18,8 @@
 @property (nonatomic, strong) UITextField *userPassword;
 @property (nonatomic, strong) UIButton *loginBtn;
 @property (nonatomic, strong) UIButton *registBtn;
+//退出登录
+@property (nonatomic, strong) UIButton *loginOutBtn;
 
 
 @end
@@ -27,19 +30,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"聊天登录";
-
-    self.navigationController.navigationBar.barTintColor = [UIColor brownColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
+    [self showBackButton:@"ic_arrow_general2"];
     [self.view addSubview:self.username];
     [self.view addSubview:self.userPassword];
     [self.view addSubview:self.registBtn];
     [self.view addSubview:self.loginBtn];
+    [self.view addSubview:self.loginOutBtn];
     [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.tabBarController.tabBar.hidden = YES;
-    self.tabBarController.tabBar.translucent = NO;
+}
+
+- (void)backAction:(UIButton *)btn{
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark -----LazyLoading
@@ -82,6 +89,17 @@
     return _loginBtn;
 }
 
+- (UIButton *)loginOutBtn{
+    if (_loginOutBtn == nil) {
+        self.loginOutBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.loginOutBtn.frame = CGRectMake(40, kScreenHeight - 44, kScreenWidth - 80, 44);
+        self.loginOutBtn.backgroundColor = [UIColor redColor];
+        [self.loginOutBtn setTitle:@"退出登录" forState:UIControlStateNormal];
+        [self.loginOutBtn addTarget:self action:@selector(loginOutAction) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _loginOutBtn;
+}
+
 #pragma mark -------自定义方法
 
 //注册
@@ -106,16 +124,28 @@
 
 //登录
 - (void)loginAction{
+    UITabBarController *chatTabBarC = [[UITabBarController alloc] init];
+    MessageViewController *messageVC = [[MessageViewController alloc] init];
+    UINavigationController *messageNav = [[UINavigationController alloc] initWithRootViewController:messageVC];
+    messageNav.tabBarItem.title = @"消息";
+    LinkManViewController *linkVC = [[LinkManViewController alloc] init];
+    UINavigationController *linkNav = [[UINavigationController alloc] initWithRootViewController:linkVC];
+    linkNav.tabBarItem.title = @"好友";
+    chatTabBarC.viewControllers = @[messageNav, linkNav];
     [ProgressHUD show:@"正在抢滩登陆"];
     //异步登陆账号
-    [[EaseMob sharedInstance].chatManager loginWithUsername:self.username.text password:self.userPassword.text error:nil];
-        [ProgressHUD showSuccess:@"登陆成功"];
-        //获取数据库中数据
-        [[EaseMob sharedInstance].chatManager loadDataFromDatabase];
-        //获取群组列表
-        [[EaseMob sharedInstance].chatManager asyncFetchMyGroupsList];
-        MessageViewController *messageVC = [[MessageViewController alloc] init];
-        [self.navigationController pushViewController:messageVC animated:YES];
+    [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:self.username.text password:self.userPassword.text completion:^(NSDictionary *loginInfo, EMError *error) {
+        if (!error) {
+            [ProgressHUD showSuccess:@"登陆成功"];
+            //获取数据库中数据
+            [[EaseMob sharedInstance].chatManager loadDataFromDatabase];
+            //获取群组列表
+            [[EaseMob sharedInstance].chatManager asyncFetchMyGroupsList];
+            [self.navigationController presentViewController:chatTabBarC animated:YES completion:nil];
+        }else{
+            [ProgressHUD showError:@"登录失败"];
+        }
+    } onQueue:nil];
 }
 
 //判断输入的内容是否为空
@@ -130,6 +160,21 @@
     return NO;
 }
 
+//退出登录
+- (void)loginOutAction{
+    [[EaseMob sharedInstance].chatManager asyncLogoffWithUnbindDeviceToken:YES completion:^(NSDictionary *info, EMError *error) {
+        if (!error) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"当前用户已退出" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil];
+            [alert show];
+            self.username.text = @"";
+            self.userPassword.text = @"";
+        }else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"退出失败" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil];
+            [alert show];
+        }
+    } onQueue:nil];
+}
+
 
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -139,13 +184,26 @@
 - (void)didReceiveBuddyRequest:(NSString *)username
                        message:(NSString *)message{
     NSString *str = [NSString stringWithFormat:@"%@请求加你为好友", username];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-    [alert show];
-    EMError *error = nil;
-    BOOL isSuccess = [[EaseMob sharedInstance].chatManager acceptBuddyRequest:username error:&error];
-    if (isSuccess && !error) {
-        NSLog(@"发送同意成功");
-    }
+    UIAlertController *alertC = [UIAlertController alertControllerWithTitle:str message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        EMError *error = nil;
+       [[EaseMob sharedInstance].chatManager acceptBuddyRequest:username error:&error];
+        if (error == nil) {
+            NSLog(@"发送同意成功");
+        }
+    }];
+    //拒绝加好友
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"拒绝" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        EMError *error = nil;
+        [[EaseMob sharedInstance].chatManager rejectBuddyRequest:username reason:@"未知人士" error:&error];
+        if (error == nil) {
+            NSLog(@"发送同意成功");
+        }
+    }];
+
+    [alertC addAction:action];
+    [alertC addAction:action1];
+    [self presentViewController:alertC animated:YES completion:nil];
 }
 
 - (void)didAcceptedByBuddy:(NSString *)username{
