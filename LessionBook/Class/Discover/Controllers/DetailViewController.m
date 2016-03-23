@@ -47,19 +47,15 @@
     tableViewHead.authorNameLabel.text = self.zuozheString;
     tableViewHead.describeLabel.text   = self.miaoshuString;
     [tableViewHead.shareBtn addTarget:self action:@selector(shareAction) forControlEvents:UIControlEventTouchUpInside];
+    [tableViewHead.collectionBtn addTarget:self action:@selector(collectionAction) forControlEvents:UIControlEventTouchUpInside];
     
     self.tableView.tableHeaderView = tableViewHead;
 }
 #pragma mark -- 头部分享按钮
 -(void)shareAction{
-
-    
-    
-    
-    
-    NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"DIDI2" ofType:@"jpg"];
-    NSData *date = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.pictchString]];
-    NSLog(@"%@",imagePath);
+  //  NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"DIDI2" ofType:@"jpg"];
+   // NSData *date = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.pictchString]];
+   // NSLog(@"%@",imagePath);
     //构造分享内容
     id<ISSContent> publishContent = [ShareSDK content:[NSString stringWithFormat:@"%@%@",self.titleString,self.pictchString]
                                        defaultContent:@"测试一下"
@@ -94,7 +90,9 @@
                             }];
     
 }
-
+-(void)collectionAction{
+    
+}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dateArray.count;
     

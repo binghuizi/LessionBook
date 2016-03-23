@@ -68,7 +68,7 @@
                 <outlet property="twoBtn" destination="qAH-uq-p7S" id="hnC-vs-HLN"/>
                 <outlet property="typeBtn" destination="jSq-Qu-519" id="aWe-WB-Y8F"/>
             </connections>
-            <point key="canvasLocation" x="463.5" y="278"/>
+            <point key="canvasLocation" x="603.5" y="286"/>
         </tableViewCell>
     </objects>
     <resources>
