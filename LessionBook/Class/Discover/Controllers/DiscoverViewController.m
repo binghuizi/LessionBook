@@ -57,6 +57,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"马里亚纳听书";
+    //导航栏颜色
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
+    
+    
     [self startTimer];
     [self.view addSubview:self.titleView];
     [self.view addSubview:self.typeView];

@@ -34,7 +34,7 @@ static NSString *_didDownload = @"did";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationController.navigationBar.barTintColor = [UIColor brownColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
     self.navigationController.navigationBar.translucent = NO;
     self.navigationItem.title = @"下载";
     [self.view addSubview:self.tableView];
@@ -93,7 +93,36 @@ static NSString *_didDownload = @"did";
     }
 }
 
+#pragma mark ------tableView可编辑状态
 
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated{
+    [self.tableView setEditing:YES animated:YES];
+}
+//让所有cell处于可编辑状态
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
+//选择编辑样式
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (!self.selectdidDownload) {
+        detailModel *model = self.downlistArray[indexPath.row];
+        DownlaodTask *task = [DownlaodTask shareInstance];
+        [task deleteModel:model];
+        [self.downlistArray removeObjectAtIndex:indexPath.row];
+    }else{
+        NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+        detailModel *model = self.didloadArray[indexPath.row];
+        NSString *filePath = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.m4a", model.name]];
+        NSFileManager *manager = [NSFileManager defaultManager];
+        [manager removeItemAtPath:filePath error:nil];
+        [self.didloadArray removeObjectAtIndex:indexPath.row];
+    }
+    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
 
 #pragma mark ----------Lazyloding
 

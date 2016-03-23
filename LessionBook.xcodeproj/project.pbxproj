@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A0042821CA23E0D00904873 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CDC1C9B910C00950794 /* libsqlite3.tbd */; };
 		7A1A79B31C9FE7AE0001C962 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1A79B21C9FE7AE0001C962 /* libicucore.tbd */; };
 		7A1A79B51C9FE7CE0001C962 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1A79B41C9FE7CE0001C962 /* libstdc++.tbd */; };
 		7A1A79B71C9FE7FE0001C962 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1A79B61C9FE7FE0001C962 /* JavaScriptCore.framework */; };
@@ -15,7 +16,6 @@
 		7A389CAA1C9B873000950794 /* ChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A389CA91C9B873000950794 /* ChatRoomViewController.m */; };
 		7A389CD91C9B90C900950794 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CD81C9B90C800950794 /* MobileCoreServices.framework */; };
 		7A389CDB1C9B90D300950794 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CDA1C9B90D300950794 /* CFNetwork.framework */; };
-		7A389CDD1C9B910C00950794 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CDC1C9B910C00950794 /* libsqlite3.tbd */; };
 		7A389CDF1C9B911F00950794 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CDE1C9B911F00950794 /* libstdc++.6.0.9.tbd */; };
 		7A389CE11C9B912B00950794 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CE01C9B912B00950794 /* libz.tbd */; };
 		7A389CE31C9B913C00950794 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CE21C9B913C00950794 /* libiconv.tbd */; };
@@ -29,7 +29,6 @@
 		7A45325A1C9F9C1800EDB43C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4532591C9F9C1800EDB43C /* CoreTelephony.framework */; };
 		7A45325C1C9F9C3500EDB43C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A45325B1C9F9C3500EDB43C /* SystemConfiguration.framework */; };
 		7A45325E1C9F9C4700EDB43C /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A45325D1C9F9C4700EDB43C /* libz.1.2.5.tbd */; };
-		7A4532601C9F9C7700EDB43C /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A45325F1C9F9C7700EDB43C /* libicucore.tbd */; };
 		7A4532621C9F9C9F00EDB43C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4532611C9F9C9F00EDB43C /* AVFoundation.framework */; };
 		7A4532641C9F9CAE00EDB43C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4532631C9F9CAE00EDB43C /* MediaPlayer.framework */; };
 		7A4623EF1C992FED00A6750D /* TypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4623EE1C992FED00A6750D /* TypeModel.m */; };
@@ -243,7 +242,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A389CDD1C9B910C00950794 /* libsqlite3.tbd in Frameworks */,
+				7A0042821CA23E0D00904873 /* libsqlite3.tbd in Frameworks */,
 				7A1A79B91C9FE81B0001C962 /* ImageIO.framework in Frameworks */,
 				7A1A79B71C9FE7FE0001C962 /* JavaScriptCore.framework in Frameworks */,
 				7A1A79B51C9FE7CE0001C962 /* libstdc++.tbd in Frameworks */,
@@ -251,8 +250,6 @@
 				7A1A79B31C9FE7AE0001C962 /* libicucore.tbd in Frameworks */,
 				7A4532641C9F9CAE00EDB43C /* MediaPlayer.framework in Frameworks */,
 				7A4532621C9F9C9F00EDB43C /* AVFoundation.framework in Frameworks */,
-				7A389CDD1C9B910C00950794 /* libsqlite3.tbd in Frameworks */,
-				7A4532601C9F9C7700EDB43C /* libicucore.tbd in Frameworks */,
 				7A45325E1C9F9C4700EDB43C /* libz.1.2.5.tbd in Frameworks */,
 				7A45325C1C9F9C3500EDB43C /* SystemConfiguration.framework in Frameworks */,
 				7A45325A1C9F9C1800EDB43C /* CoreTelephony.framework in Frameworks */,
