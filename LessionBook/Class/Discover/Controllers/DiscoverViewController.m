@@ -309,6 +309,7 @@
         touchButton.frame = imageView.frame;
         touchButton.tag = i;
         [touchButton addTarget:self action:@selector(pictuAction:) forControlEvents:UIControlEventTouchUpInside];
+        
         [self.scrollView addSubview:touchButton];
     }
     //区头添加
@@ -480,6 +481,9 @@
 -(void)titleName:(NSString *)titleName idString:(NSString *)idString{
     
 }
+
+
+
 //懒加载collectionView
 -(UICollectionView *)collectionView{
     if (_collectionView == nil) {

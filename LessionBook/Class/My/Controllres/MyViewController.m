@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationController.navigationBar.backgroundColor = [UIColor greenColor];
+    self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:0 green:201/255.0f blue:255/255.0f alpha:1.0];
     self.myArray = [NSArray arrayWithObjects:@"我的收藏", @"最近收听", @"定时关闭", @"更多设置", @"书友畅聊", nil];
     self.detailArray = [NSArray arrayWithObjects:@"暂无收藏", @"暂无收听记录", @"", @"", @"", nil];
     [self confineHeadView];
@@ -99,7 +99,7 @@
 - (void)confineHeadView{
     self.headView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, 200)];
     self.tableView.tableHeaderView = self.headView;
-    self.headView.backgroundColor = [UIColor greenColor];
+    self.headView.backgroundColor = [UIColor colorWithRed:0 green:201/255.0f blue:255/255.0f alpha:1.0];
     UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     loginBtn.frame = CGRectMake(20, 70, 100, 100);
     [loginBtn setTitle:@"登陆/注册" forState:UIControlStateNormal];
