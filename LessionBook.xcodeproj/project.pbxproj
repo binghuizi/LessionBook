@@ -242,8 +242,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A0042821CA23E0D00904873 /* libsqlite3.tbd in Frameworks */,
+
+
+				7A0042821CA23E0D00904873 /* libsqlite3.tbd in 
 				7A1A79B91C9FE81B0001C962 /* ImageIO.framework in Frameworks */,
+				7A389CDD1C9B910C00950794 /* libsqlite3.tbd in Frameworks */,
 				7A1A79B71C9FE7FE0001C962 /* JavaScriptCore.framework in Frameworks */,
 				7A1A79B51C9FE7CE0001C962 /* libstdc++.tbd in Frameworks */,
 				7A389CE11C9B912B00950794 /* libz.tbd in Frameworks */,

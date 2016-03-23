@@ -44,6 +44,8 @@
     //设置应用的BmobKey
     [Bmob registerWithAppKey:@"209affb0270dad4053ab8b1ded9b56fa"];
     
+    
+    
     //注册环信
     //registerSDKWithAppKey
     [[EaseMob sharedInstance] registerSDKWithAppKey:kHuanxinAppKey apnsCertName:nil];
@@ -147,19 +149,32 @@
     return YES;
 }
 
-//-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
-//    return [WeiboSDK handleOpenURL:url delegate:self];
-//}
+
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url{
+    return [WeiboSDK handleOpenURL:url delegate:self];
+}
+-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+
+    return [WeiboSDK handleOpenURL:url delegate:self];
+}
 //-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
 //    return [WeiboSDK handleOpenURL:url delegate:self];
 //}
 
-- (BOOL)application:(UIApplication *)application
-      handleOpenURL:(NSURL *)url
-{
-    return [ShareSDK handleOpenURL:url
-                        wxDelegate:self];
-}
+
+//- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
+//    return [WeiboSDK handleOpenURL:url delegate:self];
+//    
+//   }
+
+//- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
+//    return [WeiboSDK handleOpenURL:url delegate:self];
+//}
+//
+//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+//    return [WeiboSDK handleOpenURL:url delegate:self];
+//}
+
 
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url

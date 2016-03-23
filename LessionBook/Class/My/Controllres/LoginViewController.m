@@ -10,6 +10,8 @@
 #import "RegisterViewController.h"
 #import <BmobSDK/BmobUser.h>
 #import "ProgressHUD.h"
+#import <WeiboSDK.h>
+
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *accountNumber;
 @property (weak, nonatomic) IBOutlet UITextField *passWard;
@@ -57,7 +59,31 @@
 
 //新浪微博登录
 - (void)mcroblogLoginBtn:(UIButton *)btn{
+    //请求授权信息
+    WBAuthorizeRequest *request = [WBAuthorizeRequest request];
+    request.redirectURI = @"https://api.weibo.com/oauth2/default.html";
+    request.scope = @"all";
+    [WeiboSDK sendRequest:request];
     
+    //接收回调信息并与Bmob账号进行绑定，首次登录时Bmob后台会创建一个账号
+    WBAuthorizeResponse *response = [WBAuthorizeResponse response];
+    NSString *accessToken = [response accessToken];
+    NSString *uid = [response userID];
+    NSDate *expiresDate = [response expirationDate];
+    NSLog(@"acessToken:%@",accessToken);
+    NSLog(@"UserId:%@",uid);
+    NSLog(@"expiresDate:%@",expiresDate);
+    NSDictionary *dic = @{@"access_token":accessToken,@"uid":uid,@"expirationDate":expiresDate};
+   //通过授权信息注册登录
+    [BmobUser loginInBackgroundWithAuthorDictionary:dic platform:BmobSNSPlatformSinaWeibo block:^(BmobUser *user, NSError *error) {
+        if (error) {
+            NSLog(@"weibo login error:%@",error);
+            [ProgressHUD showError:@"微博登陆失败" Interaction:YES];
+        } else if (user){
+            NSLog(@"user objectid is :%@",user.objectId);
+            [ProgressHUD showSuccess:@"微博登陆成功" Interaction:YES];
+        }
+    }];
 }
 - (void)QQLoginBtn:(UIButton *)btn{
     
