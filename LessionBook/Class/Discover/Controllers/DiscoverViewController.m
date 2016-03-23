@@ -18,6 +18,7 @@
 #import "DetailViewController.h"
 #import "detailModel.h"
 #import "TypeViewController.h"
+
 @interface DiscoverViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate, imageviewDelegate>
 {
    
@@ -478,8 +479,10 @@
 
 
 }
--(void)titleName:(NSString *)titleName idString:(NSString *)idString{
-    
+-(void)typeIdString:(NSString *)typeId{
+    TypeViewController *typeVc = [[TypeViewController alloc]init];
+    typeVc.idString = typeId;
+    [self.navigationController pushViewController:typeVc animated:YES];
 }
 
 
