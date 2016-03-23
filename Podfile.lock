@@ -30,13 +30,33 @@ PODS:
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
-  - ShareSDK3 (3.2.3):
-    - ShareSDK3/ShareSDK (= 3.2.3)
-  - ShareSDK3/ShareSDK (3.2.3)
-  - ShareSDK3/ShareSDKPlatforms/QQ (3.2.3)
-  - ShareSDK3/ShareSDKPlatforms/SinaWeibo (3.2.3)
-  - ShareSDK3/ShareSDKPlatforms/WeChat (3.2.3)
-  - ShareSDK3/ShareSDKUI (3.2.3)
+  - ShareSDK2 (2.12.4):
+    - ShareSDK2/Core (= 2.12.4)
+  - ShareSDK2/Connection/QQ (2.12.4):
+    - ShareSDK2/Extend/QQConnectSDK
+  - ShareSDK2/Connection/QZone (2.12.4):
+    - ShareSDK2/Extend/QQConnectSDK
+  - ShareSDK2/Connection/SinaWeibo (2.12.4):
+    - ShareSDK2/Extend/SinaWeiboSDK
+  - ShareSDK2/Connection/WeChat (2.12.4):
+    - ShareSDK2/Extend/WeChatSDK
+  - ShareSDK2/Core (2.12.4)
+  - ShareSDK2/Extend/QQConnectSDK (2.12.4)
+  - ShareSDK2/Extend/SinaWeiboSDK (2.12.4)
+  - ShareSDK2/Extend/WeChatSDK (2.12.4)
+  - ShareSDK2/UI (2.12.4):
+    - ShareSDK2/UI/Flat (= 2.12.4)
+    - ShareSDK2/UI/iPadDefault (= 2.12.4)
+    - ShareSDK2/UI/iPadSimple (= 2.12.4)
+    - ShareSDK2/UI/iPhoneAppRecommend (= 2.12.4)
+    - ShareSDK2/UI/iPhoneDefault (= 2.12.4)
+    - ShareSDK2/UI/iPhoneSimple (= 2.12.4)
+  - ShareSDK2/UI/Flat (2.12.4)
+  - ShareSDK2/UI/iPadDefault (2.12.4)
+  - ShareSDK2/UI/iPadSimple (2.12.4)
+  - ShareSDK2/UI/iPhoneAppRecommend (2.12.4)
+  - ShareSDK2/UI/iPhoneDefault (2.12.4)
+  - ShareSDK2/UI/iPhoneSimple (2.12.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0.4)
@@ -45,11 +65,13 @@ DEPENDENCIES:
   - EaseUI (from `https://github.com/easemob/easeui-ios-cocoapods.git`)
   - MOBFoundation
   - SDWebImage
-  - ShareSDK3
-  - ShareSDK3/ShareSDKPlatforms/QQ
-  - ShareSDK3/ShareSDKPlatforms/SinaWeibo
-  - ShareSDK3/ShareSDKPlatforms/WeChat
-  - ShareSDK3/ShareSDKUI
+  - ShareSDK2
+  - ShareSDK2/Connection/QQ
+  - ShareSDK2/Connection/QZone
+  - ShareSDK2/Connection/SinaWeibo
+  - ShareSDK2/Connection/WeChat
+  - ShareSDK2/UI
+  - ShareSDK2/UI/iPhoneDefault
 
 EXTERNAL SOURCES:
   EaseMobSDKFull:
@@ -76,6 +98,6 @@ SPEC CHECKSUMS:
   MOBFoundation: 79efc94db961fe5a08cf32de69166f6a29a3b2b5
   MWPhotoBrowser: ba0d0c09ffda3a7ea10093518738c502c1c7141c
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
-  ShareSDK3: 76a2b7bee33fc7360fbc9670adb3e9e06534ee82
+  ShareSDK2: cfe71b8d026bf8f7d592396ab195937bc89bbead
 
 COCOAPODS: 0.39.0
