@@ -99,7 +99,7 @@
             
             return;
         }
-        UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"申请提示" message:@"你想说点什么" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"好友邀请" message:@"好友验证信息" preferredStyle:UIAlertControllerStyleAlert];
         __weak typeof(alertC) weakAlert = alertC;
         [alertC addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
             NSString *str = [weakAlert.message stringByAppendingString:textField.text];

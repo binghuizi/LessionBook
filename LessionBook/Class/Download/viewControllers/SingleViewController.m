@@ -38,6 +38,7 @@
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
     [[EaseChatBarMoreView appearance] setMoreViewBackgroundColor:[UIColor colorWithRed:240 / 255.0 green:242 / 255.0 blue:247 / 255.0 alpha:1.0]];
     [self setBarBtnItem];
+    
     [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
 }
 

@@ -11,6 +11,7 @@
 #import "LinkManViewController.h"
 #import <EaseMob.h>
 #import "ProgressHUD.h"
+#import <BmobSDK/Bmob.h>
 
 @interface ChatRoomViewController ()<UITextFieldDelegate, EMChatManagerDelegate>
 
@@ -162,6 +163,8 @@
 
 //退出登录
 - (void)loginOutAction{
+
+    
     [[EaseMob sharedInstance].chatManager asyncLogoffWithUnbindDeviceToken:YES completion:^(NSDictionary *info, EMError *error) {
         if (!error) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"当前用户已退出" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil];
