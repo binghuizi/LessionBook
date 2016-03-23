@@ -9,10 +9,13 @@
 #import "MyViewController.h"
 #import "FavoriteViewController.h"
 #import "RecordViewController.h"
+#import "MessageViewController.h"
+#import "LinkManViewController.h"
 #import "TimeView.h"
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
-#import "ChatRoomViewController.h"
+#import <EaseMob.h>
+#import <BmobSDK/Bmob.h>
 
 @interface MyViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, retain) UITableView *tableView;
@@ -29,8 +32,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
-    self.myArray = [NSArray arrayWithObjects:@"我的收藏", @"最近收听", @"定时关闭", @"更多设置", @"书友畅聊", nil];
-    self.detailArray = [NSArray arrayWithObjects:@"暂无收藏", @"暂无收听记录", @"", @"", @"", nil];
+    self.myArray = [NSArray arrayWithObjects:@"我的收藏", @"最近收听", @"定时关闭", @"更多设置", @"书友畅聊", @"账号设置", nil];
+    self.detailArray = [NSArray arrayWithObjects:@"暂无收藏", @"暂无收听记录", @"", @"", @"", @"",nil];
     [self confineHeadView];
     [self.view addSubview:self.tableView];
     
@@ -60,6 +63,8 @@
         cell.imageView.image = [UIImage imageNamed:@"userinfo_setting"];
     }else if (indexPath.row == 4){
         cell.imageView.image = [UIImage imageNamed:@"exp_watch"];
+    }else if (indexPath.row == 5){
+        cell.imageView.image = [UIImage imageNamed:@"icon_user"];
     }
     return cell;
 }
@@ -86,9 +91,36 @@
             break;
         case 4:
         {
-            ChatRoomViewController *chatroomVC = [[ChatRoomViewController alloc] init];
-            UINavigationController *chatroomNav = [[UINavigationController alloc] initWithRootViewController:chatroomVC];
-            [self.navigationController presentViewController:chatroomNav animated:YES completion:nil];
+            BmobUser *user = [BmobUser getCurrentUser];
+            if (user != nil) {
+                UITabBarController *chatTabBarC = [[UITabBarController alloc] init];
+                MessageViewController *messageVC = [[MessageViewController alloc] init];
+                UINavigationController *messageNav = [[UINavigationController alloc] initWithRootViewController:messageVC];
+                messageNav.tabBarItem.title = @"消息";
+                LinkManViewController *linkVC = [[LinkManViewController alloc] init];
+                UINavigationController *linkNav = [[UINavigationController alloc] initWithRootViewController:linkVC];
+                linkNav.tabBarItem.title = @"好友";
+                chatTabBarC.viewControllers = @[messageNav, linkNav];
+                [self.navigationController presentViewController:chatTabBarC animated:YES completion:nil];
+            }
+        }
+            break;
+        //退出登录
+        case 5:
+        {
+            BmobUser *currntUser = [BmobUser getCurrentUser];
+            if (currntUser != nil) {
+                [[EaseMob sharedInstance].chatManager asyncLogoffWithUnbindDeviceToken:YES completion:^(NSDictionary *info, EMError *error) {
+                    if (!error) {
+                        [BmobUser logout];
+                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"当前用户已退出" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil];
+                        [alert show];
+                    }else{
+                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"退出失败" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil];
+                        [alert show];
+                    }
+                } onQueue:nil];
+            }
         }
             break;
         default:

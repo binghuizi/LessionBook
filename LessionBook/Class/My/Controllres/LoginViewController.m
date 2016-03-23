@@ -11,8 +11,9 @@
 #import <BmobSDK/BmobUser.h>
 #import "ProgressHUD.h"
 #import <WeiboSDK.h>
+#import <EaseMob.h>
 
-@interface LoginViewController ()
+@interface LoginViewController ()<EMChatManagerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *accountNumber;
 @property (weak, nonatomic) IBOutlet UITextField *passWard;
 
@@ -38,6 +39,8 @@
     [self.mcroblogLoginBtn addTarget:self action:@selector(mcroblogLoginBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.QQLoginBtn addTarget:self action:@selector(QQLoginBtn:) forControlEvents:UIControlEventTouchUpInside];
     
+    
+    //添加代理
 }
 - (void)leftTitleAction:(UIBarButtonItem *)btn{
     UIStoryboard *myStoryBoard = [UIStoryboard storyboardWithName:@"My" bundle:nil];
@@ -47,10 +50,22 @@
 }
 - (void)accountLogin:(UIButton *)btn{
     //BmobUser *buser = [[BmobUser alloc] init];
-    [BmobUser loginInbackgroundWithAccount:self.accountNumber.text
-                                andPassword:self.passWard.text block:^(BmobUser *user, NSError *error) {
+    [ProgressHUD show:@"正在抢滩登陆"];
+    [BmobUser loginInbackgroundWithAccount:self.accountNumber.text andPassword:self.passWard.text block:^(BmobUser *user, NSError *error) {
                                     if (user) {
-                                        [ProgressHUD showSuccess:@"登陆成功"];
+                                        //异步登陆账号
+                                        [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:self.accountNumber.text password:self.passWard.text completion:^(NSDictionary *loginInfo, EMError *error) {
+                                            if (!error) {
+                                                [ProgressHUD showSuccess:@"登陆成功"];
+                                                //获取数据库中数据
+                                                [[EaseMob sharedInstance].chatManager loadDataFromDatabase];
+                                                //获取群组列表
+                                                [[EaseMob sharedInstance].chatManager asyncFetchMyGroupsList];
+//                                                [self.navigationController popViewControllerAnimated:YES];
+                                            }else{
+                                                [ProgressHUD showError:@"登录失败"];
+                                            }
+                                        } onQueue:nil];
                                     } else {
                                         [ProgressHUD showError:[NSString stringWithFormat:@"%@", error] Interaction:YES];
                                     }
@@ -95,6 +110,7 @@
     //view结束编辑，回收键盘
     [self.view endEditing:YES];
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -109,5 +125,23 @@
     // Pass the selected object to the new view controller.
 }
 */
+//环信代理
+- (void)didReceiveBuddyRequest:(NSString *)username
+                       message:(NSString *)message{
+    NSString *str = [NSString stringWithFormat:@"--------------%@请求加你为好友", username];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil];
+    [alert show];
+    EMError *error = nil;
+    [[EaseMob sharedInstance].chatManager acceptBuddyRequest:username error:&error];
+    if (error == nil) {
+        NSLog(@"----------同意加好友");
+    }
+}
+
+- (void)didAcceptedByBuddy:(NSString *)username{
+    NSString *str = [NSString stringWithFormat:@"%@同意加你为好友", username];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    [alert show];
+}
 
 @end

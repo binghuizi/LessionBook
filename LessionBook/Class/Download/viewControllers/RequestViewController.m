@@ -8,8 +8,9 @@
 
 #import "RequestViewController.h"
 #import <EaseMob.h>
+#import <BmobSDK/Bmob.h>
 
-@interface RequestViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface RequestViewController ()<UITableViewDataSource, UITableViewDelegate, EMChatManagerDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UITextField *search;
 
@@ -28,7 +29,8 @@
     self.navigationItem.titleView = self.search;
     [self showRightBtn];
     [self showBackButton:@"ic_arrow_general2"];
-    
+    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
+
 }
 
 #pragma mark -------------UITableViewDataSource
@@ -38,21 +40,55 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    static NSString *cellID = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
+    }
+    BmobUser *user = self.listArray[indexPath.row];
+    cell.textLabel.text = user.username;
+    cell.imageView.image = [UIImage imageNamed:@"surprise_24"];
     return cell;
 }
 
 
 #pragma mark -------------UITableViewDelegate
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    BmobUser *user = self.listArray[indexPath.row];
+    NSString *loginUsername = [[EaseMob sharedInstance].chatManager apnsNickname];
+    if ([user.username isEqualToString:loginUsername]) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"NO" message:@"不能添加自己为好友" delegate:nil cancelButtonTitle:NSLocalizedString(@"ok", @"OK") otherButtonTitles:nil];
+        [alertView show];
+        return;
+    }
+    UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"好友邀请" message:@"好友验证信息" preferredStyle:UIAlertControllerStyleAlert];
+    __weak typeof(alertC) weakAlert = alertC;
+    [alertC addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        NSString *str = [weakAlert.message stringByAppendingString:textField.text];
+        weakAlert.message = str;
+    }];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        EMError *error = nil;
+      bool isSuccess = [[EaseMob sharedInstance].chatManager addBuddy:user.username message:@"我想加您为好友" error:&error];
+        if (isSuccess) {
+            NSLog(@"------发送成功");
+        }else{
+            NSLog(@"----%@",error);
+        }
+    }];
+    [alertC addAction:action];
+    [self.navigationController presentViewController:alertC animated:YES completion:nil];
+}
+
+
 #pragma mark -------------Lazyloading
 
 - (UITableView *)tableView{
     if (_tableView == nil) {
-        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, kScreenWidth, kScreenHeight - 108) style:UITableViewStylePlain];
+        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - 108) style:UITableViewStylePlain];
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
-        [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     }
     return _tableView;
 }
@@ -86,36 +122,22 @@
 
 #pragma mark -------------CustomMethod
 
+//搜索好友
 - (void)seachFriend{
     [self.search resignFirstResponder];
-    if(_search.text.length > 0)
-    {
-//#warning 由用户体系的用户，需要添加方法在已有的用户体系中查询符合填写内容的用户
-//#warning 以下代码为测试代码，默认用户体系中有一个符合要求的同名用户
-        NSString *loginUsername = [[EaseMob sharedInstance].chatManager apnsNickname];
-        if ([_search.text isEqualToString:loginUsername]) {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"NO" message:@"不能添加自己为好友" delegate:nil cancelButtonTitle:NSLocalizedString(@"ok", @"OK") otherButtonTitles:nil];
-            [alertView show];
-            
-            return;
+    //查询用户表
+    BmobQuery *bquery = [BmobUser query];
+    [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        if (self.listArray.count > 0) {
+            [self.listArray removeAllObjects];
         }
-        UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"好友邀请" message:@"好友验证信息" preferredStyle:UIAlertControllerStyleAlert];
-        __weak typeof(alertC) weakAlert = alertC;
-        [alertC addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-            NSString *str = [weakAlert.message stringByAppendingString:textField.text];
-            weakAlert.message = str;
-        }];
-        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            EMError *error = nil;
-            [[EaseMob sharedInstance].chatManager addBuddy:_search.text message:@"我想加您为好友" error:&error];
-            if (error == nil) {
-                NSLog(@"发送成功");
+        for (BmobUser *user in array) {
+            if ([user.username containsString:self.search.text]) {
+                [self.listArray addObject:user];
             }
-        }];
-        [alertC addAction:action];
-        [self.navigationController presentViewController:alertC animated:YES completion:nil];
-    }
+        }
+        [self.tableView reloadData];
+    }];
 }
-
 
 @end

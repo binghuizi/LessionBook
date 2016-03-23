@@ -31,7 +31,7 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
 
-@interface AppDelegate ()<WeiboSDKDelegate>
+@interface AppDelegate ()
 
 @end
 
@@ -50,7 +50,7 @@
     //registerSDKWithAppKey
     [[EaseMob sharedInstance] registerSDKWithAppKey:kHuanxinAppKey apnsCertName:nil];
     [[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
-    [[EaseMob sharedInstance].chatManager setIsAutoFetchBuddyList:YES];
+//    [[EaseMob sharedInstance].chatManager setIsAutoFetchBuddyList:YES];
     
     [[EaseSDKHelper shareHelper] easemobApplication:application
                       didFinishLaunchingWithOptions:launchOptions
