@@ -13,9 +13,9 @@
 #import <AFHTTPSessionManager.h>
 #import "detailModel.h"
 #import <ShareSDK/ShareSDK.h>
-
-
 #import <QuartzCore/QuartzCore.h>
+
+
 @interface DetailViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,strong) UITableView *tableView;
 @property(nonatomic,strong) NSMutableArray *dateArray;
