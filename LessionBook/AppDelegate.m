@@ -31,7 +31,7 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
 
-@interface AppDelegate ()<WeiboSDKDelegate>
+@interface AppDelegate ()<EMChatManagerDelegate>
 
 @end
 
@@ -44,12 +44,14 @@
     //设置应用的BmobKey
     [Bmob registerWithAppKey:@"209affb0270dad4053ab8b1ded9b56fa"];
     
+    
+    
     //注册环信
     //registerSDKWithAppKey
     [[EaseMob sharedInstance] registerSDKWithAppKey:kHuanxinAppKey apnsCertName:nil];
     [[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
-    [[EaseMob sharedInstance].chatManager setIsAutoFetchBuddyList:YES];
-    
+//    [[EaseMob sharedInstance].chatManager setIsAutoFetchBuddyList:YES];
+    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
     [[EaseSDKHelper shareHelper] easemobApplication:application
                       didFinishLaunchingWithOptions:launchOptions
                                              appkey:kHuanxinAppKey
@@ -147,19 +149,32 @@
     return YES;
 }
 
-//-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
-//    return [WeiboSDK handleOpenURL:url delegate:self];
-//}
+
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url{
+    return [WeiboSDK handleOpenURL:url delegate:self];
+}
+-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+
+    return [WeiboSDK handleOpenURL:url delegate:self];
+}
 //-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
 //    return [WeiboSDK handleOpenURL:url delegate:self];
 //}
 
-- (BOOL)application:(UIApplication *)application
-      handleOpenURL:(NSURL *)url
-{
-    return [ShareSDK handleOpenURL:url
-                        wxDelegate:self];
-}
+
+//- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
+//    return [WeiboSDK handleOpenURL:url delegate:self];
+//    
+//   }
+
+//- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
+//    return [WeiboSDK handleOpenURL:url delegate:self];
+//}
+//
+//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+//    return [WeiboSDK handleOpenURL:url delegate:self];
+//}
+
 
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
@@ -198,6 +213,26 @@
 }
 
 
+- (void)didLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error{
+    NSLog(@"217 appdelegate--------%@", loginInfo);
+}
 
+- (void)didReceiveBuddyRequest:(NSString *)username message:(NSString *)message{
+    NSString *str = [NSString stringWithFormat:@"--------------%@请求加你为好友", username];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil];
+    [alert show];
+    EMError *error = nil;
+    [[EaseMob sharedInstance].chatManager acceptBuddyRequest:username error:&error];
+    if (error == nil) {
+        NSLog(@"----------同意加好友");
+    }else{
+        NSLog(@"----------失败");
+    }
 
+}
+- (void)didAcceptedByBuddy:(NSString *)username{
+    NSString *str = [NSString stringWithFormat:@"%@同意加你为好友", username];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    [alert show];
+}
 @end

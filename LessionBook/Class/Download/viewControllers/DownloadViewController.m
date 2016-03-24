@@ -10,7 +10,9 @@
 #import "VOSegmentedControl.h"
 #import "DownloadTableViewCell.h"
 #import "DownloadDidTableViewCell.h"
-#import "DidDownLoadViewController.h"
+
+
+
 
 #import "DownlaodTask.h"
 

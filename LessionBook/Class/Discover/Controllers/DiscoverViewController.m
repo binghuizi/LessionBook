@@ -274,10 +274,6 @@
         [cell.contentView addSubview:self.imageView];
         [cell.contentView addSubview:self.titleLabel];
         return cell;
-   
-    
-   
-    
 }
 #pragma mark --collectionView点击方法
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{

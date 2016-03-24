@@ -11,6 +11,7 @@
 #import "RequestViewController.h"
 #import "SingleViewController.h"
 #import "ChatBoxeViewController.h"
+#import "GroupViewController.h"
 
 @interface LinkManViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -95,7 +96,9 @@
         }
             break;
         case 1:
-            
+        {
+        
+        }
             break;
         case 2:
         {
@@ -106,7 +109,7 @@
         default:
         {
             EMBuddy *buddy = self.friendArray[indexPath.row - 3];
-            SingleViewController *singleVC = [[SingleViewController alloc] initWithConversationChatter:buddy.username conversationType:eConversationTypeChatRoom];
+            SingleViewController *singleVC = [[SingleViewController alloc] initWithConversationChatter:buddy.username conversationType:eConversationTypeChat];
             [self.navigationController pushViewController:singleVC animated:YES];
         }
             break;

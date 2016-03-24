@@ -11,7 +11,7 @@
 #import <EaseMobSDKFull/EaseMob.h>
 #import "SingleViewController.h"
 
-@interface MessageViewController ()<UITableViewDataSource, UITableViewDelegate, EMChatManagerDelegate>
+@interface MessageViewController ()<UITableViewDataSource, UITableViewDelegate,EMChatManagerDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -29,10 +29,9 @@
     //导航栏颜色
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
     [self showBackButton:@"ic_arrow_general2"];
+    [self showRightBarButton:@"清空"];
     self.tableView.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:self.tableView];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -51,6 +50,14 @@
     [self.tabBarController dismissViewControllerAnimated:YES completion:nil];
 }
 
+//移除所有会话记录
+-(void)leftTitleAction:(UIButton *)btn{
+    [[EaseMob sharedInstance].chatManager removeAllConversationsWithDeleteMessages:self append2Chat:YES];
+    self.conversionArray = [[EaseMob sharedInstance].chatManager loadAllConversationsFromDatabaseWithAppend2Chat:YES];
+    [self.tableView reloadData];
+}
+
+
 #pragma mark --------------UITableViewDataSource
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -63,23 +70,25 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
-    EMConversation *conversation = self.conversionArray[indexPath.row];
-    cell.textLabel.text = conversation.chatter;
-    EMMessage *message = conversation.latestMessage;
-    id<IEMMessageBody> msBody = message.messageBodies.firstObject;
-    switch (msBody.messageBodyType) {
-        case eMessageBodyType_Text:{
-            NSString *txt = ((EMTextMessageBody *)msBody).text;
-            cell.detailTextLabel.text = txt;
-            cell.imageView.layer.cornerRadius = 25;
-            cell.imageView.clipsToBounds = YES;
-            cell.imageView.image = [UIImage imageNamed:@"EaseUIResource.bundle/user"];
+    if (self.conversionArray.count > 0) {
+        EMConversation *conversation = self.conversionArray[indexPath.row];
+        cell.textLabel.text = conversation.chatter;
+        EMMessage *message = conversation.latestMessage;
+        id<IEMMessageBody> msBody = message.messageBodies.firstObject;
+        switch (msBody.messageBodyType) {
+            case eMessageBodyType_Text:{
+                NSString *txt = ((EMTextMessageBody *)msBody).text;
+                cell.detailTextLabel.text = txt;
+                cell.imageView.layer.cornerRadius = 25;
+                cell.imageView.clipsToBounds = YES;
+                cell.imageView.image = [UIImage imageNamed:@"EaseUIResource.bundle/user"];
+            }
+                break;
+            default:
+                break;
         }
-            break;
-        default:
-            break;
     }
-    return cell;
+       return cell;
 }
 
 #pragma mark --------------UITableViewDelegate
@@ -102,11 +111,6 @@
     return _tableView;
 }
 
-#pragma mark -------EMChatManagerDelegate
-
-- (void)didReceiveOfflineMessages:(NSArray *)offlineMessages{
-
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
