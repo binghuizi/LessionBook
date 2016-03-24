@@ -62,6 +62,7 @@
                     
                 } else {
                    [ProgressHUD showSuccess:@"注册成功" Interaction:YES];
+                    [self.navigationController popViewControllerAnimated:YES];
                 }
             }];
         }

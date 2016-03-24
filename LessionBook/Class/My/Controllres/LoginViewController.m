@@ -12,8 +12,16 @@
 #import "ProgressHUD.h"
 #import <WeiboSDK.h>
 #import <EaseMob.h>
+#import "AppDelegate.h"
+
+
+
 
 @interface LoginViewController ()<EMChatManagerDelegate>
+{
+    AppDelegate *myAppDelagate;
+
+}
 @property (weak, nonatomic) IBOutlet UITextField *accountNumber;
 @property (weak, nonatomic) IBOutlet UITextField *passWard;
 
@@ -30,7 +38,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
     self.title = @"登录";
     [self showBackButton:@"ic_arrow_general2"];
     [self showRightBarButton:@"注册"];
@@ -40,7 +48,12 @@
     [self.QQLoginBtn addTarget:self action:@selector(QQLoginBtn:) forControlEvents:UIControlEventTouchUpInside];
     
     
-    //添加代理
+
+    myAppDelagate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    
+    
+    
+
 }
 - (void)leftTitleAction:(UIBarButtonItem *)btn{
     UIStoryboard *myStoryBoard = [UIStoryboard storyboardWithName:@"My" bundle:nil];
@@ -52,6 +65,12 @@
     [ProgressHUD show:@"正在抢滩登陆"];
     [BmobUser loginInbackgroundWithAccount:self.accountNumber.text andPassword:self.passWard.text block:^(BmobUser *user, NSError *error) {
                                     if (user) {
+
+                                        
+                                       
+                                        
+                                        
+
                                         //异步登陆账号
                                         [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:self.accountNumber.text password:self.passWard.text completion:^(NSDictionary *loginInfo, EMError *error) {
                                             if (!error) {
@@ -64,7 +83,16 @@
                                             }else{
                                                 [ProgressHUD showError:@"登录失败"];
                                             }
+                                            
+                                            myAppDelagate.isLogin = 1;
+                                            myAppDelagate.userId = self.accountNumber.text;
+                                            [self.navigationController popViewControllerAnimated:YES];
+                                            
+                                            
+                                            
+                                            
                                         } onQueue:nil];
+
                                     } else {
                                         [ProgressHUD showError:[NSString stringWithFormat:@"%@", error] Interaction:YES];
                                     }
@@ -110,20 +138,19 @@
     [self.view endEditing:YES];
 }
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 //环信代理
 - (void)didReceiveBuddyRequest:(NSString *)username
                        message:(NSString *)message{
@@ -142,5 +169,6 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
     [alert show];
 }
+
 
 @end
