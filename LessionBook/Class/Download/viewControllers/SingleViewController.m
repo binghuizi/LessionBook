@@ -152,13 +152,6 @@
 //    [[EaseMob sharedInstance].chatManager removeConversationByChatter:@"8001" deleteMessages:YES append2Chat:YES];
 }
 
-- (void)willReceiveOfflineMessages{
-
-}
-
-- (void)didReceiveOfflineMessages:(NSArray *)offlineMessages{
-
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
