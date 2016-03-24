@@ -13,6 +13,9 @@
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
 #import "ChatRoomViewController.h"
+#import <BmobSDK/Bmob.h>
+#import "AppDelegate.h"
+#import <UIButton+WebCache.h>
 
 @interface MyViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, retain) UITableView *tableView;
@@ -102,15 +105,36 @@
     self.headView.backgroundColor = [UIColor colorWithRed:0 green:201/255.0f blue:255/255.0f alpha:1.0];
     UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     loginBtn.frame = CGRectMake(20, 70, 100, 100);
-    [loginBtn setTitle:@"登陆/注册" forState:UIControlStateNormal];
+    
     [loginBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     loginBtn.clipsToBounds = YES;
     loginBtn.layer.cornerRadius = 50;
     loginBtn.backgroundColor = [UIColor whiteColor];
     [loginBtn addTarget:self action:@selector(loginAction) forControlEvents:UIControlEventTouchUpInside];
     UILabel *welcomeLabel = [[UILabel alloc] initWithFrame:CGRectMake(150, 100, 250, 30)];
-    welcomeLabel.text = @"欢迎来到马里亚纳听书";
     welcomeLabel.textColor = [UIColor whiteColor];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    BmobUser *buser = [[BmobUser alloc] init];
+//    buser.username = responseObject[@"screen_name"];
+//    [buser setObject:responseObject[@"avatar_large"] forKey:@"headerImage"];
+    BmobUser *bUser = [BmobUser getCurrentUser];
+    if (bUser) {
+        //已登录
+        buser.username = appDelegate.dic[@"screen_name"];
+        [buser setObject:appDelegate.dic[@"avatar_large"] forKey:@"headerImage"];
+        welcomeLabel.text = buser.username;
+        [loginBtn setTitle:@"" forState:UIControlStateNormal];
+        [loginBtn sd_setImageWithURL:[NSURL URLWithString:appDelegate.dic[@"avatar_large"]] forState:UIControlStateNormal];
+        loginBtn.enabled = NO;
+        DSNLog(@"用户已存在");
+        DSNLog(@"%@", appDelegate.dic);
+    }else{
+        //未登录
+        [loginBtn setTitle:@"登陆/注册" forState:UIControlStateNormal];
+        welcomeLabel.text = @"欢迎来到马里亚纳听书";
+        loginBtn.enabled = YES;
+    }
+   
     
     [self.headView addSubview:loginBtn];
     [self.headView addSubview:welcomeLabel];

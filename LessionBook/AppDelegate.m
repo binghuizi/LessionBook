@@ -19,14 +19,9 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 #import "WXApi.h"
 #import "WeiboSDK.h"
-
-
+#import <AFNetworking/AFHTTPSessionManager.h>
+#import "ProgressHUD.h"
 #import <BmobSDK/Bmob.h>
-
-
-
-
-
 //腾讯开放平台（对应QQ和QQ空间）SDK头文件
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
@@ -43,7 +38,9 @@
     
     //设置应用的BmobKey
     [Bmob registerWithAppKey:@"209affb0270dad4053ab8b1ded9b56fa"];
-    
+    //微博分享
+    [WeiboSDK enableDebugMode:YES];
+    [WeiboSDK registerApp:kWeiboAppKey];
     
     
     //注册环信
@@ -136,55 +133,73 @@
                            appSecret:kWeiXinAppKey
                            wechatCls:[WXApi class]];
     
-    
-    
-    
-    
-    
-    
-    
-    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
 
 
--(BOOL)application:(UIApplication *)application openURL:(NSURL *)url{
-    return [WeiboSDK handleOpenURL:url delegate:self];
-}
--(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
-
-    return [WeiboSDK handleOpenURL:url delegate:self];
-}
-//-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+//-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url{
 //    return [WeiboSDK handleOpenURL:url delegate:self];
 //}
-
-
 //- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
 //    return [WeiboSDK handleOpenURL:url delegate:self];
 //    
 //   }
+-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    
+    return [WeiboSDK handleOpenURL:url delegate:self];
+}
 
-//- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
-//    return [WeiboSDK handleOpenURL:url delegate:self];
-//}
-//
-//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-//    return [WeiboSDK handleOpenURL:url delegate:self];
-//}
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    return [WeiboSDK handleOpenURL:url delegate:self];
+}
+- (void)didReceiveWeiboRequest:(WBBaseRequest *)request{
+    
+}
+- (void)didReceiveWeiboResponse:(WBBaseResponse *)response{
+    if ([response isKindOfClass:WBAuthorizeResponse.class])
+    {
+//        NSString *title = NSLocalizedString(@"认证结果", nil);
+//        NSString *message = [NSString stringWithFormat:@"%@: %d\nresponse.userId: %@\nresponse.accessToken: %@\n%@: %@\n%@: %@", NSLocalizedString(@"响应状态", nil), (int)response.statusCode,[(WBAuthorizeResponse *)response userID], [(WBAuthorizeResponse *)response accessToken],  NSLocalizedString(@"响应UserInfo数据", nil), response.userInfo, NSLocalizedString(@"原请求UserInfo数据", nil), response.requestUserInfo];
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
+//                                                        message:message
+//                                                       delegate:nil
+//                                              cancelButtonTitle:NSLocalizedString(@"确定", nil)
+//                                              otherButtonTitles:nil];
+        
+//      self.wbtoken = [(WBAuthorizeResponse *)response accessToken];
+//       self.wbCurrentUserId = [(WBAuthorizeResponse *)response userID];
+//       self.wbRefreshToken = [(WBAuthorizeResponse *)response refreshToken];
+//        [alert show];
+        NSString *accessToken = [(WBAuthorizeResponse *)response accessToken];
+        NSString *uid = [(WBAuthorizeResponse *)response userID];
+        NSDate *expriated = [(WBAuthorizeResponse *)response expirationDate];
+        //得到的新浪微博授权信息，请按照例子来生成NSDictionary
+        NSDictionary *dic = @{@"access_token":accessToken,@"uid":uid,@"expirationDate":expriated};
+        NSLog(@"%@", response.userInfo);
+        [BmobUser loginInBackgroundWithAuthorDictionary:dic platform:BmobSNSPlatformSinaWeibo block:^(BmobUser *user, NSError *error) {
+            if (error) {
+                NSLog(@"weibo login error:%@",error);
+            } else if (user){
+                NSLog(@"user objectid is :%@",user.objectId);
+                [ProgressHUD showSuccess:@"新浪微博登陆成功" Interaction:YES];
+            }
+        }];
 
-
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation
-{
-    return [ShareSDK handleOpenURL:url
-                 sourceApplication:sourceApplication
-                        annotation:annotation
-                        wxDelegate:self];
+        
+        AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
+        sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+        [sessionManager GET:[NSString stringWithFormat:@"https://api.weibo.com/2/users/show.json?access_token=%@&uid=%@",response.userInfo[@"refresh_token"],uid] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            DSNLog(@"%@", responseObject);
+            
+            self.dic = responseObject;
+                   } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            DSNLog(@"%@", error);
+        }];
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

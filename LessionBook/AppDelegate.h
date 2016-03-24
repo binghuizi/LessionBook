@@ -13,7 +13,10 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate, WeiboSDKDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+//@property (nonatomic, strong) NSString *wbtoken;
+//@property (nonatomic, strong) NSString *wbRefreshToken;
+//@property (nonatomic, strong) NSString *wbCurrentUserId;
+@property (nonatomic, retain) NSDictionary *dic;
 
 @end
 
