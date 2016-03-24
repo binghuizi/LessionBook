@@ -9,6 +9,7 @@
 #import "GroupViewController.h"
 #import <EaseMob.h>
 #import "SingleViewController.h"
+#import "NewGroupViewController.h"
 
 @interface GroupViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -85,7 +86,9 @@
 #pragma mark -----CustomMethod
 
 -(void)leftTitleAction:(UIButton *)btn{
-
+    UIStoryboard *groupSB = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
+    NewGroupViewController *newgroupVC = [groupSB instantiateInitialViewController];
+    [self.navigationController pushViewController:newgroupVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

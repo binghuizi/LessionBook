@@ -11,6 +11,7 @@
 #import "RequestViewController.h"
 #import "SingleViewController.h"
 #import "ChatBoxeViewController.h"
+#import "GroupViewController.h"
 
 @interface LinkManViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -95,7 +96,9 @@
         }
             break;
         case 1:
-            
+        {
+        
+        }
             break;
         case 2:
         {

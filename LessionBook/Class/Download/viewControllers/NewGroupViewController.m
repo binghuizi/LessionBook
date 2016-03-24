@@ -15,6 +15,10 @@
 @property (strong, nonatomic) IBOutlet UITextField *groupDescription;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
+- (IBAction)createNewGroup:(UIButton *)sender;
+//取消
+- (IBAction)cancelBtnAction:(UIButton *)sender;
+
 //好友数组
 @property (nonatomic, strong) NSArray *friendArray;
 //组员数组
@@ -85,4 +89,16 @@
 }
 */
 
+- (IBAction)createNewGroup:(UIButton *)sender {
+    EMGroupStyleSetting *setting = [[EMGroupStyleSetting alloc] init];
+    setting.groupMaxUsersCount = 200;
+    setting.groupStyle = eGroupStyle_PublicOpenJoin;
+    EMGroup *group = [[EaseMob sharedInstance].chatManager createGroupWithSubject:self.groupName.text description:self.groupDescription.text invitees:self.groupsArray initialWelcomeMessage:@"邀你加入群组" styleSetting:setting error:nil];
+    NSLog(@"---------%@", group);
+    
+}
+
+- (IBAction)cancelBtnAction:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end
