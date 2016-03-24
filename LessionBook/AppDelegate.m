@@ -31,7 +31,7 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<EMChatManagerDelegate>
 
 @end
 
@@ -51,7 +51,7 @@
     [[EaseMob sharedInstance] registerSDKWithAppKey:kHuanxinAppKey apnsCertName:nil];
     [[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
 //    [[EaseMob sharedInstance].chatManager setIsAutoFetchBuddyList:YES];
-    
+    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
     [[EaseSDKHelper shareHelper] easemobApplication:application
                       didFinishLaunchingWithOptions:launchOptions
                                              appkey:kHuanxinAppKey
@@ -213,6 +213,26 @@
 }
 
 
+- (void)didLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error{
+    NSLog(@"217 appdelegate--------%@", loginInfo);
+}
 
+- (void)didReceiveBuddyRequest:(NSString *)username message:(NSString *)message{
+    NSString *str = [NSString stringWithFormat:@"--------------%@请求加你为好友", username];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil];
+    [alert show];
+    EMError *error = nil;
+    [[EaseMob sharedInstance].chatManager acceptBuddyRequest:username error:&error];
+    if (error == nil) {
+        NSLog(@"----------同意加好友");
+    }else{
+        NSLog(@"----------失败");
+    }
 
+}
+- (void)didAcceptedByBuddy:(NSString *)username{
+    NSString *str = [NSString stringWithFormat:@"%@同意加你为好友", username];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    [alert show];
+}
 @end

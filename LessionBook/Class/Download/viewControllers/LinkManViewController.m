@@ -106,7 +106,7 @@
         default:
         {
             EMBuddy *buddy = self.friendArray[indexPath.row - 3];
-            SingleViewController *singleVC = [[SingleViewController alloc] initWithConversationChatter:buddy.username conversationType:eConversationTypeChatRoom];
+            SingleViewController *singleVC = [[SingleViewController alloc] initWithConversationChatter:buddy.username conversationType:eConversationTypeChat];
             [self.navigationController pushViewController:singleVC animated:YES];
         }
             break;

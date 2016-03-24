@@ -65,6 +65,7 @@
 		7A75013A1C9BE5180002FA5C /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7A7501371C9BE5180002FA5C /* ProgressHUD.bundle */; };
 		7A75013B1C9BE5180002FA5C /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7501391C9BE5180002FA5C /* ProgressHUD.m */; };
 		7A75016B1C9C09040002FA5C /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A75016A1C9C09040002FA5C /* RequestViewController.m */; };
+		7A80A3191CA37DCE00845015 /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A80A3181CA37DCE00845015 /* GroupViewController.m */; };
 		7A965F751C99328A00DE2547 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A965F6E1C99328900DE2547 /* DownloadViewController.m */; };
 		7A965F761C99328A00DE2547 /* search.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A965F711C99328A00DE2547 /* search.plist */; };
 		7A965F771C99328A00DE2547 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A965F741C99328A00DE2547 /* SearchViewController.m */; };
@@ -180,6 +181,8 @@
 		7A7501391C9BE5180002FA5C /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		7A7501691C9C09040002FA5C /* RequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestViewController.h; sourceTree = "<group>"; };
 		7A75016A1C9C09040002FA5C /* RequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestViewController.m; sourceTree = "<group>"; };
+		7A80A3171CA37DCE00845015 /* GroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupViewController.h; sourceTree = "<group>"; };
+		7A80A3181CA37DCE00845015 /* GroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupViewController.m; sourceTree = "<group>"; };
 		7A965F6D1C99328900DE2547 /* DownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
 		7A965F6E1C99328900DE2547 /* DownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
 		7A965F711C99328A00DE2547 /* search.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = search.plist; sourceTree = "<group>"; };
@@ -369,6 +372,8 @@
 				7A9BBA201C9D08C900CA55D9 /* SingleViewController.m */,
 				7ADC1BEF1CA14F3B000DF95B /* ChatBoxeViewController.h */,
 				7ADC1BF01CA14F3B000DF95B /* ChatBoxeViewController.m */,
+				7A80A3171CA37DCE00845015 /* GroupViewController.h */,
+				7A80A3181CA37DCE00845015 /* GroupViewController.m */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -751,6 +756,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A80A3191CA37DCE00845015 /* GroupViewController.m in Sources */,
 				7A4764201C984D900057A7D9 /* VOContentLayer.m in Sources */,
 				7A4623F81C999C0B00A6750D /* ChoseCollectionViewCell.m in Sources */,
 				7A4532321C9E423E00EDB43C /* LoginViewController.m in Sources */,

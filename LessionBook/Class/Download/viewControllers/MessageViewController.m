@@ -22,14 +22,6 @@
 
 @implementation MessageViewController
 
-- (instancetype)init{
-   self = [super init];
-    if (self) {
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-    }
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -117,28 +109,6 @@
         self.tableView.rowHeight = 50;
     }
     return _tableView;
-}
-
-#pragma mark -------EMChatManagerDelegate
-
-- (void)didReceiveBuddyRequest:(NSString *)username
-                       message:(NSString *)message{
-    NSString *str = [NSString stringWithFormat:@"--------------%@请求加你为好友", username];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil];
-    [alert show];
-    EMError *error = nil;
-    [[EaseMob sharedInstance].chatManager acceptBuddyRequest:username error:&error];
-    if (error == nil) {
-        NSLog(@"----------同意加好友");
-    }else{
-     NSLog(@"----------失败");
-    }
-}
-
-- (void)didAcceptedByBuddy:(NSString *)username{
-    NSString *str = [NSString stringWithFormat:@"%@同意加你为好友", username];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-    [alert show];
 }
 
 

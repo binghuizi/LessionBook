@@ -10,7 +10,7 @@
 #import <EaseMob.h>
 #import <BmobSDK/Bmob.h>
 
-@interface RequestViewController ()<UITableViewDataSource, UITableViewDelegate, EMChatManagerDelegate>
+@interface RequestViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UITextField *search;
 
@@ -29,7 +29,6 @@
     self.navigationItem.titleView = self.search;
     [self showRightBtn];
     [self showBackButton:@"ic_arrow_general2"];
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
 
 }
 
@@ -67,17 +66,18 @@
     [alertC addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         NSString *str = [weakAlert.message stringByAppendingString:textField.text];
         weakAlert.message = str;
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            EMError *error = nil;
+            bool isSuccess = [[EaseMob sharedInstance].chatManager addBuddy:user.username message:weakAlert.message error:&error];
+            if (isSuccess) {
+                NSLog(@"------发送成功");
+            }else{
+                NSLog(@"----%@",error);
+            }
+        }];
+        [weakAlert addAction:action];
     }];
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        EMError *error = nil;
-      bool isSuccess = [[EaseMob sharedInstance].chatManager addBuddy:user.username message:@"我想加您为好友" error:&error];
-        if (isSuccess) {
-            NSLog(@"------发送成功");
-        }else{
-            NSLog(@"----%@",error);
-        }
-    }];
-    [alertC addAction:action];
+
     [self.navigationController presentViewController:alertC animated:YES completion:nil];
 }
 
