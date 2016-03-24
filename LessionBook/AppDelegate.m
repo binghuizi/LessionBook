@@ -157,24 +157,6 @@
 
     return [WeiboSDK handleOpenURL:url delegate:self];
 }
-//-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-//    return [WeiboSDK handleOpenURL:url delegate:self];
-//}
-
-
-//- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
-//    return [WeiboSDK handleOpenURL:url delegate:self];
-//    
-//   }
-
-//- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
-//    return [WeiboSDK handleOpenURL:url delegate:self];
-//}
-//
-//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-//    return [WeiboSDK handleOpenURL:url delegate:self];
-//}
-
 
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
@@ -213,9 +195,13 @@
 }
 
 
+//环信代理
+
 - (void)didLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error{
     NSLog(@"217 appdelegate--------%@", loginInfo);
 }
+
+
 
 - (void)didReceiveBuddyRequest:(NSString *)username message:(NSString *)message{
     NSString *str = [NSString stringWithFormat:@"--------------%@请求加你为好友", username];
@@ -235,4 +221,10 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
     [alert show];
 }
+
+//接受群组邀请代理
+- (void)didAcceptInvitationFromGroup:(EMGroup *)group error:(EMError *)error{
+
+}
+
 @end

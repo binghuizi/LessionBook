@@ -49,7 +49,6 @@
     
 }
 - (void)accountLogin:(UIButton *)btn{
-    //BmobUser *buser = [[BmobUser alloc] init];
     [ProgressHUD show:@"正在抢滩登陆"];
     [BmobUser loginInbackgroundWithAccount:self.accountNumber.text andPassword:self.passWard.text block:^(BmobUser *user, NSError *error) {
                                     if (user) {

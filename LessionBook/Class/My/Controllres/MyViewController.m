@@ -97,9 +97,11 @@
                 MessageViewController *messageVC = [[MessageViewController alloc] init];
                 UINavigationController *messageNav = [[UINavigationController alloc] initWithRootViewController:messageVC];
                 messageNav.tabBarItem.title = @"消息";
+                messageNav.tabBarItem.image = [UIImage imageNamed:@"tabbar_chatsHL"];
                 LinkManViewController *linkVC = [[LinkManViewController alloc] init];
                 UINavigationController *linkNav = [[UINavigationController alloc] initWithRootViewController:linkVC];
                 linkNav.tabBarItem.title = @"好友";
+                linkNav.tabBarItem.image = [UIImage imageNamed:@"tabbar_contactsHL"];
                 chatTabBarC.viewControllers = @[messageNav, linkNav];
                 [self.navigationController presentViewController:chatTabBarC animated:YES completion:nil];
             }
