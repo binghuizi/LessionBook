@@ -11,7 +11,7 @@
 #import "DownloadTableViewCell.h"
 #import "DownloadDidTableViewCell.h"
 #import "DidDownLoadViewController.h"
-#import "ChatRoomViewController.h"
+
 #import "DownlaodTask.h"
 
 static NSString *_downloadcell = @"cell";

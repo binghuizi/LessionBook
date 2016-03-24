@@ -12,22 +12,27 @@
 #import "TimeView.h"
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
-#import "ChatRoomViewController.h"
 
-@interface MyViewController ()<UITableViewDataSource, UITableViewDelegate>
+#import "AppDelegate.h"
+#import <BmobSDK/BmobUser.h>
+@interface MyViewController ()<UITableViewDataSource, UITableViewDelegate>{
+    AppDelegate *myAppDelegate;
+}
 @property (nonatomic, retain) UITableView *tableView;
 @property (nonatomic, retain) NSArray *myArray;
 @property (nonatomic, retain) NSArray *detailArray;
 @property (nonatomic, retain) UIView *headView;
 @property (nonatomic, retain) UIView *timeUpView;
-
+@property (nonatomic, retain) UIButton *loginBtn;
+@property (nonatomic, retain) UIButton *leaveBtn;
 @end
 
 @implementation MyViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    myAppDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
     self.myArray = [NSArray arrayWithObjects:@"我的收藏", @"最近收听", @"定时关闭", @"更多设置", @"书友畅聊", nil];
     self.detailArray = [NSArray arrayWithObjects:@"暂无收藏", @"暂无收听记录", @"", @"", @"", nil];
@@ -35,12 +40,48 @@
     [self.view addSubview:self.tableView];
     
 }
+//将要显示
+-(void)viewWillAppear:(BOOL)animated{
+    if (myAppDelegate.isLogin == 1) {
+        BmobUser *user = [BmobUser getCurrentUser];
+        if (user != nil) {
+            [self.loginBtn setTitle:user.username forState:UIControlStateNormal];
+            self.loginBtn.font = [UIFont systemFontOfSize:13];
+            //显示退出按钮
+            self.leaveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+            self.leaveBtn.frame = CGRectMake(kWideth -kWideth * 130/kWideth , kHeight * 160/kHeight, 100, 30);
+            [self.leaveBtn setTitle:@"退出" forState:UIControlStateNormal];
+            self.leaveBtn.backgroundColor = [UIColor orangeColor];
+            [self.leaveBtn addTarget:self action:@selector(touchLeave) forControlEvents:UIControlEventTouchUpInside];
+            [self.headView addSubview:self.leaveBtn];
+            
+            
+            
+            
+            
+        }else{
+            
+        }
+        
+    }
+}
+
+//点击退出按钮
+-(void)touchLeave{
+    myAppDelegate.isLogin = 0;
+
+    self.leaveBtn.hidden = YES;
+    [self.loginBtn setTitle:@"登录/注册" forState:UIControlStateNormal];
+    
+}
+
+//行
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
    return  self.myArray.count;
 }
 
 
-
+//cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellId = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
@@ -67,8 +108,19 @@
     switch (indexPath.row) {
         case 0:
         {
-            FavoriteViewController *favoriteVC = [[FavoriteViewController alloc] init];
-            [self.navigationController pushViewController:favoriteVC animated:YES];
+            if (myAppDelegate.isLogin) {
+                FavoriteViewController *favoriteVC = [[FavoriteViewController alloc] init];
+                [self.navigationController pushViewController:favoriteVC animated:YES];
+            }else{
+                UIStoryboard *myStoryBoard = [UIStoryboard storyboardWithName:@"My" bundle:nil];
+                
+                LoginViewController *loginVC = [myStoryBoard instantiateViewControllerWithIdentifier:@"loginVC"];
+                [self.navigationController pushViewController:loginVC animated:YES];
+                
+                
+                
+            }
+            
         }
             break;
         case 1:
@@ -86,9 +138,7 @@
             break;
         case 4:
         {
-            ChatRoomViewController *chatroomVC = [[ChatRoomViewController alloc] init];
-            UINavigationController *chatroomNav = [[UINavigationController alloc] initWithRootViewController:chatroomVC];
-            [self.navigationController presentViewController:chatroomNav animated:YES completion:nil];
+            
         }
             break;
         default:
@@ -100,27 +150,32 @@
     self.headView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, 200)];
     self.tableView.tableHeaderView = self.headView;
     self.headView.backgroundColor = [UIColor colorWithRed:0 green:201/255.0f blue:255/255.0f alpha:1.0];
-    UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    loginBtn.frame = CGRectMake(20, 70, 100, 100);
-    [loginBtn setTitle:@"登陆/注册" forState:UIControlStateNormal];
-    [loginBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    loginBtn.clipsToBounds = YES;
-    loginBtn.layer.cornerRadius = 50;
-    loginBtn.backgroundColor = [UIColor whiteColor];
-    [loginBtn addTarget:self action:@selector(loginAction) forControlEvents:UIControlEventTouchUpInside];
+    self.loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.loginBtn.frame = CGRectMake(20, 70, 100, 100);
+    [self.loginBtn setTitle:@"登陆/注册" forState:UIControlStateNormal];
+    [self.loginBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    self.loginBtn.clipsToBounds = YES;
+    self.loginBtn.layer.cornerRadius = 50;
+    self.loginBtn.backgroundColor = [UIColor whiteColor];
+    [self.loginBtn addTarget:self action:@selector(loginAction) forControlEvents:UIControlEventTouchUpInside];
     UILabel *welcomeLabel = [[UILabel alloc] initWithFrame:CGRectMake(150, 100, 250, 30)];
     welcomeLabel.text = @"欢迎来到马里亚纳听书";
     welcomeLabel.textColor = [UIColor whiteColor];
     
-    [self.headView addSubview:loginBtn];
+    [self.headView addSubview:self.loginBtn];
     [self.headView addSubview:welcomeLabel];
 }
 //登录注册按钮
 - (void)loginAction{
-    UIStoryboard *myStoryBoard = [UIStoryboard storyboardWithName:@"My" bundle:nil];
+    if (myAppDelegate.isLogin == 0) {
+        UIStoryboard *myStoryBoard = [UIStoryboard storyboardWithName:@"My" bundle:nil];
+        
+        LoginViewController *loginVC = [myStoryBoard instantiateViewControllerWithIdentifier:@"loginVC"];
+        [self.navigationController pushViewController:loginVC animated:YES];
+    }else{
+        
+    }
     
-    LoginViewController *loginVC = [myStoryBoard instantiateViewControllerWithIdentifier:@"loginVC"];
-    [self.navigationController pushViewController:loginVC animated:YES];
     
 }
 

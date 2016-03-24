@@ -11,7 +11,8 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-
+@property(nonatomic,assign) BOOL isCollection;
+@property(nonatomic,assign) BOOL isLogin;
+@property(nonatomic,strong) NSString *userId;
 @end
 

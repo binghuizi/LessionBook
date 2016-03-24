@@ -14,9 +14,16 @@
 #import "detailModel.h"
 #import <ShareSDK/ShareSDK.h>
 #import <QuartzCore/QuartzCore.h>
-
-
-@interface DetailViewController ()<UITableViewDataSource,UITableViewDelegate>
+#import "AppDelegate.h"
+#import "LoginViewController.h"
+#import "BookInformation.h"
+#import "SqlModel.h"
+#import <BmobSDK/BmobUser.h>
+@interface DetailViewController ()<UITableViewDataSource,UITableViewDelegate>{
+     DetailHeadView *_tableViewHead;
+    BOOL isCollection;
+    AppDelegate *_myAppdelegate;
+}
 @property(nonatomic,strong) UITableView *tableView;
 @property(nonatomic,strong) NSMutableArray *dateArray;
 
@@ -26,30 +33,46 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
     [self showBackButton:@"ic_arrow_general2"];
    
     self.title = self.titleString;
-   
+    _myAppdelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    
+    //是否收藏
+    isCollection = 1 ;
     [self loadAction];
     [self.view addSubview:self.tableView];
     [self.tableView registerNib:[UINib nibWithNibName:@"TableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     
     [self loadHeadView];
 }
+//将要显示
+-(void)viewWillAppear:(BOOL)animated{
+    //显示是否收藏状态
+//    if (_myAppdelegate.isCollection == 0) {
+//        
+//        [_tableViewHead.collectionBtn setImage:[UIImage imageNamed:@"umeng_socialize_action_unlike"] forState:UIControlStateNormal];
+//        
+//    }else{
+//       
+//        [_tableViewHead.collectionBtn setImage:[UIImage imageNamed:@"btn_play_fav"] forState:UIControlStateNormal];
+    
+   // }
+}
 #pragma mark --- 头部
 -(void)loadHeadView{
     //[[[NSBundle mainBundle] loadNibNamed:@"DetailHeaderView" owner:nil options:nil] lastObject];DetailHeadView
-    DetailHeadView *tableViewHead = [[[NSBundle mainBundle] loadNibNamed:@"DetailHeadView" owner:nil options:nil] lastObject];
-    [tableViewHead.imageView sd_setImageWithURL:[NSURL URLWithString:self.pictchString] placeholderImage:nil];
-    tableViewHead.anchorNameLabel.text = self.zhuboString;
-    tableViewHead.authorNameLabel.text = self.zuozheString;
-    tableViewHead.describeLabel.text   = self.miaoshuString;
-    [tableViewHead.shareBtn addTarget:self action:@selector(shareAction) forControlEvents:UIControlEventTouchUpInside];
-    [tableViewHead.collectionBtn addTarget:self action:@selector(collectionAction) forControlEvents:UIControlEventTouchUpInside];
+    _tableViewHead = [[[NSBundle mainBundle] loadNibNamed:@"DetailHeadView" owner:nil options:nil] lastObject];
+    [_tableViewHead.imageView sd_setImageWithURL:[NSURL URLWithString:self.pictchString] placeholderImage:nil];
+    _tableViewHead.anchorNameLabel.text = self.zhuboString;
+    _tableViewHead.authorNameLabel.text = self.zuozheString;
+    _tableViewHead.describeLabel.text   = self.miaoshuString;
+    [_tableViewHead.shareBtn addTarget:self action:@selector(shareAction) forControlEvents:UIControlEventTouchUpInside];
+    [_tableViewHead.collectionBtn addTarget:self action:@selector(collectionAction) forControlEvents:UIControlEventTouchUpInside];
     
-    self.tableView.tableHeaderView = tableViewHead;
+    self.tableView.tableHeaderView = _tableViewHead;
 }
 #pragma mark -- 头部分享按钮
 -(void)shareAction{
@@ -90,7 +113,69 @@
                             }];
     
 }
+//收藏
 -(void)collectionAction{
+    //是否登陆状态 登陆状态才能收藏
+    if (_myAppdelegate.isLogin) {
+        //1.登录状态下 点击收藏 变红色❤️
+       
+            
+            
+            BookInformation *info = [BookInformation bookInformationWithUserId:_myAppdelegate.userId bookId:self.idString bookName:self.titleString bookIntroduction:self.miaoshuString imageString:self.pictchString];
+            SqlModel *model = [[SqlModel alloc]init];
+        
+        BmobUser *user = [BmobUser getCurrentUser];
+        
+        if (user != NULL) {
+            if ([model insertIntoBookSql:info tableName:user.username] == 1) {
+                UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"收藏成功" preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    
+                    [_tableViewHead.collectionBtn setImage:[UIImage imageNamed:@"btn_play_fav"] forState:UIControlStateNormal];
+                    isCollection = 0;
+                    _myAppdelegate.isCollection = 1;
+                    
+                }];
+                [alertVc addAction:action];
+                [self presentViewController:alertVc animated:YES completion:nil];
+            }else{
+                //登录状态下 不想收藏了，再次点击  变成灰色❤️
+                [_tableViewHead.collectionBtn setImage:[UIImage imageNamed:@"umeng_socialize_action_unlike"] forState:UIControlStateNormal];
+                isCollection = 1;
+                _myAppdelegate.isCollection = 0;
+            }
+
+        }
+        
+            
+            
+            
+        
+    }else{
+        //登陆状态跳转登录页面
+        UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"请先登录" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            UIStoryboard *myStoryBoard = [UIStoryboard storyboardWithName:@"My" bundle:nil];
+            
+            LoginViewController *loginVC = [myStoryBoard instantiateViewControllerWithIdentifier:@"loginVC"];
+            [self.navigationController pushViewController:loginVC animated:YES];
+        }];
+        
+          UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+              
+          }];
+        
+        [alertVc addAction:action2];
+        [alertVc addAction:action];
+        [self presentViewController:alertVc animated:YES completion:nil];
+        
+        
+    }
+    
+    
+   
+    
+    
     
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
