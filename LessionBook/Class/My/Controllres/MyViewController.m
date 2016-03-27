@@ -9,20 +9,28 @@
 #import "MyViewController.h"
 #import "FavoriteViewController.h"
 #import "RecordViewController.h"
+#import "MessageViewController.h"
+#import "LinkManViewController.h"
 #import "TimeView.h"
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
-#import "ChatRoomViewController.h"
+#import "AppDelegate.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <EaseMob.h>
 #import <BmobSDK/Bmob.h>
 #import "AppDelegate.h"
-#import <UIButton+WebCache.h>
 
-@interface MyViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface MyViewController ()<UITableViewDataSource, UITableViewDelegate>{
+    AppDelegate *myAppDelegate;
+}
 @property (nonatomic, retain) UITableView *tableView;
 @property (nonatomic, retain) NSArray *myArray;
 @property (nonatomic, retain) NSArray *detailArray;
 @property (nonatomic, retain) UIView *headView;
 @property (nonatomic, retain) UIView *timeUpView;
+@property (nonatomic, retain) UIButton *loginBtn;
+@property (nonatomic, retain) UIImageView *userImageView;
+
 
 @end
 
@@ -30,20 +38,42 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    myAppDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
-    self.myArray = [NSArray arrayWithObjects:@"我的收藏", @"最近收听", @"定时关闭", @"更多设置", @"书友畅聊", nil];
-    self.detailArray = [NSArray arrayWithObjects:@"暂无收藏", @"暂无收听记录", @"", @"", @"", nil];
-    [self confineHeadView];
+    self.myArray = [NSArray arrayWithObjects:@"我的收藏", @"最近收听", @"定时关闭", @"更多设置", @"书友畅聊", @"账号设置", nil];
+    self.detailArray = [NSArray arrayWithObjects:@"暂无收藏", @"暂无收听记录", @"", @"", @"", @"",nil];
     [self.view addSubview:self.tableView];
     
 }
+
+//将要显示
+-(void)viewWillAppear:(BOOL)animated{
+//    if (myAppDelegate.isLogin == 1) {
+//        BmobUser *user = [BmobUser getCurrentUser];
+//        if (user != nil) {
+//            [self.loginBtn setTitle:user.username forState:UIControlStateNormal];
+//            self.loginBtn.font = [UIFont systemFontOfSize:13];
+//            
+//            }else{
+//            
+//        }
+//        
+//    }
+    //刷新头视图
+    [self confineHeadView];
+    //刷新tableview
+//    [self.tableView reloadData];
+}
+
+
+//行
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
    return  self.myArray.count;
 }
 
 
-
+//cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellId = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
@@ -63,6 +93,8 @@
         cell.imageView.image = [UIImage imageNamed:@"userinfo_setting"];
     }else if (indexPath.row == 4){
         cell.imageView.image = [UIImage imageNamed:@"exp_watch"];
+    }else if (indexPath.row == 5){
+        cell.imageView.image = [UIImage imageNamed:@"icon_user"];
     }
     return cell;
 }
@@ -70,8 +102,19 @@
     switch (indexPath.row) {
         case 0:
         {
-            FavoriteViewController *favoriteVC = [[FavoriteViewController alloc] init];
-            [self.navigationController pushViewController:favoriteVC animated:YES];
+            if (myAppDelegate.isLogin) {
+                FavoriteViewController *favoriteVC = [[FavoriteViewController alloc] init];
+                [self.navigationController pushViewController:favoriteVC animated:YES];
+            }else{
+                UIStoryboard *myStoryBoard = [UIStoryboard storyboardWithName:@"My" bundle:nil];
+                
+                LoginViewController *loginVC = [myStoryBoard instantiateViewControllerWithIdentifier:@"loginVC"];
+                [self.navigationController pushViewController:loginVC animated:YES];
+                
+                
+                
+            }
+            
         }
             break;
         case 1:
@@ -89,9 +132,41 @@
             break;
         case 4:
         {
-            ChatRoomViewController *chatroomVC = [[ChatRoomViewController alloc] init];
-            UINavigationController *chatroomNav = [[UINavigationController alloc] initWithRootViewController:chatroomVC];
-            [self.navigationController presentViewController:chatroomNav animated:YES completion:nil];
+
+            BmobUser *user = [BmobUser getCurrentUser];
+            if (user != nil) {
+                UITabBarController *chatTabBarC = [[UITabBarController alloc] init];
+                MessageViewController *messageVC = [[MessageViewController alloc] init];
+                UINavigationController *messageNav = [[UINavigationController alloc] initWithRootViewController:messageVC];
+                messageNav.tabBarItem.title = @"消息";
+                LinkManViewController *linkVC = [[LinkManViewController alloc] init];
+                UINavigationController *linkNav = [[UINavigationController alloc] initWithRootViewController:linkVC];
+                linkNav.tabBarItem.title = @"好友";
+                chatTabBarC.viewControllers = @[messageNav, linkNav];
+                [self.navigationController presentViewController:chatTabBarC animated:YES completion:nil];
+            }
+        }
+            break;
+        //退出登录
+        case 5:
+        {
+            BmobUser *currntUser = [BmobUser getCurrentUser];
+            if (currntUser != nil) {
+                [[EaseMob sharedInstance].chatManager asyncLogoffWithUnbindDeviceToken:YES completion:^(NSDictionary *info, EMError *error) {
+                    if (!error) {
+                        [BmobUser logout];
+                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"当前用户已退出" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil];
+                        
+                        myAppDelegate.isLogin = 0;
+                        [self confineHeadView];
+                        [alert show];
+                    }else{
+                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"退出失败" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil];
+                        [alert show];
+                    }
+                } onQueue:nil];
+            }
+            [self confineHeadView];
         }
             break;
         default:
@@ -103,49 +178,59 @@
     self.headView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, 200)];
     self.tableView.tableHeaderView = self.headView;
     self.headView.backgroundColor = [UIColor colorWithRed:0 green:201/255.0f blue:255/255.0f alpha:1.0];
-    UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    loginBtn.frame = CGRectMake(20, 70, 100, 100);
-    
-    [loginBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    loginBtn.clipsToBounds = YES;
-    loginBtn.layer.cornerRadius = 50;
-    loginBtn.backgroundColor = [UIColor whiteColor];
-    [loginBtn addTarget:self action:@selector(loginAction) forControlEvents:UIControlEventTouchUpInside];
-    UILabel *welcomeLabel = [[UILabel alloc] initWithFrame:CGRectMake(150, 100, 250, 30)];
+
+    self.loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.loginBtn.frame = CGRectMake(20, 70, 100, 100);
+    self.userImageView = [[UIImageView alloc] initWithFrame:CGRectMake(40, 90, 60, 60)];
+    self.userImageView.clipsToBounds = YES;
+    self.userImageView.layer.cornerRadius = 30;
+    [self.loginBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    self.loginBtn.clipsToBounds = YES;
+    self.loginBtn.layer.cornerRadius = 50;
+    self.loginBtn.backgroundColor = [UIColor whiteColor];
+    [self.loginBtn addTarget:self action:@selector(loginAction) forControlEvents:UIControlEventTouchUpInside];
+    UILabel *welcomeLabel = [[UILabel alloc] initWithFrame:CGRectMake(130, 100, 250, 30)];
     welcomeLabel.textColor = [UIColor whiteColor];
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    BmobUser *buser = [[BmobUser alloc] init];
-//    buser.username = responseObject[@"screen_name"];
-//    [buser setObject:responseObject[@"avatar_large"] forKey:@"headerImage"];
+
+    
+    BmobUser *User = [[BmobUser alloc] init];
     BmobUser *bUser = [BmobUser getCurrentUser];
     if (bUser) {
         //已登录
-        buser.username = appDelegate.dic[@"screen_name"];
-        [buser setObject:appDelegate.dic[@"avatar_large"] forKey:@"headerImage"];
-        welcomeLabel.text = buser.username;
-        [loginBtn setTitle:@"" forState:UIControlStateNormal];
-        [loginBtn sd_setImageWithURL:[NSURL URLWithString:appDelegate.dic[@"avatar_large"]] forState:UIControlStateNormal];
-        loginBtn.enabled = NO;
-        DSNLog(@"用户已存在");
-        DSNLog(@"%@", appDelegate.dic);
+        self.loginBtn.hidden = YES;
+        self.userImageView.hidden = NO;
+        User.username = myAppDelegate.dic[@"screen_name"];
+        welcomeLabel.text = User.username;
+        [self.userImageView sd_setImageWithURL:[NSURL URLWithString:myAppDelegate.dic[@"avatar_hd"]] placeholderImage:nil];
+        NSLog(@"%@", bUser);
+        NSLog(@"%@", myAppDelegate.dic[@"avatar_hd"]);
+        NSLog(@"1");
+        
     }else{
         //未登录
-        [loginBtn setTitle:@"登陆/注册" forState:UIControlStateNormal];
+        self.loginBtn.hidden = NO;
+        self.userImageView.hidden = YES;
+
+        [self.loginBtn setTitle:@"登陆/注册" forState:UIControlStateNormal];
         welcomeLabel.text = @"欢迎来到马里亚纳听书";
-        loginBtn.enabled = YES;
+        NSLog(@"2");
     }
-   
+//    self.loginBtn.backgroundColor = [UIColor redColor];
+//    self.userImageView.backgroundColor = [UIColor whiteColor];
+//    welcomeLabel.backgroundColor = [UIColor blackColor];
     
-    [self.headView addSubview:loginBtn];
+    [self.headView addSubview:self.loginBtn];
     [self.headView addSubview:welcomeLabel];
+    [self.headView addSubview:self.userImageView];
 }
 //登录注册按钮
 - (void)loginAction{
-    UIStoryboard *myStoryBoard = [UIStoryboard storyboardWithName:@"My" bundle:nil];
-    
-    LoginViewController *loginVC = [myStoryBoard instantiateViewControllerWithIdentifier:@"loginVC"];
-    [self.navigationController pushViewController:loginVC animated:YES];
-    
+    if (myAppDelegate.isLogin == 0) {
+        UIStoryboard *myStoryBoard = [UIStoryboard storyboardWithName:@"My" bundle:nil];
+        LoginViewController *loginVC = [myStoryBoard instantiateViewControllerWithIdentifier:@"loginVC"];
+        [self.navigationController pushViewController:loginVC animated:YES];
+    }else{
+        }
 }
 
 

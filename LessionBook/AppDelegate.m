@@ -26,7 +26,7 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
 
-@interface AppDelegate ()<WeiboSDKDelegate>
+@interface AppDelegate ()<EMChatManagerDelegate>
 
 @end
 
@@ -47,8 +47,8 @@
     //registerSDKWithAppKey
     [[EaseMob sharedInstance] registerSDKWithAppKey:kHuanxinAppKey apnsCertName:nil];
     [[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
-    [[EaseMob sharedInstance].chatManager setIsAutoFetchBuddyList:YES];
-    
+//    [[EaseMob sharedInstance].chatManager setIsAutoFetchBuddyList:YES];
+    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
     [[EaseSDKHelper shareHelper] easemobApplication:application
                       didFinishLaunchingWithOptions:launchOptions
                                              appkey:kHuanxinAppKey
@@ -95,10 +95,6 @@
     discoVc.tabBarItem.title = @"发现";
     discoVc.tabBarItem.image = [UIImage imageNamed:@"tab_discovery"];
     
-    
-    
-    
-    
     tabarVc.viewControllers = @[disNav,searchNav, downloadNav, myNav];
     
     self.window.rootViewController = tabarVc;
@@ -139,21 +135,7 @@
 }
 
 
-//-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url{
-//    return [WeiboSDK handleOpenURL:url delegate:self];
-//}
-//- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
-//    return [WeiboSDK handleOpenURL:url delegate:self];
-//    
-//   }
--(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
-    
-    return [WeiboSDK handleOpenURL:url delegate:self];
-}
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-    return [WeiboSDK handleOpenURL:url delegate:self];
-}
 - (void)didReceiveWeiboRequest:(WBBaseRequest *)request{
     
 }
@@ -167,7 +149,7 @@
 //                                                       delegate:nil
 //                                              cancelButtonTitle:NSLocalizedString(@"确定", nil)
 //                                              otherButtonTitles:nil];
-        
+//        
 //      self.wbtoken = [(WBAuthorizeResponse *)response accessToken];
 //       self.wbCurrentUserId = [(WBAuthorizeResponse *)response userID];
 //       self.wbRefreshToken = [(WBAuthorizeResponse *)response refreshToken];
@@ -177,31 +159,48 @@
         NSDate *expriated = [(WBAuthorizeResponse *)response expirationDate];
         //得到的新浪微博授权信息，请按照例子来生成NSDictionary
         NSDictionary *dic = @{@"access_token":accessToken,@"uid":uid,@"expirationDate":expriated};
-        NSLog(@"%@", response.userInfo);
-        [BmobUser loginInBackgroundWithAuthorDictionary:dic platform:BmobSNSPlatformSinaWeibo block:^(BmobUser *user, NSError *error) {
-            if (error) {
-                NSLog(@"weibo login error:%@",error);
-            } else if (user){
-                NSLog(@"user objectid is :%@",user.objectId);
-                [ProgressHUD showSuccess:@"新浪微博登陆成功" Interaction:YES];
-            }
-        }];
-
+//        NSLog(@"%@", response.userInfo);
         
-        AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
+       AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
         sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-        [sessionManager GET:[NSString stringWithFormat:@"https://api.weibo.com/2/users/show.json?access_token=%@&uid=%@",response.userInfo[@"refresh_token"],uid] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        [sessionManager GET:@"https://api.weibo.com/2/users/show.json" parameters:@{@"access_token":accessToken, @"uid":uid} progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             DSNLog(@"%@", responseObject);
-            
             self.dic = responseObject;
-                   } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            DSNLog(@"%@", error);
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            DSNLog(@"responseObject = -----56%@", error);
+        }];
+        //登陆
+        [BmobUser loginInBackgroundWithAuthorDictionary:dic platform:BmobSNSPlatformSinaWeibo block:^(BmobUser *user, NSError *error) {
+            if (error) {
+                NSLog(@"weibo login error:%@",error);
+                self.isLogin = NO;
+            } else if (user){
+                NSLog(@"user objectid is :%@",user.objectId);
+                [ProgressHUD showSuccess:@"新浪微博登陆成功" Interaction:YES];
+                self.isLogin = YES;
+                [user setUsername:self.dic[@"screen_name"]];
+                [user setObject:self.dic[@"avatar_hd"] forKey:@"headerImage"];
+            }
         }];
     }
 }
+//-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url{
+//    return [WeiboSDK handleOpenURL:url delegate:self];
+//}
+//- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
+//    return [WeiboSDK handleOpenURL:url delegate:self];
+//
+//   }
+-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    
+    return [WeiboSDK handleOpenURL:url delegate:self];
+}
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    return [WeiboSDK handleOpenURL:url delegate:self];
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -228,6 +227,26 @@
 }
 
 
+- (void)didLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error{
+    NSLog(@"217 appdelegate--------%@", loginInfo);
+}
 
+- (void)didReceiveBuddyRequest:(NSString *)username message:(NSString *)message{
+    NSString *str = [NSString stringWithFormat:@"--------------%@请求加你为好友", username];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil];
+    [alert show];
+    EMError *error = nil;
+    [[EaseMob sharedInstance].chatManager acceptBuddyRequest:username error:&error];
+    if (error == nil) {
+        NSLog(@"----------同意加好友");
+    }else{
+        NSLog(@"----------失败");
+    }
 
+}
+- (void)didAcceptedByBuddy:(NSString *)username{
+    NSString *str = [NSString stringWithFormat:@"%@同意加你为好友", username];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    [alert show];
+}
 @end

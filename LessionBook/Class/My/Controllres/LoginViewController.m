@@ -11,8 +11,17 @@
 #import <BmobSDK/BmobUser.h>
 #import "ProgressHUD.h"
 #import <WeiboSDK.h>
+#import <EaseMob.h>
+#import "AppDelegate.h"
 
-@interface LoginViewController ()
+
+
+
+@interface LoginViewController ()<EMChatManagerDelegate>
+{
+    AppDelegate *myAppDelagate;
+
+}
 @property (weak, nonatomic) IBOutlet UITextField *accountNumber;
 @property (weak, nonatomic) IBOutlet UITextField *passWard;
 
@@ -29,7 +38,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
     self.title = @"登录";
     [self showBackButton:@"ic_arrow_general2"];
     [self showRightBarButton:@"注册"];
@@ -39,6 +48,13 @@
     [self.mcroblogLoginBtn addTarget:self action:@selector(mcroblogLoginBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.QQLoginBtn addTarget:self action:@selector(QQLoginBtn:) forControlEvents:UIControlEventTouchUpInside];
     
+    
+
+    myAppDelagate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    
+    
+    
+
 }
 - (void)leftTitleAction:(UIBarButtonItem *)btn{
     UIStoryboard *myStoryBoard = [UIStoryboard storyboardWithName:@"My" bundle:nil];
@@ -47,15 +63,37 @@
     
 }
 - (void)accountLogin:(UIButton *)btn{
-    BmobUser *buser = [[BmobUser alloc] init];
-    [BmobUser loginInbackgroundWithAccount:self.accountNumber.text
-                                andPassword:self.passWard.text block:^(BmobUser *user, NSError *error) {
-                                    if (user) {
-                                        [ProgressHUD showSuccess:@"登陆成功"];
-                                    } else {
-                                        [ProgressHUD showError:[NSString stringWithFormat:@"%@", error] Interaction:YES];
-                                    }
-                                }];
+    
+    //    BmobUser *buser = [[BmobUser alloc] init];
+    //    [BmobUser loginInbackgroundWithAccount:self.accountNumber.text
+    //                                andPassword:self.passWard.text block:^(BmobUser *user, NSError *error) {
+    //BmobUser *buser = [[BmobUser alloc] init];
+    //    [ProgressHUD show:@"正在抢滩登陆"];
+    //    BmobUser *buser = [[BmobUser alloc] init];
+    [BmobUser loginInbackgroundWithAccount:self.accountNumber.text andPassword:self.passWard.text block:^(BmobUser *user, NSError *error) {
+        if (user) {
+            //异步登陆账号
+            [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:self.accountNumber.text password:self.passWard.text completion:^(NSDictionary *loginInfo, EMError *error) {
+                if (!error) {
+                    [ProgressHUD showSuccess:@"登陆成功"];
+                    //获取数据库中数据
+                    [[EaseMob sharedInstance].chatManager loadDataFromDatabase];
+                    //获取群组列表
+                    [[EaseMob sharedInstance].chatManager asyncFetchMyGroupsList];
+                    //                                                [self.navigationController popViewControllerAnimated:YES];
+                }else{
+                    [ProgressHUD showError:@"登录失败"];
+                }
+                
+                myAppDelagate.isLogin = 1;
+                myAppDelagate.userId = self.accountNumber.text;
+                [self.navigationController popViewControllerAnimated:YES];
+                } onQueue:nil];
+            
+        } else {
+            [ProgressHUD showError:[NSString stringWithFormat:@"%@", error] Interaction:YES];
+        }
+    }];
 }
 
 //新浪微博登录
@@ -66,7 +104,6 @@
     request.redirectURI = @"https://api.weibo.com/oauth2/default.html";
     request.scope = @"all";
     [WeiboSDK sendRequest:request];
-    DSNLog(@"请求授权信息");
     
 }
 - (void)QQLoginBtn:(UIButton *)btn{
@@ -79,19 +116,38 @@
     //view结束编辑，回收键盘
     [self.view endEditing:YES];
 }
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
+//环信代理
+- (void)didReceiveBuddyRequest:(NSString *)username
+                       message:(NSString *)message{
+    NSString *str = [NSString stringWithFormat:@"--------------%@请求加你为好友", username];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil];
+    [alert show];
+    EMError *error = nil;
+    [[EaseMob sharedInstance].chatManager acceptBuddyRequest:username error:&error];
+    if (error == nil) {
+        NSLog(@"----------同意加好友");
+    }
+}
+
+- (void)didAcceptedByBuddy:(NSString *)username{
+    NSString *str = [NSString stringWithFormat:@"%@同意加你为好友", username];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    [alert show];
+}
+
 
 @end

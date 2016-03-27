@@ -9,6 +9,7 @@
 #import "RegisterViewController.h"
 #import <BmobSDK/Bmob.h>
 #import "ProgressHUD.h"
+#import <EaseMob.h>
 @interface RegisterViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *mobilePhoneNumber;
 
@@ -32,9 +33,9 @@
     [self.indentifyCoreBtn addTarget:self action:@selector(getIndentifyCore:) forControlEvents:UIControlEventTouchUpInside];
 }
 - (void)getIndentifyCore:(UIButton *)btn{
-    [BmobSMS requestSMSCodeInBackgroundWithPhoneNumber:self.mobilePhoneNumber.text andTemplate:@"您好，您此次验证码为XXXXXX，请尽快注册。【马里亚纳听书】" resultBlock:^(int number, NSError *error) {
-        
-    }];
+//    [BmobSMS requestSMSCodeInBackgroundWithPhoneNumber:self.mobilePhoneNumber.text andTemplate:@"您好，您此次验证码为XXXXXX，请尽快注册。【马里亚纳听书】" resultBlock:^(int number, NSError *error) {
+//        
+//    }];
 }
 
 /*
@@ -61,6 +62,7 @@
                     
                 } else {
                    [ProgressHUD showSuccess:@"注册成功" Interaction:YES];
+                    [self.navigationController popViewControllerAnimated:YES];
                 }
             }];
         }
@@ -68,12 +70,23 @@
 */
 - (void)backLogin:(UIButton *)btn{
     BmobUser *buser = [[BmobUser alloc] init];
-    buser.mobilePhoneNumber = self.mobilePhoneNumber.text;
+//    buser.mobilePhoneNumber = self.mobilePhoneNumber.text;
     buser.password = self.passWord.text;
-    buser.username = @"xiaoming";
+    buser.username = self.mobilePhoneNumber.text;
+    [ProgressHUD show:@"正在注册"];
     [buser signUpInBackgroundWithBlock:^ (BOOL isSuccessful, NSError *error){
+        //bmob注册成功后再注册环信账号
         if (isSuccessful){
-            [ProgressHUD showSuccess:@"注册成功" Interaction:YES];
+            __weak typeof(self) weakself = self;
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                EMError *error = nil;
+                [[EaseMob sharedInstance].chatManager registerNewAccount:weakself.mobilePhoneNumber.text password:weakself.passWord.text error:&error];
+                if (!error) {
+                     [ProgressHUD showSuccess:@"注册成功, 请登录"];
+                }else{
+                    [ProgressHUD showError:@"注册失败啦"];
+                }
+            });
         } else {
             NSLog(@"%@",error);
             [ProgressHUD showError:@"注册失败" Interaction:YES];
