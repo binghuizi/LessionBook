@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *authorNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *describeLabel;
 @property(nonatomic,strong) detailModel *model;
+@property (strong, nonatomic) IBOutlet UIButton *downloadBtn;
 
 @property (weak, nonatomic) IBOutlet UIButton *shareBtn;
 @property (weak, nonatomic) IBOutlet UIButton *collectionBtn;

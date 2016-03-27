@@ -16,8 +16,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 - (IBAction)createNewGroup:(UIButton *)sender;
-//取消
-- (IBAction)cancelBtnAction:(UIButton *)sender;
+
 
 //好友数组
 @property (nonatomic, strong) NSArray *friendArray;
@@ -32,6 +31,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.friendArray = [[EaseMob sharedInstance].chatManager fetchBuddyListWithError:nil];
+    self.tabBarController.tabBar.hidden = YES;
+    [self showRightBarButton:@"取消"];
 }
 #pragma mark ----------UITableViewDataSource
 
@@ -98,7 +99,7 @@
     
 }
 
-- (IBAction)cancelBtnAction:(UIButton *)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+-(void)leftTitleAction:(UIButton *)btn{
+     [self.navigationController popViewControllerAnimated:YES];
 }
 @end

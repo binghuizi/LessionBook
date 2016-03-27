@@ -19,14 +19,16 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 #import "WXApi.h"
 #import "WeiboSDK.h"
+
 #import <AFNetworking/AFHTTPSessionManager.h>
 #import "ProgressHUD.h"
+
 #import <BmobSDK/Bmob.h>
 //腾讯开放平台（对应QQ和QQ空间）SDK头文件
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
 
-@interface AppDelegate ()<EMChatManagerDelegate>
+@interface AppDelegate ()<EMChatManagerDelegate, UIAlertViewDelegate>
 
 @end
 
@@ -139,27 +141,17 @@
 - (void)didReceiveWeiboRequest:(WBBaseRequest *)request{
     
 }
+
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response{
     if ([response isKindOfClass:WBAuthorizeResponse.class])
     {
-//        NSString *title = NSLocalizedString(@"认证结果", nil);
-//        NSString *message = [NSString stringWithFormat:@"%@: %d\nresponse.userId: %@\nresponse.accessToken: %@\n%@: %@\n%@: %@", NSLocalizedString(@"响应状态", nil), (int)response.statusCode,[(WBAuthorizeResponse *)response userID], [(WBAuthorizeResponse *)response accessToken],  NSLocalizedString(@"响应UserInfo数据", nil), response.userInfo, NSLocalizedString(@"原请求UserInfo数据", nil), response.requestUserInfo];
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
-//                                                        message:message
-//                                                       delegate:nil
-//                                              cancelButtonTitle:NSLocalizedString(@"确定", nil)
-//                                              otherButtonTitles:nil];
-//        
-//      self.wbtoken = [(WBAuthorizeResponse *)response accessToken];
-//       self.wbCurrentUserId = [(WBAuthorizeResponse *)response userID];
-//       self.wbRefreshToken = [(WBAuthorizeResponse *)response refreshToken];
-//        [alert show];
+
         NSString *accessToken = [(WBAuthorizeResponse *)response accessToken];
         NSString *uid = [(WBAuthorizeResponse *)response userID];
         NSDate *expriated = [(WBAuthorizeResponse *)response expirationDate];
         //得到的新浪微博授权信息，请按照例子来生成NSDictionary
         NSDictionary *dic = @{@"access_token":accessToken,@"uid":uid,@"expirationDate":expriated};
-//        NSLog(@"%@", response.userInfo);
+
         
        AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
         sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
@@ -198,9 +190,19 @@
     return [WeiboSDK handleOpenURL:url delegate:self];
 }
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-    return [WeiboSDK handleOpenURL:url delegate:self];
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+    return [ShareSDK handleOpenURL:url
+                 sourceApplication:sourceApplication
+                        annotation:annotation
+                        wxDelegate:self];
+
 }
+
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -227,13 +229,17 @@
 }
 
 
+//环信代理
+
 - (void)didLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error{
     NSLog(@"217 appdelegate--------%@", loginInfo);
 }
 
+
+
 - (void)didReceiveBuddyRequest:(NSString *)username message:(NSString *)message{
-    NSString *str = [NSString stringWithFormat:@"--------------%@请求加你为好友", username];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil];
+    NSString *str = [NSString stringWithFormat:@"%@请求加你为好友", username];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"同意" otherButtonTitles:@"拒绝",nil];
     [alert show];
     EMError *error = nil;
     [[EaseMob sharedInstance].chatManager acceptBuddyRequest:username error:&error];
@@ -242,11 +248,18 @@
     }else{
         NSLog(@"----------失败");
     }
-
 }
 - (void)didAcceptedByBuddy:(NSString *)username{
     NSString *str = [NSString stringWithFormat:@"%@同意加你为好友", username];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
     [alert show];
 }
+
+//接受群组邀请代理
+- (void)didAcceptInvitationFromGroup:(EMGroup *)group error:(EMError *)error{
+    
+}
+
+
+
 @end

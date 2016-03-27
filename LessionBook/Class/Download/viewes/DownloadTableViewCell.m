@@ -8,7 +8,7 @@
 
 #import "DownloadTableViewCell.h"
 #import <AFNetworking.h>
-
+#import "DownlaodTask.h"
 
 @interface DownloadTableViewCell ()<NSURLConnectionDataDelegate>
 
@@ -56,13 +56,15 @@
     self.bookNameLabel.text = model.parentname;
     self.url = model.mediainfo[@"download"];
     self.downloadProgress.hidden = NO;
+    self.download = YES;
 //    [self downloadfile];
-    if (self.downloadBtn.titleLabel.text != nil) {
-        [self.downloadBtn setTitle:@"下载" forState:UIControlStateNormal];
-        self.timeLabel.text = @"未下载";
-        self.sizeLabel.text = @"";
-        self.download = NO;
-    }
+//    if (self.downloadBtn.titleLabel.text != nil) {
+//        [self.downloadBtn setTitle:@"下载" forState:UIControlStateNormal];
+//        self.timeLabel.text = @"未下载";
+//        self.sizeLabel.text = @"";
+//        self.download = NO;
+//    }
+
 }
 
 
@@ -125,6 +127,8 @@
         self.timeLabel.text = @"已下载";
         [self.downloadBtn setTitle:@"完成" forState:UIControlStateNormal];
         [self.connect cancel];
+        DownlaodTask *task = [DownlaodTask shareInstance];
+        [task deleteModel:self.twoModel];
         return;
     }
     [[NSFileManager defaultManager] createFileAtPath:fullPath contents:nil attributes:nil];
@@ -146,6 +150,9 @@
     //4.计算文件的下载进度
     double progress = (double)self.currentSize/self.totalSize;
     self.downloadProgress.progress = progress;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"title" object:nil userInfo:@{@"progress":[NSString stringWithFormat:@"%.2f", progress], @"model":self.twoModel}];
+    
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection{

@@ -14,8 +14,13 @@
 #import "TimeView.h"
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
+
 #import "AppDelegate.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+
+//账号设置
+#import "AccountViewController.h"
+
 #import <EaseMob.h>
 #import <BmobSDK/Bmob.h>
 #import "AppDelegate.h"
@@ -49,21 +54,23 @@
 
 //将要显示
 -(void)viewWillAppear:(BOOL)animated{
-//    if (myAppDelegate.isLogin == 1) {
-//        BmobUser *user = [BmobUser getCurrentUser];
-//        if (user != nil) {
-//            [self.loginBtn setTitle:user.username forState:UIControlStateNormal];
-//            self.loginBtn.font = [UIFont systemFontOfSize:13];
-//            
-//            }else{
-//            
-//        }
-//        
-//    }
+
+
     //刷新头视图
     [self confineHeadView];
     //刷新tableview
 //    [self.tableView reloadData];
+
+//    if (myAppDelegate.isLogin == 1) {
+//        BmobUser *user = [BmobUser getCurrentUser];
+//        if (user != nil) {
+//            [self.loginBtn setTitle:user.username forState:UIControlStateNormal];
+//            self.loginBtn.titleLabel.font = [UIFont systemFontOfSize:13];
+//        }else{
+//            [self.loginBtn setTitle:@"登录/注册" forState:UIControlStateNormal];
+//        }
+//    }
+
 }
 
 
@@ -78,11 +85,12 @@
     static NSString *cellId = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellId];
     }
     cell.detailTextLabel.numberOfLines = 0;
     cell.detailTextLabel.text = self.detailArray[indexPath.row];
      cell.textLabel.text = self.myArray[indexPath.row];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     if (indexPath.row == 0) {
         cell.imageView.image = [UIImage imageNamed:@"userinfo_collection"];
     }else if (indexPath.row == 1){
@@ -94,7 +102,7 @@
     }else if (indexPath.row == 4){
         cell.imageView.image = [UIImage imageNamed:@"exp_watch"];
     }else if (indexPath.row == 5){
-        cell.imageView.image = [UIImage imageNamed:@"icon_user"];
+        cell.imageView.image = [UIImage imageNamed:@"notification"];
     }
     return cell;
 }
@@ -110,9 +118,6 @@
                 
                 LoginViewController *loginVC = [myStoryBoard instantiateViewControllerWithIdentifier:@"loginVC"];
                 [self.navigationController pushViewController:loginVC animated:YES];
-                
-                
-                
             }
             
         }
@@ -139,17 +144,23 @@
                 MessageViewController *messageVC = [[MessageViewController alloc] init];
                 UINavigationController *messageNav = [[UINavigationController alloc] initWithRootViewController:messageVC];
                 messageNav.tabBarItem.title = @"消息";
+                messageNav.tabBarItem.image = [UIImage imageNamed:@"tabbar_chatsHL"];
                 LinkManViewController *linkVC = [[LinkManViewController alloc] init];
                 UINavigationController *linkNav = [[UINavigationController alloc] initWithRootViewController:linkVC];
                 linkNav.tabBarItem.title = @"好友";
+                linkNav.tabBarItem.image = [UIImage imageNamed:@"tabbar_contactsHL"];
                 chatTabBarC.viewControllers = @[messageNav, linkNav];
                 [self.navigationController presentViewController:chatTabBarC animated:YES completion:nil];
+            }else{
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"尚未登录" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil];
+                [alert show];
             }
         }
             break;
         //退出登录
         case 5:
         {
+
             BmobUser *currntUser = [BmobUser getCurrentUser];
             if (currntUser != nil) {
                 [[EaseMob sharedInstance].chatManager asyncLogoffWithUnbindDeviceToken:YES completion:^(NSDictionary *info, EMError *error) {
@@ -167,6 +178,18 @@
                 } onQueue:nil];
             }
             [self confineHeadView];
+
+            BmobUser *user = [BmobUser getCurrentUser];
+            if (user != nil) {
+                AccountViewController *accountVC = [[AccountViewController alloc] init];
+                [self.navigationController pushViewController:accountVC animated:YES];
+            }else{
+                UIStoryboard *myStoryBoard = [UIStoryboard storyboardWithName:@"My" bundle:nil];
+                
+                LoginViewController *loginVC = [myStoryBoard instantiateViewControllerWithIdentifier:@"loginVC"];
+                [self.navigationController pushViewController:loginVC animated:YES];
+            }
+
         }
             break;
         default:
