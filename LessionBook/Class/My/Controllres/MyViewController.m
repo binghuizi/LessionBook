@@ -16,6 +16,8 @@
 #import "RegisterViewController.h"
 //账号设置
 #import "AccountViewController.h"
+//更多设置
+#import "MoreViewController.h"
 #import <EaseMob.h>
 #import <BmobSDK/Bmob.h>
 
@@ -121,6 +123,12 @@
             TimeView *timeView = [[TimeView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
             UIWindow *window = [[UIApplication sharedApplication].delegate window];
             [window addSubview:timeView];
+        }
+            break;
+        case 3:
+        {
+            MoreViewController *moreVC = [[MoreViewController alloc] init];
+            [self.navigationController pushViewController:moreVC animated:YES];
         }
             break;
         case 4:

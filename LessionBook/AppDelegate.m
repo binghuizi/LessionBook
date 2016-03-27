@@ -23,7 +23,7 @@
 //腾讯开放平台（对应QQ和QQ空间）SDK头文件
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
-
+#import <AVFoundation/AVFoundation.h>
 @interface AppDelegate ()<EMChatManagerDelegate, UIAlertViewDelegate>
 
 @end
@@ -33,7 +33,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
     //设置应用的BmobKey
     [Bmob registerWithAppKey:@"209affb0270dad4053ab8b1ded9b56fa"];
     
@@ -192,6 +191,7 @@
 
 - (void)didLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error{
     NSLog(@"217 appdelegate--------%@", loginInfo);
+    
 }
 
 
