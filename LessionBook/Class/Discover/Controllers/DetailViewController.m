@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "DownloadListViewController.h"
 #import "TableViewCell.h"
 #import "DetailHeadView.h"
 #import <SDWebImage/UIImageView+WebCache.h>
@@ -36,7 +37,7 @@
     
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
     [self showBackButton:@"ic_arrow_general2"];
-   
+    
     self.title = self.titleString;
     _myAppdelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
     
@@ -51,15 +52,15 @@
 //将要显示
 -(void)viewWillAppear:(BOOL)animated{
     //显示是否收藏状态
-//    if (_myAppdelegate.isCollection == 0) {
-//        
-//        [_tableViewHead.collectionBtn setImage:[UIImage imageNamed:@"umeng_socialize_action_unlike"] forState:UIControlStateNormal];
-//        
-//    }else{
-//       
-//        [_tableViewHead.collectionBtn setImage:[UIImage imageNamed:@"btn_play_fav"] forState:UIControlStateNormal];
+    //    if (_myAppdelegate.isCollection == 0) {
+    //
+    //        [_tableViewHead.collectionBtn setImage:[UIImage imageNamed:@"umeng_socialize_action_unlike"] forState:UIControlStateNormal];
+    //
+    //    }else{
+    //
+    //        [_tableViewHead.collectionBtn setImage:[UIImage imageNamed:@"btn_play_fav"] forState:UIControlStateNormal];
     
-   // }
+    // }
 }
 #pragma mark --- 头部
 -(void)loadHeadView{
@@ -71,14 +72,13 @@
     _tableViewHead.describeLabel.text   = self.miaoshuString;
     [_tableViewHead.shareBtn addTarget:self action:@selector(shareAction) forControlEvents:UIControlEventTouchUpInside];
     [_tableViewHead.collectionBtn addTarget:self action:@selector(collectionAction) forControlEvents:UIControlEventTouchUpInside];
+    //下载列表
+    [_tableViewHead.downloadBtn addTarget:self action:@selector(downloadBtn) forControlEvents:UIControlEventTouchUpInside];
     
     self.tableView.tableHeaderView = _tableViewHead;
 }
 #pragma mark -- 头部分享按钮
 -(void)shareAction{
-  //  NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"DIDI2" ofType:@"jpg"];
-   // NSData *date = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.pictchString]];
-   // NSLog(@"%@",imagePath);
     //构造分享内容
     id<ISSContent> publishContent = [ShareSDK content:[NSString stringWithFormat:@"%@%@",self.titleString,self.pictchString]
                                        defaultContent:@"测试一下"
@@ -90,8 +90,7 @@
     
     //创建iPad弹出菜单容器,详见第六步
     id<ISSContainer> container = [ShareSDK container];
-   // [container setIPadContainerWithView:sender arrowDirect:UIPopoverArrowDirectionUp];
-    
+
     //弹出分享菜单
     [ShareSDK showShareActionSheet:container
                          shareList:nil
@@ -118,11 +117,11 @@
     //是否登陆状态 登陆状态才能收藏
     if (_myAppdelegate.isLogin) {
         //1.登录状态下 点击收藏 变红色❤️
-       
-            
-            
-            BookInformation *info = [BookInformation bookInformationWithUserId:_myAppdelegate.userId bookId:self.idString bookName:self.titleString bookIntroduction:self.miaoshuString imageString:self.pictchString];
-            SqlModel *model = [[SqlModel alloc]init];
+        
+        
+        
+        BookInformation *info = [BookInformation bookInformationWithUserId:_myAppdelegate.userId bookId:self.idString bookName:self.titleString bookIntroduction:self.miaoshuString imageString:self.pictchString];
+        SqlModel *model = [[SqlModel alloc]init];
         
         BmobUser *user = [BmobUser getCurrentUser];
         
@@ -144,12 +143,12 @@
                 isCollection = 1;
                 _myAppdelegate.isCollection = 0;
             }
-
+            
         }
         
-            
-            
-            
+        
+        
+        
         
     }else{
         //登陆状态跳转登录页面
@@ -161,9 +160,9 @@
             [self.navigationController pushViewController:loginVC animated:YES];
         }];
         
-          UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-              
-          }];
+        UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
         
         [alertVc addAction:action2];
         [alertVc addAction:action];
@@ -173,7 +172,7 @@
     }
     
     
-   
+    
     
     
     
@@ -209,7 +208,7 @@
             [model setValuesForKeysWithDictionary:dic];
             [self.dateArray addObject:model];
         }
-       
+        
         [self.tableView reloadData];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -239,7 +238,11 @@
 
 
 #pragma mark ---------DownLoad
-
+- (void)downloadBtn{
+    DownloadListViewController *downloadlistVC = [[DownloadListViewController alloc] init];
+    downloadlistVC.dataArray = self.dateArray;
+    [self.navigationController pushViewController:downloadlistVC animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -8,17 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		7A0042821CA23E0D00904873 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CDC1C9B910C00950794 /* libsqlite3.tbd */; };
+		7A0AB13B1CA4D3B50085875C /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0AB13A1CA4D3B50085875C /* AccountViewController.m */; };
+		7A0AB1411CA5312A0085875C /* DownloadListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0AB1401CA5312A0085875C /* DownloadListViewController.m */; };
 		7A1A79B31C9FE7AE0001C962 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1A79B21C9FE7AE0001C962 /* libicucore.tbd */; };
 		7A1A79B51C9FE7CE0001C962 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1A79B41C9FE7CE0001C962 /* libstdc++.tbd */; };
 		7A1A79B71C9FE7FE0001C962 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1A79B61C9FE7FE0001C962 /* JavaScriptCore.framework */; };
 		7A1A79D61CA025E20001C962 /* DIDI2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A1A79D51CA025E20001C962 /* DIDI2.jpg */; };
-
 		7A1BE5171CA289B3000B7B13 /* BookInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BE5161CA289B3000B7B13 /* BookInformation.m */; };
 		7A1BE51A1CA289DF000B7B13 /* SqlModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BE5191CA289DF000B7B13 /* SqlModel.m */; };
 		7A1BE51E1CA2BF77000B7B13 /* FavoriteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BE51C1CA2BF77000B7B13 /* FavoriteTableViewCell.m */; };
 		7A1BE51F1CA2BF77000B7B13 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A1BE51D1CA2BF77000B7B13 /* FavoriteTableViewCell.xib */; };
-
-
 		7A389CD91C9B90C900950794 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CD81C9B90C800950794 /* MobileCoreServices.framework */; };
 		7A389CDB1C9B90D300950794 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CDA1C9B90D300950794 /* CFNetwork.framework */; };
 		7A389CDF1C9B911F00950794 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A389CDE1C9B911F00950794 /* libstdc++.6.0.9.tbd */; };
@@ -106,12 +105,15 @@
 /* Begin PBXFileReference section */
 		67981FB38F5840FA5D07AC7F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		706A4DEFC7FBB216AD8C4E61 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7A0AB1391CA4D3B50085875C /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		7A0AB13A1CA4D3B50085875C /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		7A0AB13F1CA5312A0085875C /* DownloadListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadListViewController.h; sourceTree = "<group>"; };
+		7A0AB1401CA5312A0085875C /* DownloadListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadListViewController.m; sourceTree = "<group>"; };
 		7A1A79B21C9FE7AE0001C962 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		7A1A79B41C9FE7CE0001C962 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		7A1A79B61C9FE7FE0001C962 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		7A1A79B81C9FE81B0001C962 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		7A1A79D51CA025E20001C962 /* DIDI2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DIDI2.jpg; sourceTree = "<group>"; };
-
 		7A1BE5151CA289B3000B7B13 /* BookInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookInformation.h; sourceTree = "<group>"; };
 		7A1BE5161CA289B3000B7B13 /* BookInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookInformation.m; sourceTree = "<group>"; };
 		7A1BE5181CA289DF000B7B13 /* SqlModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqlModel.h; sourceTree = "<group>"; };
@@ -119,7 +121,6 @@
 		7A1BE51B1CA2BF77000B7B13 /* FavoriteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteTableViewCell.h; sourceTree = "<group>"; };
 		7A1BE51C1CA2BF77000B7B13 /* FavoriteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteTableViewCell.m; sourceTree = "<group>"; };
 		7A1BE51D1CA2BF77000B7B13 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
-
 		7A389CD81C9B90C800950794 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		7A389CDA1C9B90D300950794 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		7A389CDC1C9B910C00950794 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -381,10 +382,6 @@
 			children = (
 				7A965F6D1C99328900DE2547 /* DownloadViewController.h */,
 				7A965F6E1C99328900DE2547 /* DownloadViewController.m */,
-
-				7A6BE8471C9A5F35006F6E17 /* DidDownLoadViewController.h */,
-				7A6BE8481C9A5F35006F6E17 /* DidDownLoadViewController.m */,
-
 				7AD1C4AA1C9BA204001346CA /* MessageViewController.h */,
 				7AD1C4AB1C9BA204001346CA /* MessageViewController.m */,
 				7A7501301C9BAD110002FA5C /* LinkManViewController.h */,
@@ -517,6 +514,8 @@
 				7A54D24D1C9BA0070012224E /* DetailViewController.m */,
 				7A68D4EE1C9D50360090DB08 /* TypeViewController.h */,
 				7A68D4EF1C9D50360090DB08 /* TypeViewController.m */,
+				7A0AB13F1CA5312A0085875C /* DownloadListViewController.h */,
+				7A0AB1401CA5312A0085875C /* DownloadListViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -589,6 +588,8 @@
 				7A4532311C9E423E00EDB43C /* LoginViewController.m */,
 				7A4532331C9E426800EDB43C /* RegisterViewController.h */,
 				7A4532341C9E426800EDB43C /* RegisterViewController.m */,
+				7A0AB1391CA4D3B50085875C /* AccountViewController.h */,
+				7A0AB13A1CA4D3B50085875C /* AccountViewController.m */,
 			);
 			path = Controllres;
 			sourceTree = "<group>";
@@ -817,14 +818,13 @@
 				7A6BE8431C9A428C006F6E17 /* DownloadDidTableViewCell.m in Sources */,
 				7A4764221C984D900057A7D9 /* VOSegment.m in Sources */,
 				7A68D4EA1C9D40100090DB08 /* UIViewController+Common.m in Sources */,
+				7A0AB1411CA5312A0085875C /* DownloadListViewController.m in Sources */,
 				7A7501351C9BE3BD0002FA5C /* NSString+Common.m in Sources */,
 				7A4764211C984D900057A7D9 /* VOIndicatorAnimation.m in Sources */,
 				7A965F7A1C993B2A00DE2547 /* SearchModel.m in Sources */,
-
 				7A1BE5171CA289B3000B7B13 /* BookInformation.m in Sources */,
-
+				7A0AB13B1CA4D3B50085875C /* AccountViewController.m in Sources */,
 				7A80A31C1CA389E100845015 /* NewGroupViewController.m in Sources */,
-
 				7A68D4ED1C9D450D0090DB08 /* HWTools.m in Sources */,
 				7A75016B1C9C09040002FA5C /* RequestViewController.m in Sources */,
 				7AFFB1BB1C9EA12E00B8E3FB /* typeDetailModel.m in Sources */,

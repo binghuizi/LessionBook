@@ -19,19 +19,12 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 #import "WXApi.h"
 #import "WeiboSDK.h"
-
-
 #import <BmobSDK/Bmob.h>
-
-
-
-
-
 //腾讯开放平台（对应QQ和QQ空间）SDK头文件
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
 
-@interface AppDelegate ()<EMChatManagerDelegate>
+@interface AppDelegate ()<EMChatManagerDelegate, UIAlertViewDelegate>
 
 @end
 
@@ -204,8 +197,8 @@
 
 
 - (void)didReceiveBuddyRequest:(NSString *)username message:(NSString *)message{
-    NSString *str = [NSString stringWithFormat:@"--------------%@请求加你为好友", username];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil];
+    NSString *str = [NSString stringWithFormat:@"%@请求加你为好友", username];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"同意" otherButtonTitles:@"拒绝",nil];
     [alert show];
     EMError *error = nil;
     [[EaseMob sharedInstance].chatManager acceptBuddyRequest:username error:&error];
@@ -214,7 +207,6 @@
     }else{
         NSLog(@"----------失败");
     }
-
 }
 - (void)didAcceptedByBuddy:(NSString *)username{
     NSString *str = [NSString stringWithFormat:@"%@同意加你为好友", username];
@@ -224,7 +216,9 @@
 
 //接受群组邀请代理
 - (void)didAcceptInvitationFromGroup:(EMGroup *)group error:(EMError *)error{
-
+    
 }
+
+
 
 @end

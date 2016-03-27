@@ -46,14 +46,7 @@
     [self.accountLoginBtn addTarget:self action:@selector(accountLogin:) forControlEvents:UIControlEventTouchUpInside];
     [self.mcroblogLoginBtn addTarget:self action:@selector(mcroblogLoginBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.QQLoginBtn addTarget:self action:@selector(QQLoginBtn:) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-
     myAppDelagate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
-    
-    
-    
-
 }
 - (void)leftTitleAction:(UIBarButtonItem *)btn{
     UIStoryboard *myStoryBoard = [UIStoryboard storyboardWithName:@"My" bundle:nil];
@@ -64,39 +57,27 @@
 - (void)accountLogin:(UIButton *)btn{
     [ProgressHUD show:@"正在抢滩登陆"];
     [BmobUser loginInbackgroundWithAccount:self.accountNumber.text andPassword:self.passWard.text block:^(BmobUser *user, NSError *error) {
-                                    if (user) {
-
-                                        
-                                       
-                                        
-                                        
-
-                                        //异步登陆账号
-                                        [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:self.accountNumber.text password:self.passWard.text completion:^(NSDictionary *loginInfo, EMError *error) {
-                                            if (!error) {
-                                                [ProgressHUD showSuccess:@"登陆成功"];
-                                                //获取数据库中数据
-                                                [[EaseMob sharedInstance].chatManager loadDataFromDatabase];
-                                                //获取群组列表
-                                                [[EaseMob sharedInstance].chatManager asyncFetchMyGroupsList];
-//                                                [self.navigationController popViewControllerAnimated:YES];
-                                            }else{
-                                                [ProgressHUD showError:@"登录失败"];
-                                            }
-                                            
-                                            myAppDelagate.isLogin = 1;
-                                            myAppDelagate.userId = self.accountNumber.text;
-                                            [self.navigationController popViewControllerAnimated:YES];
-                                            
-                                            
-                                            
-                                            
-                                        } onQueue:nil];
-
-                                    } else {
-                                        [ProgressHUD showError:[NSString stringWithFormat:@"%@", error] Interaction:YES];
-                                    }
-                                }];
+        if (user) {
+            //异步登陆账号
+            [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:self.accountNumber.text password:self.passWard.text completion:^(NSDictionary *loginInfo, EMError *error) {
+                if (!error) {
+                    [ProgressHUD showSuccess:@"登陆成功"];
+                    //获取数据库中数据
+                    [[EaseMob sharedInstance].chatManager loadDataFromDatabase];
+                    //获取群组列表
+                    [[EaseMob sharedInstance].chatManager asyncFetchMyGroupsList];
+                }else{
+                    [ProgressHUD showError:@"登录失败"];
+                }
+                
+                myAppDelagate.isLogin = 1;
+                myAppDelagate.userId = self.accountNumber.text;
+                [self.navigationController popViewControllerAnimated:YES];
+            } onQueue:nil];
+        } else {
+            [ProgressHUD showError:[NSString stringWithFormat:@"%@", error] Interaction:YES];
+        }
+    }];
 }
 
 //新浪微博登录
@@ -116,7 +97,7 @@
     NSLog(@"UserId:%@",uid);
     NSLog(@"expiresDate:%@",expiresDate);
     NSDictionary *dic = @{@"access_token":accessToken,@"uid":uid,@"expirationDate":expiresDate};
-   //通过授权信息注册登录
+    //通过授权信息注册登录
     [BmobUser loginInBackgroundWithAuthorDictionary:dic platform:BmobSNSPlatformSinaWeibo block:^(BmobUser *user, NSError *error) {
         if (error) {
             NSLog(@"weibo login error:%@",error);
@@ -131,9 +112,6 @@
     
 }
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    //这个是逐个的textFiled回收键盘，比较麻烦
-    //  [self.ZhangHao resignFirstResponder];
-    //  [self.MiMa resignFirstResponder];
     //view结束编辑，回收键盘
     [self.view endEditing:YES];
 }
