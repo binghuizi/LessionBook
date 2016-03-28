@@ -19,10 +19,13 @@
 #import "LoginViewController.h"
 #import "BookInformation.h"
 #import "SqlModel.h"
+#import <BmobSDK/Bmob.h>
+#import <BmobSDK/BmobQuery.h>
 #import <BmobSDK/BmobUser.h>
 #import "PlayViewController.h"
 #import "ZYMusic.h"
 #import "ZYMusicTool.h"
+
 @interface DetailViewController ()<UITableViewDataSource,UITableViewDelegate>{
      DetailHeadView *_tableViewHead;
     BOOL isCollection;
@@ -91,7 +94,7 @@
     [_tableViewHead.shareBtn addTarget:self action:@selector(shareAction) forControlEvents:UIControlEventTouchUpInside];
     [_tableViewHead.collectionBtn addTarget:self action:@selector(collectionAction) forControlEvents:UIControlEventTouchUpInside];
     //下载列表
-    [_tableViewHead.downloadBtn addTarget:self action:@selector(downloadBtn) forControlEvents:UIControlEventTouchUpInside];
+    [_tableViewHead.downloadBtn addTarget:self action:@selector(confirmVIP) forControlEvents:UIControlEventTouchUpInside];
     
     self.tableView.tableHeaderView = _tableViewHead;
 }
@@ -305,6 +308,26 @@
 
 
 #pragma mark ---------DownLoad
+
+//先确认是否为VIP
+- (void)confirmVIP{
+    BmobUser *user = [BmobUser getCurrentUser];
+    if (user == nil) {
+        UIAlertView *alert  = [[UIAlertView alloc] initWithTitle:@"提示" message:@"对不起，您还未登录" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        [alert show];
+    }else{BmobQuery *bQuery = [BmobUser query];
+        [bQuery getObjectInBackgroundWithId:user.objectId block:^(BmobObject *object, NSError *error) {
+            NSString *vip = [object objectForKey:@"VIP"];
+            if ([vip isEqualToString:@"true"]) {
+                [self downloadBtn];
+            }else{
+                UIAlertView *alert  = [[UIAlertView alloc] initWithTitle:@"提示" message:@"对不起，此功能需要VIP资格才可使用" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+                [alert show];
+            }
+        }];
+    }
+}
+
 - (void)downloadBtn{
     DownloadListViewController *downloadlistVC = [[DownloadListViewController alloc] init];
     downloadlistVC.dataArray = self.dateArray;

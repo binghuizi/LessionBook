@@ -300,6 +300,7 @@
 				7A4532641C9F9CAE00EDB43C /* MediaPlayer.framework in Frameworks */,
 				7A45325E1C9F9C4700EDB43C /* libz.1.2.5.tbd in Frameworks */,
 				7A45325C1C9F9C3500EDB43C /* SystemConfiguration.framework in Frameworks */,
+				7A45325A1C9F9C1800EDB43C /* CoreTelephony.framework in Frameworks */,
 				7A4532581C9F9BEE00EDB43C /* CoreGraphics.framework in Frameworks */,
 				7A4532571C9F9BDE00EDB43C /* Security.framework in Frameworks */,
 				7A389CE71C9B915600950794 /* libxml2.tbd in Frameworks */,
@@ -1030,6 +1031,7 @@
 					"$(PROJECT_DIR)/LessionBook/Library/libWeiboSDK",
 					"$(PROJECT_DIR)/LessionBook/Library/libWeiboSDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/LessionBook/Library/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
+					"$(PROJECT_DIR)/LessionBook/Library/tools/libWeiboSDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iOS.huI.LessionBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1066,6 +1068,7 @@
 					"$(PROJECT_DIR)/LessionBook/Library/libWeiboSDK",
 					"$(PROJECT_DIR)/LessionBook/Library/libWeiboSDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/LessionBook/Library/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
+					"$(PROJECT_DIR)/LessionBook/Library/tools/libWeiboSDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iOS.huI.LessionBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";

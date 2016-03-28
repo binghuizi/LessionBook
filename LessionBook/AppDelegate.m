@@ -22,7 +22,9 @@
 
 #import <AFNetworking/AFHTTPSessionManager.h>
 #import "ProgressHUD.h"
-
+//支付设置
+#import <AlipaySDK/AlipaySDK.h>
+#import <BmobPay/BmobPay.h>
 #import <BmobSDK/Bmob.h>
 //腾讯开放平台（对应QQ和QQ空间）SDK头文件
 #import <TencentOpenAPI/TencentOAuth.h>
@@ -38,24 +40,24 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     //设置应用的BmobKey
-    [Bmob registerWithAppKey:@"209affb0270dad4053ab8b1ded9b56fa"];
+    [Bmob registerWithAppKey:kBmobPayKey];
+    //bmob支付
+    [BmobPaySDK registerWithAppKey:kBmobPayKey];
     //微博分享
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:kWeiboAppKey];
-    
     
     //注册环信
     //registerSDKWithAppKey
     [[EaseMob sharedInstance] registerSDKWithAppKey:kHuanxinAppKey apnsCertName:nil];
     [[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
-//    [[EaseMob sharedInstance].chatManager setIsAutoFetchBuddyList:YES];
     [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
     [[EaseSDKHelper shareHelper] easemobApplication:application
                       didFinishLaunchingWithOptions:launchOptions
                                              appkey:kHuanxinAppKey
                                        apnsCertName:nil
                                         otherConfig:@{kSDKConfigEnableConsoleLogger:[NSNumber numberWithBool:YES]}];
-
+    
 
     // Override point for customization after application launch.
     //下载
@@ -142,16 +144,15 @@
 }
 
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response{
-    if ([response isKindOfClass:WBAuthorizeResponse.class])
-    {
-
         NSString *accessToken = [(WBAuthorizeResponse *)response accessToken];
         NSString *uid = [(WBAuthorizeResponse *)response userID];
         NSDate *expriated = [(WBAuthorizeResponse *)response expirationDate];
+    NSLog(@"acessToken:%@",accessToken);
+    NSLog(@"UserId:%@",uid);
+    NSLog(@"expiresDate:%@",expriated);
         //得到的新浪微博授权信息，请按照例子来生成NSDictionary
-        NSDictionary *dic = @{@"access_token":accessToken,@"uid":uid,@"expirationDate":expriated};
-
-        
+    DSNLog(@"accessToken = %@",accessToken);
+    DSNLog(@"----------------");
        AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
         sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
         [sessionManager GET:@"https://api.weibo.com/2/users/show.json" parameters:@{@"access_token":accessToken, @"uid":uid} progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -159,45 +160,62 @@
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             DSNLog(@"%@", responseObject);
             self.dic = responseObject;
+            BmobQuery *bquery = [BmobUser query];
+            NSArray *array = @[@{@"username" : self.dic[@"screen_name"]}];
+            [bquery addTheConstraintByOrOperationWithArray:array];
+            [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+                NSLog(@"%@", array);
+            }];
+            
+            BmobUser *bUser = [[BmobUser alloc] init];
+            [bUser setUsername:self.dic[@"screen_name"]];
+            [bUser setPassword:@"000000"];
+            [bUser setObject:self.dic[@"avatar_hd"] forKey:@"headImage"];
+           
+            [bUser signUpInBackgroundWithBlock:^(BOOL isSuccessful, NSError *error) {
+                if (isSuccessful){
+                    NSLog(@"Sign up successfully");
+            [BmobUser loginWithUsernameInBackground:self.dic[@"screen_name"] password:@"000000" block:^(BmobUser *user, NSError *error) {
+                        if (user) {
+                            //          NSLog(@"user objectid is :%@",user.objectId);
+                            [ProgressHUD showSuccess:@"新浪微博登陆成功" Interaction:YES];
+                            self.isLogin = YES;
+                        } else {
+                            NSLog(@"weibo login error:%@",error);
+                            self.isLogin = NO;
+                        }
+                    }];
+
+                } else {
+                    NSLog(@"%@",error);
+                }
+            }];
+            
+            
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             DSNLog(@"responseObject = -----56%@", error);
         }];
-        //登陆
-        [BmobUser loginInBackgroundWithAuthorDictionary:dic platform:BmobSNSPlatformSinaWeibo block:^(BmobUser *user, NSError *error) {
-            if (error) {
-                NSLog(@"weibo login error:%@",error);
-                self.isLogin = NO;
-            } else if (user){
-                NSLog(@"user objectid is :%@",user.objectId);
-                [ProgressHUD showSuccess:@"新浪微博登陆成功" Interaction:YES];
-                self.isLogin = YES;
-                [user setUsername:self.dic[@"screen_name"]];
-                [user setObject:self.dic[@"avatar_hd"] forKey:@"headerImage"];
-            }
-        }];
-    }
-}
-//-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url{
-//    return [WeiboSDK handleOpenURL:url delegate:self];
-//}
-//- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
-//    return [WeiboSDK handleOpenURL:url delegate:self];
-//
-//   }
--(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
-    
-    return [WeiboSDK handleOpenURL:url delegate:self];
 }
 
+-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    
+    return [WeiboSDK handleOpenURL:url delegate:self] |[ShareSDK handleOpenURL:url wxDelegate:self];
+}
+//支付代理
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation
 {
+    if ([url.host isEqualToString:@"safepay"]) {
+        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"result = %@", resultDic);
+        }];
+    }
     return [ShareSDK handleOpenURL:url
                  sourceApplication:sourceApplication
                         annotation:annotation
-                        wxDelegate:self];
+                        wxDelegate:self]|[WeiboSDK handleOpenURL:url delegate:self];
 
 }
 
@@ -259,6 +277,8 @@
 - (void)didAcceptInvitationFromGroup:(EMGroup *)group error:(EMError *)error{
     
 }
+
+
 
 
 
