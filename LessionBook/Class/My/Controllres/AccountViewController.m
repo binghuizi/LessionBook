@@ -160,6 +160,7 @@
             [user setObject:file1.url forKey:@"imageUrl"];
             [user updateInBackground];
             //打印file文件的url地址
+            [[NSFileManager defaultManager] removeItemAtPath:imagePath error:nil];
         }else{
             //进行处理
         }
@@ -199,6 +200,7 @@
             BmobUser *user = [BmobUser getCurrentUser];
             if (user) {
                 NSString *city = [user objectForKey:@"city"];
+                NSLog(@"%@", city);
                 if ([city isEqualToString:@""]) {
                     cell.textLabel.text = @"地区";
                 }else{
@@ -264,13 +266,13 @@
 - (void)setCity{
     UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"地区城市" message:nil preferredStyle:UIAlertControllerStyleAlert];
     [alertC addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-        BmobUser *user = [BmobUser getCurrentUser];
-        NSLog(@"%@", textField.text);
-        [user setObject:textField.text forKey:@"city"];
-        [user updateInBackground];
-        [self.tableView reloadData];
+        textField.placeholder = @"请输入地区";
     }];
     UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        BmobUser *user = [BmobUser getCurrentUser];
+        [user setObject:alertC.textFields[0].text forKey:@"city"];
+        [user updateInBackground];
+        [self.tableView reloadData];
     }];
     [alertC addAction:action];
     [self presentViewController:alertC animated:YES completion:nil];
