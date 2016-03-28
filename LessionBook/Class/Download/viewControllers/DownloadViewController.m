@@ -48,6 +48,7 @@ static NSString *_didDownload = @"did";
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     DownlaodTask *task = [DownlaodTask shareInstance];
     self.downlistArray = [task getdownLoadModel];
     [self.tableView reloadData];
@@ -66,8 +67,10 @@ static NSString *_didDownload = @"did";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (!self.selectdidDownload) {
     DownloadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:_downloadcell forIndexPath:indexPath];
-        cell.model = self.downlistArray[indexPath.row];
-        cell.delegate = self;
+        if (self.downlistArray.count > 0) {
+            cell.model = self.downlistArray[indexPath.row];
+            cell.delegate = self;
+        }
         return cell;
     }
     DownloadDidTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:_didDownload forIndexPath:indexPath];
@@ -114,7 +117,7 @@ static NSString *_didDownload = @"did";
         detailModel *model = self.downlistArray[indexPath.row];
         DownlaodTask *task = [DownlaodTask shareInstance];
         [task deleteModel:model];
-        [self.downlistArray removeObjectAtIndex:indexPath.row];
+        [self.downlistArray removeObject:model];
     }else{
         NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
         detailModel *model = self.didloadArray[indexPath.row];

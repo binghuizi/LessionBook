@@ -20,18 +20,15 @@
 #import "WXApi.h"
 #import "WeiboSDK.h"
 
+#import <AFNetworking/AFHTTPSessionManager.h>
+#import "ProgressHUD.h"
 
 #import <BmobSDK/Bmob.h>
-
-
-
-
-
 //腾讯开放平台（对应QQ和QQ空间）SDK头文件
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
-
-@interface AppDelegate ()<EMChatManagerDelegate>
+#import <AVFoundation/AVFoundation.h>
+@interface AppDelegate ()<EMChatManagerDelegate, UIAlertViewDelegate>
 
 @end
 
@@ -40,10 +37,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
     //设置应用的BmobKey
     [Bmob registerWithAppKey:@"209affb0270dad4053ab8b1ded9b56fa"];
-    
+    //微博分享
+    [WeiboSDK enableDebugMode:YES];
+    [WeiboSDK registerApp:kWeiboAppKey];
     
     
     //注册环信
@@ -98,10 +96,6 @@
     discoVc.tabBarItem.title = @"发现";
     discoVc.tabBarItem.image = [UIImage imageNamed:@"tab_discovery"];
     
-    
-    
-    
-    
     tabarVc.viewControllers = @[disNav,searchNav, downloadNav, myNav];
     
     self.window.rootViewController = tabarVc;
@@ -136,45 +130,64 @@
                            appSecret:kWeiXinAppKey
                            wechatCls:[WXApi class]];
     
-    
-    
-    
-    
-    
-    
-    
-    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
 
 
--(BOOL)application:(UIApplication *)application openURL:(NSURL *)url{
-    return [WeiboSDK handleOpenURL:url delegate:self];
-}
--(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
 
-    return [WeiboSDK handleOpenURL:url delegate:self];
+- (void)didReceiveWeiboRequest:(WBBaseRequest *)request{
+    
 }
-//-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+
+- (void)didReceiveWeiboResponse:(WBBaseResponse *)response{
+    if ([response isKindOfClass:WBAuthorizeResponse.class])
+    {
+
+        NSString *accessToken = [(WBAuthorizeResponse *)response accessToken];
+        NSString *uid = [(WBAuthorizeResponse *)response userID];
+        NSDate *expriated = [(WBAuthorizeResponse *)response expirationDate];
+        //得到的新浪微博授权信息，请按照例子来生成NSDictionary
+        NSDictionary *dic = @{@"access_token":accessToken,@"uid":uid,@"expirationDate":expriated};
+
+        
+       AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
+        sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+        [sessionManager GET:@"https://api.weibo.com/2/users/show.json" parameters:@{@"access_token":accessToken, @"uid":uid} progress:^(NSProgress * _Nonnull downloadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            DSNLog(@"%@", responseObject);
+            self.dic = responseObject;
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            DSNLog(@"responseObject = -----56%@", error);
+        }];
+        //登陆
+        [BmobUser loginInBackgroundWithAuthorDictionary:dic platform:BmobSNSPlatformSinaWeibo block:^(BmobUser *user, NSError *error) {
+            if (error) {
+                NSLog(@"weibo login error:%@",error);
+                self.isLogin = NO;
+            } else if (user){
+                NSLog(@"user objectid is :%@",user.objectId);
+                [ProgressHUD showSuccess:@"新浪微博登陆成功" Interaction:YES];
+                self.isLogin = YES;
+                [user setUsername:self.dic[@"screen_name"]];
+                [user setObject:self.dic[@"avatar_hd"] forKey:@"headerImage"];
+            }
+        }];
+    }
+}
+//-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url{
 //    return [WeiboSDK handleOpenURL:url delegate:self];
 //}
-
-
 //- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
 //    return [WeiboSDK handleOpenURL:url delegate:self];
-//    
-//   }
-
-//- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
-//    return [WeiboSDK handleOpenURL:url delegate:self];
-//}
 //
-//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-//    return [WeiboSDK handleOpenURL:url delegate:self];
-//}
-
+//   }
+-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    
+    return [WeiboSDK handleOpenURL:url delegate:self];
+}
 
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
@@ -185,7 +198,9 @@
                  sourceApplication:sourceApplication
                         annotation:annotation
                         wxDelegate:self];
+
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -213,13 +228,18 @@
 }
 
 
+//环信代理
+
 - (void)didLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error{
     NSLog(@"217 appdelegate--------%@", loginInfo);
+    
 }
 
+
+
 - (void)didReceiveBuddyRequest:(NSString *)username message:(NSString *)message{
-    NSString *str = [NSString stringWithFormat:@"--------------%@请求加你为好友", username];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil];
+    NSString *str = [NSString stringWithFormat:@"%@请求加你为好友", username];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"同意" otherButtonTitles:@"拒绝",nil];
     [alert show];
     EMError *error = nil;
     [[EaseMob sharedInstance].chatManager acceptBuddyRequest:username error:&error];
@@ -228,11 +248,18 @@
     }else{
         NSLog(@"----------失败");
     }
-
 }
 - (void)didAcceptedByBuddy:(NSString *)username{
     NSString *str = [NSString stringWithFormat:@"%@同意加你为好友", username];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友邀请" message:str delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
     [alert show];
 }
+
+//接受群组邀请代理
+- (void)didAcceptInvitationFromGroup:(EMGroup *)group error:(EMError *)error{
+    
+}
+
+
+
 @end

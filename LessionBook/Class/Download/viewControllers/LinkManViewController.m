@@ -97,7 +97,8 @@
             break;
         case 1:
         {
-        
+            GroupViewController *groupVC = [[GroupViewController alloc] init];
+            [self.navigationController pushViewController:groupVC animated:YES];
         }
             break;
         case 2:

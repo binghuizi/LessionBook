@@ -34,7 +34,7 @@
 {
     [super viewWillAppear:animated];
     EMError *error = nil;
-    self.groupListArray = [[EaseMob sharedInstance].chatManager fetchMyGroupsListWithError:&error];
+    self.groupListArray = [[EaseMob sharedInstance].chatManager fetchAllPublicGroupsWithError:&error];
     if (!error) {
         NSLog(@"%lu", self.groupListArray.count);
     }
@@ -67,6 +67,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.groupListArray.count > 0) {
         EMGroup *group = self.groupListArray[indexPath.row];
+        NSString *usrename = [[EaseMob sharedInstance].chatManager apnsNickname];
+        if ([group.owner isEqualToString:usrename]) {
+            
+        }else{
+        [[EaseMob sharedInstance].chatManager asyncJoinPublicGroup:group.groupId completion:^(EMGroup *group, EMError *error) {
+            if (!error) {
+                NSLog(@"入群成功");
+            }
+        } onQueue:nil];
+        }
         SingleViewController *singleVC = [[SingleViewController alloc] initWithConversationChatter:group.groupId conversationType:eConversationTypeGroupChat];
         [self.navigationController pushViewController:singleVC animated:YES];
     }

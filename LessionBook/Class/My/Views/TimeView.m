@@ -204,8 +204,7 @@
         
         
         
-    }
-      else{
+    } else{
         
         [theTimer invalidate];
         

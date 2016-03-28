@@ -26,7 +26,22 @@
 - (void)awakeFromNib {
     // Initialization code
     [self.downloadBtn addTarget:self action:@selector(downloadAction) forControlEvents:UIControlEventTouchUpInside];
-    
+    //注册通知中心
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeBtnTitle:) name:@"title" object:nil];
+}
+
+//通知的方法
+
+- (void)changeBtnTitle:(NSNotification *)notification{
+    detailModel *model = notification.userInfo[@"model"];
+    NSString *progress = notification.userInfo[@"progress"];
+    if ([self.twoModel.parentname isEqualToString:model.parentname]) {
+        if ([progress isEqualToString:@"1.00"]) {
+            [self.downloadBtn setTitle:@"已下载" forState:UIControlStateNormal];
+        }else{
+            [self.downloadBtn setTitle:[NSString stringWithFormat:@"%.f%%", [progress doubleValue] * 100] forState:UIControlStateNormal];
+        }
+    }
 }
 
 -(void)setModel:(detailModel *)model{
