@@ -1,0 +1,21 @@
+//
+//  PlayViewController.h
+//  LessionBook
+//
+//  Created by scjy on 16/3/24.
+//  Copyright © 2016年 迪士尼工作室. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "detailModel.h"
+@interface PlayViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bookNameLabel;
+@property (weak, nonatomic) IBOutlet UIButton *playBtn;
+- (IBAction)playAction:(id)sender;
+@property(nonatomic,strong) NSString *nameString;
+@property(nonatomic,assign) NSInteger timeInt;
+@property(nonatomic,strong) NSString *urlString;
+-(void)show;
+@property (nonatomic, strong) detailModel *playingMusic;
+@end

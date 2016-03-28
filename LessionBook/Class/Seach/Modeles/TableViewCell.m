@@ -8,7 +8,8 @@
 
 #import "TableViewCell.h"
 #import "DownlaodTask.h"
-
+#import <BmobSDK/Bmob.h>
+#import <BmobSDK/BmobQuery.h>
 
 @interface TableViewCell ()<NSURLConnectionDataDelegate>
 
@@ -25,7 +26,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    [self.downloadBtn addTarget:self action:@selector(downloadAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.downloadBtn addTarget:self action:@selector(confirmVIP) forControlEvents:UIControlEventTouchUpInside];
     //注册通知中心
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeBtnTitle:) name:@"title" object:nil];
 }
@@ -60,6 +61,28 @@
     [task addDownLoadModel:self.twoModel];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"下载提示" message:@"已添加到下载队列" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil];
     [alert show];
+}
+
+//先确认是否为VIP
+- (void)confirmVIP{
+    BmobUser *user = [BmobUser getCurrentUser];
+    if (user == nil) {
+        UIAlertView *alert  = [[UIAlertView alloc] initWithTitle:@"提示" message:@"对不起，您还未登录" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        [alert show];
+    }else{
+        BmobQuery *bQuery = [BmobUser query];
+        
+        [bQuery getObjectInBackgroundWithId:user.objectId block:^(BmobObject *object, NSError *error) {
+            NSString *vip = [object objectForKey:@"VIP"];
+            if ([vip isEqualToString:@"true"]) {
+                NSLog(@"%@", vip);
+                            [self downloadAction];
+            }else{
+                UIAlertView *alert  = [[UIAlertView alloc] initWithTitle:@"提示" message:@"对不起，此功能需要VIP资格才可使用" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+                [alert show];
+            }
+        }];
+    }
 }
 
 
