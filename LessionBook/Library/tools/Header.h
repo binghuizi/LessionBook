@@ -16,7 +16,8 @@
 #define kDetails @"http://42.120.60.147/v5/media/channels/"
 
 #define kDownload @"http://upod.qingting.fm%@"
-
+//#define kMusic @"http://42.120.60.90/vod/00/00/0000000000000000000024292789_24.m4a"
+#define kMusic @"http://upod.qingting.fm"
 #endif /* Header_h */
 
 

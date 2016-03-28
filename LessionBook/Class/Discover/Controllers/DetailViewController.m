@@ -19,18 +19,30 @@
 #import "BookInformation.h"
 #import "SqlModel.h"
 #import <BmobSDK/BmobUser.h>
+#import "PlayViewController.h"
+#import "ZYMusic.h"
+#import "ZYMusicTool.h"
 @interface DetailViewController ()<UITableViewDataSource,UITableViewDelegate>{
      DetailHeadView *_tableViewHead;
     BOOL isCollection;
     AppDelegate *_myAppdelegate;
+    
 }
+@property(nonatomic,strong) PlayViewController *playVc;
 @property(nonatomic,strong) UITableView *tableView;
 @property(nonatomic,strong) NSMutableArray *dateArray;
-
+@property(nonatomic,strong) NSMutableArray *urlArray;
+@property (nonatomic, assign) int currentIndex;//当前歌曲
 @end
 
 @implementation DetailViewController
-
+-(PlayViewController *)playVc{
+    if (_playVc == nil) {
+        self.playVc = [[PlayViewController alloc]init];
+        
+    }
+    return _playVc;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -50,16 +62,9 @@
 }
 //将要显示
 -(void)viewWillAppear:(BOOL)animated{
-    //显示是否收藏状态
-//    if (_myAppdelegate.isCollection == 0) {
-//        
-//        [_tableViewHead.collectionBtn setImage:[UIImage imageNamed:@"umeng_socialize_action_unlike"] forState:UIControlStateNormal];
-//        
-//    }else{
-//       
-//        [_tableViewHead.collectionBtn setImage:[UIImage imageNamed:@"btn_play_fav"] forState:UIControlStateNormal];
-    
-   // }
+    self.navigationController.navigationBar.alpha = 1.0;
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
+    self.tabBarController.tabBar.hidden = NO;
 }
 #pragma mark --- 头部
 -(void)loadHeadView{
@@ -172,11 +177,6 @@
         
     }
     
-    
-   
-    
-    
-    
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dateArray.count;
@@ -192,6 +192,38 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 90;
 }
+#pragma mark --- 点击cell触发事件
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [ZYMusicTool setPlayingMusic:self.dateArray[indexPath.row]];
+    detailModel *preModel = self.dateArray[self.currentIndex];//当前歌曲
+  
+    preModel.playing = NO;
+    
+    detailModel *model = self.dateArray[indexPath.row];
+    
+    NSLog(@"%@",model.download);
+    model.playing = YES;
+    
+    NSArray *indexPaths = @[[NSIndexPath indexPathForItem:self.currentIndex inSection:0],indexPath];
+    [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
+    
+    self.currentIndex = (int)indexPath.row;
+    
+   
+    NSInteger num = [HWTools number:model.duration];
+   self.playVc.nameString = model.name;
+   self. playVc.timeInt = num;
+   
+    self.playVc.urlString = model.download;
+    self.playVc.playingMusic = self.dateArray[indexPath.row];
+    [self.playVc show];
+    [self.navigationController pushViewController:self.playVc animated:YES];
+    
+    
+    
+    
+}
 #pragma mark -- 解析详情数据
 -(void)loadAction{
     AFHTTPSessionManager *sessionManger = [[AFHTTPSessionManager alloc]init];
@@ -203,13 +235,22 @@
         
         NSDictionary *rootDic = responseObject;
         NSArray *dataArray = rootDic[@"data"];
-        
+        if (self.urlArray.count > 0) {
+            [self.urlArray removeAllObjects];
+        }
         for (NSDictionary *dic in dataArray) {
             detailModel *model = [[detailModel alloc]init];
             [model setValuesForKeysWithDictionary:dic];
+            
+            NSDictionary *medioDic = dic[@"mediainfo"];
+            [model setValuesForKeysWithDictionary:medioDic];
             [self.dateArray addObject:model];
+            [self.urlArray addObject:model.download];
         }
-       
+        
+        [ZYMusicTool musics:self.dateArray];
+       // sics = self.urlArray;
+        
         [self.tableView reloadData];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -235,7 +276,12 @@
     }
     return _dateArray;
 }
-
+-(NSMutableArray *)urlArray{
+    if (_urlArray == nil) {
+        self.urlArray = [NSMutableArray new];
+    }
+    return _urlArray;
+}
 
 
 #pragma mark ---------DownLoad
