@@ -22,7 +22,9 @@
 
 #import <AFNetworking/AFHTTPSessionManager.h>
 #import "ProgressHUD.h"
-
+//支付设置
+#import <AlipaySDK/AlipaySDK.h>
+#import <BmobPay/BmobPay.h>
 #import <BmobSDK/Bmob.h>
 //腾讯开放平台（对应QQ和QQ空间）SDK头文件
 #import <TencentOpenAPI/TencentOAuth.h>
@@ -38,7 +40,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     //设置应用的BmobKey
-    [Bmob registerWithAppKey:@"209affb0270dad4053ab8b1ded9b56fa"];
+    [Bmob registerWithAppKey:kBmobPayKey];
+    //bmob支付
+    [BmobPaySDK registerWithAppKey:kBmobPayKey];
     //微博分享
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:kWeiboAppKey];
@@ -48,14 +52,13 @@
     //registerSDKWithAppKey
     [[EaseMob sharedInstance] registerSDKWithAppKey:kHuanxinAppKey apnsCertName:nil];
     [[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
-//    [[EaseMob sharedInstance].chatManager setIsAutoFetchBuddyList:YES];
     [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
     [[EaseSDKHelper shareHelper] easemobApplication:application
                       didFinishLaunchingWithOptions:launchOptions
                                              appkey:kHuanxinAppKey
                                        apnsCertName:nil
                                         otherConfig:@{kSDKConfigEnableConsoleLogger:[NSNumber numberWithBool:YES]}];
-
+    
 
     // Override point for customization after application launch.
     //下载
@@ -188,12 +191,17 @@
     
     return [WeiboSDK handleOpenURL:url delegate:self];
 }
-
+//支付代理
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation
 {
+    if ([url.host isEqualToString:@"safepay"]) {
+        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"result = %@", resultDic);
+        }];
+    }
     return [ShareSDK handleOpenURL:url
                  sourceApplication:sourceApplication
                         annotation:annotation
@@ -259,6 +267,8 @@
 - (void)didAcceptInvitationFromGroup:(EMGroup *)group error:(EMError *)error{
     
 }
+
+
 
 
 

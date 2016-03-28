@@ -30,7 +30,7 @@
 #define kWeiXinAppID @"wxcd68582298f97128"
 #define kWeiXinAppKey @"db4edda7a6e5ac341bdd70cedd465e31"
 
-
+#define kBmobPayKey @"209affb0270dad4053ab8b1ded9b56fa"
 
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width

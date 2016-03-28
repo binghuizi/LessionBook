@@ -14,7 +14,6 @@
 #import "TimeView.h"
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
-
 #import "AppDelegate.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
@@ -22,7 +21,6 @@
 #import "AccountViewController.h"
 //更多设置
 #import "MoreViewController.h"
-
 #import <EaseMob.h>
 #import <BmobSDK/Bmob.h>
 #import "AppDelegate.h"
@@ -57,7 +55,8 @@
 //将要显示
 -(void)viewWillAppear:(BOOL)animated{
 
-
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.translucent = NO;
     //刷新头视图
     [self confineHeadView];
     //刷新tableview
@@ -168,25 +167,6 @@
         //退出登录
         case 5:
         {
-
-            BmobUser *currntUser = [BmobUser getCurrentUser];
-            if (currntUser != nil) {
-                [[EaseMob sharedInstance].chatManager asyncLogoffWithUnbindDeviceToken:YES completion:^(NSDictionary *info, EMError *error) {
-                    if (!error) {
-                        [BmobUser logout];
-                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"当前用户已退出" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil];
-                        
-                        myAppDelegate.isLogin = 0;
-                        [self confineHeadView];
-                        [alert show];
-                    }else{
-                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"退出失败" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil];
-                        [alert show];
-                    }
-                } onQueue:nil];
-            }
-            [self confineHeadView];
-
             BmobUser *user = [BmobUser getCurrentUser];
             if (user != nil) {
                 AccountViewController *accountVC = [[AccountViewController alloc] init];
@@ -233,8 +213,8 @@
         User.username = myAppDelegate.dic[@"screen_name"];
         welcomeLabel.text = User.username;
         [self.userImageView sd_setImageWithURL:[NSURL URLWithString:myAppDelegate.dic[@"avatar_hd"]] placeholderImage:nil];
-        NSLog(@"%@", bUser);
-        NSLog(@"%@", myAppDelegate.dic[@"avatar_hd"]);
+//        NSLog(@"%@", bUser);
+//        NSLog(@"%@", myAppDelegate.dic[@"avatar_hd"]);
         NSLog(@"1");
         
     }else{
@@ -261,7 +241,8 @@
         LoginViewController *loginVC = [myStoryBoard instantiateViewControllerWithIdentifier:@"loginVC"];
         [self.navigationController pushViewController:loginVC animated:YES];
     }else{
-        }
+        
+    }
 }
 
 

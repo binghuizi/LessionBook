@@ -83,6 +83,13 @@
                 [[EaseMob sharedInstance].chatManager registerNewAccount:weakself.mobilePhoneNumber.text password:weakself.passWord.text error:&error];
                 if (!error) {
                      [ProgressHUD showSuccess:@"注册成功, 请登录"];
+                    BmobObject *userInfo = [BmobObject objectWithClassName:@"UserInformation"];
+                    [userInfo setObject:weakself.mobilePhoneNumber.text forKey:@"username"];
+                    [userInfo saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+                        //进行操作
+                        NSLog(@"-------%d", isSuccessful);
+                    }];
+                    
                 }else{
                     [ProgressHUD showError:@"注册失败啦"];
                 }
