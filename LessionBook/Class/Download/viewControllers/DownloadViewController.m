@@ -10,7 +10,7 @@
 #import "VOSegmentedControl.h"
 #import "DownloadTableViewCell.h"
 #import "DownloadDidTableViewCell.h"
-
+#import "PlayViewController.h"
 
 
 
@@ -93,8 +93,7 @@ static NSString *_didDownload = @"did";
     if (self.selectdidDownload) {
         NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
         detailModel *model = self.didloadArray[indexPath.row];
-        NSString *filePath = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.m4a", model.name]];
-        NSLog(@"---%@", filePath);
+        PlayViewController *playVC = [[PlayViewController alloc] init];
     }
 }
 

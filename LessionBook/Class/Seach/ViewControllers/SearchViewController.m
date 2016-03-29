@@ -12,6 +12,7 @@
 #import "SearchModel.h"
 #import <UIImageView+WebCache.h>
 #import "DetailViewController.h"
+#import "PlayViewController.h"
 
 @interface SearchViewController ()<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
@@ -199,7 +200,7 @@
 
 - (UITableView *)tableView{
     if (_tableView == nil) {
-        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, kWideth, kHeight - 172) style:UITableViewStylePlain];
+        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, kWideth, kHeight - 108) style:UITableViewStylePlain];
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
         self.tableView.rowHeight = 50;
@@ -317,13 +318,13 @@
     switch (_index) {
         case 0:
         {
-            DetailViewController *detailVC = [[DetailViewController alloc] init];
-            SearchModel *model = self.listArray[1][indexPath.row];
-            detailVC.titleString = model.name;
-            detailVC.pictchString = model.cover;
-            detailVC.miaoshuString = model.miaoshu;
-            detailVC.idString = model.cid;
-            [self.navigationController pushViewController:detailVC animated:YES];
+                DetailViewController *detailVC = [[DetailViewController alloc] init];
+                SearchModel *model = self.listArray[indexPath.section][indexPath.row];
+                detailVC.titleString = model.name;
+                detailVC.pictchString = model.cover;
+                detailVC.miaoshuString = model.miaoshu;
+                detailVC.idString = model.cid;
+                [self.navigationController pushViewController:detailVC animated:YES];
         }
             break;
         case 1:
@@ -349,8 +350,14 @@
 #pragma mark ----------UISearchBarDelegate
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     [self.searchBar resignFirstResponder];
+    [self requestModel];
 }
 
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.searchBar resignFirstResponder];
+    [self requestModel];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
