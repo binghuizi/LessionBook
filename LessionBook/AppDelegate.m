@@ -144,8 +144,6 @@
 }
 
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response{
-
-
         NSString *accessToken = [(WBAuthorizeResponse *)response accessToken];
         NSString *uid = [(WBAuthorizeResponse *)response userID];
         NSDate *expriated = [(WBAuthorizeResponse *)response expirationDate];
@@ -153,7 +151,6 @@
     NSLog(@"UserId:%@",uid);
     NSLog(@"expiresDate:%@",expriated);
         //得到的新浪微博授权信息，请按照例子来生成NSDictionary
-//        NSDictionary *dic = @{@"access_token":accessToken,@"uid":uid,@"expirationDate":expriated};
     DSNLog(@"accessToken = %@",accessToken);
     DSNLog(@"----------------");
        AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
@@ -198,31 +195,11 @@
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             DSNLog(@"responseObject = -----56%@", error);
         }];
-//        //登陆
-//        [BmobUser loginInBackgroundWithAuthorDictionary:dic platform:BmobSNSPlatformSinaWeibo block:^(BmobUser *user, NSError *error) {
-//            if (error) {
-//                NSLog(@"weibo login error:%@",error);
-//                self.isLogin = NO;
-//            } else if (user){
-//                NSLog(@"user objectid is :%@",user.objectId);
-//                [ProgressHUD showSuccess:@"新浪微博登陆成功" Interaction:YES];
-//                self.isLogin = YES;
-//                [user setUsername:self.dic[@"screen_name"]];
-//                [user setObject:self.dic[@"avatar_hd"] forKey:@"headerImage"];
-//            }
-//        }];
-
 }
-//-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url{
-//    return [WeiboSDK handleOpenURL:url delegate:self];
-//}
-//- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
-//    return [WeiboSDK handleOpenURL:url delegate:self];
-//
-//   }
+
 -(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
     
-    return [WeiboSDK handleOpenURL:url delegate:self] || [ShareSDK handleOpenURL:url wxDelegate:self];
+    return [WeiboSDK handleOpenURL:url delegate:self] |[ShareSDK handleOpenURL:url wxDelegate:self];
 }
 //支付代理
 - (BOOL)application:(UIApplication *)application
@@ -238,7 +215,7 @@
     return [ShareSDK handleOpenURL:url
                  sourceApplication:sourceApplication
                         annotation:annotation
-                        wxDelegate:self] || [WeiboSDK handleOpenURL:url delegate:self];
+                        wxDelegate:self]|[WeiboSDK handleOpenURL:url delegate:self];
 
 }
 

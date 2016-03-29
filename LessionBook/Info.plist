@@ -34,7 +34,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string></string>
+			<string>https://api.weibo.com/oauth2/default.html</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>wb3034676506</string>
@@ -57,6 +57,7 @@
 	<array>
 		<string>sinaweibo</string>
 		<string>sinaweibohd</string>
+		<string>sinaweibohdsso</string>
 		<string>sinaweibosso</string>
 		<string>weibosdk2.5</string>
 		<string>weibosdk</string>
