@@ -16,7 +16,7 @@
 #import "RegisterViewController.h"
 #import "AppDelegate.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-
+#import <SDWebImage/UIButton+WebCache.h>
 //账号设置
 #import "AccountViewController.h"
 //更多设置
@@ -35,6 +35,7 @@
 @property (nonatomic, retain) UIButton *loginBtn;
 @property (nonatomic, retain) UIImageView *userImageView;
 
+
 //定时关闭的属性
 @property (nonatomic, retain) UIView *timeView;
 @property (nonatomic, strong) UIView *blackView;
@@ -44,6 +45,8 @@
 @property (nonatomic, assign) NSInteger tg;
 @property (nonatomic, retain) NSTimer *timer;
 @property (nonatomic, retain) UISwitch *Switch;
+@property (nonatomic, retain) UILabel *welcomeLabel;
+
 
 @end
 
@@ -56,6 +59,7 @@
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
     self.myArray = [NSArray arrayWithObjects:@"我的收藏", @"最近收听", @"定时关闭", @"更多设置", @"书友畅聊", @"账号设置", nil];
     self.detailArray = [NSArray arrayWithObjects:@"暂无收藏", @"暂无收听记录", @"", @"", @"", @"",nil];
+    [self confineHeadView];
     [self.view addSubview:self.tableView];
     
 }
@@ -65,21 +69,22 @@
 
     [super viewWillAppear:animated];
     self.tabBarController.tabBar.translucent = NO;
-    //刷新头视图
-    [self confineHeadView];
+    BmobUser *user = [BmobUser getCurrentUser];
+    if (user) {
+        NSString *url = [user objectForKey:@"imageUrl"];
+        self.loginBtn.hidden = YES;
+        self.userImageView.hidden = NO;
+        [self.userImageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"a040144d464bf201a150a57abf8f8292"]];
+        self.welcomeLabel.text = user.username;
+    }else{
+        self.userImageView.hidden = YES;
+        [self.loginBtn setTitle:@"登录/注册" forState:UIControlStateNormal];
+        self.loginBtn.hidden = NO;
+        self.welcomeLabel.text = @"欢迎来到马里亚纳听书";
+    }
     //刷新tableview
-//    [self.tableView reloadData];
-
-//    if (myAppDelegate.isLogin == 1) {
-//        BmobUser *user = [BmobUser getCurrentUser];
-//        if (user != nil) {
-//            [self.loginBtn setTitle:user.username forState:UIControlStateNormal];
-//            self.loginBtn.titleLabel.font = [UIFont systemFontOfSize:13];
-//        }else{
-//            [self.loginBtn setTitle:@"登录/注册" forState:UIControlStateNormal];
-//        }
-//    }
-
+    [self.tableView reloadData];
+    
 }
 
 
@@ -413,38 +418,34 @@
     self.loginBtn.layer.cornerRadius = 50;
     self.loginBtn.backgroundColor = [UIColor whiteColor];
     [self.loginBtn addTarget:self action:@selector(loginAction) forControlEvents:UIControlEventTouchUpInside];
-    UILabel *welcomeLabel = [[UILabel alloc] initWithFrame:CGRectMake(130, 100, 250, 30)];
-    welcomeLabel.textColor = [UIColor whiteColor];
-
+    self.welcomeLabel = [[UILabel alloc] initWithFrame:CGRectMake(130, 100, 250, 30)];
+    self.welcomeLabel.textColor = [UIColor whiteColor];
+    self.welcomeLabel.text = @"欢迎来到马里亚纳听书";
     
-    BmobUser *User = [[BmobUser alloc] init];
-    BmobUser *bUser = [BmobUser getCurrentUser];
-    if (bUser) {
-        //已登录
-        self.loginBtn.hidden = YES;
-        self.userImageView.hidden = NO;
-        User.username = myAppDelegate.dic[@"screen_name"];
-        welcomeLabel.text = User.username;
-        [self.userImageView sd_setImageWithURL:[NSURL URLWithString:myAppDelegate.dic[@"avatar_hd"]] placeholderImage:nil];
-//        NSLog(@"%@", bUser);
-//        NSLog(@"%@", myAppDelegate.dic[@"avatar_hd"]);
-        NSLog(@"1");
-        
-    }else{
-        //未登录
-        self.loginBtn.hidden = NO;
-        self.userImageView.hidden = YES;
-
-        [self.loginBtn setTitle:@"登陆/注册" forState:UIControlStateNormal];
-        welcomeLabel.text = @"欢迎来到马里亚纳听书";
-        NSLog(@"2");
-    }
+//    BmobUser *User = [[BmobUser alloc] init];
+//    BmobUser *bUser = [BmobUser getCurrentUser];
+//    if (bUser) {
+//        //已登录
+//        self.userImageView.hidden = NO;
+//        User.username = myAppDelegate.dic[@"screen_name"];
+//       self.welcomeLabel.text = User.username;
+//        [self.userImageView sd_setImageWithURL:[NSURL URLWithString:myAppDelegate.dic[@"avatar_hd"]] placeholderImage:nil];
+//        NSLog(@"1");
+//    }else{
+//        //未登录
+//        self.loginBtn.hidden = NO;
+//        self.userImageView.hidden = YES;
+//
+//        [self.loginBtn setTitle:@"登陆/注册" forState:UIControlStateNormal];
+//       self.welcomeLabel.text = @"欢迎来到马里亚纳听书";
+//        NSLog(@"2");
+//    }
 //    self.loginBtn.backgroundColor = [UIColor redColor];
 //    self.userImageView.backgroundColor = [UIColor whiteColor];
 //    welcomeLabel.backgroundColor = [UIColor blackColor];
     
     [self.headView addSubview:self.loginBtn];
-    [self.headView addSubview:welcomeLabel];
+    [self.headView addSubview:self.welcomeLabel];
     [self.headView addSubview:self.userImageView];
 }
 //登录注册按钮

@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "detailModel.h"
-@interface DetailViewController : UIViewController
+#import "PlayViewController.h"
+@interface DetailViewController : UIViewController<PlayViewControllerDelagate>
 @property(nonatomic,strong) NSString *titleString;
 @property(nonatomic,strong) NSString *pictchString;
 @property(nonatomic,strong) NSString *zhuboString;

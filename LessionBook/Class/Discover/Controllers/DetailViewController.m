@@ -36,14 +36,17 @@
 @property(nonatomic,strong) UITableView *tableView;
 @property(nonatomic,strong) NSMutableArray *dateArray;
 @property(nonatomic,strong) NSMutableArray *urlArray;
-@property (nonatomic, assign) int currentIndex;//当前歌曲
+@property (nonatomic, assign) NSInteger currentIndex;//当前歌曲
+@property(nonatomic,assign) BOOL isBack;
+
 @end
 
 @implementation DetailViewController
 -(PlayViewController *)playVc{
     if (_playVc == nil) {
         self.playVc = [[PlayViewController alloc]init];
-        
+        self.playVc.arrayAll = self.dateArray;
+        _playVc.delegate = self;
     }
     return _playVc;
 }
@@ -62,23 +65,25 @@
     [self.view addSubview:self.tableView];
     [self.tableView registerNib:[UINib nibWithNibName:@"TableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     
+    
+    self.isBack = 0;
+    
     [self loadHeadView];
+}
+- (void)backAction:(UIButton *)btn{
+    if (self.currentIndex != 0 || self.isBack == 1) {
+         _myAppdelegate.detailModel = self.dateArray[self.currentIndex];
+    }
+   
+    [self.navigationController popViewControllerAnimated:YES];
 }
 //将要显示
 -(void)viewWillAppear:(BOOL)animated{
     self.navigationController.navigationBar.alpha = 1.0;
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
     self.tabBarController.tabBar.hidden = NO;
-    //显示是否收藏状态
-    //    if (_myAppdelegate.isCollection == 0) {
-    //
-    //        [_tableViewHead.collectionBtn setImage:[UIImage imageNamed:@"umeng_socialize_action_unlike"] forState:UIControlStateNormal];
-    //
-    //    }else{
-    //
-    //        [_tableViewHead.collectionBtn setImage:[UIImage imageNamed:@"btn_play_fav"] forState:UIControlStateNormal];
     
-    // }
+    
 
 }
 #pragma mark --- 头部
@@ -206,13 +211,21 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 90;
 }
+//PlayViewController代理方法
+-(void)getNum:(NSInteger)cunrrentNum{
+    self.currentIndex = cunrrentNum;
+    NSLog(@"currentIndex%ld",self.currentIndex);
+}
+
 #pragma mark --- 点击cell触发事件
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    self.isBack = 1;
+    
     
     [ZYMusicTool setPlayingMusic:self.dateArray[indexPath.row]];
-    detailModel *preModel = self.dateArray[self.currentIndex];//当前歌曲
-  
-    preModel.playing = NO;
+   // detailModel *preModel = self.dateArray[self.currentIndex];//当前歌曲
+     self.playVc.currentplayingMusic = self.dateArray[self.currentIndex];//当前歌曲
+   // preModel.playing = NO;
     
     detailModel *model = self.dateArray[indexPath.row];
     
@@ -225,10 +238,10 @@
     self.currentIndex = (int)indexPath.row;
     
    
-    NSInteger num = [HWTools number:model.duration];
+   NSInteger num = [HWTools number:model.duration];
    self.playVc.nameString = model.name;
    self. playVc.timeInt = num;
-   
+    self.playVc.num = indexPath.row;
     self.playVc.urlString = model.download;
     self.playVc.playingMusic = self.dateArray[indexPath.row];
     [self.playVc show];
@@ -332,14 +345,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

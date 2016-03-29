@@ -12,8 +12,10 @@
 #import "detailModel.h"
 #import "ZYMusicTool.h"
 #import "ZYAudioManager.h"
-
-@interface PlayViewController ()<MPMediaPickerControllerDelegate,AVAudioPlayerDelegate>
+#import "AppDelegate.h"
+@interface PlayViewController ()<MPMediaPickerControllerDelegate,AVAudioPlayerDelegate>{
+    AppDelegate *myAppDelagate;
+}
 @property (nonatomic, retain) NSTimer *timer;
 @property (nonatomic, assign) BOOL timeStart;
 @property (nonatomic, assign) BOOL typePlay;
@@ -39,7 +41,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    //返回按钮
+    [self showBackButton:@"ic_arrow_general2"];
     self.navigationController.navigationBar.alpha = 0.3;
     self.navigationController.navigationBar.barTintColor = [UIColor clearColor];
     self.navigationController.navigationBar.translucent = YES;
@@ -53,9 +56,15 @@
     
    // [self show];
 }
+- (void)backAction:(UIButton *)btn{
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
 -(void)show{
+      myAppDelagate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    
      UIWindow *windows = [UIApplication sharedApplication].keyWindow;
-    if (self.playingMusic != [ZYMusicTool playingMusic]) {
+    if (self.currentplayingMusic != [ZYMusicTool playingMusic]) {
         [self resetPlayingMusic];
     }
     
@@ -63,6 +72,7 @@
     
     windows.userInteractionEnabled = YES;
     [self startPlayingMusic];
+   
 
 }
 
@@ -71,7 +81,8 @@
 - (void)resetPlayingMusic
 {
     //停止播放音乐
-    [[ZYAudioManager defaultManager]stopMusic:self.playingMusic.download];
+    [[ZYAudioManager defaultManager]stopMusic:self.currentplayingMusic.download];
+    [[ZYAudioManager defaultManager]stopMusic:myAppDelagate.detailModel.download];
     //停止播放音乐
     //[[ZYAudioManager defaultManager]stopMusic:self.urlString];
     self.player = nil;
@@ -81,21 +92,24 @@
 //开始播放音乐
 - (void)startPlayingMusic
 {
-    if (self.playingMusic == [ZYMusicTool playingMusic]) {
+    if (self.currentplayingMusic == [ZYMusicTool playingMusic]) {
         [self addCurrentTimer];
       
         return;
     }
    // 开放播放音乐
+    self.playingMusic = self.arrayAll[self.num];
     self.player = [[ZYAudioManager defaultManager]playingMusic:self.playingMusic.download];
-  //  self.player = [[ZYAudioManager defaultManager]playingMusic:self.urlString];
-    NSLog(@"%@",self.playingMusic.download);
+  
+   
     self.player.delegate = self;
     [self addCurrentTimer];
     
     self.playBtn.selected = YES;
-    [self.playBtn setImage:[UIImage imageNamed:@"play_button_pause"]forState:UIControlStateNormal];
-    self.timeLabel.text = [NSString stringWithFormat:@"%02ld : %02ld",self.timeInt/60,self.timeInt%60];;
+    
+    NSInteger num = [HWTools number:self.playingMusic.duration];
+    self.timeLabel.text = [NSString stringWithFormat:@"%02ld : %02ld",num/60,num%60];
+    
     
     //切换锁屏
     [self updateLockedScreenMusic];
@@ -112,7 +126,7 @@
     }
     //新增定时器之前
     [self removeCurrentTimer];
-    [self updateCurrentTimer];
+  //  [self updateCurrentTimer];
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateCurrentTimer) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop]addTimer:self.timer forMode:NSRunLoopCommonModes];
@@ -140,7 +154,8 @@
         
     }
     
-    
+    self.bookNameLabel.text = self.playingMusic.name;
+    [self.playBtn setImage:[UIImage imageNamed:@"play_button_pause"]forState:UIControlStateNormal];
 }
 
 
@@ -226,10 +241,15 @@
     windo.userInteractionEnabled = NO;
     [[ZYAudioManager defaultManager]stopMusic:self.playingMusic.download];
     [ZYMusicTool setPlayingMusic:[ZYMusicTool previousMusic]];
-    [self removeCurrentTimer];
+    self.num -= 1;
+    if (self.num < 0) {
+        self.num = 0;
+    }
     [self startPlayingMusic];
-    windo.userInteractionEnabled = YES;
+    [self removeCurrentTimer];
     
+    windo.userInteractionEnabled = YES;
+    [self.delegate getNum:self.num];
     
     
     
@@ -242,8 +262,19 @@
     windo.userInteractionEnabled = NO;
     [[ZYAudioManager defaultManager]stopMusic:self.playingMusic.download];
     [ZYMusicTool setPlayingMusic:[ZYMusicTool nextMusic]];
+    self.num += 1;
+    NSLog(@"%ld",self.arrayAll.count);
+    NSLog(@"%ld",self.num);
+    if (self.num > self.arrayAll.count - 1) {
+        self.num = 0;
+    }
+    
+    
+    [self startPlayingMusic];
     [self removeCurrentTimer];
+    
     windo.userInteractionEnabled = YES;
+    [self.delegate getNum:self.num ];
 }
 #pragma mark ----AVAudioPlayerDelegate
 #pragma mark - 播放器代理方法
