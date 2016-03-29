@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <WeiboSDK.h>
-
+#import "detailModel.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, WeiboSDKDelegate>
 
@@ -21,6 +21,6 @@
 @property(nonatomic,assign) BOOL isCollection;
 @property(nonatomic,assign) BOOL isLogin;
 @property(nonatomic,strong) NSString *userId;
-
+@property(nonatomic,strong) detailModel *detailModel;
 @end
 
