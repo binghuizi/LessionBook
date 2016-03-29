@@ -76,6 +76,7 @@
 		7A75016B1C9C09040002FA5C /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A75016A1C9C09040002FA5C /* RequestViewController.m */; };
 		7A80A3191CA37DCE00845015 /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A80A3181CA37DCE00845015 /* GroupViewController.m */; };
 		7A80A31C1CA389E100845015 /* NewGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A80A31B1CA389E100845015 /* NewGroupViewController.m */; };
+		7A9340F91CA94BE900889D49 /* SingleTion.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9340F81CA94BE900889D49 /* SingleTion.m */; };
 		7A965F751C99328A00DE2547 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A965F6E1C99328900DE2547 /* DownloadViewController.m */; };
 		7A965F761C99328A00DE2547 /* search.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A965F711C99328A00DE2547 /* search.plist */; };
 		7A965F771C99328A00DE2547 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A965F741C99328A00DE2547 /* SearchViewController.m */; };
@@ -220,6 +221,8 @@
 		7A80A3181CA37DCE00845015 /* GroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupViewController.m; sourceTree = "<group>"; };
 		7A80A31A1CA389E100845015 /* NewGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewGroupViewController.h; sourceTree = "<group>"; };
 		7A80A31B1CA389E100845015 /* NewGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewGroupViewController.m; sourceTree = "<group>"; };
+		7A9340F71CA94BE900889D49 /* SingleTion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleTion.h; sourceTree = "<group>"; };
+		7A9340F81CA94BE900889D49 /* SingleTion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleTion.m; sourceTree = "<group>"; };
 		7A965F6D1C99328900DE2547 /* DownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
 		7A965F6E1C99328900DE2547 /* DownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
 		7A965F711C99328A00DE2547 /* search.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = search.plist; sourceTree = "<group>"; };
@@ -648,6 +651,8 @@
 				7A0AB13A1CA4D3B50085875C /* AccountViewController.m */,
 				7A548A271CA788C600037FDA /* MoreViewController.h */,
 				7A548A281CA788C600037FDA /* MoreViewController.m */,
+				7A9340F71CA94BE900889D49 /* SingleTion.h */,
+				7A9340F81CA94BE900889D49 /* SingleTion.m */,
 			);
 			path = Controllres;
 			sourceTree = "<group>";
@@ -877,6 +882,7 @@
 				7A99D4501C97EE31001DD9B9 /* AppDelegate.m in Sources */,
 				7A54D2581C9C3F6A0012224E /* detailModel.m in Sources */,
 				7A6BE8461C9A47BD006F6E17 /* UIView+UIViewExtension.m in Sources */,
+				7A9340F91CA94BE900889D49 /* SingleTion.m in Sources */,
 				7AB0FED81CA7E6D800E2F11A /* ZYAudioManager.m in Sources */,
 				7A54D24E1C9BA0070012224E /* DetailViewController.m in Sources */,
 				7A6BE8431C9A428C006F6E17 /* DownloadDidTableViewCell.m in Sources */,

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,23 +15,43 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="鬼吹灯" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8U6-hX-AaO">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="鬼吹灯" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8U6-hX-AaO">
                         <rect key="frame" x="8" y="8" width="288" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="qul-Z8-I3Q"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="时长" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRD-zv-uxZ">
-                        <rect key="frame" x="8" y="48" width="181" height="23"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时长" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRD-zv-uxZ">
+                        <rect key="frame" x="8" y="48" width="288" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="23" id="vkz-Bi-9mS"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.43872316919191923" green="0.43872316919191923" blue="0.43872316919191923" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwP-mA-JJb">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwP-mA-JJb">
                         <rect key="frame" x="304" y="8" width="63" height="63"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="63" id="0be-4o-KKo"/>
+                        </constraints>
                         <state key="normal" image="ic_download_item"/>
                     </button>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="HRD-zv-uxZ" secondAttribute="trailing" constant="71" id="2zr-vV-xyC"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="lwP-mA-JJb" secondAttribute="trailing" id="5bM-e2-dZD"/>
+                    <constraint firstAttribute="topMargin" secondItem="8U6-hX-AaO" secondAttribute="top" id="Klu-id-WeU"/>
+                    <constraint firstItem="lwP-mA-JJb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="296" id="PDV-8M-Alj"/>
+                    <constraint firstItem="HRD-zv-uxZ" firstAttribute="top" secondItem="8U6-hX-AaO" secondAttribute="bottom" constant="8" id="UWb-1R-Unc"/>
+                    <constraint firstAttribute="topMargin" secondItem="lwP-mA-JJb" secondAttribute="top" id="fdk-k7-ob6"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="8U6-hX-AaO" secondAttribute="leading" id="pGl-hE-ANb"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="8U6-hX-AaO" secondAttribute="trailing" constant="71" id="s2I-bO-d4P"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="HRD-zv-uxZ" secondAttribute="leading" id="way-xA-Shc"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="bookNameLabel" destination="8U6-hX-AaO" id="G0i-rJ-GqK"/>
