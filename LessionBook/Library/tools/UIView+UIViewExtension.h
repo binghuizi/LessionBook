@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (UIViewExtension)
+@property (assign, nonatomic) CGFloat x;
+@property (assign, nonatomic) CGFloat y;
 /**
  *	@brief	获取左上角横坐标
  *

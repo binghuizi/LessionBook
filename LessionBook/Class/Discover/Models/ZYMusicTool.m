@@ -26,9 +26,9 @@ static detailModel *_playingMusic;
 
 + (void)setPlayingMusic:(detailModel *)playingMusic
 {
-    if (playingMusic == nil || ![_musics containsObject:playingMusic] || playingMusic == _playingMusic) {
-        return;
-    }
+//    if (playingMusic == nil || ![_musics containsObject:playingMusic] || playingMusic == _playingMusic) {
+//        return;
+//    }
     _playingMusic = playingMusic;
 }
 

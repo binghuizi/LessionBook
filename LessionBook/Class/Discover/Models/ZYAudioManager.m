@@ -64,21 +64,34 @@ static ZYAudioManager *_instance = nil;
 - (AVAudioPlayer *)playingMusic:(NSString *)filename
 {
    // if (filename == nil || filename.length == 0) return nil;
-        
-    
     AVAudioPlayer *player = self.musicPlayers[filename];      //先查询对象是否缓存了
+ 
+   BOOL file = [[NSFileManager defaultManager]fileExistsAtPath:filename];
+     NSError *error = nil;
+   
     
     if (!player) {
-        NSURL *urlString = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kMusic,filename]];
-        NSData *date = [NSData dataWithContentsOfURL:urlString];
-        NSLog(@"%@",urlString);
-        //NSURL *url = [[NSBundle mainBundle] URLForResource:filename withExtension:nil];
         
-        //if (!url)  return nil;
-        NSError *error = nil;
-        player = [[AVAudioPlayer alloc] initWithData:date error:&error];
-        
+        if (file) {
+            NSURL *url = [NSURL fileURLWithPath:filename];
+            
+            player = [[AVAudioPlayer alloc]initWithContentsOfURL:url error:&error];
+        }else{
+            NSURL *urlString = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kMusic,filename]];
+            NSData *date = [NSData dataWithContentsOfURL:urlString];
+            NSLog(@"%@",urlString);
+            //NSURL *url = [[NSBundle mainBundle] URLForResource:filename withExtension:nil];
+            
+            //if (!url)  return nil;
+            //        NSError *error = nil;
+            player = [[AVAudioPlayer alloc] initWithData:date error:&error];
+        }
         if (![player prepareToPlay]) return nil;
+        
+        //后台播放音频设置
+        AVAudioSession *session = [AVAudioSession sharedInstance];
+        [session setActive:YES error:nil];
+        [session setCategory:AVAudioSessionCategoryPlayback error:nil];
         
         self.musicPlayers[filename] = player;            //对象是最新创建的，那么对它进行一次缓存
     }

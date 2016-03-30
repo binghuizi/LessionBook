@@ -7,7 +7,10 @@
 //
 
 #import "TimeView.h"
-
+#import "ZYAudioManager.h"
+#import "ZYMusic.h"
+#import "ZYMusicTool.h"
+#import "AppDelegate.h"
 @interface TimeView ()
 @property (nonatomic, strong) UIView *blackView;
 @property (nonatomic, strong) UIView *timeUpView;
@@ -201,7 +204,7 @@
         
     } else if(shi == 0 && [d second] == 0 && [d minute] == 0) {
     //计时1分钟结束，do_something
-        
+        ;
         
         
     } else{

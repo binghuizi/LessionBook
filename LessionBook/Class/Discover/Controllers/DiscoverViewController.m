@@ -88,6 +88,9 @@
     
     
 }
+-(void)viewWillAppear:(BOOL)animated{
+    self.tabBarController.tabBar.hidden = NO;
+}
 #pragma mark --- 清扫手势
 //向右清扫
 - (void)oneFingerSwipeUp:(UISwipeGestureRecognizer *)recognizer{
