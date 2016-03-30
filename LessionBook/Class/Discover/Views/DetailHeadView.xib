@@ -54,9 +54,8 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heibang" translatesAutoresizingMaskIntoConstraints="NO" id="Swt-GZ-tUK">
                     <rect key="frame" x="9" y="14" width="119" height="107"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="119" id="3UV-M1-Mop"/>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="107" id="3yg-e6-AIk"/>
-                        <constraint firstAttribute="height" constant="107" id="BzJ-e5-ABO"/>
+                        <constraint firstAttribute="height" constant="107" id="e4k-QR-9MY"/>
+                        <constraint firstAttribute="width" constant="119" id="sEP-NF-NLR"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作者：TESTMS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5f-L9-b1z">
@@ -84,65 +83,50 @@
                     <rect key="frame" x="0.0" y="132" width="375" height="55"/>
                     <color key="backgroundColor" red="0.0" green="0.82745098039999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="55" id="zSa-f3-5Uu"/>
+                        <constraint firstAttribute="height" constant="55" id="O0c-sZ-nZw"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sls-H3-FJf">
-                    <rect key="frame" x="30" y="136" width="49" height="48"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="48" id="tn2-N5-OUr"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <inset key="titleEdgeInsets" minX="-23" minY="30" maxX="0.0" maxY="0.0"/>
-                    <inset key="imageEdgeInsets" minX="9" minY="-23" maxX="0.0" maxY="0.0"/>
-                    <state key="normal" title="收 藏" image="umeng_socialize_action_unlike"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mki-O6-Gfv">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mki-O6-Gfv">
                     <rect key="frame" x="163" y="136" width="49" height="48"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <inset key="titleEdgeInsets" minX="-32" minY="30" maxX="0.0" maxY="0.0"/>
                     <inset key="imageEdgeInsets" minX="9" minY="-28" maxX="0.0" maxY="0.0"/>
                     <state key="normal" title="分 享" image="ic_channel_share"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jeq-Ym-FAZ">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jeq-Ym-FAZ">
                     <rect key="frame" x="296" y="134" width="49" height="48"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <inset key="titleEdgeInsets" minX="-32" minY="32" maxX="0.0" maxY="0.0"/>
                     <inset key="imageEdgeInsets" minX="9" minY="-24" maxX="0.0" maxY="0.0"/>
                     <state key="normal" title="下 载" image="ic_channel_download"/>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sls-H3-FJf">
+                    <rect key="frame" x="30" y="136" width="49" height="48"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="titleEdgeInsets" minX="-23" minY="30" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="9" minY="-23" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="收 藏" image="umeng_socialize_action_unlike"/>
+                </button>
             </subviews>
             <constraints>
-                <constraint firstItem="Bee-pc-QOf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0cK-zI-CTC"/>
-                <constraint firstItem="mki-O6-Gfv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="136" id="1Ih-GP-lUr"/>
                 <constraint firstAttribute="bottom" secondItem="Hh3-JA-npJ" secondAttribute="bottom" id="7EO-gg-All"/>
                 <constraint firstItem="Hh3-JA-npJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GGm-U9-EON"/>
-                <constraint firstItem="Jeq-Ym-FAZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="296" id="Hsw-mW-faF"/>
                 <constraint firstItem="Hh3-JA-npJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ITc-Fd-0AV"/>
-                <constraint firstItem="Sls-H3-FJf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="JS5-j2-O95"/>
-                <constraint firstAttribute="bottom" secondItem="Jeq-Ym-FAZ" secondAttribute="bottom" constant="1" id="Jdo-C9-d72"/>
-                <constraint firstAttribute="trailing" secondItem="Sls-H3-FJf" secondAttribute="trailing" constant="296" id="Lhj-G7-UUz"/>
-                <constraint firstItem="Bee-pc-QOf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="132" id="PC0-yM-C5b"/>
+                <constraint firstItem="Swt-GZ-tUK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="9" id="Q0X-WN-mK2"/>
                 <constraint firstItem="Isg-ga-l8O" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="136" id="RCe-Nj-n0O"/>
                 <constraint firstAttribute="trailing" secondItem="6eS-ya-JZo" secondAttribute="trailing" constant="97" id="SCa-ll-hgZ"/>
-                <constraint firstItem="mki-O6-Gfv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SSy-XG-DwR"/>
                 <constraint firstAttribute="trailing" secondItem="K5f-L9-b1z" secondAttribute="trailing" constant="71" id="SgR-ic-xgC"/>
                 <constraint firstItem="6eS-ya-JZo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="145" id="UEa-sc-xRM"/>
-                <constraint firstItem="Jeq-Ym-FAZ" firstAttribute="width" secondItem="Sls-H3-FJf" secondAttribute="width" id="VIf-X8-Znp"/>
                 <constraint firstItem="Isg-ga-l8O" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="48" id="bvZ-9V-aF0"/>
-                <constraint firstItem="mki-O6-Gfv" firstAttribute="height" secondItem="Sls-H3-FJf" secondAttribute="height" id="cmS-qH-waR"/>
+                <constraint firstAttribute="trailing" secondItem="Bee-pc-QOf" secondAttribute="trailing" id="dnY-E2-dTk"/>
                 <constraint firstItem="6eS-ya-JZo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="eXP-1v-Ecb"/>
-                <constraint firstItem="mki-O6-Gfv" firstAttribute="width" secondItem="Sls-H3-FJf" secondAttribute="width" id="gao-xZ-IPR"/>
-                <constraint firstItem="Swt-GZ-tUK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="9" id="htn-6t-Ts6"/>
+                <constraint firstItem="Bee-pc-QOf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="h8G-sI-iRH"/>
                 <constraint firstItem="K5f-L9-b1z" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="29" id="igJ-QJ-5cW"/>
-                <constraint firstItem="Jeq-Ym-FAZ" firstAttribute="height" secondItem="Sls-H3-FJf" secondAttribute="height" id="lRQ-Yy-ohr"/>
-                <constraint firstAttribute="trailing" secondItem="Jeq-Ym-FAZ" secondAttribute="trailing" constant="30" id="lVe-na-7lS"/>
                 <constraint firstAttribute="trailing" secondItem="Hh3-JA-npJ" secondAttribute="trailing" id="mVB-Ss-5ro"/>
-                <constraint firstItem="Sls-H3-FJf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="136" id="pmG-Bv-NrX"/>
-                <constraint firstItem="Swt-GZ-tUK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="14" id="qKm-lF-8DV"/>
-                <constraint firstAttribute="trailing" secondItem="Bee-pc-QOf" secondAttribute="trailing" id="rNd-9Z-Lp5"/>
                 <constraint firstAttribute="trailing" secondItem="Isg-ga-l8O" secondAttribute="trailing" constant="16" id="vEa-HX-LoD"/>
                 <constraint firstItem="K5f-L9-b1z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="143" id="vN9-Hj-Xji"/>
+                <constraint firstItem="Bee-pc-QOf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="132" id="wX3-tG-eui"/>
+                <constraint firstItem="Swt-GZ-tUK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="14" id="xag-gV-m71"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
@@ -162,7 +146,7 @@
                 <outlet property="imageView" destination="Swt-GZ-tUK" id="I0d-n9-VnL"/>
                 <outlet property="shareBtn" destination="mki-O6-Gfv" id="aPg-mj-14C"/>
             </connections>
-            <point key="canvasLocation" x="1259.5" y="306.5"/>
+            <point key="canvasLocation" x="1329.5" y="375.5"/>
         </view>
     </objects>
     <resources>
