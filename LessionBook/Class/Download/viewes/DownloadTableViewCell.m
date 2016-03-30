@@ -110,7 +110,7 @@
     //2.获得文件的全路径
     //caches
     NSString *caches = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    NSString *fullPath = [caches stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.m4a", self.files]];
+    NSString *fullPath = [caches stringByAppendingPathComponent:self.fileName];
     self.fullPath = fullPath;
     NSLog(@"%@", fullPath);
     //3.创建一个空的文件
@@ -171,6 +171,7 @@
     [self.downloadBtn setTitle:@"完成" forState:UIControlStateNormal];
     
     if (self.delegate != nil && [self.delegate respondsToSelector:@selector(didDownlaod:)]) {
+        self.twoModel.download = self.fullPath;
         [self.delegate didDownlaod:self.twoModel];
     }
     
