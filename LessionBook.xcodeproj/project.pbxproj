@@ -32,7 +32,6 @@
 		7A4532551C9F9BBA00EDB43C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4532541C9F9BBA00EDB43C /* CoreLocation.framework */; };
 		7A4532571C9F9BDE00EDB43C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4532561C9F9BDE00EDB43C /* Security.framework */; };
 		7A4532581C9F9BEE00EDB43C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9BBA221C9D3AA200CA55D9 /* CoreGraphics.framework */; };
-		7A45325A1C9F9C1800EDB43C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4532591C9F9C1800EDB43C /* CoreTelephony.framework */; };
 		7A45325C1C9F9C3500EDB43C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A45325B1C9F9C3500EDB43C /* SystemConfiguration.framework */; };
 		7A45325E1C9F9C4700EDB43C /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A45325D1C9F9C4700EDB43C /* libz.1.2.5.tbd */; };
 		7A4532621C9F9C9F00EDB43C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4532611C9F9C9F00EDB43C /* AVFoundation.framework */; };
@@ -58,6 +57,11 @@
 		7A54D2531C9BA0B80012224E /* DetailHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A54D2521C9BA0B80012224E /* DetailHeadView.xib */; };
 		7A54D2551C9C3C8E0012224E /* 大圈.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A54D2541C9C3C8E0012224E /* 大圈.plist */; };
 		7A54D2581C9C3F6A0012224E /* detailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A54D2571C9C3F6A0012224E /* detailModel.m */; };
+		7A5D01A41CA96C8500A4A866 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A5D01A31CA96C8500A4A866 /* CoreFoundation.framework */; };
+		7A5D01A61CA96D3500A4A866 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A5D01A51CA96D3500A4A866 /* Foundation.framework */; };
+		7A5D01A81CA96D3D00A4A866 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A5D01A71CA96D3D00A4A866 /* UIKit.framework */; };
+		7A5D01AA1CA96E2C00A4A866 /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A5D01A91CA96E2C00A4A866 /* PushConfig.plist */; };
+		7A5D01B21CA96FE100A4A866 /* jpush-ios-2.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A5D01B01CA96FE100A4A866 /* jpush-ios-2.1.0.a */; };
 		7A68D4E71C9CF0730090DB08 /* 精选.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A68D4E61C9CF0730090DB08 /* 精选.plist */; };
 		7A68D4EA1C9D40100090DB08 /* UIViewController+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A68D4E81C9D40100090DB08 /* UIViewController+Common.m */; };
 		7A68D4ED1C9D450D0090DB08 /* HWTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A68D4EC1C9D450D0090DB08 /* HWTools.m */; };
@@ -191,6 +195,12 @@
 		7A54D2541C9C3C8E0012224E /* 大圈.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = "大圈.plist"; sourceTree = "<group>"; };
 		7A54D2561C9C3F6A0012224E /* detailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailModel.h; sourceTree = "<group>"; };
 		7A54D2571C9C3F6A0012224E /* detailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailModel.m; sourceTree = "<group>"; };
+		7A5D01A31CA96C8500A4A866 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		7A5D01A51CA96D3500A4A866 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7A5D01A71CA96D3D00A4A866 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7A5D01A91CA96E2C00A4A866 /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
+		7A5D01B01CA96FE100A4A866 /* jpush-ios-2.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-2.1.0.a"; sourceTree = "<group>"; };
+		7A5D01B11CA96FE100A4A866 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
 		7A68D4E61C9CF0730090DB08 /* 精选.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = "精选.plist"; sourceTree = "<group>"; };
 		7A68D4E81C9D40100090DB08 /* UIViewController+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Common.m"; sourceTree = "<group>"; };
 		7A68D4E91C9D40100090DB08 /* UIViewController+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Common.h"; sourceTree = "<group>"; };
@@ -293,11 +303,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A4532571C9F9BDE00EDB43C /* Security.framework in Frameworks */,
+				7A5D01A81CA96D3D00A4A866 /* UIKit.framework in Frameworks */,
+				7A5D01A61CA96D3500A4A866 /* Foundation.framework in Frameworks */,
+				7A5D01B21CA96FE100A4A866 /* jpush-ios-2.1.0.a in Frameworks */,
+				7A5D01A41CA96C8500A4A866 /* CoreFoundation.framework in Frameworks */,
+				7A389CDB1C9B90D300950794 /* CFNetwork.framework in Frameworks */,
 				7A4532621C9F9C9F00EDB43C /* AVFoundation.framework in Frameworks */,
 				7AB9594A1CA7C2C0007D75AB /* libc++.tbd in Frameworks */,
 				7A389CE11C9B912B00950794 /* libz.tbd in Frameworks */,
 				7AB959481CA7C299007D75AB /* CoreMotion.framework in Frameworks */,
-				7A45325A1C9F9C1800EDB43C /* CoreTelephony.framework in Frameworks */,
 				7A4532551C9F9BBA00EDB43C /* CoreLocation.framework in Frameworks */,
 				7A0042821CA23E0D00904873 /* libsqlite3.tbd in Frameworks */,
 				7A1A79B71C9FE7FE0001C962 /* JavaScriptCore.framework in Frameworks */,
@@ -306,15 +321,12 @@
 				7A4532641C9F9CAE00EDB43C /* MediaPlayer.framework in Frameworks */,
 				7A45325E1C9F9C4700EDB43C /* libz.1.2.5.tbd in Frameworks */,
 				7A45325C1C9F9C3500EDB43C /* SystemConfiguration.framework in Frameworks */,
-				7A45325A1C9F9C1800EDB43C /* CoreTelephony.framework in Frameworks */,
 				7A4532581C9F9BEE00EDB43C /* CoreGraphics.framework in Frameworks */,
-				7A4532571C9F9BDE00EDB43C /* Security.framework in Frameworks */,
 				7A389CE71C9B915600950794 /* libxml2.tbd in Frameworks */,
 				7AB959441CA7C130007D75AB /* AlipaySDK.framework in Frameworks */,
 				7A389CE51C9B914B00950794 /* libresolv.tbd in Frameworks */,
 				7A389CE31C9B913C00950794 /* libiconv.tbd in Frameworks */,
 				7A389CDF1C9B911F00950794 /* libstdc++.6.0.9.tbd in Frameworks */,
-				7A389CDB1C9B90D300950794 /* CFNetwork.framework in Frameworks */,
 				7A389CD91C9B90C900950794 /* MobileCoreServices.framework in Frameworks */,
 				F3C52409254B7E14DA087F46 /* libPods.a in Frameworks */,
 				7AB959451CA7C130007D75AB /* BmobPay.framework in Frameworks */,
@@ -327,6 +339,9 @@
 		12BB96C7D9304EFD5EC9AB4C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A5D01A71CA96D3D00A4A866 /* UIKit.framework */,
+				7A5D01A51CA96D3500A4A866 /* Foundation.framework */,
+				7A5D01A31CA96C8500A4A866 /* CoreFoundation.framework */,
 				7AB959491CA7C2C0007D75AB /* libc++.tbd */,
 				7AB959471CA7C298007D75AB /* CoreMotion.framework */,
 				7A1A79B81C9FE81B0001C962 /* ImageIO.framework */,
@@ -377,6 +392,15 @@
 				7A47641F1C984D900057A7D9 /* VOSegmentedControl.m */,
 			);
 			path = VOSegmentedControl;
+			sourceTree = "<group>";
+		};
+		7A5D01AF1CA96FE100A4A866 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				7A5D01B01CA96FE100A4A866 /* jpush-ios-2.1.0.a */,
+				7A5D01B11CA96FE100A4A866 /* JPUSHService.h */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 		7A68D4F61C9D5F750090DB08 /* PullingRefreshTableView */ = {
@@ -515,6 +539,7 @@
 				7A99D4511C97EE31001DD9B9 /* Assets.xcassets */,
 				7A99D4531C97EE31001DD9B9 /* LaunchScreen.storyboard */,
 				7A99D4561C97EE31001DD9B9 /* Info.plist */,
+				7A5D01A91CA96E2C00A4A866 /* PushConfig.plist */,
 				7A99D44B1C97EE31001DD9B9 /* Supporting Files */,
 			);
 			path = LessionBook;
@@ -689,6 +714,7 @@
 		7AE2889A1C980EEF00596833 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				7A5D01AF1CA96FE100A4A866 /* lib */,
 				7AE2889B1C980EEF00596833 /* tools */,
 			);
 			path = Library;
@@ -749,7 +775,15 @@
 				TargetAttributes = {
 					7A99D4471C97EE31001DD9B9 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = DE92S34P85;
+						DevelopmentTeam = CCQ5LLLX4L;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -804,6 +838,7 @@
 				7A1BE51F1CA2BF77000B7B13 /* FavoriteTableViewCell.xib in Resources */,
 				7A965F761C99328A00DE2547 /* search.plist in Resources */,
 				7A47640C1C9835BA0057A7D9 /* 搜索大主宰.plist in Resources */,
+				7A5D01AA1CA96E2C00A4A866 /* PushConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1044,8 +1079,10 @@
 					"$(PROJECT_DIR)/LessionBook/Library/libWeiboSDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/LessionBook/Library/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/LessionBook/Library/tools/libWeiboSDK",
+					"$(SRCROOT)/LessionBook/Library/lib",
+					"$(PROJECT_DIR)/LessionBook/Library/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = iOS.huI.LessionBook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Mangoinc.lessionBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1081,8 +1118,10 @@
 					"$(PROJECT_DIR)/LessionBook/Library/libWeiboSDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/LessionBook/Library/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/LessionBook/Library/tools/libWeiboSDK",
+					"$(SRCROOT)/LessionBook/Library/lib",
+					"$(PROJECT_DIR)/LessionBook/Library/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = iOS.huI.LessionBook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Mangoinc.lessionBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

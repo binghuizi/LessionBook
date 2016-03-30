@@ -403,8 +403,6 @@
     CGFloat pageWidth = self.scrollView.frame.size.width;
     //scrollView的偏移量
     self.scrollView.contentOffset = CGPointMake(pageNumber *pageWidth, 0);
-    
-    
 }
 //开始定时轮番
 -(void)startTimer{
@@ -413,8 +411,7 @@
     }
     self.timer = [NSTimer timerWithTimeInterval:2.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
     
-    
-     [[NSRunLoop currentRunLoop]addTimer:self.timer forMode:NSRunLoopCommonModes];
+    [[NSRunLoop currentRunLoop]addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 -(void)updateTimer{
     if (self.pictureArray.count > 0) {

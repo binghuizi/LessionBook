@@ -19,7 +19,8 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 #import "WXApi.h"
 #import "WeiboSDK.h"
-
+//推送
+#import "JPUSHService.h"
 #import <AFNetworking/AFHTTPSessionManager.h>
 #import "ProgressHUD.h"
 //支付设置
@@ -46,7 +47,6 @@
     //微博分享
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:kWeiboAppKey];
-    
     //注册环信
     //registerSDKWithAppKey
     [[EaseMob sharedInstance] registerSDKWithAppKey:kHuanxinAppKey apnsCertName:nil];
@@ -57,8 +57,29 @@
                                              appkey:kHuanxinAppKey
                                        apnsCertName:nil
                                         otherConfig:@{kSDKConfigEnableConsoleLogger:[NSNumber numberWithBool:YES]}];
+    //推送
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        //可以添加自定义categories
+        [JPUSHService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
+                                                          UIUserNotificationTypeSound |
+                                                          UIUserNotificationTypeAlert)
+                                              categories:nil];
+    } else {
+        //categories 必须为nil
+        [JPUSHService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                                          UIRemoteNotificationTypeSound |
+                                                          UIRemoteNotificationTypeAlert)
+                                              categories:nil];
+    }
     
-
+    // Required
+    //如需兼容旧版本的方式，请依旧使用[JPUSHService setupWithOption:launchOptions]方式初始化和同时使用pushConfig.plist文件声明appKey等配置内容。
+    //推送
+    [JPUSHService setupWithOption:launchOptions appKey:@"0497c4b90c2f04c9418cbc1e" channel:@"https://itunes.apple.com/cn/genre/yin-le/id34" apsForProduction:YES];
+    
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    [defaultCenter addObserver:self selector:@selector(networkDidReceiveMessage:) name:kJPFNetworkDidReceiveMessageNotification object:nil];
+    // 本地通知内容获取：NSDictionary *localNotification = [launchOptions objectForKey: UIApplicationLaunchOptionsLocalNotificationKey]
     // Override point for customization after application launch.
     //下载
     [[UITabBar appearance] setTintColor:[UIColor orangeColor]];
@@ -218,7 +239,45 @@
                         wxDelegate:self]|[WeiboSDK handleOpenURL:url delegate:self];
 
 }
+- (void)networkDidReceiveMessage:(NSNotification *)notification {
+    NSDictionary * userInfo = [notification userInfo];
+    NSString *content = [userInfo valueForKey:@"content"];
+    NSDictionary *extras = [userInfo valueForKey:@"extras"];
+    NSString *customizeField1 = [extras valueForKey:@"customizeField1"]; //自定义参数，key是自己定义的
+    
+}
+//推送
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Required
+    [JPUSHService registerDeviceToken:deviceToken];
+}
 
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    // Required,For systems with less than or equal to iOS6
+    [JPUSHService handleRemoteNotification:userInfo];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    // 取得 APNs 标准信息内容
+    NSDictionary *aps = [userInfo valueForKey:@"aps"];
+    NSString *content = [aps valueForKey:@"alert"]; //推送显示的内容
+    NSInteger badge = [[aps valueForKey:@"badge"] integerValue]; //badge数量
+    NSString *sound = [aps valueForKey:@"sound"]; //播放的声音
+    
+    // 取得Extras字段内容
+    NSString *customizeField1 = [userInfo valueForKey:@"customizeExtras"]; //服务端中Extras字段，key是自己定义的
+    NSLog(@"content =[%@], badge=[%ld], sound=[%@], customize field  =[%@]",content,badge,sound,customizeField1);
+    // IOS 7 Support Required
+    [JPUSHService handleRemoteNotification:userInfo];
+    completionHandler(UIBackgroundFetchResultNewData);
+    
+    
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    //Optional
+    NSLog(@"did Fail To Register For Remote Notifications With Error: %@", error);
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -234,6 +293,8 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     [[EaseMob sharedInstance] applicationWillEnterForeground:application];
+    [application setApplicationIconBadgeNumber:0];
+    [application cancelAllLocalNotifications];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -244,7 +305,6 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     [[EaseMob sharedInstance] applicationWillTerminate:application];
 }
-
 
 //环信代理
 
@@ -278,8 +338,41 @@
     
 }
 
+- (void)didReceiveOfflineMessages:(NSArray *)offlineMessages{
+    EMMessage *message = [offlineMessages lastObject];
+    id<IEMMessageBody> msgBody = message.messageBodies.firstObject;
+    switch (msgBody.messageBodyType) {
+        case eMessageBodyType_Text:
+        {
+            // 收到的文字消息
+            NSString *txt = ((EMTextMessageBody *)msgBody).text;
+            [JPUSHService setLocalNotification:[NSDate dateWithTimeIntervalSinceNow:100]
+                                     alertBody:txt
+                                         badge:1
+                                   alertAction:@"确定"
+                                 identifierKey:@"identifierKey"
+                                      userInfo:nil
+                                     soundName:nil];
+        }
+            break;
+        case eMessageBodyType_Command:
+            break;
+        case eMessageBodyType_File:
+            break;
+        case eMessageBodyType_Image:
+            break;
+        case eMessageBodyType_Location:
+            break;
+        case eMessageBodyType_Video:
+            break;
+        case eMessageBodyType_Voice:
+            break;
+    }
+}
 
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    [JPUSHService showLocalNotificationAtFront:notification identifierKey:@"identifierKey"];
 
-
+}
 
 @end

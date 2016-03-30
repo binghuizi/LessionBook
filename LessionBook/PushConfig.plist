@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CHANEL</key>
+	<string>https://itunes.apple.com/cn/genre/yin-le/id34</string>
+	<key>APP_KEY</key>
+	<string>0497c4b90c2f04c9418cbc1e</string>
+	<key>APS_FOR_PRODUCTION</key>
+	<string>0</string>
+</dict>
+</plist>
