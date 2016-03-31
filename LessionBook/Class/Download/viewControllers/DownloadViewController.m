@@ -94,6 +94,8 @@ static NSString *_didDownload = @"did";
         NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
         detailModel *model = self.didloadArray[indexPath.row];
         PlayViewController *playVC = [[PlayViewController alloc] init];
+        
+        
     }
 }
 

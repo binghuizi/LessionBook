@@ -391,7 +391,7 @@
         
         [self.timer invalidate];
         self.timeShowLabel.text = @"time up";
-        
+        //停止播放
         [[ZYAudioManager defaultManager]stopMusic:myAppDelegate.detailModel.download];
         
     }

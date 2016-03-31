@@ -146,7 +146,7 @@
                 <outlet property="imageView" destination="Swt-GZ-tUK" id="I0d-n9-VnL"/>
                 <outlet property="shareBtn" destination="mki-O6-Gfv" id="aPg-mj-14C"/>
             </connections>
-            <point key="canvasLocation" x="1329.5" y="375.5"/>
+            <point key="canvasLocation" x="471.5" y="353.5"/>
         </view>
     </objects>
     <resources>
