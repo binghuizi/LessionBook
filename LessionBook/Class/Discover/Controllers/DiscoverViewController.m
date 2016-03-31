@@ -265,7 +265,7 @@
         self.imageView.layer.masksToBounds = YES;
         self.imageView.layer.cornerRadius = 35;
         self.imageView.backgroundColor = [UIColor lightGrayColor];
-        [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.imageArray[indexPath.row]] placeholderImage:nil];
+        [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.imageArray[indexPath.row]] placeholderImage:[UIImage imageNamed:@"a040144d464bf201a150a57abf8f8292"]];
         
         self.titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 75, 100, 30)];
         self.titleLabel.text = self.titleArray[indexPath.row];
@@ -273,11 +273,15 @@
         for (id subView in cell.contentView.subviews) {
             [subView removeFromSuperview];
         }
-        
         [cell.contentView addSubview:self.imageView];
         [cell.contentView addSubview:self.titleLabel];
         return cell;
 }
+
+
+
+
+
 #pragma mark --collectionView点击方法
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     TypeViewController *typeVc = [[TypeViewController alloc]init];

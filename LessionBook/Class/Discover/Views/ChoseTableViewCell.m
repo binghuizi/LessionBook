@@ -8,8 +8,18 @@
 
 #import "ChoseTableViewCell.h"
 #import <UIButton+WebCache.h>
-@implementation ChoseTableViewCell
+#import <SDWebImage/UIImageView+WebCache.h>
+@interface ChoseTableViewCell()
 
+
+
+@end
+
+
+@implementation ChoseTableViewCell
+//@property (weak, nonatomic) IBOutlet UIButton *onebtn;
+//@property (weak, nonatomic) IBOutlet UIButton *twoBtn;
+//@property (weak, nonatomic) IBOutlet UIButton *threeBtn;
 - (void)awakeFromNib {
     // Initialization code
 }
@@ -86,9 +96,10 @@
         
         
         
-        [self.onebtn   sd_setImageWithURL:[NSURL URLWithString:itemDic[@"bigthumb"]] forState:UIControlStateNormal];
-        [self.twoBtn   sd_setImageWithURL:[NSURL URLWithString:itemDic1[@"bigthumb"]] forState:UIControlStateNormal];
-        [self.threeBtn sd_setImageWithURL:[NSURL URLWithString:itemDic2[@"bigthumb"]] forState:UIControlStateNormal];
+//        [self.onebtn   sd_setImageWithURL:[NSURL URLWithString:itemDic[@"bigthumb"]] forState:UIControlStateNormal];
+        [self.oneImage sd_setImageWithURL:[NSURL URLWithString:itemDic[@"bigthumb"]]];
+        [self.twoImage sd_setImageWithURL:[NSURL URLWithString:itemDic1[@"bigthumb"]]];
+        [self.threeImage sd_setImageWithURL:[NSURL URLWithString:itemDic2[@"bigthumb"]]];
         
         [self.typeBtn setTitle:model.name forState:UIControlStateNormal];
         

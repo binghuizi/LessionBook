@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+
+
+
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,30 +19,56 @@
                 <rect key="frame" x="0.0" y="0.0" width="359" height="81"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="浮华城市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMO-CG-1Ke">
-                        <rect key="frame" x="13" y="8" width="241" height="29"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="浮华城市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMO-CG-1Ke">
+                        <rect key="frame" x="13" y="8" width="265" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="SQv-zd-os4"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="集数：456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="314-Ll-ayB">
-                        <rect key="frame" x="164" y="49" width="64" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="集数：456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="314-Ll-ayB">
+                        <rect key="frame" x="219" y="48" width="59" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="yci-e8-c6C"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.43826941289999999" green="0.43826941289999999" blue="0.43826941289999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUH-Oc-4Vd">
-                        <rect key="frame" x="279" y="39" width="66" height="34"/>
-                        <color key="backgroundColor" red="0.77932449494949496" green="0.4487255485676071" blue="0.33617097871021018" alpha="1" colorSpace="calibratedRGB"/>
-                        <state key="normal" image="btn_mypage_fav_s"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUH-Oc-4Vd">
+                        <rect key="frame" x="286" y="8" width="65" height="65"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="65" id="7LZ-kb-ouY"/>
+                            <constraint firstAttribute="height" constant="65" id="KgZ-HV-BU4"/>
+                        </constraints>
+                        <state key="normal" image="btn_play_fav"/>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="主播： 晴雪" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c84-Ue-cXR">
-                        <rect key="frame" x="18" y="52" width="138" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主播： 晴雪" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c84-Ue-cXR">
+                        <rect key="frame" x="13" y="48" width="130" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="pC4-v6-ypq"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.43826941287878785" green="0.43826941287878785" blue="0.43826941287878785" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="314-Ll-ayB" secondAttribute="trailing" constant="81" id="07i-lj-0R0"/>
+                    <constraint firstItem="c84-Ue-cXR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="0J8-iG-L4Q"/>
+                    <constraint firstItem="vMO-CG-1Ke" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="0dS-Tx-Uc9"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="vMO-CG-1Ke" secondAttribute="trailing" constant="73" id="5DN-5J-gz1"/>
+                    <constraint firstAttribute="topMargin" secondItem="vMO-CG-1Ke" secondAttribute="top" id="G36-Ws-KF0"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="c84-Ue-cXR" secondAttribute="trailing" constant="208" id="QSL-Qe-5Lj"/>
+                    <constraint firstItem="314-Ll-ayB" firstAttribute="centerY" secondItem="c84-Ue-cXR" secondAttribute="centerY" id="Y9N-AA-SN3"/>
+                    <constraint firstItem="314-Ll-ayB" firstAttribute="top" secondItem="vMO-CG-1Ke" secondAttribute="bottom" id="g39-Aa-aGZ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="yUH-Oc-4Vd" secondAttribute="trailing" id="tpt-e2-wbP"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="c84-Ue-cXR" secondAttribute="bottom" constant="-5" id="typ-vZ-awc"/>
+                    <constraint firstItem="c84-Ue-cXR" firstAttribute="top" secondItem="vMO-CG-1Ke" secondAttribute="bottom" id="vRw-Nd-zHh"/>
+                    <constraint firstAttribute="topMargin" secondItem="yUH-Oc-4Vd" secondAttribute="top" id="ww7-8o-Tgr"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="anchorLabel" destination="c84-Ue-cXR" id="GUx-e9-nky"/>
@@ -48,6 +79,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="btn_mypage_fav_s" width="34" height="34"/>
+        <image name="btn_play_fav" width="34" height="34"/>
     </resources>
 </document>

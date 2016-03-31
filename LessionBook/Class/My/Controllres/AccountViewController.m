@@ -232,7 +232,17 @@
         case 1:
         {
             //支付变成VIP
-            [self payBecomeVIP];
+            BmobUser *user = [BmobUser getCurrentUser];
+            if (user) {
+                NSString *vip = [user objectForKey:@"VIP"];
+                if ([vip isEqualToString:@"true"]) {
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"你已经是高贵的超级会员，无需再充值会员，感谢你对我们的支持" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+                    [alert show];
+                }else{
+                   [self payBecomeVIP];
+                }
+            }
+
         }
             break;
         case 2:

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -29,7 +29,6 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xST-qX-adB">
                     <rect key="frame" x="135" y="69" width="223" height="55"/>
                     <string key="text">主人公有一个奇怪的名字：赵赶驴。因为这个名字，经常被人爆笑。一次加班晚归，他与同事白琳被意外困在了电梯里，两人得以邂逅结识。赵赶驴从此不可自拔地喜欢上了白琳，并想方设法调换岗位去了白琳所在的部门。
-
  </string>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -86,43 +85,66 @@
                         <constraint firstAttribute="height" constant="55" id="O0c-sZ-nZw"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mki-O6-Gfv">
-                    <rect key="frame" x="163" y="136" width="49" height="48"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sls-H3-FJf">
+                    <rect key="frame" x="0.0" y="134" width="128" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="xC4-dc-jwV"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <inset key="titleEdgeInsets" minX="-32" minY="30" maxX="0.0" maxY="0.0"/>
-                    <inset key="imageEdgeInsets" minX="9" minY="-28" maxX="0.0" maxY="0.0"/>
-                    <state key="normal" title="分 享" image="ic_channel_share"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jeq-Ym-FAZ">
-                    <rect key="frame" x="296" y="134" width="49" height="48"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <inset key="titleEdgeInsets" minX="-32" minY="32" maxX="0.0" maxY="0.0"/>
-                    <inset key="imageEdgeInsets" minX="9" minY="-24" maxX="0.0" maxY="0.0"/>
-                    <state key="normal" title="下 载" image="ic_channel_download"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sls-H3-FJf">
-                    <rect key="frame" x="30" y="136" width="49" height="48"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <inset key="titleEdgeInsets" minX="-23" minY="30" maxX="0.0" maxY="0.0"/>
+                    <inset key="titleEdgeInsets" minX="-40" minY="30" maxX="0.0" maxY="0.0"/>
                     <inset key="imageEdgeInsets" minX="9" minY="-23" maxX="0.0" maxY="0.0"/>
                     <state key="normal" title="收 藏" image="umeng_socialize_action_unlike"/>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mki-O6-Gfv">
+                    <rect key="frame" x="128" y="136" width="128" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="VA3-F1-P3x"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="titleEdgeInsets" minX="-57" minY="30" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="9" minY="-28" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="分 享" image="ic_channel_share"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jeq-Ym-FAZ">
+                    <rect key="frame" x="258" y="134" width="117" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="lgZ-eU-Cnq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="titleEdgeInsets" minX="-50" minY="32" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="-24" maxX="-13" maxY="0.0"/>
+                    <state key="normal" title="下 载" image="ic_channel_download"/>
+                </button>
             </subviews>
             <constraints>
+                <constraint firstItem="Bee-pc-QOf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0cK-zI-CTC"/>
                 <constraint firstAttribute="bottom" secondItem="Hh3-JA-npJ" secondAttribute="bottom" id="7EO-gg-All"/>
+                <constraint firstItem="mki-O6-Gfv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="128" id="GBo-Ad-TqR"/>
                 <constraint firstItem="Hh3-JA-npJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GGm-U9-EON"/>
                 <constraint firstItem="Hh3-JA-npJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ITc-Fd-0AV"/>
+                <constraint firstAttribute="bottom" secondItem="Jeq-Ym-FAZ" secondAttribute="bottom" constant="1" id="OtE-B1-2vk"/>
+                <constraint firstItem="Bee-pc-QOf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="132" id="PC0-yM-C5b"/>
                 <constraint firstItem="Swt-GZ-tUK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="9" id="Q0X-WN-mK2"/>
                 <constraint firstItem="Isg-ga-l8O" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="136" id="RCe-Nj-n0O"/>
                 <constraint firstAttribute="trailing" secondItem="6eS-ya-JZo" secondAttribute="trailing" constant="97" id="SCa-ll-hgZ"/>
                 <constraint firstAttribute="trailing" secondItem="K5f-L9-b1z" secondAttribute="trailing" constant="71" id="SgR-ic-xgC"/>
                 <constraint firstItem="6eS-ya-JZo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="145" id="UEa-sc-xRM"/>
+                <constraint firstAttribute="bottom" secondItem="Sls-H3-FJf" secondAttribute="bottom" constant="1" id="Y9W-vL-qIf"/>
                 <constraint firstItem="Isg-ga-l8O" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="48" id="bvZ-9V-aF0"/>
                 <constraint firstAttribute="trailing" secondItem="Bee-pc-QOf" secondAttribute="trailing" id="dnY-E2-dTk"/>
                 <constraint firstItem="6eS-ya-JZo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="eXP-1v-Ecb"/>
+                <constraint firstAttribute="trailing" secondItem="mki-O6-Gfv" secondAttribute="trailing" constant="119" id="eoC-IC-Chk"/>
+                <constraint firstAttribute="trailing" secondItem="Sls-H3-FJf" secondAttribute="trailing" constant="247" id="fDe-p4-d27"/>
                 <constraint firstItem="Bee-pc-QOf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="h8G-sI-iRH"/>
+                <constraint firstItem="Swt-GZ-tUK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="9" id="htn-6t-Ts6"/>
+                <constraint firstItem="Jeq-Ym-FAZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="258" id="iZ9-zy-g1C"/>
                 <constraint firstItem="K5f-L9-b1z" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="29" id="igJ-QJ-5cW"/>
                 <constraint firstAttribute="trailing" secondItem="Hh3-JA-npJ" secondAttribute="trailing" id="mVB-Ss-5ro"/>
+                <constraint firstAttribute="bottom" secondItem="mki-O6-Gfv" secondAttribute="bottom" constant="-1" id="nUu-3h-W3f"/>
+                <constraint firstItem="Sls-H3-FJf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nkg-ic-aNr"/>
+                <constraint firstItem="Swt-GZ-tUK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="14" id="qKm-lF-8DV"/>
+                <constraint firstAttribute="trailing" secondItem="Bee-pc-QOf" secondAttribute="trailing" id="rNd-9Z-Lp5"/>
+                <constraint firstAttribute="trailing" secondItem="Jeq-Ym-FAZ" secondAttribute="trailing" id="t15-9i-Huo"/>
                 <constraint firstAttribute="trailing" secondItem="Isg-ga-l8O" secondAttribute="trailing" constant="16" id="vEa-HX-LoD"/>
                 <constraint firstItem="K5f-L9-b1z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="143" id="vN9-Hj-Xji"/>
                 <constraint firstItem="Bee-pc-QOf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="132" id="wX3-tG-eui"/>
