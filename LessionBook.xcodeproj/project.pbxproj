@@ -109,6 +109,7 @@
 		7AB959481CA7C299007D75AB /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB959471CA7C298007D75AB /* CoreMotion.framework */; };
 		7AB9594A1CA7C2C0007D75AB /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB959491CA7C2C0007D75AB /* libc++.tbd */; };
 		7AD1C4AC1C9BA204001346CA /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD1C4AB1C9BA204001346CA /* MessageViewController.m */; };
+		7AD1FA781CAA9D64000B0AD0 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD1FA771CAA9D64000B0AD0 /* UIView+Extension.m */; };
 		7ADC1BEB1CA0F14A000DF95B /* dddd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7ADC1BEA1CA0F14A000DF95B /* dddd.plist */; };
 		7ADC1BF11CA14F3B000DF95B /* ChatBoxeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADC1BF01CA14F3B000DF95B /* ChatBoxeViewController.m */; };
 		7AE264B71C9840A9006C9A6D /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE264B61C9840A9006C9A6D /* MyViewController.m */; };
@@ -279,6 +280,8 @@
 		7ABFC11F1C98FFCF004B9AA6 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		7AD1C4AA1C9BA204001346CA /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		7AD1C4AB1C9BA204001346CA /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		7AD1FA761CAA9D64000B0AD0 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		7AD1FA771CAA9D64000B0AD0 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		7ADC1BEA1CA0F14A000DF95B /* dddd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dddd.plist; sourceTree = "<group>"; };
 		7ADC1BEF1CA14F3B000DF95B /* ChatBoxeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatBoxeViewController.h; sourceTree = "<group>"; };
 		7ADC1BF01CA14F3B000DF95B /* ChatBoxeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatBoxeViewController.m; sourceTree = "<group>"; };
@@ -414,6 +417,8 @@
 		7A7501361C9BE5180002FA5C /* ProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
+				7AD1FA761CAA9D64000B0AD0 /* UIView+Extension.h */,
+				7AD1FA771CAA9D64000B0AD0 /* UIView+Extension.m */,
 				7A7501371C9BE5180002FA5C /* ProgressHUD.bundle */,
 				7A7501381C9BE5180002FA5C /* ProgressHUD.h */,
 				7A7501391C9BE5180002FA5C /* ProgressHUD.m */,
@@ -927,6 +932,7 @@
 				7A0AB1411CA5312A0085875C /* DownloadListViewController.m in Sources */,
 				7A7501351C9BE3BD0002FA5C /* NSString+Common.m in Sources */,
 				7A4764211C984D900057A7D9 /* VOIndicatorAnimation.m in Sources */,
+				7AD1FA781CAA9D64000B0AD0 /* UIView+Extension.m in Sources */,
 				7A965F7A1C993B2A00DE2547 /* SearchModel.m in Sources */,
 				7A1BE5171CA289B3000B7B13 /* BookInformation.m in Sources */,
 				7A0AB13B1CA4D3B50085875C /* AccountViewController.m in Sources */,
@@ -999,7 +1005,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1036,7 +1042,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1060,7 +1066,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LessionBook/Library/tools/HWDefine.pch";
 				INFOPLIST_FILE = LessionBook/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1099,7 +1105,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LessionBook/Library/tools/HWDefine.pch";
 				INFOPLIST_FILE = LessionBook/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

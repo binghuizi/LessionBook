@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayViewController">
             <connections>
                 <outlet property="bookNameLabel" destination="Gcc-48-ZX6" id="tdu-g9-Wud"/>
+                <outlet property="exitBtn" destination="p1L-YI-P0k" id="sD8-Qk-WGO"/>
                 <outlet property="imageVc" destination="Vu7-h0-la3" id="ObD-EQ-80f"/>
                 <outlet property="playBtn" destination="tRU-De-eoB" id="tax-SY-nmh"/>
                 <outlet property="playProgress" destination="VDL-hX-GNk" id="tAH-cq-LPs"/>
@@ -37,7 +38,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcc-48-ZX6">
-                    <rect key="frame" x="37" y="280" width="301" height="112"/>
+                    <rect key="frame" x="37" y="278" width="301" height="112"/>
                     <fontDescription key="fontDescription" type="system" pointSize="28"/>
                     <color key="textColor" red="0.96336410984848486" green="0.96336410984848486" blue="0.96336410984848486" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -58,17 +59,41 @@
                 </button>
                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VDL-hX-GNk">
                     <rect key="frame" x="49" y="429" width="280" height="2"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="Hbb-ep-DVW" appends="YES" id="dnv-1t-1HD"/>
+                    </connections>
                 </progressView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1L-YI-P0k" userLabel="退出">
+                    <rect key="frame" x="18" y="27" width="42" height="48"/>
+                    <state key="normal" backgroundImage="quit">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="exit:" destination="-1" eventType="touchUpInside" id="iAL-aU-aSn"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="1063.5" y="67.5"/>
+            <point key="canvasLocation" x="1033.5" y="60.5"/>
         </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="XFn-ce-5fe">
+            <connections>
+                <action selector="panGueserevent:" destination="-1" id="rnJ-Q1-wm0"/>
+            </connections>
+        </panGestureRecognizer>
+        <tapGestureRecognizer id="Hbb-ep-DVW">
+            <connections>
+                <action selector="tapProgressView:" destination="-1" id="6uS-uY-l9q"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="play_bg" width="720" height="1230"/>
         <image name="play_button_next" width="50" height="50"/>
         <image name="play_button_play" width="52" height="52"/>
         <image name="play_button_pre" width="50" height="50"/>
+        <image name="quit" width="41" height="48"/>
     </resources>
 </document>

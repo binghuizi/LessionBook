@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <WeiboSDK.h>
 #import "detailModel.h"
-
+#import "PlayViewController.h"
+#import "detailModel.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate, WeiboSDKDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
@@ -22,5 +23,9 @@
 @property(nonatomic,assign) BOOL isLogin;
 @property(nonatomic,strong) NSString *userId;
 @property(nonatomic,strong) detailModel *detailModel;
+@property(nonatomic,strong) NSArray *arrayAll;
+@property(nonatomic,assign) NSInteger num;
+@property (nonatomic, strong) detailModel *currentplayingMusic;
+
 @end
 

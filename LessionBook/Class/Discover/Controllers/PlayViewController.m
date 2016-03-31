@@ -31,6 +31,22 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageVc;
 
 
+
+@property (weak, nonatomic) IBOutlet UIButton *exitBtn;
+
+
+
+- (IBAction)exit:(id)sender;
+
+
+
+
+- (IBAction)tapProgressView:(UITapGestureRecognizer *)sender;
+
+
+
+
+
 - (IBAction)preClick:(id)sender;
 
 - (IBAction)nextClick:(id)sender;
@@ -41,37 +57,47 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //返回按钮
-    [self showBackButton:@"ic_arrow_general2"];
+    
+    
+}
+-(void)viewDidDisappear:(BOOL)animated{
+    NSLog(@"消失");
+}
+-(void)viewWillAppear:(BOOL)animated{
     self.navigationController.navigationBar.alpha = 0.3;
     self.navigationController.navigationBar.barTintColor = [UIColor clearColor];
     self.navigationController.navigationBar.translucent = YES;
-   
+    
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
     self.tabBarController.tabBar.hidden = YES;
     
-    self.typePlay = 1;
-    
-    
-   // [self show];
-}
-- (void)backAction:(UIButton *)btn{
-    
-    [self.navigationController popViewControllerAnimated:YES];
+  
 }
 -(void)show{
       myAppDelagate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
     
      UIWindow *windows = [UIApplication sharedApplication].keyWindow;
-    if (self.currentplayingMusic != [ZYMusicTool playingMusic]) {
+    self.view.bounds = windows.bounds;
+    [windows addSubview:self.view];
+    self.view.y = self.view.height;
+    self.view.hidden = NO;
+//    if (self.currentplayingMusic != [ZYMusicTool playingMusic]) {
+//        [self resetPlayingMusic];
+//    }
+    if (myAppDelagate.currentplayingMusic != [ZYMusicTool playingMusic]) {
         [self resetPlayingMusic];
     }
     
      windows.userInteractionEnabled = NO;         //以免在动画过程中用户多次点击，或者造成其他事件的发生
     
-    windows.userInteractionEnabled = YES;
-    [self startPlayingMusic];
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        self.view.y = 0;
+    }completion:^(BOOL finished) {
+        windows.userInteractionEnabled = YES;
+        [self startPlayingMusic];
+    }];
    
 
 }
@@ -79,12 +105,18 @@
 #pragma mark ----音乐控制
 //重置播放的歌曲
 - (void)resetPlayingMusic
+
 {
+    self.timeLabel.text = [self stringWithTime:0];
+//    //停止播放音乐
+//    [[ZYAudioManager defaultManager]stopMusic:self.currentplayingMusic.download];
+//
+    
     //停止播放音乐
-    [[ZYAudioManager defaultManager]stopMusic:self.currentplayingMusic.download];
+    [[ZYAudioManager defaultManager]stopMusic:myAppDelagate.currentplayingMusic.download];
+    
     [[ZYAudioManager defaultManager]stopMusic:myAppDelagate.detailModel.download];
-    //停止播放音乐
-    //[[ZYAudioManager defaultManager]stopMusic:self.urlString];
+    
     self.player = nil;
     [self removeCurrentTimer];
 
@@ -92,27 +124,38 @@
 //开始播放音乐
 - (void)startPlayingMusic
 {
-    if (self.currentplayingMusic == [ZYMusicTool playingMusic]) {
+//    if (self.num == 0 &&  self.currentplayingMusic == [ZYMusicTool playingMusic])
+    
+     if (self.num == 0 &&  myAppDelagate.currentplayingMusic == [ZYMusicTool playingMusic]){
+        // 开放播放音乐
+     // self.playingMusic = self.arrayAll[self.num];
+        self.playingMusic = myAppDelagate.arrayAll[self.num];
+        self.player = [[ZYAudioManager defaultManager]playingMusic:self.playingMusic.download];
+//        
+//        
+        self.player.delegate = self;
         [self addCurrentTimer];
-      
-        return;
+//        
+        self.playBtn.selected = YES;
+    }else{
+        if (myAppDelagate.currentplayingMusic == [ZYMusicTool playingMusic]) {
+            [self addCurrentTimer];
+           
+            return;
+        }
+        // 开放播放音乐
+        //self.playingMusic = self.arrayAll[self.num];
+        self.playingMusic = myAppDelagate.arrayAll[self.num];
+        self.player = [[ZYAudioManager defaultManager]playingMusic:self.playingMusic.download];
+        
+        
+        self.player.delegate = self;
+        [self addCurrentTimer];
+        
+        self.playBtn.selected = YES;
+
     }
-   // 开放播放音乐
-    self.playingMusic = self.arrayAll[self.num];
-    self.player = [[ZYAudioManager defaultManager]playingMusic:self.playingMusic.download];
-  
-   
-    self.player.delegate = self;
-    [self addCurrentTimer];
     
-    self.playBtn.selected = YES;
-    
-    NSInteger num = [HWTools number:self.playingMusic.duration];
-    self.timeLabel.text = [NSString stringWithFormat:@"%02ld : %02ld",num/60,num%60];
-    
-    
-    //切换锁屏
-    [self updateLockedScreenMusic];
 
 }
 #pragma mark ----进度条定时器处理
@@ -126,7 +169,7 @@
     }
     //新增定时器之前
     [self removeCurrentTimer];
-  //  [self updateCurrentTimer];
+    [self updateCurrentTimer];
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateCurrentTimer) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop]addTimer:self.timer forMode:NSRunLoopCommonModes];
@@ -143,17 +186,9 @@
  */
 - (void)updateCurrentTimer
 {
-    
     double temp = self.player.currentTime / self.player.duration;
     self.playProgress.progress = temp;
-    
-    self.timeInt -=1;
-    if (self.timeInt != 0) {
-        self.timeLabel.text = [NSString stringWithFormat:@"%02ld:%02ld",self.timeInt/60,self.timeInt%60];
-    }else{
-        
-    }
-    
+    self.timeLabel.text =  [self stringWithTime:self.player.currentTime];
     self.bookNameLabel.text = self.playingMusic.name;
     [self.playBtn setImage:[UIImage imageNamed:@"play_button_pause"]forState:UIControlStateNormal];
 }
@@ -180,62 +215,55 @@
          [sender setImage:[UIImage imageNamed:@"play_button_pause"]forState:UIControlStateNormal];
         self.playBtn.selected =  YES;
 [[ZYAudioManager defaultManager]playingMusic:self.playingMusic.download];
-   //     [[ZYAudioManager defaultManager]playingMusic:self.urlString];
+        
         [self addCurrentTimer];
         
     }else{
         [sender setImage:[UIImage imageNamed:@"play_button_play"]forState:UIControlStateNormal];
         self.playBtn.selected = NO;
         [[ZYAudioManager defaultManager]pauseMusic:self.playingMusic.download];
-       // [[ZYAudioManager defaultManager]playingMusic:self.urlString];
+       
         [self removeCurrentTimer];
         
     }
     
-    
-   
 }
 
 
 
-/**
- *  更新播放进度
- */
-//-(void)updateProgress{
-//    float progress= (double)self.audioPlayer.currentTime /self.audioPlayer.duration;
-//    
-//    [self.playProgress setProgress:progress animated:true];
-//    
-//    self.timeInt -=1;
-//    if (self.timeInt != 0) {
-//        self.timeLabel.text = [NSString stringWithFormat:@"%02ld: %02ld",(NSInteger)self.timeInt/60,(NSInteger)self.timeInt%60];
-//    }else{
-//        [self.timer invalidate];
-//    }
-//}
+#pragma mark -----离开页面
+- (IBAction)exit:(id)sender {
+    
+    UIWindow *windows = [UIApplication sharedApplication].keyWindow;
+    windows.userInteractionEnabled = NO;
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        self.view.y = self.view.height;
+    }completion:^(BOOL finished) {
+        self.view.hidden = YES;            //view看不到了，将之隐藏掉，可以减少性能的消耗
+        [self removeCurrentTimer];
+       
+        windows.userInteractionEnabled = YES;
+    }];
+    
+    
+    myAppDelagate.num = self.num;
 
+}
 /**
- *  一旦输出改变则执行此方法
+ *  轻击progressView，使得滑块走到对应位置
  *
- *  @param notification 输出改变通知对象
  */
-//-(void)routeChange:(NSNotification *)notification{
-//    NSDictionary *dic=notification.userInfo;
-//    int changeReason= [dic[AVAudioSessionRouteChangeReasonKey] intValue];
-//    //等于AVAudioSessionRouteChangeReasonOldDeviceUnavailable表示旧输出不可用
-//    if (changeReason==AVAudioSessionRouteChangeReasonOldDeviceUnavailable) {
-//        AVAudioSessionRouteDescription *routeDescription=dic[AVAudioSessionRouteChangePreviousRouteKey];
-//        AVAudioSessionPortDescription *portDescription= [routeDescription.outputs firstObject];
-//        //原设备为耳机则暂停
-//        if ([portDescription.portType isEqualToString:@"Headphones"]) {
-//            [self pause];
-//        }
-//    }
-//}
-
-
-
-//前一首
+- (IBAction)tapProgressView:(UITapGestureRecognizer *)sender {
+    CGPoint point = [sender locationInView:sender.view];
+    
+    self.player.currentTime = (point.x / sender.view.width) * self.player.duration;
+    
+    [self updateCurrentTimer];
+ 
+    
+}
+#pragma mark ------上一集
 - (IBAction)preClick:(id)sender {
     UIWindow *windo = [UIApplication sharedApplication].keyWindow;
     windo.userInteractionEnabled = NO;
@@ -245,15 +273,14 @@
     if (self.num < 0) {
         self.num = 0;
     }
-    [self startPlayingMusic];
+    
     [self removeCurrentTimer];
+    [self startPlayingMusic];
+    
     
     windo.userInteractionEnabled = YES;
     [self.delegate getNum:self.num];
-    
-    
-    
-    
+
 }
 
 - (IBAction)nextClick:(id)sender {
@@ -261,29 +288,38 @@
     UIWindow *windo = [UIApplication sharedApplication].keyWindow;
     windo.userInteractionEnabled = NO;
     [[ZYAudioManager defaultManager]stopMusic:self.playingMusic.download];
-    [ZYMusicTool setPlayingMusic:[ZYMusicTool nextMusic]];
+   // [ZYMusicTool setPlayingMusic:[ZYMusicTool nextMusic]];
     self.num += 1;
-    NSLog(@"%ld",self.arrayAll.count);
-    NSLog(@"%ld",self.num);
-    if (self.num > self.arrayAll.count - 1) {
+    
+//    if (self.num > self.arrayAll.count - 1) {
+//        self.num = 0;
+//    }
+    if (self.num > myAppDelagate.arrayAll.count - 1) {
         self.num = 0;
     }
-    
-    
-    [self startPlayingMusic];
-    [self removeCurrentTimer];
-    
+     [self removeCurrentTimer];
+     [self startPlayingMusic];
+   
     windo.userInteractionEnabled = YES;
-    [self.delegate getNum:self.num ];
+   // myAppDelagate.num = self.num;
+    //[self.delegate getNum:self.num ];
 }
 #pragma mark ----AVAudioPlayerDelegate
 #pragma mark - 播放器代理方法
 -(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
-//    NSLog(@"音乐播放完成...");
+
 //    //根据实际情况播放完成可以将会话关闭，其他音频应用继续播放
-//    [[AVAudioSession sharedInstance]setActive:NO error:nil];
-//    [self.playBtn setImage:[UIImage imageNamed:@"play_button_play"]forState:UIControlStateNormal];
-    [self nextClick:nil];
+    NSLog(@"%ld",self.num);
+    NSLog(@"%ld",myAppDelagate.arrayAll.count - 1);
+//    if (self.num  == myAppDelagate.arrayAll.count - 1) {
+//        [self.playBtn setImage:[UIImage imageNamed:@"play_button_play"]forState:UIControlStateNormal];
+//        [[AVAudioSession sharedInstance]setActive:NO error:nil];
+//        
+//    }else{
+       [self nextClick:nil];
+//}
+    
+    
 }
 
 -(void)audioPlayerBeginInterruption:(AVAudioPlayer *)player{
@@ -303,15 +339,8 @@
     }
 }
 
-#pragma mark ----锁屏时候的设置，效果需要在真机上才可以看到
-- (void)updateLockedScreenMusic
-{ //播放信息中心
-    MPNowPlayingInfoCenter *center = [MPNowPlayingInfoCenter defaultCenter];
-    //初始化播放信息
-    NSMutableDictionary *info = [NSMutableDictionary dictionary];
-    info[MPMediaItemPropertyAlbumTitle] = self.bookNameLabel.text;
-    
-}
+
+
 #pragma mark - 远程控制事件监听
 -(BOOL)canBecomeFirstResponder{
     return YES;
@@ -335,11 +364,6 @@
             break;
     }
 }
-
-
-
-
-
 
 
 @end

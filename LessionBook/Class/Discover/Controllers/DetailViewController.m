@@ -46,6 +46,7 @@
     if (_playVc == nil) {
         self.playVc = [[PlayViewController alloc]init];
         self.playVc.arrayAll = self.dateArray;
+        _myAppdelegate.arrayAll = self.dateArray;
         _playVc.delegate = self;
     }
     return _playVc;
@@ -81,7 +82,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     self.navigationController.navigationBar.alpha = 1.0;
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
-    self.tabBarController.tabBar.hidden = NO;
+    self.tabBarController.tabBar.hidden = YES;
     
     
 
@@ -219,33 +220,33 @@
 
 #pragma mark --- 点击cell触发事件
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (self.isBack != 0) {
+        self.currentIndex = _myAppdelegate.num;
+    }
+   
     self.isBack = 1;
     
     
     [ZYMusicTool setPlayingMusic:self.dateArray[indexPath.row]];
-   // detailModel *preModel = self.dateArray[self.currentIndex];//当前歌曲
-     self.playVc.currentplayingMusic = self.dateArray[self.currentIndex];//当前歌曲
-   // preModel.playing = NO;
+    
+//    self.playVc.currentplayingMusic = self.dateArray[self.currentIndex];//当前歌曲
+    _myAppdelegate.currentplayingMusic = self.dateArray[self.currentIndex];
     
     detailModel *model = self.dateArray[indexPath.row];
     
-    NSLog(@"%@",model.download);
+ 
     model.playing = YES;
     
     NSArray *indexPaths = @[[NSIndexPath indexPathForItem:self.currentIndex inSection:0],indexPath];
     [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
     
     self.currentIndex = (int)indexPath.row;
-    
-   
-   NSInteger num = [HWTools number:model.duration];
-   self.playVc.nameString = model.name;
-   self. playVc.timeInt = num;
     self.playVc.num = indexPath.row;
-    self.playVc.urlString = model.download;
+    
     self.playVc.playingMusic = self.dateArray[indexPath.row];
     [self.playVc show];
-    [self.navigationController pushViewController:self.playVc animated:YES];
+  
     
     
     

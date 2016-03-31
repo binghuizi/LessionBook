@@ -24,7 +24,7 @@
 #import <EaseMob.h>
 #import <BmobSDK/Bmob.h>
 #import "AppDelegate.h"
-
+#import "ZYAudioManager.h"
 @interface MyViewController ()<UITableViewDataSource, UITableViewDelegate>{
     AppDelegate *myAppDelegate;
 }
@@ -124,10 +124,16 @@
     switch (indexPath.row) {
         case 0:
         {
-            if (myAppDelegate.isLogin) {
-                FavoriteViewController *favoriteVC = [[FavoriteViewController alloc] init];
-                [self.navigationController pushViewController:favoriteVC animated:YES];
-            }else{
+           
+                BmobUser *user = [BmobUser getCurrentUser];
+                if (user != nil) {
+                    FavoriteViewController *favoriteVC = [[FavoriteViewController alloc] init];
+                    
+                    
+                    [self.navigationController pushViewController:favoriteVC animated:YES];
+
+                
+                    }else{
                 UIStoryboard *myStoryBoard = [UIStoryboard storyboardWithName:@"My" bundle:nil];
                 
                 LoginViewController *loginVC = [myStoryBoard instantiateViewControllerWithIdentifier:@"loginVC"];
@@ -386,6 +392,7 @@
         [self.timer invalidate];
         self.timeShowLabel.text = @"time up";
         
+        [[ZYAudioManager defaultManager]stopMusic:myAppDelegate.detailModel.download];
         
     }
 }
@@ -474,14 +481,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
