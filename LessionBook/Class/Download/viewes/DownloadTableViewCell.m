@@ -57,7 +57,7 @@
     self.url = model.mediainfo[@"download"];
     self.downloadProgress.hidden = NO;
     self.download = YES;
-//    [self downloadfile];
+    [self downloadfile];
 //    if (self.downloadBtn.titleLabel.text != nil) {
 //        [self.downloadBtn setTitle:@"下载" forState:UIControlStateNormal];
 //        self.timeLabel.text = @"未下载";

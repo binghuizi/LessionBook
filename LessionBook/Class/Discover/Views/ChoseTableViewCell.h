@@ -30,6 +30,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *typeBtn;
 @property(nonatomic,strong) NSString *picthString;
 
+@property (weak, nonatomic) IBOutlet UIImageView *twoImage;
+@property (weak, nonatomic) IBOutlet UIImageView *oneImage;
+@property (weak, nonatomic) IBOutlet UIImageView *threeImage;
+
 @property (nonatomic,strong) ChoseModel *model;
 @property(nonatomic,strong) NSArray *dataArray;
 @property(nonatomic,strong) NSMutableArray *imageArray;

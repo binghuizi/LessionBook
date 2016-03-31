@@ -91,9 +91,8 @@ static NSString *_didDownload = @"did";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.selectdidDownload) {
-        NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-        detailModel *model = self.didloadArray[indexPath.row];
-        PlayViewController *playVC = [[PlayViewController alloc] init];
+//        detailModel *model = self.didloadArray[indexPath.row];
+//        PlayViewController *playVC = [[PlayViewController alloc] init];
     }
 }
 
@@ -118,11 +117,9 @@ static NSString *_didDownload = @"did";
         [task deleteModel:model];
         [self.downlistArray removeObject:model];
     }else{
-        NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
         detailModel *model = self.didloadArray[indexPath.row];
-        NSString *filePath = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.m4a", model.name]];
         NSFileManager *manager = [NSFileManager defaultManager];
-        [manager removeItemAtPath:filePath error:nil];
+        [manager removeItemAtPath:model.download error:nil];
         [self.didloadArray removeObjectAtIndex:indexPath.row];
     }
     [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];

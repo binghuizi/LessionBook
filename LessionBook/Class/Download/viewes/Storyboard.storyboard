@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--New Group View Controller-->
@@ -17,38 +18,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Rz-BP-bop">
-                                <rect key="frame" x="0.0" y="189" width="375" height="363"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Rz-BP-bop">
+                                <rect key="frame" x="-4" y="189" width="383" height="363"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Ems-nr-5bG" id="CL3-4H-xZq"/>
                                     <outlet property="delegate" destination="Ems-nr-5bG" id="WES-nO-Wg1"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="群组名称" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTY-IR-wRc">
-                                <rect key="frame" x="0.0" y="20" width="375" height="40"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="群组名称" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTY-IR-wRc">
+                                <rect key="frame" x="-4" y="20" width="383" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Idm-r1-Ccg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="人数" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rF2-wE-EiR">
-                                <rect key="frame" x="0.0" y="69" width="375" height="40"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="人数" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rF2-wE-EiR">
+                                <rect key="frame" x="-4" y="69" width="383" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="群组描述" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zJc-Uo-2AN">
-                                <rect key="frame" x="0.0" y="117" width="375" height="40"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="群组描述" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zJc-Uo-2AN">
+                                <rect key="frame" x="-4" y="117" width="383" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="添加群组成员" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wo-85-oFE">
-                                <rect key="frame" x="0.0" y="165" width="375" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="添加群组成员" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wo-85-oFE">
+                                <rect key="frame" x="-4" y="165" width="383" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="BF5-2Y-0eD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVz-hL-P1b">
-                                <rect key="frame" x="99" y="563" width="177" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVz-hL-P1b">
+                                <rect key="frame" x="95" y="563" width="177" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.78985201390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9eU-au-rUP"/>
+                                </constraints>
                                 <state key="normal" title="创建"/>
                                 <connections>
                                     <action selector="createNewGroup:" destination="Ems-nr-5bG" eventType="touchUpInside" id="6GP-su-hOg"/>
@@ -56,6 +66,31 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Wo-85-oFE" firstAttribute="top" secondItem="zJc-Uo-2AN" secondAttribute="bottom" constant="8" id="7yG-pX-efg"/>
+                            <constraint firstItem="rF2-wE-EiR" firstAttribute="top" secondItem="WTY-IR-wRc" secondAttribute="bottom" constant="9" id="9lx-04-iiL"/>
+                            <constraint firstItem="zJc-Uo-2AN" firstAttribute="height" secondItem="rF2-wE-EiR" secondAttribute="height" id="9qd-LH-irH"/>
+                            <constraint firstItem="0Wo-85-oFE" firstAttribute="leading" secondItem="a0x-Hu-Ekv" secondAttribute="leadingMargin" constant="-20" id="E7W-82-WQA"/>
+                            <constraint firstAttribute="bottom" secondItem="3Rz-BP-bop" secondAttribute="bottom" constant="115" id="Gwc-Av-0gg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WTY-IR-wRc" secondAttribute="trailing" constant="-20" id="Jij-Iy-k4a"/>
+                            <constraint firstItem="rF2-wE-EiR" firstAttribute="centerX" secondItem="WTY-IR-wRc" secondAttribute="centerX" id="JxJ-wT-7cc"/>
+                            <constraint firstItem="rF2-wE-EiR" firstAttribute="width" secondItem="WTY-IR-wRc" secondAttribute="width" id="Kaj-hP-e77"/>
+                            <constraint firstItem="zJc-Uo-2AN" firstAttribute="centerX" secondItem="rF2-wE-EiR" secondAttribute="centerX" id="KpB-DD-THC"/>
+                            <constraint firstItem="3Rz-BP-bop" firstAttribute="centerX" secondItem="0Wo-85-oFE" secondAttribute="centerX" id="R0d-af-rGv"/>
+                            <constraint firstItem="rF2-wE-EiR" firstAttribute="height" secondItem="WTY-IR-wRc" secondAttribute="height" id="TAm-6Q-xfu"/>
+                            <constraint firstItem="zJc-Uo-2AN" firstAttribute="width" secondItem="rF2-wE-EiR" secondAttribute="width" id="WGj-bU-meF"/>
+                            <constraint firstItem="3Rz-BP-bop" firstAttribute="top" secondItem="0Wo-85-oFE" secondAttribute="bottom" id="XC7-Ax-t20"/>
+                            <constraint firstItem="wS3-Oc-GuE" firstAttribute="top" secondItem="LVz-hL-P1b" secondAttribute="bottom" constant="54" id="Y6Z-h1-vF2"/>
+                            <constraint firstItem="WTY-IR-wRc" firstAttribute="top" secondItem="iOy-Yz-aqg" secondAttribute="bottom" id="hLO-g7-BQg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Wo-85-oFE" secondAttribute="trailing" constant="-20" id="ibP-FB-Khg"/>
+                            <constraint firstItem="3Rz-BP-bop" firstAttribute="leading" secondItem="a0x-Hu-Ekv" secondAttribute="leadingMargin" constant="-20" id="kLW-Np-lqR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Rz-BP-bop" secondAttribute="trailing" constant="-20" id="pR8-gU-BRw"/>
+                            <constraint firstItem="zJc-Uo-2AN" firstAttribute="top" secondItem="rF2-wE-EiR" secondAttribute="bottom" constant="8" id="vbd-Yw-vYE"/>
+                            <constraint firstAttribute="trailing" secondItem="LVz-hL-P1b" secondAttribute="trailing" constant="103" id="wmi-yV-yDV"/>
+                            <constraint firstItem="LVz-hL-P1b" firstAttribute="leading" secondItem="a0x-Hu-Ekv" secondAttribute="leadingMargin" constant="75" id="x8F-wk-WA3"/>
+                            <constraint firstItem="WTY-IR-wRc" firstAttribute="leading" secondItem="a0x-Hu-Ekv" secondAttribute="leadingMargin" constant="-20" id="yoD-on-Mrm"/>
+                            <constraint firstItem="0Wo-85-oFE" firstAttribute="centerX" secondItem="zJc-Uo-2AN" secondAttribute="centerX" id="zag-rB-0Y8"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
