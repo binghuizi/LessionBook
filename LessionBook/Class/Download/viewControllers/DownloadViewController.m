@@ -31,17 +31,18 @@ static NSString *_didDownload = @"did";
 @property (nonatomic, strong) NSMutableArray *downlistArray;
 //已完成列表
 @property (nonatomic, strong) NSMutableArray *didloadArray;
+@property (nonatomic, assign) NSInteger currentIndex;//当前歌曲
 
 @end
 
 @implementation DownloadViewController
-//-(PlayViewController *)playVc{
-//    if (_playVC == nil) {
-//        
-//        _playVC = [[PlayViewController alloc]init];
-//    }
-//    return _playVC;
-//}
+-(PlayViewController *)playVc{
+    if (_playVC == nil) {
+        
+        _playVC = [[PlayViewController alloc]init];
+    }
+    return _playVC;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -103,25 +104,30 @@ static NSString *_didDownload = @"did";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.selectdidDownload) {
 
-        [[ZYAudioManager defaultManager]playingMusic:self.didloadArray[indexPath.row]];
+        //这个页面全部的数据
         [ZYMusicTool musics:self.didloadArray];
         
+        //self.isBack = 1;
+        //当前一行数据
+        [ZYMusicTool setPlayingMusic:[ZYMusicTool musics:self.didloadArray][indexPath.row]];
+        
+        myAppdelegate.currentplayingMusic = [ZYMusicTool musics:self.didloadArray][self.currentIndex];//当前歌曲
+        
         detailModel *model = self.didloadArray[indexPath.row];
-       
-        
-        myAppdelegate.detailModel = self.didloadArray[indexPath.row];
-        //所有数据
-        myAppdelegate.arrayAll = self.didloadArray;
-        //当前数据
-        myAppdelegate.currentplayingMusic = self.didloadArray[indexPath.row];
-        PlayViewController *playVC = [[PlayViewController alloc]init];
-        playVC.num = indexPath.row;
-        [playVC show];
-       
         
         
-//        detailModel *model = self.didloadArray[indexPath.row];
-//        PlayViewController *playVC = [[PlayViewController alloc] init];
+        model.playing = YES;
+        
+        NSArray *indexPaths = @[[NSIndexPath indexPathForItem:self.currentIndex inSection:0],indexPath];
+        [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
+        
+        self.currentIndex = (int)indexPath.row;
+        
+        
+        [self.playVc show];
+        
+        
+
 
     }
 }
@@ -217,7 +223,7 @@ static NSString *_didDownload = @"did";
     [self.downlistArray removeObject:models];
     DownlaodTask *task = [DownlaodTask shareInstance];
     [task deleteModel:models];
-    NSLog(@"-166--------------%lu", self.didloadArray.count);
+   // NSLog(@"-166--------------%lu", self.didloadArray.count);
     [self.tableView reloadData];
 
 }

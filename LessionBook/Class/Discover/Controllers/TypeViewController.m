@@ -75,9 +75,7 @@
    
     
 }
--(void)viewWillAppear:(BOOL)animated{
-   // [[ZYAudioManager defaultManager]playingMusic:<#(NSString *)#>]
-}
+
 -(void)headAction{
 //清扫手势事件
     self.typeDetailSwipeLeft     = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(oneFingerSwipeUp:)];
@@ -225,7 +223,7 @@
             TypeModel *model = [[TypeModel alloc]init];
           
             [model setValuesForKeysWithDictionary:itemDic];
-            [self.idArray addObject:model.id];
+            [self.idArray addObject:model.idString];
             NSArray *broadArray = itemDic[@"broadcasters"];
             if (broadArray.count > 0) {
                 [model setValuesForKeysWithDictionary:broadArray[0]];
@@ -267,7 +265,7 @@
             TypeModel *model = [[TypeModel alloc]init];
            
             [model setValuesForKeysWithDictionary:itemDic];
-            [self.idArray1 addObject:model.id];
+            [self.idArray1 addObject:model.idString];
             
             NSArray *broadArray = itemDic[@"broadcasters"];
             if (broadArray.count != 0) {
@@ -306,7 +304,7 @@
             TypeModel *model = [[TypeModel alloc]init];
             
             [model setValuesForKeysWithDictionary:itemDic];
-            [self.idArray2 addObject:model.id];
+            [self.idArray2 addObject:model.idString];
             
             NSArray *broadArray = itemDic[@"broadcasters"];
             if (broadArray.count != 0) {

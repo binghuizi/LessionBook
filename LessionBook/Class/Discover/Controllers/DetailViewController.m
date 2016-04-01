@@ -204,11 +204,11 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 90;
 }
-//PlayViewController代理方法
--(void)getNum:(NSInteger)cunrrentNum{
-    self.currentIndex = cunrrentNum;
-    NSLog(@"currentIndex%ld",self.currentIndex);
-}
+////PlayViewController代理方法
+//-(void)getNum:(NSInteger)cunrrentNum{
+//    self.currentIndex = cunrrentNum;
+//    NSLog(@"currentIndex%ld",self.currentIndex);
+//}
 
 #pragma mark --- 点击cell触发事件
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

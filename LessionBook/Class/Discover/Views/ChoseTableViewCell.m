@@ -37,7 +37,7 @@
         self.zuozheArray = [NSMutableArray new];
         self.idArray     = [NSMutableArray new];
         self.typeIdArray = [NSMutableArray new];
-        [self.typeIdArray addObject:model.id];
+        [self.typeIdArray addObject:model.idString];
         NSDictionary *itemDic  = model.items[0];
         NSDictionary *itemDic1 = model.items[1];
         NSDictionary *itemDic2 = model.items[2];
