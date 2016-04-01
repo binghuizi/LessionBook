@@ -28,10 +28,6 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"FavoriteTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
    
     
-   
-    
-    
-    
 }
 -(void)addSqlAction{
     
@@ -42,7 +38,6 @@
         
     }
   
-    
     
 }
 //行

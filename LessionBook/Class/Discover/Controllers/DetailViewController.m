@@ -25,7 +25,7 @@
 #import "PlayViewController.h"
 #import "ZYMusic.h"
 #import "ZYMusicTool.h"
-
+#import "ZYAudioManager.h"
 @interface DetailViewController ()<UITableViewDataSource,UITableViewDelegate>{
      DetailHeadView *_tableViewHead;
     BOOL isCollection;
@@ -45,9 +45,9 @@
 -(PlayViewController *)playVc{
     if (_playVc == nil) {
         self.playVc = [[PlayViewController alloc]init];
-        self.playVc.arrayAll = self.dateArray;
-        _myAppdelegate.arrayAll = self.dateArray;
-        _playVc.delegate = self;
+       // self.playVc.arrayAll = self.dateArray;
+       // _myAppdelegate.arrayAll = self.dateArray;
+        
     }
     return _playVc;
 }
@@ -71,6 +71,7 @@
     
     [self loadHeadView];
 }
+
 - (void)backAction:(UIButton *)btn{
     if (self.currentIndex != 0 || self.isBack == 1) {
          _myAppdelegate.detailModel = self.dateArray[self.currentIndex];
@@ -139,18 +140,15 @@
 }
 //收藏
 -(void)collectionAction{
-    //是否登陆状态 登陆状态才能收藏
-    if (_myAppdelegate.isLogin) {
+  
         //1.登录状态下 点击收藏 变红色❤️
-        
-        
-        
+    
         BookInformation *info = [BookInformation bookInformationWithUserId:_myAppdelegate.userId bookId:self.idString bookName:self.titleString bookIntroduction:self.miaoshuString imageString:self.pictchString];
         SqlModel *model = [[SqlModel alloc]init];
         
         BmobUser *user = [BmobUser getCurrentUser];
         
-        if (user != NULL) {
+    if (user != NULL) {
             if ([model insertIntoBookSql:info tableName:user.username] == 1) {
                 UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"收藏成功" preferredStyle:UIAlertControllerStyleAlert];
                 UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -169,13 +167,7 @@
                 _myAppdelegate.isCollection = 0;
             }
             
-        }
-        
-        
-        
-        
-        
-    }else{
+  }else{
         //登陆状态跳转登录页面
         UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"请先登录" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -220,18 +212,14 @@
 
 #pragma mark --- 点击cell触发事件
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //这个页面全部的数据
+    [ZYMusicTool musics:self.dateArray];
     
-    if (self.isBack != 0) {
-        self.currentIndex = _myAppdelegate.num;
-    }
-   
     self.isBack = 1;
-    
-    
-    [ZYMusicTool setPlayingMusic:self.dateArray[indexPath.row]];
-    
-//    self.playVc.currentplayingMusic = self.dateArray[self.currentIndex];//当前歌曲
-    _myAppdelegate.currentplayingMusic = self.dateArray[self.currentIndex];
+    //当前一行数据
+    [ZYMusicTool setPlayingMusic:[ZYMusicTool musics:self.dateArray][indexPath.row]];
+ 
+    _myAppdelegate.currentplayingMusic = [ZYMusicTool musics:self.dateArray][self.currentIndex];//当前歌曲
     
     detailModel *model = self.dateArray[indexPath.row];
     
@@ -242,14 +230,8 @@
     [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
     
     self.currentIndex = (int)indexPath.row;
-    self.playVc.num = indexPath.row;
     
-    self.playVc.playingMusic = self.dateArray[indexPath.row];
     [self.playVc show];
-  
-    
-    
-    
     
 }
 #pragma mark -- 解析详情数据
@@ -276,9 +258,8 @@
             [self.urlArray addObject:model.download];
         }
         
-
-        [ZYMusicTool musics:self.dateArray];
-       // sics = self.urlArray;
+        
+       
         
 
         [self.tableView reloadData];
@@ -334,10 +315,11 @@
         }];
     }
 }
-
+#pragma mark -------下载按钮
 - (void)downloadBtn{
     DownloadListViewController *downloadlistVC = [[DownloadListViewController alloc] init];
     downloadlistVC.dataArray = self.dateArray;
+    
     [self.navigationController pushViewController:downloadlistVC animated:YES];
 }
 

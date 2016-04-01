@@ -16,7 +16,7 @@
 #import "ProgressHUD.h"
 #import "DetailViewController.h"
 #import "SearchViewController.h"
-
+#import "ZYAudioManager.h"
 @interface TypeViewController ()<UITableViewDataSource,UITableViewDelegate,PullingRefreshTableViewDelegate>{
     NSInteger _pageCount;//定义请求页码
 }
@@ -75,8 +75,9 @@
    
     
 }
-
-
+-(void)viewWillAppear:(BOOL)animated{
+   // [[ZYAudioManager defaultManager]playingMusic:<#(NSString *)#>]
+}
 -(void)headAction{
 //清扫手势事件
     self.typeDetailSwipeLeft     = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(oneFingerSwipeUp:)];

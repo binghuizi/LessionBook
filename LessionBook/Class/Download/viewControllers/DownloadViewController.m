@@ -11,18 +11,21 @@
 #import "DownloadTableViewCell.h"
 #import "DownloadDidTableViewCell.h"
 #import "PlayViewController.h"
-
-
-
+#import "AppDelegate.h"
 #import "DownlaodTask.h"
+#import "ZYAudioManager.h"
+#import "ZYMusicTool.h"
 
 static NSString *_downloadcell = @"cell";
 static NSString *_didDownload = @"did";
 
-@interface DownloadViewController ()<UITableViewDataSource, UITableViewDelegate, downloadDelegate>
+@interface DownloadViewController ()<UITableViewDataSource, UITableViewDelegate, downloadDelegate>{
+    AppDelegate *myAppdelegate;
+    
+}
 @property (nonatomic, strong) VOSegmentedControl *segmentControl;
 @property (nonatomic, strong) UITableView *tableView;
-
+@property (nonatomic, strong) PlayViewController *playVC;
 @property (nonatomic, assign) BOOL selectdidDownload;
 
 @property (nonatomic, strong) NSMutableArray *downlistArray;
@@ -32,7 +35,13 @@ static NSString *_didDownload = @"did";
 @end
 
 @implementation DownloadViewController
-
+//-(PlayViewController *)playVc{
+//    if (_playVC == nil) {
+//        
+//        _playVC = [[PlayViewController alloc]init];
+//    }
+//    return _playVC;
+//}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -45,6 +54,8 @@ static NSString *_didDownload = @"did";
     [self.tableView registerClass:[DownloadDidTableViewCell class] forCellReuseIdentifier:_didDownload];
     
     self.selectdidDownload = YES;
+    myAppdelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -92,12 +103,23 @@ static NSString *_didDownload = @"did";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.selectdidDownload) {
 
-        NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+        [[ZYAudioManager defaultManager]playingMusic:self.didloadArray[indexPath.row]];
+        [ZYMusicTool musics:self.didloadArray];
+        
         detailModel *model = self.didloadArray[indexPath.row];
-        PlayViewController *playVC = [[PlayViewController alloc] init];
+       
+        
+        myAppdelegate.detailModel = self.didloadArray[indexPath.row];
+        //所有数据
+        myAppdelegate.arrayAll = self.didloadArray;
+        //当前数据
+        myAppdelegate.currentplayingMusic = self.didloadArray[indexPath.row];
+        PlayViewController *playVC = [[PlayViewController alloc]init];
+        playVC.num = indexPath.row;
+        [playVC show];
+       
         
         
-
 //        detailModel *model = self.didloadArray[indexPath.row];
 //        PlayViewController *playVC = [[PlayViewController alloc] init];
 

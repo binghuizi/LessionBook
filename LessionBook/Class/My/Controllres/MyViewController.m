@@ -58,7 +58,7 @@
     
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
     self.myArray = [NSArray arrayWithObjects:@"我的收藏", @"最近收听", @"定时关闭", @"更多设置", @"书友畅聊", @"账号设置", nil];
-    self.detailArray = [NSArray arrayWithObjects:@"暂无收藏", @"暂无收听记录", @"", @"", @"", @"",nil];
+    self.detailArray = [NSArray arrayWithObjects:@"", @"", @"", @"", @"", @"",nil];
     [self confineHeadView];
     [self.view addSubview:self.tableView];
     
@@ -66,7 +66,7 @@
 
 //将要显示
 -(void)viewWillAppear:(BOOL)animated{
-
+    self.tabBarController.tabBar.hidden = NO;
     [super viewWillAppear:animated];
     self.tabBarController.tabBar.translucent = NO;
     BmobUser *user = [BmobUser getCurrentUser];

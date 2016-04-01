@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
+#import "detailModel.h"
 @interface ZYAudioManager : NSObject
 + (instancetype)defaultManager;
 
@@ -15,4 +16,5 @@
 - (AVAudioPlayer *)playingMusic:(NSString *)filename;
 - (void)pauseMusic:(NSString *)filename;
 - (void)stopMusic:(NSString *)filename;
+- (detailModel *)prePlayMusic;
 @end
