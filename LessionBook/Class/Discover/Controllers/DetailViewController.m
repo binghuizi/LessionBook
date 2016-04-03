@@ -238,6 +238,8 @@
 -(void)loadAction{
     AFHTTPSessionManager *sessionManger = [[AFHTTPSessionManager alloc]init];
     sessionManger.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    NSLog(@"%@",[NSString stringWithFormat:@"%@%@%@",kDetails,self.idString,@"/programs/curpage/1/pagesize/100"]);
+    
     [sessionManger GET:[NSString stringWithFormat:@"%@%@%@",kDetails,self.idString,@"/programs/curpage/1/pagesize/100"] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         //DSNLog(@"%@",downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
