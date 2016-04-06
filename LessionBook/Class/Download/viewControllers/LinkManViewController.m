@@ -10,7 +10,6 @@
 #import <EaseMob.h>
 #import "RequestViewController.h"
 #import "SingleViewController.h"
-#import "ChatBoxeViewController.h"
 #import "GroupViewController.h"
 
 @interface LinkManViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -70,10 +69,6 @@
             cell.textLabel.text = @"群组";
             cell.imageView.image = [UIImage imageNamed:@"exp_watch"];
             break;
-        case 2:
-            cell.textLabel.text = @"聊天室列表";
-            cell.imageView.image = [UIImage imageNamed:@"exp_watch"];
-            break;
         default:{
             if (self.friendArray.count > 0) {
                 EMBuddy *buddy = self.friendArray[indexPath.row - 3];
@@ -92,19 +87,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     switch (indexPath.row) {
         case 0:{
-          
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"通知" message:@"暂无通知" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:nil];
+            [alert show];
         }
             break;
         case 1:
         {
             GroupViewController *groupVC = [[GroupViewController alloc] init];
             [self.navigationController pushViewController:groupVC animated:YES];
-        }
-            break;
-        case 2:
-        {
-            ChatBoxeViewController *chatboxVC = [[ChatBoxeViewController alloc] init];
-            [self.navigationController pushViewController:chatboxVC animated:YES];
         }
             break;
         default:

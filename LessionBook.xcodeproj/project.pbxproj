@@ -13,7 +13,6 @@
 		7A1A79B31C9FE7AE0001C962 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1A79B21C9FE7AE0001C962 /* libicucore.tbd */; };
 		7A1A79B51C9FE7CE0001C962 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1A79B41C9FE7CE0001C962 /* libstdc++.tbd */; };
 		7A1A79B71C9FE7FE0001C962 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1A79B61C9FE7FE0001C962 /* JavaScriptCore.framework */; };
-		7A1A79D61CA025E20001C962 /* DIDI2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A1A79D51CA025E20001C962 /* DIDI2.jpg */; };
 		7A1BE5171CA289B3000B7B13 /* BookInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BE5161CA289B3000B7B13 /* BookInformation.m */; };
 		7A1BE51A1CA289DF000B7B13 /* SqlModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BE5191CA289DF000B7B13 /* SqlModel.m */; };
 		7A1BE51E1CA2BF77000B7B13 /* FavoriteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BE51C1CA2BF77000B7B13 /* FavoriteTableViewCell.m */; };
@@ -82,7 +81,6 @@
 		7A80A31C1CA389E100845015 /* NewGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A80A31B1CA389E100845015 /* NewGroupViewController.m */; };
 		7A9340F91CA94BE900889D49 /* SingleTion.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9340F81CA94BE900889D49 /* SingleTion.m */; };
 		7A965F751C99328A00DE2547 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A965F6E1C99328900DE2547 /* DownloadViewController.m */; };
-		7A965F761C99328A00DE2547 /* search.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A965F711C99328A00DE2547 /* search.plist */; };
 		7A965F771C99328A00DE2547 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A965F741C99328A00DE2547 /* SearchViewController.m */; };
 		7A965F7A1C993B2A00DE2547 /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A965F791C993B2A00DE2547 /* SearchModel.m */; };
 		7A965F7E1C9993B200DE2547 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A965F7C1C9993B200DE2547 /* TableViewCell.m */; };
@@ -110,8 +108,6 @@
 		7AB9594A1CA7C2C0007D75AB /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB959491CA7C2C0007D75AB /* libc++.tbd */; };
 		7AD1C4AC1C9BA204001346CA /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD1C4AB1C9BA204001346CA /* MessageViewController.m */; };
 		7AD1FA781CAA9D64000B0AD0 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD1FA771CAA9D64000B0AD0 /* UIView+Extension.m */; };
-		7ADC1BEB1CA0F14A000DF95B /* dddd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7ADC1BEA1CA0F14A000DF95B /* dddd.plist */; };
-		7ADC1BF11CA14F3B000DF95B /* ChatBoxeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADC1BF01CA14F3B000DF95B /* ChatBoxeViewController.m */; };
 		7AE264B71C9840A9006C9A6D /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE264B61C9840A9006C9A6D /* MyViewController.m */; };
 		7AE264B91C9841D4006C9A6D /* My.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE264B81C9841D4006C9A6D /* My.storyboard */; };
 		7AE2889F1C98118000596833 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE2889E1C98118000596833 /* DiscoverViewController.m */; };
@@ -131,7 +127,6 @@
 		7A1A79B41C9FE7CE0001C962 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		7A1A79B61C9FE7FE0001C962 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		7A1A79B81C9FE81B0001C962 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		7A1A79D51CA025E20001C962 /* DIDI2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DIDI2.jpg; sourceTree = "<group>"; };
 		7A1BE5151CA289B3000B7B13 /* BookInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookInformation.h; sourceTree = "<group>"; };
 		7A1BE5161CA289B3000B7B13 /* BookInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookInformation.m; sourceTree = "<group>"; };
 		7A1BE5181CA289DF000B7B13 /* SqlModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqlModel.h; sourceTree = "<group>"; };
@@ -236,7 +231,6 @@
 		7A9340F81CA94BE900889D49 /* SingleTion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleTion.m; sourceTree = "<group>"; };
 		7A965F6D1C99328900DE2547 /* DownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
 		7A965F6E1C99328900DE2547 /* DownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
-		7A965F711C99328A00DE2547 /* search.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = search.plist; sourceTree = "<group>"; };
 		7A965F731C99328A00DE2547 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		7A965F741C99328A00DE2547 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		7A965F781C993B2A00DE2547 /* SearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModel.h; sourceTree = "<group>"; };
@@ -282,9 +276,6 @@
 		7AD1C4AB1C9BA204001346CA /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		7AD1FA761CAA9D64000B0AD0 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		7AD1FA771CAA9D64000B0AD0 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
-		7ADC1BEA1CA0F14A000DF95B /* dddd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dddd.plist; sourceTree = "<group>"; };
-		7ADC1BEF1CA14F3B000DF95B /* ChatBoxeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatBoxeViewController.h; sourceTree = "<group>"; };
-		7ADC1BF01CA14F3B000DF95B /* ChatBoxeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatBoxeViewController.m; sourceTree = "<group>"; };
 		7AE264B51C9840A9006C9A6D /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		7AE264B61C9840A9006C9A6D /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		7AE264B81C9841D4006C9A6D /* My.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = My.storyboard; sourceTree = "<group>"; };
@@ -458,8 +449,6 @@
 				7A75016A1C9C09040002FA5C /* RequestViewController.m */,
 				7A9BBA1F1C9D08C900CA55D9 /* SingleViewController.h */,
 				7A9BBA201C9D08C900CA55D9 /* SingleViewController.m */,
-				7ADC1BEF1CA14F3B000DF95B /* ChatBoxeViewController.h */,
-				7ADC1BF01CA14F3B000DF95B /* ChatBoxeViewController.m */,
 				7A80A3171CA37DCE00845015 /* GroupViewController.h */,
 				7A80A3181CA37DCE00845015 /* GroupViewController.m */,
 				7A80A31A1CA389E100845015 /* NewGroupViewController.h */,
@@ -480,10 +469,8 @@
 		7A965F701C99328A00DE2547 /* Modeles */ = {
 			isa = PBXGroup;
 			children = (
-				7A965F711C99328A00DE2547 /* search.plist */,
 				7A965F781C993B2A00DE2547 /* SearchModel.h */,
 				7A965F791C993B2A00DE2547 /* SearchModel.m */,
-				7ADC1BEA1CA0F14A000DF95B /* dddd.plist */,
 			);
 			path = Modeles;
 			sourceTree = "<group>";
@@ -531,7 +518,6 @@
 		7A99D44A1C97EE31001DD9B9 /* LessionBook */ = {
 			isa = PBXGroup;
 			children = (
-				7A1A79D51CA025E20001C962 /* DIDI2.jpg */,
 				7AE2889A1C980EEF00596833 /* Library */,
 				7AA0C53B1C980BEA001275A0 /* Class */,
 				7A99D44E1C97EE31001DD9B9 /* AppDelegate.h */,
@@ -815,7 +801,6 @@
 				7A68D4E71C9CF0730090DB08 /* 精选.plist in Resources */,
 				7A4623F91C999C0B00A6750D /* ChoseCollectionViewCell.xib in Resources */,
 				7A965F7F1C9993B200DE2547 /* TableViewCell.xib in Resources */,
-				7A1A79D61CA025E20001C962 /* DIDI2.jpg in Resources */,
 				7A3E9EA11CA3D66F007F1B0E /* PlayViewController.xib in Resources */,
 				7A54D2531C9BA0B80012224E /* DetailHeadView.xib in Resources */,
 				7A47640E1C9835C20057A7D9 /* 坏蛋.plist in Resources */,
@@ -823,7 +808,6 @@
 				7AB437071C9A4D2100532A9A /* ChoseTableViewCell.xib in Resources */,
 				7AB959461CA7C130007D75AB /* 更新日志.rtf in Resources */,
 				7AE264B91C9841D4006C9A6D /* My.storyboard in Resources */,
-				7ADC1BEB1CA0F14A000DF95B /* dddd.plist in Resources */,
 				7A99D4521C97EE31001DD9B9 /* Assets.xcassets in Resources */,
 				7A965F851C9998FF00DE2547 /* DownloadTableViewCell.xib in Resources */,
 				7A54D2551C9C3C8E0012224E /* 大圈.plist in Resources */,
@@ -836,7 +820,6 @@
 				7A4764141C98408C0057A7D9 /* 分类.plist in Resources */,
 				7A68D4FB1C9D5F750090DB08 /* blueArrow.png in Resources */,
 				7A1BE51F1CA2BF77000B7B13 /* FavoriteTableViewCell.xib in Resources */,
-				7A965F761C99328A00DE2547 /* search.plist in Resources */,
 				7A47640C1C9835BA0057A7D9 /* 搜索大主宰.plist in Resources */,
 				7A5D01AA1CA96E2C00A4A866 /* PushConfig.plist in Resources */,
 			);
@@ -913,7 +896,6 @@
 				7AE264B71C9840A9006C9A6D /* MyViewController.m in Sources */,
 				7A4E32CC1C9FE27900FEF17C /* DownlaodTask.m in Sources */,
 				7A68D4F41C9D587C0090DB08 /* TypeTableViewCell.m in Sources */,
-				7ADC1BF11CA14F3B000DF95B /* ChatBoxeViewController.m in Sources */,
 				7A4623EF1C992FED00A6750D /* TypeModel.m in Sources */,
 				7A4532351C9E426800EDB43C /* RegisterViewController.m in Sources */,
 				7A965F771C99328A00DE2547 /* SearchViewController.m in Sources */,

@@ -91,7 +91,7 @@
 -(void)loadHeadView{
     //[[[NSBundle mainBundle] loadNibNamed:@"DetailHeaderView" owner:nil options:nil] lastObject];DetailHeadView
     _tableViewHead = [[[NSBundle mainBundle] loadNibNamed:@"DetailHeadView" owner:nil options:nil] lastObject];
-    [_tableViewHead.imageView sd_setImageWithURL:[NSURL URLWithString:self.pictchString] placeholderImage:nil];
+    [_tableViewHead.imageView sd_setImageWithURL:[NSURL URLWithString:self.pictchString] placeholderImage:[UIImage imageNamed:@"F82EFEA8-3F5B-42F3-9493-48D206FEDEB1"]];
     _tableViewHead.anchorNameLabel.text = self.zhuboString;
     _tableViewHead.authorNameLabel.text = self.zuozheString;
     _tableViewHead.describeLabel.text   = self.miaoshuString;

@@ -91,8 +91,7 @@ static NSString *_didDownload = @"did";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.selectdidDownload) {
-//        detailModel *model = self.didloadArray[indexPath.row];
-//        PlayViewController *playVC = [[PlayViewController alloc] init];
+
     }
 }
 

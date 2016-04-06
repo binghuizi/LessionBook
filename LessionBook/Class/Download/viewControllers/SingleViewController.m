@@ -11,7 +11,7 @@
 #import <EaseUI.h>
 #import <EaseMob.h>
 #import <EMMessage.h>
-
+#import <BmobSDK/BmobUser.h>
 
 @interface SingleViewController ()<UIAlertViewDelegate, EaseMessageViewControllerDataSource, EaseMessageViewControllerDelegate, EMChatManagerDelegate>
 
@@ -145,11 +145,13 @@
 }
 
 - (void)deleteallMessage{
-//    if (self.dataArray.count == 0) {
-//        [self showHint:NSLocalizedString(@"message.noMessage", @"no messages")];
-//        return;
-//    }
-//    [[EaseMob sharedInstance].chatManager removeConversationByChatter:@"8001" deleteMessages:YES append2Chat:YES];
+    if (self.dataArray.count == 0) {
+        [self showHint:NSLocalizedString(@"message.noMessage", @"no messages")];
+        return;
+    }
+    NSArray *conversations = [[EaseMob sharedInstance].chatManager conversations];
+    EMBuddy *buddy = [conversations lastObject];
+    [[EaseMob sharedInstance].chatManager removeConversationByChatter:buddy.username deleteMessages:YES append2Chat:YES];
 }
 
 

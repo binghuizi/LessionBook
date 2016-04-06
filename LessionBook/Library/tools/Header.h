@@ -31,18 +31,10 @@
 //#define TypeSuggestion  @"http://api2.qingting.fm/v5/media/categories/"
 #define TypeSuggestion @"http://42.120.60.147/v5/media/categories/"
 
-
-
-
-
-
-
-
 ////分类 -都市-推荐
 ///http://api2.qingting.fm/v5/media/categories/939/channels/order/recommend/curpage/1/pagesize/10
 ////分类-最热门—热门
 //http://42.120.60.147/v5/media/categories/1097/channels/order/hot/curpage/1/pagesize/10
-//
 ////分类-最热门—最新
 //http://42.120.60.147/v5/media/categories/1097/channels/order/latest/curpage/1/pagesize/10
 //

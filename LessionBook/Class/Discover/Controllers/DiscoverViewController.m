@@ -60,7 +60,7 @@
     self.title = @"马里亚纳听书";
     //导航栏颜色
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
-    
+    self.navigationController.navigationBar.translucent = NO;
     
     [self startTimer];
     [self.view addSubview:self.titleView];
@@ -70,7 +70,7 @@
     [self loadTypeData];//加载分类解析
     [self loadpicture];//轮番图加载
     [self loadChosen]; //加载精选解析
-    [self.titleView addSubview:self.segment1];
+    [self.view addSubview:self.segment1];
     [self.typeView addSubview:self.collectionView];
     [self.choseView addSubview:self.tableView];
 
@@ -89,6 +89,7 @@
     
 }
 -(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     self.tabBarController.tabBar.hidden = NO;
 }
 #pragma mark --- 清扫手势
@@ -524,7 +525,7 @@
 #pragma mark -- 轮番图ScrollView
 -(UIScrollView *)scrollView{
     if (_scrollView == nil) {
-        self.scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, kWideth, kHeight *220/kHeight)];
+        self.scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, kWideth, 220)];
         self.scrollView.delegate = self;
         //添加图片的个数
         self.scrollView.contentSize = CGSizeMake(self.pictureArray.count *kWideth, 220);
@@ -549,7 +550,7 @@
 //标题视图
 -(UIView *)titleView{
     if (_titleView == nil) {
-        self.titleView = [[UIView alloc]initWithFrame:CGRectMake(0,60,kWideth, 44)];
+        self.titleView = [[UIView alloc]initWithFrame:CGRectMake(0,0,kWideth, 44)];
         self.titleView.backgroundColor = [UIColor magentaColor];
     }
     return _titleView;
@@ -557,15 +558,14 @@
 //分类视图
 -(UIView *)typeView{
     if (_typeView == nil) {
-        self.typeView = [[UIView alloc]initWithFrame:CGRectMake(0, 105, kWideth, kHeight-155)];
+        self.typeView = [[UIView alloc]initWithFrame:CGRectMake(0, 44, kWideth, kHeight-108)];
     }
     return _typeView;
 }
 //精选视图
 -(UIView *)choseView{
     if (_choseView == nil) {
-        self.choseView = [[UIView alloc]initWithFrame:CGRectMake(0, 105, kWideth, kHeight-155)];
-        self.choseView.backgroundColor = [UIColor purpleColor];
+        self.choseView = [[UIView alloc]initWithFrame:CGRectMake(0, 44, kWideth, kHeight-108)];
     }
     return _choseView;
 }

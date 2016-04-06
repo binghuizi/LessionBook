@@ -50,6 +50,7 @@
 //标题
     self.navigationItem.title = self.navigationItemTitle;
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
+    self.navigationController.navigationBar.translucent = NO;
 //返回按钮
     [self showBackButton:@"ic_arrow_general2"];
     [self.view addSubview:self.recommendView];
@@ -401,7 +402,7 @@
 #pragma mark --- 懒加载
 -(PullingRefreshTableView *)tableView{
     if (_tableView == nil) {
-        self.tableView = [[PullingRefreshTableView alloc]initWithFrame:CGRectMake(0, kHeight * 50/kHeight, kWideth, kHeight - kHeight * 50/kHeight) pullingDelegate:self];
+        self.tableView = [[PullingRefreshTableView alloc]initWithFrame:CGRectMake(0, 0, kWideth, kHeight - 100) pullingDelegate:self];
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
     }
@@ -409,7 +410,7 @@
 }
 -(PullingRefreshTableView *)tableView1{
     if (_tableView1 == nil) {
-        self.tableView1 = [[PullingRefreshTableView alloc]initWithFrame:CGRectMake(0, kHeight * 100/kHeight, kWideth, kHeight - kHeight * 150/kHeight) pullingDelegate:self];
+        self.tableView1 = [[PullingRefreshTableView alloc]initWithFrame:CGRectMake(0, 0, kWideth, kHeight - 100) pullingDelegate:self];
         self.tableView1.dataSource = self;
         self.tableView1.delegate = self;
     }
@@ -417,7 +418,7 @@
 }
 -(PullingRefreshTableView *)tableView2{
     if (_tableView2 == nil) {
-        self.tableView2 = [[PullingRefreshTableView alloc]initWithFrame:CGRectMake(0, kHeight * 100/kHeight, kWideth, kHeight - kHeight * 100/kHeight) pullingDelegate:self];
+        self.tableView2 = [[PullingRefreshTableView alloc]initWithFrame:CGRectMake(0, 0, kWideth, kHeight - 100) pullingDelegate:self];
         self.tableView2.dataSource = self;
         self.tableView2.delegate = self;
     }
@@ -428,7 +429,7 @@
         self.segment1 = [[VOSegmentedControl alloc]initWithSegments:@[@{VOSegmentText:@"推荐"},
                                                                       @{VOSegmentText:@"最热"},
                                                                       @{VOSegmentText:@"最新"}]];
-       self.segment1.frame             = CGRectMake(0,kWideth * 60/kWideth,kWideth,kWideth * 44/kWideth);
+       self.segment1.frame             = CGRectMake(0,0,kWideth, 44);
        self.segment1.textColor         = [UIColor blackColor];//字体颜色
        self.segment1.selectedTextColor = [UIColor orangeColor];//选中时字体颜色
        self.segment1.contentStyle      = VOContentStyleImageLeft;//风格
@@ -470,14 +471,14 @@
 #pragma mark --- 懒加载
 -(UIView *)recommendView{
     if (_recommendView == nil) {
-        self.recommendView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kWideth, kHeight)];
+        self.recommendView = [[UIView alloc]initWithFrame:CGRectMake(0, 44, kWideth, kHeight - 108)];
         
     }
     return _recommendView;
 }
 -(UIView *)hotView{
     if (_hotView == nil) {
-        self.hotView = [[UIView alloc]initWithFrame: CGRectMake(0, 0, kWideth, kHeight)];
+        self.hotView = [[UIView alloc]initWithFrame: CGRectMake(0, 44, kWideth, kHeight - 108)];
        
         
     }
@@ -485,7 +486,7 @@
 }
 -(UIView *)latestView{
     if (_latestView == nil) {
-        self.latestView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kWideth, kHeight)];
+        self.latestView = [[UIView alloc]initWithFrame:CGRectMake(0, 44, kWideth, kHeight - 108)];
        
     }
     return _latestView;

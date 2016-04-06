@@ -54,6 +54,7 @@
     }else{
     [self.userImageView setImage:[UIImage imageNamed:@"a040144d464bf201a150a57abf8f8292"]];
     }
+    [self.tableView reloadData];
 }
 
 #pragma mark ------------CustomMethod

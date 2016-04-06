@@ -56,14 +56,14 @@
     self.bookNameLabel.text = model.parentname;
     self.url = model.mediainfo[@"download"];
     self.downloadProgress.hidden = NO;
-    self.download = YES;
-    [self downloadfile];
-//    if (self.downloadBtn.titleLabel.text != nil) {
-//        [self.downloadBtn setTitle:@"下载" forState:UIControlStateNormal];
-//        self.timeLabel.text = @"未下载";
-//        self.sizeLabel.text = @"";
-//        self.download = NO;
-//    }
+//    self.download = YES;
+//    [self downloadfile];
+    if (self.downloadBtn.titleLabel.text != nil) {
+        [self.downloadBtn setTitle:@"下载" forState:UIControlStateNormal];
+        self.timeLabel.text = @"未下载";
+        self.sizeLabel.text = @"";
+        self.download = NO;
+    }
 
 }
 

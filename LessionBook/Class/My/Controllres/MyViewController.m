@@ -469,10 +469,10 @@
 
 - (UITableView *)tableView{
     if (!_tableView) {
-        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - 40)];
+        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - 44)];
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
-        self.tableView.rowHeight = 80;
+        self.tableView.rowHeight = 66;
     }
     return _tableView;
 }

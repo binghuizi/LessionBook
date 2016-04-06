@@ -10,6 +10,7 @@
 #import "LoginViewController.h"
 #import <SDWebImage/SDImageCache.h>
 #import <MessageUI/MessageUI.h>
+#import <BmobSDK/BmobUser.h>
 
 @interface MoreViewController ()<UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate>
 
@@ -23,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.hidden = NO;
     self.navigationItem.title = @"更多设置";
     [self.view addSubview:self.tableView];
     self.listArray = [NSMutableArray arrayWithObjects:@"意见反馈",@"给我评分",@"清空缓存",@"账号登录", nil];
@@ -109,6 +110,10 @@
             break;
         case 3:
         {
+            BmobUser *user = [BmobUser getCurrentUser];
+            if (user) {
+                [BmobUser logout];
+            }
             //账号登录
             UIStoryboard *myStoryBoard = [UIStoryboard storyboardWithName:@"My" bundle:nil];
             LoginViewController *loginVC = [myStoryBoard instantiateViewControllerWithIdentifier:@"loginVC"];

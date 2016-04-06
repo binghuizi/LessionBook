@@ -54,6 +54,10 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
+}
 
 #pragma mark ----------CustomMethod
 
@@ -318,9 +322,14 @@
     switch (_index) {
         case 0:
         {
+            
                 DetailViewController *detailVC = [[DetailViewController alloc] init];
                 SearchModel *model = self.listArray[indexPath.section][indexPath.row];
-                detailVC.titleString = model.name;
+            if (indexPath.section == 0) {
+                detailVC.titleString = model.cname;
+            }else{
+            detailVC.titleString = model.name;
+            }
                 detailVC.pictchString = model.cover;
                 detailVC.miaoshuString = model.miaoshu;
                 detailVC.idString = model.cid;
@@ -350,12 +359,20 @@
 #pragma mark ----------UISearchBarDelegate
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     [self.searchBar resignFirstResponder];
+    self.segmentControl.hidden = NO;
+    self.tableView.hidden = NO;
+    self.Searchtext = [self.searchBar.text stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
+    NSLog(@"%@", self.Searchtext);
     [self requestModel];
 }
 
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.searchBar resignFirstResponder];
+    self.segmentControl.hidden = NO;
+    self.tableView.hidden = NO;
+    self.Searchtext = [self.searchBar.text stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
+    NSLog(@"%@", self.Searchtext);
     [self requestModel];
 }
 
