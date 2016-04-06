@@ -7,13 +7,16 @@
 //
 
 #import "ZYAudioManager.h"
-
-@interface ZYAudioManager ()
+#import "ZYMusicTool.h"
+#import "detailModel.h"
+#import "AppDelegate.h"
+@interface ZYAudioManager ()<AVAudioPlayerDelegate>
 @property (nonatomic, strong) NSMutableDictionary *musicPlayers;
 @property (nonatomic, strong) NSMutableDictionary *soundIDs;
 @end
 
 static ZYAudioManager *_instance = nil;
+static detailModel *_prePlayMusic;
 @implementation ZYAudioManager
 + (void)initialize
 {
@@ -95,16 +98,31 @@ static ZYAudioManager *_instance = nil;
         
         self.musicPlayers[filename] = player;            //对象是最新创建的，那么对它进行一次缓存
     }
+    player.delegate = _instance;
     
     if (![player isPlaying]) {                 //如果没有正在播放，那么开始播放，如果正在播放，那么不需要改变什么
         [player play];
     }
     return player;
 }
+-(detailModel *)prePlayMusic{
+  return   _prePlayMusic;
+}
+//代理方法
+-(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
+   
+    [ZYMusicTool setPlayingMusic:[ZYMusicTool nextMusic]];//下一曲数据
+    detailModel *model = [ZYMusicTool nextMusic];
+    
+    _prePlayMusic = [ZYMusicTool nextMusic];//记录在播放的歌曲
+    
+    [[ZYAudioManager defaultManager]playingMusic:model.download];//播放下一曲
+    
+}
 
 - (void)pauseMusic:(NSString *)filename
 {
-    if (filename == nil || filename.length == 0)  return;
+   // if (filename == nil || filename.length == 0)  return;
     
     AVAudioPlayer *player = self.musicPlayers[filename];
     

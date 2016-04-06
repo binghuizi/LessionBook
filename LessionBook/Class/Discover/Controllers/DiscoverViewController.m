@@ -132,7 +132,8 @@
             [model setValuesForKeysWithDictionary:itemDic];
             [self.imageArray addObject:model.thumb];
             [self.titleArray addObject:model.name];
-            [self.typeIdArray addObject:model.id];
+            [self.typeIdArray addObject:model.idString];
+            
         }
         [self.collectionView reloadData];
         

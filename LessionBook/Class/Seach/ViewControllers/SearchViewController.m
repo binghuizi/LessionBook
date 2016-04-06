@@ -68,12 +68,14 @@
     [backBtn addTarget:self action:@selector(backBtnAction) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = leftBarBtn;
+    
 }
 
 - (void)backBtnAction{
     self.tableView.hidden = YES;
     self.segmentControl.hidden = YES;
     self.searchBar.text = nil;
+    //                                                                                                                       self.tabBarController.tabBar.hidden = NO;
 
 }
 

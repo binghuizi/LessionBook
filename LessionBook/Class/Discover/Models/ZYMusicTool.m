@@ -13,10 +13,10 @@ static detailModel *_playingMusic;
 
 //所有歌曲
 +(NSArray *)musics:(NSArray *)array{
-    if (_musics == nil) {
+   
         _musics = array;
-    }
-    NSLog(@"%ld",_musics.count);
+   
+    
     return _musics;
 }
 + (detailModel *)playingMusic
@@ -39,6 +39,7 @@ static detailModel *_playingMusic;
 //        int playingIndex = (int)[[self musics] indexOfObject:_playingMusic];
       //  int playingIndex = (int)[[self mu] indexOfObject:_playingMusic];
         int playingIndex = (int)[_musics indexOfObject:_playingMusic];
+        NSLog(@"%d",playingIndex);
         nextIndex = playingIndex + 1;
         NSLog(@"%ld",_musics.count);
         if (nextIndex >= _musics.count) {

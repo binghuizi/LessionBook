@@ -57,8 +57,8 @@
     myAppDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
     
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
-    self.myArray = [NSArray arrayWithObjects:@"我的收藏", @"最近收听", @"定时关闭", @"更多设置", @"书友畅聊", @"账号设置", nil];
-    self.detailArray = [NSArray arrayWithObjects:@"暂无收藏", @"暂无收听记录", @"", @"", @"", @"",nil];
+    self.myArray = [NSArray arrayWithObjects:@"我的收藏", @"定时关闭", @"更多设置", @"书友畅聊", @"账号设置", nil];
+    self.detailArray = [NSArray arrayWithObjects:@"", @"", @"", @"", @"", @"",nil];
     [self confineHeadView];
     [self.view addSubview:self.tableView];
     
@@ -66,7 +66,7 @@
 
 //将要显示
 -(void)viewWillAppear:(BOOL)animated{
-
+    self.tabBarController.tabBar.hidden = NO;
     [super viewWillAppear:animated];
     self.tabBarController.tabBar.translucent = NO;
     BmobUser *user = [BmobUser getCurrentUser];
@@ -108,14 +108,12 @@
     if (indexPath.row == 0) {
         cell.imageView.image = [UIImage imageNamed:@"userinfo_collection"];
     }else if (indexPath.row == 1){
-        cell.imageView.image = [UIImage imageNamed:@"userinfo_history"];
-    }else if (indexPath.row == 2){
         cell.imageView.image = [UIImage imageNamed:@"userinfo_timer"];
-    }else if (indexPath.row == 3){
+    }else if (indexPath.row == 2){
         cell.imageView.image = [UIImage imageNamed:@"userinfo_setting"];
-    }else if (indexPath.row == 4){
+    }else if (indexPath.row == 3){
         cell.imageView.image = [UIImage imageNamed:@"exp_watch"];
-    }else if (indexPath.row == 5){
+    }else if (indexPath.row == 4){
         cell.imageView.image = [UIImage imageNamed:@"notification"];
     }
     return cell;
@@ -142,13 +140,8 @@
             
         }
             break;
+        
         case 1:
-        {
-           RecordViewController *recordVC = [[RecordViewController alloc] init];
-           [self.navigationController pushViewController:recordVC animated:YES];
-        }
-            break;
-        case 2:
         {
             [self openTimeView];
             
@@ -157,13 +150,13 @@
 //            [window addSubview:timeView];
         }
             break;
-        case 3:
+        case 2:
         {
             MoreViewController *moreVC = [[MoreViewController alloc] init];
             [self.navigationController pushViewController:moreVC animated:YES];
         }
             break;
-        case 4:
+        case 3:
         {
 
             BmobUser *user = [BmobUser getCurrentUser];
@@ -186,7 +179,7 @@
         }
             break;
         //退出登录
-        case 5:
+        case 4:
         {
             BmobUser *user = [BmobUser getCurrentUser];
             if (user != nil) {
@@ -255,9 +248,6 @@
     [UIView animateWithDuration:0.5 animations:^{
         self.blackView.alpha = 0.2;
     }];
-    
-    
-    
     
     [self.view addSubview:self.timeView];
     
@@ -391,7 +381,7 @@
         
         [self.timer invalidate];
         self.timeShowLabel.text = @"time up";
-        
+        //停止播放
         [[ZYAudioManager defaultManager]stopMusic:myAppDelegate.detailModel.download];
         
     }
@@ -429,27 +419,7 @@
     self.welcomeLabel.textColor = [UIColor whiteColor];
     self.welcomeLabel.text = @"欢迎来到马里亚纳听书";
     
-//    BmobUser *User = [[BmobUser alloc] init];
-//    BmobUser *bUser = [BmobUser getCurrentUser];
-//    if (bUser) {
-//        //已登录
-//        self.userImageView.hidden = NO;
-//        User.username = myAppDelegate.dic[@"screen_name"];
-//       self.welcomeLabel.text = User.username;
-//        [self.userImageView sd_setImageWithURL:[NSURL URLWithString:myAppDelegate.dic[@"avatar_hd"]] placeholderImage:nil];
-//        NSLog(@"1");
-//    }else{
-//        //未登录
-//        self.loginBtn.hidden = NO;
-//        self.userImageView.hidden = YES;
-//
-//        [self.loginBtn setTitle:@"登陆/注册" forState:UIControlStateNormal];
-//       self.welcomeLabel.text = @"欢迎来到马里亚纳听书";
-//        NSLog(@"2");
-//    }
-//    self.loginBtn.backgroundColor = [UIColor redColor];
-//    self.userImageView.backgroundColor = [UIColor whiteColor];
-//    welcomeLabel.backgroundColor = [UIColor blackColor];
+
     
     [self.headView addSubview:self.loginBtn];
     [self.headView addSubview:self.welcomeLabel];

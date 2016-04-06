@@ -16,7 +16,7 @@
 #import "ProgressHUD.h"
 #import "DetailViewController.h"
 #import "SearchViewController.h"
-
+#import "ZYAudioManager.h"
 @interface TypeViewController ()<UITableViewDataSource,UITableViewDelegate,PullingRefreshTableViewDelegate>{
     NSInteger _pageCount;//定义请求页码
 }
@@ -76,7 +76,6 @@
    
     
 }
-
 
 -(void)headAction{
 //清扫手势事件
@@ -225,7 +224,7 @@
             TypeModel *model = [[TypeModel alloc]init];
           
             [model setValuesForKeysWithDictionary:itemDic];
-            [self.idArray addObject:model.id];
+            [self.idArray addObject:model.idString];
             NSArray *broadArray = itemDic[@"broadcasters"];
             if (broadArray.count > 0) {
                 [model setValuesForKeysWithDictionary:broadArray[0]];
@@ -267,7 +266,7 @@
             TypeModel *model = [[TypeModel alloc]init];
            
             [model setValuesForKeysWithDictionary:itemDic];
-            [self.idArray1 addObject:model.id];
+            [self.idArray1 addObject:model.idString];
             
             NSArray *broadArray = itemDic[@"broadcasters"];
             if (broadArray.count != 0) {
@@ -306,7 +305,7 @@
             TypeModel *model = [[TypeModel alloc]init];
             
             [model setValuesForKeysWithDictionary:itemDic];
-            [self.idArray2 addObject:model.id];
+            [self.idArray2 addObject:model.idString];
             
             NSArray *broadArray = itemDic[@"broadcasters"];
             if (broadArray.count != 0) {

@@ -11,28 +11,38 @@
 #import "DownloadTableViewCell.h"
 #import "DownloadDidTableViewCell.h"
 #import "PlayViewController.h"
-
-
-
+#import "AppDelegate.h"
 #import "DownlaodTask.h"
+#import "ZYAudioManager.h"
+#import "ZYMusicTool.h"
 
 static NSString *_downloadcell = @"cell";
 static NSString *_didDownload = @"did";
 
-@interface DownloadViewController ()<UITableViewDataSource, UITableViewDelegate, downloadDelegate>
+@interface DownloadViewController ()<UITableViewDataSource, UITableViewDelegate, downloadDelegate>{
+    AppDelegate *myAppdelegate;
+    
+}
 @property (nonatomic, strong) VOSegmentedControl *segmentControl;
 @property (nonatomic, strong) UITableView *tableView;
-
+@property (nonatomic, strong) PlayViewController *playVC;
 @property (nonatomic, assign) BOOL selectdidDownload;
 
 @property (nonatomic, strong) NSMutableArray *downlistArray;
 //已完成列表
 @property (nonatomic, strong) NSMutableArray *didloadArray;
+@property (nonatomic, assign) NSInteger currentIndex;//当前歌曲
 
 @end
 
 @implementation DownloadViewController
-
+-(PlayViewController *)playVc{
+    if (_playVC == nil) {
+        
+        _playVC = [[PlayViewController alloc]init];
+    }
+    return _playVC;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -45,6 +55,8 @@ static NSString *_didDownload = @"did";
     [self.tableView registerClass:[DownloadDidTableViewCell class] forCellReuseIdentifier:_didDownload];
     
     self.selectdidDownload = YES;
+    myAppdelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -91,6 +103,31 @@ static NSString *_didDownload = @"did";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.selectdidDownload) {
+        //这个页面全部的数据
+        [ZYMusicTool musics:self.didloadArray];
+        
+        //self.isBack = 1;
+        //当前一行数据
+        [ZYMusicTool setPlayingMusic:[ZYMusicTool musics:self.didloadArray][indexPath.row]];
+        
+        myAppdelegate.currentplayingMusic = [ZYMusicTool musics:self.didloadArray][self.currentIndex];//当前歌曲
+        
+        detailModel *model = self.didloadArray[indexPath.row];
+        
+        
+        model.playing = YES;
+        
+        NSArray *indexPaths = @[[NSIndexPath indexPathForItem:self.currentIndex inSection:0],indexPath];
+        [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
+        
+        self.currentIndex = (int)indexPath.row;
+        
+        
+        [self.playVc show];
+        
+        
+
+
 
     }
 }
@@ -186,7 +223,7 @@ static NSString *_didDownload = @"did";
     [self.downlistArray removeObject:models];
     DownlaodTask *task = [DownlaodTask shareInstance];
     [task deleteModel:models];
-    NSLog(@"-166--------------%lu", self.didloadArray.count);
+   // NSLog(@"-166--------------%lu", self.didloadArray.count);
     [self.tableView reloadData];
 
 }
@@ -197,14 +234,5 @@ static NSString *_didDownload = @"did";
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -10,7 +10,7 @@
 #import "detailModel.h"
 @protocol PlayViewControllerDelagate <NSObject>
 
--(void)getNum:(NSInteger)cunrrentNum;
+
 
 @end
 @interface PlayViewController : UIViewController
@@ -29,5 +29,5 @@
 @property(nonatomic,strong) NSArray *arrayAll;
 @property(nonatomic,assign) NSInteger num;
 
-@property(nonatomic,assign) id<PlayViewControllerDelagate>delegate;
+
 @end

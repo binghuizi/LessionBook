@@ -16,6 +16,7 @@
  *
  */
 + (detailModel *)playingMusic;
+
 /**
  *  重新设置歌曲
  *
