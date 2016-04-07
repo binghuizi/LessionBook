@@ -200,13 +200,14 @@
         self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, kWideth - 120, 44)];
         self.searchBar.placeholder = @"搜索书名，作者";
         self.searchBar.searchBarStyle = UISearchBarStyleDefault;
+        self.searchBar.delegate = self;
     }
     return _searchBar;
 }
 
 - (UITableView *)tableView{
     if (_tableView == nil) {
-        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, kWideth, kHeight - 108) style:UITableViewStylePlain];
+        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, kWideth, kHeight - 152) style:UITableViewStylePlain];
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
         self.tableView.rowHeight = 50;

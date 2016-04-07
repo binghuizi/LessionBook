@@ -57,16 +57,6 @@
 }
 - (void)accountLogin:(UIButton *)btn{
 
-    
-    //    BmobUser *buser = [[BmobUser alloc] init];
-    //    [BmobUser loginInbackgroundWithAccount:self.accountNumber.text
-    //                                andPassword:self.passWard.text block:^(BmobUser *user, NSError *error) {
-    //BmobUser *buser = [[BmobUser alloc] init];
-    //    [ProgressHUD show:@"正在抢滩登陆"];
-    //    BmobUser *buser = [[BmobUser alloc] init];
-
-//    [ProgressHUD show:@"正在抢滩登陆"];
-
     [BmobUser loginInbackgroundWithAccount:self.accountNumber.text andPassword:self.passWard.text block:^(BmobUser *user, NSError *error) {
         if (user) {
             //异步登陆账号
@@ -77,9 +67,6 @@
                     [[EaseMob sharedInstance].chatManager loadDataFromDatabase];
                     //获取群组列表
                     [[EaseMob sharedInstance].chatManager asyncFetchMyGroupsList];
-
-                    //                                                [self.navigationController popViewControllerAnimated:YES];
-
 
                 }else{
                     [ProgressHUD showError:@"登录失败"];

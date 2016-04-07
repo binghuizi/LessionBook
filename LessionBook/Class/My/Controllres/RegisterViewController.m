@@ -30,59 +30,41 @@
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0 green:201 / 255.0 blue:1 alpha:1.0];
     self.title = @"注册";
     [self.registerBtn addTarget:self action:@selector(backLogin:) forControlEvents:UIControlEventTouchUpInside];
-    [self.indentifyCoreBtn addTarget:self action:@selector(getIndentifyCore:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.indentifyCoreBtn addTarget:self action:@selector(getIndentifyCore:) forControlEvents:UIControlEventTouchUpInside];
 }
-- (void)getIndentifyCore:(UIButton *)btn{
+//- (void)getIndentifyCore:(UIButton *)btn{
 //    [BmobSMS requestSMSCodeInBackgroundWithPhoneNumber:self.mobilePhoneNumber.text andTemplate:@"您好，您此次验证码为XXXXXX，请尽快注册。【马里亚纳听书】" resultBlock:^(int number, NSError *error) {
 //        
 //    }];
-}
+//}
 
-/*
+
 - (void)backLogin:(UIButton *)btn{
     BmobUser *buser = [[BmobUser alloc] init];
-    buser.mobilePhoneNumber = self.mobilePhoneNumber.text;
+    buser.username = self.mobilePhoneNumber.text;
     buser.password = self.passWord.text;
-//    buser.username = @"xiaoming";
-//    buser.email = @"2535865932@qq.com";
-    
+//    buser.mobilePhoneNumber = self.mobilePhoneNumber.text;
     //这个只能验证验证码是否正确，不能注册
 //    [BmobSMS verifySMSCodeInBackgroundWithPhoneNumber:self.mobilePhoneNumber.text andSMSCode:self.indentifyCore.text resultBlock:^(BOOL isSuccessful, NSError *error) {
 //        if (!isSuccessful) {
 //            NSLog(@"%@", error);
 //            [ProgressHUD showError:[NSString stringWithFormat:@"验证码%@错误", self.indentifyCore.text] Interaction:YES];
 //           
-//        } else {
-    
+//        }else{
     //手机号码，验证码注册
-            [buser signUpOrLoginInbackgroundWithSMSCode:self.indentifyCore.text block:^(BOOL isSuccessful, NSError *error) {
-                if (!isSuccessful) {
-                    NSLog(@"%@", error);
-                    [ProgressHUD showError:[NSString stringWithFormat:@"验证码%@错误", self.indentifyCore.text] Interaction:YES];
-                    
-                } else {
-                   [ProgressHUD showSuccess:@"注册成功" Interaction:YES];
-                    [self.navigationController popViewControllerAnimated:YES];
-                }
-            }];
-        }
-
-*/
-- (void)backLogin:(UIButton *)btn{
-    BmobUser *buser = [[BmobUser alloc] init];
-//    buser.mobilePhoneNumber = self.mobilePhoneNumber.text;
-    buser.password = self.passWord.text;
-    buser.username = self.mobilePhoneNumber.text;
-    [ProgressHUD show:@"正在注册"];
-    [buser signUpInBackgroundWithBlock:^ (BOOL isSuccessful, NSError *error){
-        //bmob注册成功后再注册环信账号
-        if (isSuccessful){
+    [buser signUpInBackgroundWithBlock:^(BOOL isSuccessful, NSError *error) {
+        if (!isSuccessful) {
+            NSLog(@"%@", error);
+            [ProgressHUD showError:[NSString stringWithFormat:@"验证%@错误", self.indentifyCore.text] Interaction:YES];
+            
+        } else {
+            [ProgressHUD showSuccess:@"注册成功" Interaction:YES];
             __weak typeof(self) weakself = self;
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 EMError *error = nil;
                 [[EaseMob sharedInstance].chatManager registerNewAccount:weakself.mobilePhoneNumber.text password:weakself.passWord.text error:&error];
                 if (!error) {
-                     [ProgressHUD showSuccess:@"注册成功, 请登录"];
+                    [ProgressHUD showSuccess:@"注册成功, 请登录"];
                     BmobObject *userInfo = [BmobObject objectWithClassName:@"UserInformation"];
                     [userInfo setObject:weakself.mobilePhoneNumber.text forKey:@"username"];
                     [userInfo saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
@@ -94,12 +76,38 @@
                     [ProgressHUD showError:@"注册失败啦"];
                 }
             });
-        } else {
-            NSLog(@"%@",error);
-            [ProgressHUD showError:@"注册失败" Interaction:YES];
+            [self.navigationController popViewControllerAnimated:YES];
         }
+
     }];
-    
+//        [buser signUpOrLoginInbackgroundWithSMSCode:self.indentifyCore.text block:^(BOOL isSuccessful, NSError *error) {
+//                if (!isSuccessful) {
+//                    NSLog(@"%@", error);
+//                    [ProgressHUD showError:[NSString stringWithFormat:@"验证%@错误", self.indentifyCore.text] Interaction:YES];
+//                    
+//                } else {
+//                   [ProgressHUD showSuccess:@"注册成功" Interaction:YES];
+//                    __weak typeof(self) weakself = self;
+//                   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//                   EMError *error = nil;
+//                   [[EaseMob sharedInstance].chatManager registerNewAccount:weakself.mobilePhoneNumber.text password:weakself.passWord.text error:&error];
+//                    if (!error) {
+//                    [ProgressHUD showSuccess:@"注册成功, 请登录"];
+//                    BmobObject *userInfo = [BmobObject objectWithClassName:@"UserInformation"];
+//                    [userInfo setObject:weakself.mobilePhoneNumber.text forKey:@"username"];
+//                    [userInfo saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+//                                    //进行操作
+//                        NSLog(@"-------%d", isSuccessful);
+//                                        }];
+//                                        
+//                                    }else{
+//                      [ProgressHUD showError:@"注册失败啦"];
+//                                    }
+//                                });
+//                    [self.navigationController popViewControllerAnimated:YES];
+//                }
+//            }];
+//        }}];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
